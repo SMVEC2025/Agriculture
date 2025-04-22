@@ -1,11 +1,11 @@
  
 
-import demo_img_1 from "../../public/assets/img/header/home-1.jpg";
-import demo_img_2 from "../../public/assets/img/header/home-2.jpg";
-import demo_img_3 from "../../public/assets/img/header/home-3.jpg";
-import demo_img_4 from "../../public/assets/img/header/home-4.jpg";
-import demo_img_5 from "../../public/assets/img/header/home-5.jpg";
-import demo_img_6 from "../../public/assets/img/header/home-6.jpg"; 
+import demo_img_1 from "/assets/img/header/home-1.jpg";
+import demo_img_2 from "/assets/img/header/home-2.jpg";
+import demo_img_3 from "/assets/img/header/home-3.jpg";
+import demo_img_4 from "/assets/img/header/home-4.jpg";
+import demo_img_5 from "/assets/img/header/home-5.jpg";
+import demo_img_6 from "/assets/img/header/home-6.jpg"; 
  
 
  
