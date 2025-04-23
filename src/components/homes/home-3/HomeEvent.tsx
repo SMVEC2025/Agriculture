@@ -40,7 +40,7 @@ function HomeEvent() {
         <div className="he_left">
 
           {events.map((e, i) => (
-            <div className="content">
+            <div key={i} className="content">
               <div className="contentOne">
                 <div className="he_date">12</div>
                 <div>Mat,2025</div>
