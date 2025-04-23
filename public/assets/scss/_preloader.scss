@@ -216,16 +216,11 @@
             display: inline-block;
 
             .page-numbers {
-                &.current {
-                    background-color: $theme-blue;
-                    color: $white;
-                }
-
                 display: inline-block;
                 width: 40px;
                 height: 40px;
                 line-height: 40px;
-                border-radius: 50%;                
+                border-radius: 50%;
                 background: transparent;
                 font-weight: 600;
                 transition: all 0.3s ease-in-out;
@@ -242,6 +237,12 @@
                 i {
                     margin-top: 2px;
                 }
+
+                &.current {
+                    background-color: $theme-blue;
+                    color: $white;
+                }
+
                 &:hover {
                     background-color: $theme-blue;
                     color: $white;
@@ -250,6 +251,7 @@
         }
     }
 }
+
 
 .back-to-top{
     border-radius: 50%;

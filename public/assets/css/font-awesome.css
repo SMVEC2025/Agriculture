@@ -7117,9 +7117,9 @@
 	font-style: normal;
 	font-weight: 400;
 	font-display: block;
-	src: url(../fonts/fa-brands-400.eot?#iefix) format("embedded-opentype"),
-		url(../fonts/fa-brands-400.woff2) format("woff2"),
-		url(../fonts/fa-brands-400.woff) format("woff");
+	src: url(/assets/fonts/fa-brands-400.eot?#iefix) format("embedded-opentype"),
+		url(/assets/fonts/fa-brands-400.woff2) format("woff2"),
+		url(/assets/fonts/fa-brands-400.woff) format("woff");
 }
 .fab {
 	font-family: "Font Awesome 5 Brands";
@@ -7130,10 +7130,10 @@
 	font-style: normal;
 	font-weight: 300;
 	font-display: block;
-	src: url(../fonts/fa-light-300.eot);
-	src: url(../fonts/fa-light-300.eot?#iefix) format("embedded-opentype"),
-		url(../fonts/fa-light-300.woff2) format("woff2"),
-		url(../fonts/fa-light-300.woff) format("woff");
+	src: url(/assets/fonts/fa-light-300.eot);
+	src: url(/assets/fonts/fa-light-300.eot?#iefix) format("embedded-opentype"),
+		url(/assets/fonts/fa-light-300.woff2) format("woff2"),
+		url(/assets/fonts/fa-light-300.woff) format("woff");
 }
 .fal {
 	font-weight: 300;
@@ -7144,9 +7144,9 @@
 	font-weight: 400;
 	font-display: block;
 	src: url(/assets/fonts/fa-regular-400.eot);
-	src: url(../fonts/fa-regular-400.eot?#iefix) format("embedded-opentype"),
-		url(../fonts/fa-regular-400.woff2) format("woff2"),
-		url(../fonts/fa-regular-400.woff) format("woff");
+	src: url(/assets/fonts/fa-regular-400.eot?#iefix) format("embedded-opentype"),
+		url(/assets/fonts/fa-regular-400.woff2) format("woff2"),
+		url(/assets/fonts/fa-regular-400.woff) format("woff");
 }
 .fal,
 .far {
@@ -7160,10 +7160,10 @@
 	font-style: normal;
 	font-weight: 900;
 	font-display: block;
-	src: url(../fonts/fa-solid-900.eot);
-	src: url(../fonts/fa-solid-900.eot?#iefix) format("embedded-opentype"),
-		url(../fonts/fa-solid-900.woff2) format("woff2"),
-		url(../fonts/fa-solid-900.woff) format("woff");
+	src: url(/assets/fonts/fa-solid-900.eot);
+	src: url(/assets/fonts/fa-solid-900.eot?#iefix) format("embedded-opentype"),
+		url(/assets/fonts/fa-solid-900.woff2) format("woff2"),
+		url(/assets/fonts/fa-solid-900.woff) format("woff");
 }
 .fa,
 .fas {
@@ -7173,11 +7173,11 @@
 
 @font-face {
 	font-family: "flaticon";
-	src: url("../fonts/flaticon.woff2?d0caa42a840d341fa6bdad6a9b1d572c")
+	src: url("/assets/fonts/flaticon.woff2?d0caa42a840d341fa6bdad6a9b1d572c")
 			format("woff2"),
-		url("../fonts/flaticon.woff?d0caa42a840d341fa6bdad6a9b1d572c")
+		url("/assets/fonts/flaticon.woff?d0caa42a840d341fa6bdad6a9b1d572c")
 			format("woff"),
-		url("../fonts/flaticon.eot?d0caa42a840d341fa6bdad6a9b1d572c#iefix")
+		url("/assets/fonts/flaticon.eot?d0caa42a840d341fa6bdad6a9b1d572c#iefix")
 			format("embedded-opentype");
 }
 

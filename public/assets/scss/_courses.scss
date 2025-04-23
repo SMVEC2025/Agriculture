@@ -1269,6 +1269,8 @@
                             }
                         }
                         input:checked ~ .checkmark {
+                            background-color: $theme-blue;
+
                             &::after {
                                 content: "\f00c";
                                 position: absolute;
@@ -1279,7 +1281,6 @@
                                 font-size: 11px;
                             }
     
-                            background-color: $theme-blue;
                         }
                         input:checked ~ .checkmark:after {
                             display: block;

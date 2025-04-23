@@ -996,6 +996,7 @@
 .checkout-radio {
     box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.06);
     border-radius: 5px;
+    padding: 24px;
 
     .primary-text {
         font-size: 24px;
@@ -1006,7 +1007,6 @@
         text-transform: capitalize;
     }
 
-    padding: 24px;
 
     h4{
         color: $header-color;
