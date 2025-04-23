@@ -9,7 +9,7 @@ import Count from '../../../common/Count';
 const TestimonialHomeThree = () => {
   return (
     <>
-      <section className="testimonial-section-3 fix pt-0 section-padding bg-cover" style={{background: `url(/assets/img/testimonial/bg.jpg)`, backgroundAttachment: "fixed"}}>
+      <section className="testimonial-section-3 fix pt-0 section-padding bg-cover" style={{background: `url(/assets/img/youtubethumbnail.png)`, backgroundAttachment: "fixed"}}>
             <div className="counter-section-2 section-padding pt-0">
                 <div className="container custom-container">
                     <div className="counter-wrapper-2 bg-cover" style={{background: `url(/assets/img/counter-bg.jpg)`}}>
@@ -19,7 +19,7 @@ const TestimonialHomeThree = () => {
                             </div>
                             <div className="content">
                                 <h2><span className="odometer" data-count="48.5"> <Count number={48} text='.5k'  /> </span></h2>
-                                <p>Student Enrolled</p>
+                                <p>Students</p>
                             </div>
                         </div>
                         <div className="counter-items wow fadeInUp" data-wow-delay=".4s">
@@ -37,7 +37,7 @@ const TestimonialHomeThree = () => {
                             </div>
                             <div className="content">
                                 <h2><span className="odometer" data-count="99"> <Count number={99} text='%'  /> </span></h2>
-                                <p>Satisfaction Rate</p>
+                                <p>Placement Rate</p>
                             </div>
                         </div>
                         <div className="counter-items wow fadeInUp" data-wow-delay=".8s">
@@ -46,7 +46,7 @@ const TestimonialHomeThree = () => {
                             </div>
                             <div className="content">
                                 <h2><span className="odometer" data-count="250"> <Count number={250} text='+'  /> </span></h2>
-                                <p>Instructors</p>
+                                <p>Staffs</p>
                             </div>
                         </div>
                     </div>
@@ -98,7 +98,6 @@ const TestimonialHomeThree = () => {
                             <div className="testimonial-card-items">
                                 <div className="client-info">
                                     <h3>Richard C. Andre</h3>
-                                    <span>UX/UI Designer</span>
                                 </div>
                                 <div className="client-img bg-cover" style={{background: `url(/assets/img/testimonial/client-1.png)`}}></div>
                                 <p>
@@ -114,7 +113,6 @@ const TestimonialHomeThree = () => {
                             <div className="testimonial-card-items">
                                 <div className="client-info">
                                     <h3>Kenneth D. Warren</h3>
-                                    <span>Web Developer</span>
                                 </div>
                                 <div className="client-img bg-cover" style={{background: `url(/assets/img/testimonial/client-2.png)`}}></div>
                                 <p>
@@ -130,7 +128,6 @@ const TestimonialHomeThree = () => {
                             <div className="testimonial-card-items">
                                 <div className="client-info">
                                     <h3>Michael P. Comer</h3>
-                                    <span>Graphics Designer</span>
                                 </div>
                                 <div className="client-img bg-cover" style={{background: `url(/assets/img/testimonial/client-3.png)`}}></div>
                                 <p>
@@ -146,7 +143,6 @@ const TestimonialHomeThree = () => {
                             <div className="testimonial-card-items">
                                 <div className="client-info">
                                     <h3>Kenneth D. Warren</h3>
-                                    <span>Web Developer</span>
                                 </div>
                                 <div className="client-img bg-cover" style={{background: `url(/assets/img/testimonial/client-2.png)`}}></div>
                                 <p>

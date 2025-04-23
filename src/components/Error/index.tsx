@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import BreadcrumbEvent from "../../common/breadcrumb/BreadcrumbEvent";
-import HeaderOne from "../../layouts/headers/HeaderOne";
 import MarqueeOne from "../../common/MarqueeOne";
 import FooterOne from "../../layouts/footers/FooterOne";
 import ScrollTop from "../../common/ScrollTop";
@@ -11,7 +10,6 @@ const NotFound = () => {
   return (
     <>
     <Preloader />
-      <HeaderOne />
       <BreadcrumbEvent title="Error 404" subtitle="Error 404" />
 
       <div className="error-section fix section-padding pt-0">

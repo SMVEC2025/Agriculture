@@ -8,61 +8,35 @@ const CoursesHomeThree = () => {
             <div className="container">
                 <div className="section-title color-red text-center">
                     <h6 className="wow fadeInUp">
-                        Popular Courses
+                        Popular Offering
                     </h6>
                     <h2 className="wow fadeInUp" data-wow-delay=".3s">
-                        Academic Programs
+                       our Academic Programs
                     </h2>
-                    <p className="courses-sub-text mt-3 wow fadeInUp" data-wow-delay=".5s">Get <b>2800+ </b> Best Quality Online Courses From <b>Eduspace</b></p>
+                    <p className="courses-sub-text mt-3 wow fadeInUp" data-wow-delay=".5s">  Hands-on training, expert mentorship, and real-world field experience to cultivate your success
+                    </p>
                 </div>
-                <ul className="nav mt-3 mt-md-0">
-                    
-                    <li className="nav-item wow fadeInUp" data-wow-delay=".2s">
-                        <a href="#Under" data-bs-toggle="tab" className="nav-link active">
-                            Under Graduate 
-                        </a>
-                    </li>
-                    <li className="nav-item wow fadeInUp" data-wow-delay=".4s">
-                        <a href="#Graduate" data-bs-toggle="tab" className="nav-link">
-                            Graduate Program
-                        </a>
-                    </li>
-                    <li className="nav-item wow fadeInUp" data-wow-delay=".6s">
-                        <a href="#Online" data-bs-toggle="tab" className="nav-link">
-                            Online Program
-                        </a>
-                    </li>
-                </ul>
-                <div className="tab-content">
-                    <div id="Under" className="tab-pane fade show active">
-                        <div className="row">
-                            <div className="col-xl-4 col-lg-6 col-md-6">
+            
+               <div className="couses-list">
+               <div className="col-xl-4 col-lg-6 col-md-4">
                                 <div className="popular-courses-items">
                                     <div className="popular-thumb">
                                         <div className="post-box">
                                             <Link to="/courses-details" className="post-cat">
-                                               1. Business
+                                               4 years
                                             </Link>
                                         </div>
                                         <div className="thumb">
-                                            <img src="assets/img/courses/15.jpg" alt="img" />
+                                            <img src="https://media.istockphoto.com/id/1278397817/photo/young-indian-handsome-agronomist-with-test-tube-and-tablet.jpg?s=612x612&w=0&k=20&c=t7wH6msgXxNosvF5VHyTMUqhzN69SMBcTV5NEug43SU=" alt="img" />
                                         </div>
                                     </div>
                                     <div className="content">
                                         <h4>
                                             <Link to="/courses-details">
-                                                Mastering Business Strategy
-                                                From Theory to Practice
+                                            B.Sc Agricultural Sciences
                                             </Link>
                                         </h4>
-                                        <div className="star">
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <span>(4.8/5 Reviews)</span>
-                                        </div>
+                                       
                                         <Link to="/courses-details" className="link-btn">Read More <i className="far fa-chevron-double-right"></i></Link>
                                     </div>
                                 </div>
@@ -72,254 +46,26 @@ const CoursesHomeThree = () => {
                                     <div className="popular-thumb">
                                         <div className="post-box">
                                             <Link to="/courses-details" className="post-cat">
-                                                History
+                                            4 years
                                             </Link>
                                         </div>
                                         <div className="thumb">
-                                            <img src="assets/img/courses/16.jpg" alt="img" />
+                                            <img src="https://media.istockphoto.com/id/617577124/photo/happy-young-female-botanist-collecting-sample-of-leafs.jpg?s=612x612&w=0&k=20&c=T7hJ28ZG9pV0u5zP2K4aVtHQrEF8YVfj_xEm4kExiTQ=" alt="img" />
                                         </div>
                                     </div>
                                     <div className="content">
                                         <h4>
                                             <Link to="/courses-details">
-                                                Revolution and Reform Key Turning Points in History
+                                            B.Sc Horticulture Sciences
                                             </Link>
                                         </h4>
-                                        <div className="star">
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <span>(4.8/5 Reviews)</span>
-                                        </div>
+                                       
                                         <Link to="/courses-details" className="link-btn">Read More <i className="far fa-chevron-double-right"></i></Link>
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="popular-courses-items bg-3">
-                                    <div className="popular-thumb">
-                                        <div className="post-box">
-                                            <Link to="/courses-details" className="post-cat">
-                                                Leadership
-                                            </Link>
-                                        </div>
-                                        <div className="thumb">
-                                            <img src="assets/img/courses/17.jpg" alt="img" />
-                                        </div>
-                                    </div>
-                                    <div className="content">
-                                        <h4>
-                                            <Link to="/courses-details">
-                                                Transformational Leadership Inspiring Organizations
-                                            </Link>
-                                        </h4>
-                                        <div className="star">
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <span>(4.8/5 Reviews)</span>
-                                        </div>
-                                        <Link to="/courses-details" className="link-btn">Read More <i className="far fa-chevron-double-right"></i></Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="Graduate" className="tab-pane fade">
-                        <div className="row">
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="popular-courses-items">
-                                    <div className="popular-thumb">
-                                        <div className="post-box">
-                                            <Link to="/courses-details" className="post-cat">
-                                               2. Business
-                                            </Link>
-                                        </div>
-                                        <div className="thumb">
-                                            <img src="assets/img/courses/15.jpg" alt="img" />
-                                        </div>
-                                    </div>
-                                    <div className="content">
-                                        <h4>
-                                            <Link to="/courses-details">
-                                                Mastering Business Strategy
-                                                From Theory to Practice
-                                            </Link>
-                                        </h4>
-                                        <div className="star">
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <span>(4.8/5 Reviews)</span>
-                                        </div>
-                                        <Link to="/courses-details" className="link-btn">Read More <i className="far fa-chevron-double-right"></i></Link>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="popular-courses-items bg-2">
-                                    <div className="popular-thumb">
-                                        <div className="post-box">
-                                            <Link to="/courses-details" className="post-cat">
-                                                History
-                                            </Link>
-                                        </div>
-                                        <div className="thumb">
-                                            <img src="assets/img/courses/16.jpg" alt="img" />
-                                        </div>
-                                    </div>
-                                    <div className="content">
-                                        <h4>
-                                            <Link to="/courses-details">
-                                                Revolution and Reform Key Turning Points in History
-                                            </Link>
-                                        </h4>
-                                        <div className="star">
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <span>(4.8/5 Reviews)</span>
-                                        </div>
-                                        <Link to="/courses-details" className="link-btn">Read More <i className="far fa-chevron-double-right"></i></Link>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="popular-courses-items bg-3">
-                                    <div className="popular-thumb">
-                                        <div className="post-box">
-                                            <Link to="/courses-details" className="post-cat">
-                                                Leadership
-                                            </Link>
-                                        </div>
-                                        <div className="thumb">
-                                            <img src="assets/img/courses/17.jpg" alt="img" />
-                                        </div>
-                                    </div>
-                                    <div className="content">
-                                        <h4>
-                                            <Link to="/courses-details">
-                                                Transformational Leadership Inspiring Organizations
-                                            </Link>
-                                        </h4>
-                                        <div className="star">
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <span>(4.8/5 Reviews)</span>
-                                        </div>
-                                        <Link to="/courses-details" className="link-btn">Read More <i className="far fa-chevron-double-right"></i></Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="Online" className="tab-pane fade">
-                        <div className="row">
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="popular-courses-items">
-                                    <div className="popular-thumb">
-                                        <div className="post-box">
-                                            <Link to="/courses-details" className="post-cat">
-                                               3. Business
-                                            </Link>
-                                        </div>
-                                        <div className="thumb">
-                                            <img src="assets/img/courses/15.jpg" alt="img" />
-                                        </div>
-                                    </div>
-                                    <div className="content">
-                                        <h4>
-                                            <Link to="/courses-details">
-                                                Mastering Business Strategy
-                                                From Theory to Practice
-                                            </Link>
-                                        </h4>
-                                        <div className="star">
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <span>(4.8/5 Reviews)</span>
-                                        </div>
-                                        <Link to="/courses-details" className="link-btn">Read More <i className="far fa-chevron-double-right"></i></Link>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="popular-courses-items bg-2">
-                                    <div className="popular-thumb">
-                                        <div className="post-box">
-                                            <Link to="/courses-details" className="post-cat">
-                                                History
-                                            </Link>
-                                        </div>
-                                        <div className="thumb">
-                                            <img src="assets/img/courses/16.jpg" alt="img" />
-                                        </div>
-                                    </div>
-                                    <div className="content">
-                                        <h4>
-                                            <Link to="/courses-details">
-                                                Revolution and Reform Key Turning Points in History
-                                            </Link>
-                                        </h4>
-                                        <div className="star">
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <span>(4.8/5 Reviews)</span>
-                                        </div>
-                                        <Link to="/courses-details" className="link-btn">Read More <i className="far fa-chevron-double-right"></i></Link>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="popular-courses-items bg-3">
-                                    <div className="popular-thumb">
-                                        <div className="post-box">
-                                            <Link to="/courses-details" className="post-cat">
-                                                Leadership
-                                            </Link>
-                                        </div>
-                                        <div className="thumb">
-                                            <img src="assets/img/courses/17.jpg" alt="img" />
-                                        </div>
-                                    </div>
-                                    <div className="content">
-                                        <h4>
-                                            <Link to="/courses-details">
-                                                Transformational Leadership Inspiring Organizations
-                                            </Link>
-                                        </h4>
-                                        <div className="star">
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <span>(4.8/5 Reviews)</span>
-                                        </div>
-                                        <Link to="/courses-details" className="link-btn">Read More <i className="far fa-chevron-double-right"></i></Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
+               </div>
             </div>
         </section>
     </>

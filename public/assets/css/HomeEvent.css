@@ -1,0 +1,230 @@
+.he_main{
+    padding-bottom: 3rem;
+    overflow: hidden;
+    padding-bottom: 200px;
+    position: relative;
+}
+
+.he_left{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: start;
+    height: 100%;
+    
+}
+.he_left .content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #f4f9ff;
+    padding: 30px 30px;
+    border-radius: 10px;
+    align-items: center;
+    gap: 40px;
+    width: 700px;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+.he_left .content:hover{
+    background-color:#076bca ;
+    color: white;
+    .he_date{
+        color: white;
+    }
+    .content3>button{
+        color: #ffffff;
+        border: 1px solid #ffffff;
+        border-radius: 50px;
+        padding: 10px 35px;
+    }
+    .content2>h4{
+        color: white;
+    }
+}
+.he_time{
+    margin-right: 20px;
+}
+.he_timeloc{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.he_time span{
+}
+.content2>h4{
+    font-weight: 500;
+}
+.he_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7rem;
+}
+.contentOne{
+    display: flex;
+    justify-content: center;align-items: center;
+    flex-direction: column;
+}
+.he_date{
+    color: #076bca;
+    font-size: 30px;
+    font-weight: 500;
+}
+.content2{
+    position: relative;
+    width: 60%;
+}
+.content3>button{
+    color: #076bca;
+    border: 1px solid #076bca;
+    border-radius: 50px;
+    padding: 10px 35px;
+}
+.he_left>button{
+    color: #076bca;
+    border: 1px solid #076bca;
+    border-radius: 50px;
+    padding: 10px 35px;
+    margin-left: 10px;
+}
+.contentOne,.content3{
+    width: 20%;
+}
+
+.content2::before{
+    content: "";
+    width: 1px;
+    height: 50px;
+    background-color: rgb(159, 175, 182);
+    left: -1.5rem;
+    top: 0;
+    position: absolute;
+}
+.content2::after{
+    content: "";
+    width: 1px;
+    height: 50px;
+    background-color: rgb(159, 175, 182);
+    right: -1.5rem;
+    top: 0;
+    position: absolute;
+}
+.he_right{
+    height: 100%;
+    height: 570px;
+    background-color: white;
+}
+.iphone-x {
+    position: relative;
+    width: 270px;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0px 0px 0px 10px #1f1f1f, 0px 0px 0px 10px #191919, 0px 0px 0px 12px #111;
+    
+    &:before,
+    &:after{
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    &:after {
+      bottom: 7px;
+      width: 140px;
+      height: 4px;
+      background-color: #f2f2f2;
+      border-radius: 10px;
+    }
+    
+    &:before {
+      top: 0px;
+      width: 56%;
+      height: 30px;
+      background-color: #1f1f1f;
+      border-radius: 0px 0px 40px 40px;
+    }
+    
+    i,
+    b,
+    s,
+    span {
+      position: absolute;
+      display: block;
+      color: transparent;
+    }
+    
+    i {
+      top: 0px;
+      left: 50%;
+      transform: translate(-50%, 6px);
+      height: 8px;
+      width: 15%;
+      background-color: #101010;
+      border-radius: 8px;
+      box-shadow: inset 0px -3px 3px 0px rgba(256, 256, 256, 0.2);
+    }
+    
+    b {
+      left: 10%;
+      top: 0px;
+      transform: translate(150px, 5px);
+      width: 12px;
+      height: 12px;
+      background-color: #101010;
+      border-radius: 12px;
+      box-shadow: inset 0px -3px 2px 0px rgba(256, 256, 256, 0.2);
+      
+      &:after {
+        content: '';
+        position: absolute;
+        background-color: #2d4d76;
+        width: 6px;
+        height: 6px;
+        top: 2px;
+        left: 2px;
+        top: 3px;
+        left: 3px;
+        display: block;
+        border-radius: 4px;
+        box-shadow: inset 0px -2px 2px rgba(0, 0, 0, 0.5);
+      }
+    }
+    
+    s {
+      top: 50px;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      width: 100%;
+      font-size: 70px;
+      font-weight: 100;
+      padding-top: 60px;
+    }
+    
+    span {
+      bottom: 50px;
+      width: 40px;
+      height: 40px;
+      background-color: rgba(233, 4, 4, 0.3);
+      border-radius: 50%;
+      left: 30px;
+      
+      & + span {
+        left: auto;
+        right: 30px;
+      }
+    }
+  }
+  .iphone-x>img{
+    width: 100%;
+    height: 100%;
+    object-position: left;
+    object-fit: cover;
+    cursor: pointer;
+  }

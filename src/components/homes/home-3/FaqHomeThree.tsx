@@ -3,7 +3,7 @@
 const FaqHomeThree = () => {
   return (
     <>
-      <section className="faq-section fix section-padding pt-0">
+      <section className="faq-section fix section-padding pt-10 ">
             <div className="container">
                 <div className="faq-wrapper style-2">
                     <div className="row g-4 align-items-center">
@@ -92,12 +92,11 @@ const FaqHomeThree = () => {
                         </div>
                         <div className="col-lg-6">
                            <div className="faq-image-2">
-                                <img src="assets/img/faq/01.png" alt="img" className="wow img-custom-anim-left" />
+                                <img src="https://images.pexels.com/photos/9490248/pexels-photo-9490248.jpeg?auto=compress&cs=tinysrgb&w=565" alt="img" className="wow img-custom-anim-left" />
                                 <div className="bg-shape">
-                                    <img src="assets/img/faq/bg-shape.png" alt="img" />
                                 </div>
                                 <div className="quote-shape float-bob-x">
-                                    <img src="assets/img/faq/quote-shape.png" alt="img" />
+                                    <img src="https://images.pexels.com/photos/8199622/pexels-photo-8199622.jpeg?auto=compress&cs=tinysrgb&w=370" alt="img" />
                                 </div>
                            </div>
                         </div>

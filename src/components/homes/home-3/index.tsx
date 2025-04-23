@@ -14,7 +14,7 @@ import HeroHomeThree from "./HeroHomeThree";
 import InstagramHomeThree from "./InstagramHomeThree";
 import PartnarsHomeThree from "./PartnarsHomeThree";
 import TestimonialHomeThree from "./TestimonialHomeThree";
-
+import HomeEvent from "./HomeEvent";
  
 
 const HomeThree = () => {
@@ -24,20 +24,21 @@ const HomeThree = () => {
       <HeaderThree />
       <HeroHomeThree />
       <AboutHomeThree />
-      <MarqueeTwo />
+      {/* <MarqueeTwo /> */}
       <CoursesHomeThree />
       <ChooseHomeThree />
-      <EventHomeThree />
+      {/* <EventHomeThree /> */}
+      <HomeEvent/>
       <TestimonialHomeThree />
-      <MarqueeTwo />
-      <PartnarsHomeThree />
-      <BlogHomeThree />
+      {/* <MarqueeTwo /> */}
+      {/* <PartnarsHomeThree /> */}
+      {/* <BlogHomeThree /> */}
       <FaqHomeThree />
       <InstagramHomeThree />
       <CtaHomeThree />
-      <MarqueeTwo />
+      {/* <MarqueeTwo /> */}
       <FooterThree />
-      <ScrollTop />
+      {/* <ScrollTop /> */}
     </>
   );
 };

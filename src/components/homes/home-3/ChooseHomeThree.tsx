@@ -13,7 +13,7 @@ const ChooseHomeThree = () => {
                 <div className="row g-0">
                     <div className="col-xxl-7 col-xl-6 col-lg-6">
                         <div className="video-image wow img-custom-anim-left">
-                            <img src="assets/img/feature/video.jpg" alt="img" />
+                            <img src="/assets/img/youtubethumbnail.png" alt="img" />
                             <a 
                             onClick={() => setIsVideoOpen(true)}
                             style={{ cursor: "pointer" }}
@@ -29,7 +29,7 @@ const ChooseHomeThree = () => {
                                     Why Choose Us
                                 </h6>
                                 <h2 className="text-white wow fadeInUp" data-wow-delay=".3s">
-                                    Why Choose Our Eduspace Campus
+                                    Why Choose Our SMVEC Campus
                                 </h2>
                             </div>
                             <p className="mt-3 mt-md-0 text-white wow fadeInUp" data-wow-delay=".5s">
@@ -39,7 +39,7 @@ const ChooseHomeThree = () => {
                                 <div className="col-md-6 wow fadeInUp" data-wow-delay=".3s">
                                     <div className="icon-items">
                                         <div className="icon">
-                                            <i className="flaticon-kayak"></i>
+                                            <i className="flaticon-games"></i>
                                         </div>
                                         <h3>Sports & Games</h3>
                                     </div>
@@ -82,7 +82,7 @@ const ChooseHomeThree = () => {
       <VideoPopup
         isVideoOpen={isVideoOpen}
         setIsVideoOpen={setIsVideoOpen}
-        videoId={"Ml4XCF-JS0k"}
+        videoId={"OeeMxu2bpXc"}
       />
       {/* video modal end */}
     </>

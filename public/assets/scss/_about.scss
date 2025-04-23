@@ -9,7 +9,6 @@
     .about-image {
         margin-left: 0%;
         max-width: 585px;
-        margin-top: 80px;
 
         @include breakpoint (max-xl){
            margin-top: 0;
@@ -171,6 +170,7 @@
 
 .about-section-3 {
     background-color: #09224B;
+    padding-top: 200px;
 }
 
 .about-wrapper-2 {
@@ -324,7 +324,9 @@
         }
     }
 }
-
+.about-image>img{
+    padding-left: 30px;
+}
 .about-wrapper-3 {
     .about-content {
         max-width: 770px;
@@ -400,6 +402,7 @@
     .about-image {
         max-width: 440px;
         position: relative;
+        
 
         @include breakpoint (max-xxl){
           max-width: 1200px;

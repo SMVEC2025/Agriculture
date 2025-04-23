@@ -33,31 +33,31 @@ const InstagramHomeThree = () => {
                  
                     <SwiperSlide className="swiper-slide">
                         <div className="instagram-image">
-                            <img src="assets/img/instagram/01.jpg" alt="img" />
+                            <img src="https://images.pexels.com/photos/9489759/pexels-photo-9489759.jpeg" alt="img" />
                             <Link to="/courses-details" className="icon"><i className="far fa-arrow-right"></i></Link>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className="swiper-slide">
                         <div className="instagram-image">
-                            <img src="assets/img/instagram/02.jpg" alt="img" />
+                            <img src="https://images.pexels.com/photos/2247678/pexels-photo-2247678.jpeg" alt="img" />
                             <Link to="/courses-details" className="icon"><i className="far fa-arrow-right"></i></Link>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className="swiper-slide">
                         <div className="instagram-image">
-                            <img src="assets/img/instagram/03.jpg" alt="img" />
+                            <img src="https://images.pexels.com/photos/427649/pexels-photo-427649.jpeg" alt="img" />
                             <Link to="/courses-details" className="icon"><i className="far fa-arrow-right"></i></Link>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className="swiper-slide">
                         <div className="instagram-image">
-                            <img src="assets/img/instagram/04.jpg" alt="img" />
+                            <img src="https://images.pexels.com/photos/426976/pexels-photo-426976.jpeg" alt="img" />
                             <Link to="/courses-details" className="icon"><i className="far fa-arrow-right"></i></Link>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className="swiper-slide">
                         <div className="instagram-image">
-                            <img src="assets/img/instagram/05.jpg" alt="img" />
+                            <img src="https://images.pexels.com/photos/2479946/pexels-photo-2479946.jpeg" alt="img" />
                             <Link to="/courses-details" className="icon"><i className="far fa-arrow-right"></i></Link>
                         </div>
                     </SwiperSlide>
