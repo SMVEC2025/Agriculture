@@ -1,4 +1,3 @@
-import { MdArrowBackIos, MdMoreHoriz, MdKeyboardArrowDown } from 'react-icons/md';
 
 const Instagram = () => {
   return (
