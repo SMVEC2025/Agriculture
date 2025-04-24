@@ -29,7 +29,7 @@ const HeroHomeThree = () => {
                     modules={[Pagination, Navigation, EffectFade, Autoplay]}
                     className="swiper hero-slider">
                     <SwiperSlide className="swiper-slide">
-                        <div className="slider-bg bg-cover" style={{ background: `url(/assets/img/hero/hero-3.jpg)` }}>
+                        <div className="slider-bg bg-cover" style={{ background: `url(/assets/img/home1.jpg)` }}>
                             <div className="overlay-bg bg-cover" style={{ background: `url(/assets/img/hero/ovelay-bg.png)` }}></div>
                         </div>
                         <div className="container">
@@ -53,7 +53,7 @@ const HeroHomeThree = () => {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className="swiper-slide">
-                        <div className="slider-bg bg-cover" style={{background: `url(/assets/img/hero/hero-4.jpg)`}}>
+                        <div className="slider-bg bg-cover" style={{background: `url(/assets/img/home1.jpg)`}}>
                             <div className="overlay-bg bg-cover" style={{background: `url(/assets/img/hero/ovelay-bg.png)`}}></div>
                         </div>
                         <div className="container">
@@ -77,7 +77,7 @@ const HeroHomeThree = () => {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className="swiper-slide">
-                        <div className="slider-bg bg-cover" style={{background: `url(/assets/img/hero/hero-5.jpg)`}}>
+                        <div className="slider-bg bg-cover" style={{background: `url(/assets/img/home1.jpg)`}}>
                             <div className="overlay-bg bg-cover" style={{background: `url(/assets/img/hero/ovelay-bg.png)`}}></div>
                         </div>
                         <div className="container">

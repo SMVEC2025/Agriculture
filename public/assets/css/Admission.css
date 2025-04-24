@@ -1,0 +1,195 @@
+.adj_main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+    flex-direction: column;
+}
+.adj_main p{
+    max-width: 50%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.adp_main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 3rem 0;
+    gap: 5rem;
+}
+.adj_main{
+    h6{
+        color: red;
+    }
+}
+.pcard{
+    background-color: #3a566e;
+    width: 500px;
+    
+    padding: 20px 40px;
+    position: relative;
+}
+.pcard{
+    h2{
+        font-size: 30px;
+        color: white;
+        font-weight: 400;
+    }
+    p{
+        color: rgb(212, 212, 212);
+        line-height: 25px;
+        margin-top: 1rem;
+    }
+    button{
+      padding: 5px 20px;
+      background-color: #fcfbf9;
+      margin-top: 2rem;
+      color: var(--bg5);
+    }
+    svg{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        opacity: 0.8;
+    }
+}
+
+
+/* ///////////////applicationcss/////// */
+
+.applipara{
+    display: flex;
+    justify-content: center;
+    p{
+        max-width: 50%;
+        text-align: center;
+        position: relative;padding: 4rem 0;
+    }
+    p::before{
+        width: 100%;
+        height: 1px;
+        background-color: var(--bg5);
+        content: "";
+        position: absolute;
+        top: -20px;
+        left: 0;
+
+    }
+    p::after{
+        width: 100%;
+        height: 1px;
+        background-color: var(--bg5);
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+    }
+}
+.appli_container{
+    display: flex;
+    flex-direction: row;
+    margin: 3rem 0;
+
+}
+.appli_container>div{
+    width: 50%;
+}
+.appli_container2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.appli_container1{
+    background-color: var(--theme-red);
+}
+.appli_container1{
+    color: white;
+    h6{
+        font-size: 30px;
+        color: white;
+        margin-top: 2rem;
+        margin-left: 2rem;
+    }
+    p{
+        margin-top: 0.5rem;
+        margin-left: 2rem;
+        max-width: 80%;
+    }
+}
+
+
+/* ///////////application from/////////// */
+.af_main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 5rem;
+    
+}
+.af_main{
+    button{
+        padding: 7px 25px;
+        background-color:var(--theme-red);
+        font-size: 15px;
+        color: white;
+    }
+}
+.applicationdate{
+    background-color:var(--theme-red);
+    width: 800px;
+    margin-top: 2rem;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    height: 50px;
+    transition: all 0.3s ease-out;
+    button{
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 30px;
+        cursor: pointer;
+        background:none;
+        transition: all 0.3s ease-out;
+
+    }
+
+}
+.applicationdate.open{
+    height: 300px;
+    button{
+        transform: rotate(45deg);
+    }
+}
+.applicationdate{
+    .header{
+        height: 50px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding-left: 20px;
+        columns: white;
+        h4{
+            color: white;
+            font-weight: 400;
+        }
+    }
+    .applicationcontainer{
+        padding: 20px;
+        color: var(--bg5);
+        background-color: rgb(236, 233, 233);
+        height: 100%;
+        h5{
+            color: var(--bg5);
+            margin-top: 1rem;
+            font-weight: 400;
+        }
+        ul{
+            list-style-type: disc;
+            padding-left: 20px;
+
+        }
+    }
+}

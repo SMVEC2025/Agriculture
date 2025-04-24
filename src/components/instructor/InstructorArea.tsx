@@ -9,10 +9,10 @@ const InstructorArea = () => {
         <div className="container">
             <div className="section-title  text-center">
                 <h6 className="wow fadeInUp">
-                    Our Instructors
+                    Our faculties
                 </h6>
                 <h2 className="wow fadeInUp" data-wow-delay=".3s">
-                    Meet Our Expert Instructors
+                    Meet Our Expert faculties
                 </h2>
             </div>
             <div className="row">

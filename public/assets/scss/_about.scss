@@ -605,8 +605,9 @@
         }
 
         p {
-            font-size: 19px;
+            font-size: 17px;
             color: $header-color;
+            font-weight: 400;
         }
 
         .counter-box-items {
@@ -674,4 +675,14 @@
     fill: #031f42 !important;
     // font-size: 30px !important;
     font-weight: 600 !important;
+}
+
+
+#about-h2{
+    font-size: 30px;
+}
+.section-title>img{
+    width: 100%;
+    margin-top: 1rem;
+    border-radius: 10px;
 }

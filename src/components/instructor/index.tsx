@@ -11,9 +11,9 @@ const Instructor = () => {
   return (
     <>
     <Preloader />
-			<BreadcrumbEvent title="Instructor" subtitle="Instructor" />
+			<BreadcrumbEvent title="faculties" subtitle="faculty" />
       <InstructorArea />       
-			<MarqueeOne style_2={true} />
+			{/* <MarqueeOne style_2={true} /> */}
 			<FooterOne />
       <ScrollTop />
     </>

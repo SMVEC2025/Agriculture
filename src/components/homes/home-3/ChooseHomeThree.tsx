@@ -1,7 +1,10 @@
 import { useState } from "react";
 import VideoPopup from "../../../modals/VideoPopup";
+import { PiTractorThin } from "react-icons/pi";
 
- 
+import { PiBookThin } from "react-icons/pi";
+import { PiSuitcaseSimpleLight } from "react-icons/pi";
+
 
 const ChooseHomeThree = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
@@ -39,33 +42,33 @@ const ChooseHomeThree = () => {
                                 <div className="col-md-6 wow fadeInUp" data-wow-delay=".3s">
                                     <div className="icon-items">
                                         <div className="icon">
-                                            <i className="flaticon-games"></i>
+                                        <i className="flaticon-open-book"><PiBookThin/></i>
                                         </div>
-                                        <h3>Sports & Games</h3>
+                                        <h3>Modern Curriculum</h3>
                                     </div>
                                 </div>
                                 <div className="col-md-6 wow fadeInUp" data-wow-delay=".5s">
                                     <div className="icon-items">
                                         <div className="icon">
-                                            <i className="flaticon-violin"></i>
+                                            <i className="flaticon-farmer"><PiTractorThin/></i>
                                         </div>
-                                        <h3>Music Arts & Clubs</h3>
+                                        <h3>Practical Training</h3>
                                     </div>
                                 </div>
                                 <div className="col-md-6 wow fadeInUp" data-wow-delay=".3s">
                                     <div className="icon-items">
                                         <div className="icon">
-                                            <i className="flaticon-provision"></i>
+                                            <i className="flaticon-teacher"></i>
                                         </div>
-                                        <h3>Efficient & Flexible</h3>
+                                        <h3>Experienced Faculty</h3>
                                     </div>
                                 </div>
                                 <div className="col-md-6 wow fadeInUp" data-wow-delay=".5s">
                                     <div className="icon-items">
                                         <div className="icon">
-                                            <i className="flaticon-certificate"></i>
+                                            <i className="flaticon-work"><PiSuitcaseSimpleLight/></i>
                                         </div>
-                                        <h3>Certified Institute</h3>
+                                        <h3>Placements & Internships</h3>
                                     </div>
                                 </div>
                             </div>

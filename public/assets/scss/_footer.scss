@@ -759,6 +759,7 @@
 
 .footer-section {
     position: relative;
+    height: 600px;
 
     .circle-shape-2 {
         position: absolute;
@@ -777,4 +778,7 @@
         top: 18%;
         right: 8%;
     }
+}
+.footer_logo{
+    width: 300px;
 }

@@ -12,7 +12,8 @@ const EventHomeThree = () => {
                         Upcoming Events
                     </h6>
                     <h2 className="wow fadeInUp" data-wow-delay=".3s">
-                        Webinar on Emerging Trends
+                    join our upcomming events
+
                     </h2>
                 </div>
                 <div className="event-wrapper mt-3 mt-md-0">

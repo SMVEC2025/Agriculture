@@ -1,6 +1,5 @@
 import Preloader from "../../../common/Preloader";
 import FooterThree from "../../../layouts/footers/FooterThree";
-import HeaderThree from "../../../layouts/headers/HeaderThree";
 import AboutHomeThree from "./AboutHomeThree";
 import ChooseHomeThree from "./ChooseHomeThree";
 import CoursesHomeThree from "./CoursesHomeThree";
@@ -10,29 +9,34 @@ import HeroHomeThree from "./HeroHomeThree";
 import InstagramHomeThree from "./InstagramHomeThree";
 import TestimonialHomeThree from "./TestimonialHomeThree";
 import HomeEvent from "./HomeEvent";
+import FooterOne from "../../../layouts/footers/FooterOne";
+import EventHomeThree from "./EventHomeThree";
  
 
 const HomeThree = () => {
   return (
     <>
     <Preloader />
-      <HeaderThree />
       <HeroHomeThree />
       <AboutHomeThree />
       {/* <MarqueeTwo /> */}
       <CoursesHomeThree />
       <ChooseHomeThree />
-      {/* <EventHomeThree /> */}
-      <HomeEvent/>
-      <TestimonialHomeThree />
+      <EventHomeThree />
+      {/* <HomeEvent/> */}
+      
+      <InstagramHomeThree />
+
       {/* <MarqueeTwo /> */}
       {/* <PartnarsHomeThree /> */}
       {/* <BlogHomeThree /> */}
       <FaqHomeThree />
-      <InstagramHomeThree />
+      <TestimonialHomeThree />
+
       <CtaHomeThree />
       {/* <MarqueeTwo /> */}
-      <FooterThree />
+      {/* <FooterThree /> */}
+      <FooterOne/>
       {/* <ScrollTop /> */}
     </>
   );

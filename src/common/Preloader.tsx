@@ -7,7 +7,7 @@ export default function Preloader() {
 		// Set a timer to hide the preloader after 10 seconds
 		const timer = setTimeout(() => {
 			setIsVisible(false);
-		}, 3000);
+		}, 500);
 
 		// Clean up the timer when the component is unmounted
 		return () => clearTimeout(timer);

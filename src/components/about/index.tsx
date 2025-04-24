@@ -5,6 +5,8 @@ import ScrollTop from "../../common/ScrollTop";
 import FooterOne from "../../layouts/footers/FooterOne";
 import AboutArea from "./AboutArea";
 import AboutCounter from "./AboutCounter";
+import AboutEnd from "./AboutEnd";
+import AboutMission from "./AboutMission";
 import FeatureArea from "./FeatureArea";
 
  
@@ -15,9 +17,11 @@ const About = () => {
 		<Preloader />
 			<BreadcrumbEvent title="About" subtitle="About" />
       <AboutArea />
+	  <AboutMission/>
       <FeatureArea />
-      <AboutCounter />
-			<MarqueeOne style_2={true} />
+      {/* <AboutCounter /> */}
+			{/* <MarqueeOne style_2={true} /> */}
+			<AboutEnd/>
 			<FooterOne />
 			<ScrollTop />
 		</>
