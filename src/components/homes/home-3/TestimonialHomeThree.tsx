@@ -9,7 +9,8 @@ import Count from '../../../common/Count';
 const TestimonialHomeThree = () => {
   return (
     <>
-      <section className="testimonial-section-3 fix pt-0 section-padding bg-cover" style={{background: `url(/assets/img/youtubethumbnail.png)`, backgroundAttachment: "fixed"}}>
+      <section className="testimonial-section-3 fix pt-0 section-padding" >
+      <img src="/assets/img/4G3A8463.JPG" alt="" />
             <div className="counter-section-2 section-padding pt-0">
                 <div className="container custom-container">
                     <div className="counter-wrapper-2 bg-cover" style={{background: `url(/assets/img/counter-bg.jpg)`}}>

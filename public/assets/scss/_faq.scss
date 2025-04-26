@@ -153,55 +153,32 @@
         }
 
         .faq-image-2 {
-            position: relative;
+            position: absolute;
 
-            @include breakpoint (max-xl){
-                img {
-                    @include imgw;
-               }
-            }
-
-            @include breakpoint (max-lg){
-                img {
-                    width: inherit;
-                    height: initial;
-               }
-            }
-
-            @include breakpoint (max-sm){
-               img {
-                    @include imgw;
-               }
-            }
-
-            .bg-shape {
+           top: 0;
+           right: 0;
+           z-index: 5;
+           height: 100%;
+           img{
+            width:auto;
+            height: 100vh;
+            
+           }
+        }
+        @media (max-width:576px) {
+            .faq-image-2 {
                 position: absolute;
-                top: 56%;
-                left: 50%;
-                transform: translate(-50%,-50%);
-                z-index: -1;
-
-                @include breakpoint (max-xl){
-                    display: none;
-                }
-
-                @include breakpoint (max-lg){
-                   display: block;
-                }
-
-                @include breakpoint (max-sm){
-                    display: none;
-                }
-            }
-
-            .quote-shape {
-                position: absolute;
-                bottom: -25px;
-                right: -50px;  
+    
+               top: 0;
+               right: 0;
+               z-index: -1;
+               height: 100%;
+               opacity: 0.2;
+               img{
+                width:auto;
+                height: 100vh;
                 
-                @include breakpoint (max-sm){
-                   display: none;
-                }
+               }
             }
         }
     }

@@ -2,11 +2,14 @@ import { Link } from "react-router-dom";
 
  
 
-const BreadcrumbEvent = ({title, subtitle} : any) => {
+const BreadcrumbEvent = ({title, subtitle, heroImage} : any) => {
 	return (
 		<>
 			<section className="breadcrumb-wrapper">
-				<div className="shape-1">
+			<img className="bread-image" src={heroImage} alt="img" />
+			<div className="contentt"></div>
+
+			<div className="shape-1">
 					<img src="assets/img/breadcrumb/shape-1.png" alt="img" />
 				</div>
 				<div className="shape-2">
@@ -32,7 +35,7 @@ const BreadcrumbEvent = ({title, subtitle} : any) => {
 								<li className="style-2">{subtitle}</li>
 							</ul>
 							<div className="breadcrumb-image">
-								<img src="assets/img/breadcrumb/breadcrumb.jpg" alt="img" />
+								<img src="assets/img/breadcrumb/DJI_0981.JPG" alt="img" />
 							</div>
 						</div>
 					</div>

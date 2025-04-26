@@ -7,7 +7,7 @@ export default function Preloader() {
 		// Set a timer to hide the preloader after 10 seconds
 		const timer = setTimeout(() => {
 			setIsVisible(false);
-		}, 500);
+		}, 100);
 
 		// Clean up the timer when the component is unmounted
 		return () => clearTimeout(timer);
@@ -72,36 +72,28 @@ export default function Preloader() {
       {isVisible && 
 			<div id="preloader" className="preloader">
 				<div className="animation-preloader">
-					<div className="edu-preloader-icon">
-						<img src="assets/img/preloader.gif" alt="" />
-					</div>
+					{/* <div className="edu-preloader-icon">
+						<img src="assets/img/logo.png" alt="" />
+					</div> */}
 					<div className="txt-loading">
-						<span data-text-preloader="E" className="letters-loading">
-							E
-						</span>
-						<span data-text-preloader="D" className="letters-loading">
-							D
-						</span>
-						<span data-text-preloader="U" className="letters-loading">
-							U
-						</span>
 						<span data-text-preloader="S" className="letters-loading">
 							S
 						</span>
-						<span data-text-preloader="P" className="letters-loading">
-							P
+						<span data-text-preloader="M" className="letters-loading">
+							M
 						</span>
-						<span data-text-preloader="A" className="letters-loading">
-							A
+						<span data-text-preloader="V" className="letters-loading">
+							V
+						</span>
+						<span data-text-preloader="E" className="letters-loading">
+							E
 						</span>
 						<span data-text-preloader="C" className="letters-loading">
 							C
 						</span>
-						<span data-text-preloader="E" className="letters-loading">
-							E
-						</span>
+						
 					</div>
-					<p className="text-center">Loading</p>
+					<p className="text-center">Loading...</p>
 				</div>
 				<div className="loader">
 					<div className="row">

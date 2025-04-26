@@ -1,4 +1,4 @@
-import React, {
+import  {
     createContext,
     useState,
     useEffect,
@@ -18,6 +18,7 @@ import React, {
   export function AppProvider({ children }: AppProviderProps) {
     const [showNav,setShowNav] = useState(false)
     const [isMobile,setIsMobile] = useState(false)
+    const [formOpen,setFormOpen] = useState(false)
   
     // Resize detection
     useEffect(() => {
@@ -32,7 +33,7 @@ import React, {
     return (
       <AppContext.Provider
         value={{
-            showNav,setShowNav,isMobile,setIsMobile
+            showNav,setShowNav,isMobile,setIsMobile,formOpen,setFormOpen
         }}
       >
         {children}

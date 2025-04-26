@@ -3,7 +3,7 @@
 const FaqHomeThree = () => {
   return (
     <>
-      <section className="faq-section fix section-padding pt-10 ">
+      <section className="faq-section fix section-padding pt-10 " style={{position:"relative"}}>
             <div className="container">
                 <div className="faq-wrapper style-2">
                     <div className="row g-4 align-items-center">
@@ -90,14 +90,12 @@ const FaqHomeThree = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-6">
+                        <div className="col-lg-6"> 
                            <div className="faq-image-2">
-                                <img src="https://images.pexels.com/photos/9490248/pexels-photo-9490248.jpeg?auto=compress&cs=tinysrgb&w=565" alt="img" className="wow img-custom-anim-left" />
+                                <img src="assets/img/faqback.png" alt="img" className="wow img-custom-anim-left" />
                                 <div className="bg-shape">
                                 </div>
-                                <div className="quote-shape float-bob-x">
-                                    <img src="https://images.pexels.com/photos/8199622/pexels-photo-8199622.jpeg?auto=compress&cs=tinysrgb&w=370" alt="img" />
-                                </div>
+                               
                            </div>
                         </div>
                     </div>

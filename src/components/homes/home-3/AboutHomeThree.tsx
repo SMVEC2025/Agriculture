@@ -41,10 +41,8 @@ const AboutHomeThree = () => {
                             </div>
                             <div className="col-xl-5 col-lg-6">
                                 <div className="about-image">
-                                    <img src="assets/img/about/agri.png" alt="img" className="wow img-custom-anim-left" />
-                                    <div className="bg-shape">
-                                        <img src="assets/img/about/bg-shape.png" alt="img" />
-                                    </div>
+                                <img className="homeabt-img" src="assets/img/4G3A8492.JPG" alt="img" />
+
                                     <div className="counter-box">
                                         <p>More then</p>
                                         <h2><span className="odometer" data-count="2800">

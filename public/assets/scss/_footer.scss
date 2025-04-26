@@ -760,6 +760,10 @@
 .footer-section {
     position: relative;
     height: 600px;
+    @media (max-width:576px) {
+        height: fit-content;
+
+    }
 
     .circle-shape-2 {
         position: absolute;

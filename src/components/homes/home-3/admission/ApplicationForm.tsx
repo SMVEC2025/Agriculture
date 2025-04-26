@@ -1,4 +1,5 @@
 import { useState } from "react"
+import Form from "../../../../common/Form"
 
 function ApplicationForm() {
     const [openQualification, setOpenQualification] = useState(false)
@@ -6,7 +7,8 @@ function ApplicationForm() {
     return (
         <div className="af_main">
             <button>Application Closed</button>
-            <div onClick={() => setOpenApllication(!openApplication)} className={`applicationdate ${openApplication ? "open" : ""}`}>
+            <Form/>
+            <div className={`applicationdate ${openApplication ? "open" : ""}`}  onClick={() => setOpenApllication(!openApplication)} >
                 <button>+</button>
                 <div className="header">
                     <h4>Application Dates</h4>

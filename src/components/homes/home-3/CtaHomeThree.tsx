@@ -9,12 +9,12 @@ const CtaHomeThree = () => {
             <div className="container-fluid">
                 <div className="row g-4">
                     <div className="col-xl-2 col-lg-6">
-                        <div className="coureses-image float-bob-x">
+                        {/* <div className="coureses-image float-bob-x">
                             <img src="assets/img/courses/girl.png" alt="img" className="wow img-custom-anim-left" data-wow-duration="1.5s" data-wow-delay="0.2s" />
                             <div className="bg-shape">
                                 <img src="assets/img/courses/bg-shape.png" alt="img" />
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                     <div className="col-xl-7 col-lg-6">
                         <div className="quality-coureses-content text-center">
@@ -34,12 +34,12 @@ const CtaHomeThree = () => {
                         </div>
                     </div>
                     <div className="col-xl-3 col-lg-6">
-                        <div className="coureses-image style-2 float-bob-y">
+                        {/* <div className="coureses-image style-2 float-bob-y">
                             <img src="https://img.freepik.com/free-photo/man-blue-shirt-smiling-with-backpack_1187-2295.jpg?t=st=1745402549~exp=1745406149~hmac=3eef1279265c2b5e91e995e9aa1dab8201f229b0f4a66730dfdc89d24d20c8d2&h=382" alt="img" className="wow img-custom-anim-right" data-wow-duration="1.5s" data-wow-delay="0.4s" />
                             <div className="bg-shape">
                                 <img src="assets/img/courses/bg-shape-2.png" alt="img" />
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

@@ -235,7 +235,16 @@
 
 .testimonial-section-3 {
     position: relative;
-    background-attachment: fixed;
+    background-size: fill;
+    img{
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        width: 100%;
+        object-fit: cover;
+        background-attachment: fixed;
+    }
 
     &::before {
         @include before;

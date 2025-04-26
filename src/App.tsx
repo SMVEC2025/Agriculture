@@ -14,8 +14,11 @@ import Contact from "./components/contact";
 import { AppProvider } from "./context/AppContext";
 import Navbar from "./components/navbar/Navbar";
 import Admission from "./components/homes/home-3/admission/Admission";
-import Application from "./components/homes/home-3/admission/Application";
+import HorticultureAdmission from "./components/homes/home-3/admission/HorticultureAdmission";
 import AboutHistory from "./components/abouthistory/AboutHistory";
+import AgricultureAdmission from "./components/homes/home-3/admission/AgricultureAdmission";
+import CampusLife from "./components/campuslife";
+import InstantForm from "./common/InstantForm";
 
 function App() {
   return (
@@ -24,6 +27,7 @@ function App() {
       <Wrapper>
         <Navbar/>
         {/* Define your Routes here */}
+        <InstantForm/>
         <Routes>
           <Route path="/" element={<HomeThree />} />
           <Route path="/courses-detail" element={<CoursesDetailsTwo />} />
@@ -36,10 +40,10 @@ function App() {
           <Route path="/faq" element={<Faq />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/admission" element={<Admission />} />
-          <Route path="/application" element={<Application />} />
+          <Route path="/admission-agriculture" element={<AgricultureAdmission />} />
+          <Route path="/admission-horticulture" element={<HorticultureAdmission />} />
           <Route path="/history" element={<AboutHistory />} />
-          
-          
+          <Route path="/campus-life" element={<CampusLife />} />
           {/* Catch-all route for unmatched paths */}
           <Route path="*" element={<NotFound />} />
         </Routes>
