@@ -48,7 +48,7 @@ const AboutHomeThree = () => {
                                         <h2><span className="odometer" data-count="2800">
                                             <Count number={2800} text='+' />
                                         </span></h2>
-                                        <p>Quality Courses</p>
+                                        <p>placements</p>
                                     </div>
                                 </div>
                             </div>
