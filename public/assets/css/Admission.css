@@ -506,3 +506,85 @@
     color: black;
   }
   }
+
+
+
+  @media (max-width: 768px) {
+    .form-container{
+      width: 100%;margin: 0;
+      height: 100vh;
+      
+    }
+    .if_main{
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.459);
+      backdrop-filter: blur(5px);
+      z-index: 1005;
+    }
+    .close-btn{
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      font-size: 30px;
+      color: rgb(0, 0, 0);
+      cursor: pointer;
+      z-index: 1006;
+    }
+    .close-btn:hover{
+     scale: 1.1;
+    }
+    .if_main>div{
+      scale: 1;
+    }
+    .if_main{
+      button{
+          background-color: var(--theme-red);
+      }
+      form{
+          height: fit-content;
+          padding: 0;
+      }
+      
+    .form-container h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+    }
+    
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 0.1rem;
+      font-weight: 600;
+      color: #34495e;
+    }
+    
+    .form-group input[type="text"],
+    .form-group input[type="tel"],
+    .form-group select {
+      width: 100%;
+      padding: 0.25rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+    
+    .form-group input[type="text"]:focus,
+    .form-group input[type="tel"]:focus,
+    .form-group select:focus {
+      border-color: #3498db;
+      outline: none;
+      color: black;
+    }
+    }
+  
+  }
