@@ -79,3 +79,6 @@
 .mmbtn.color{
     color: var(--bg-5);
 }
+.mmbtn.true{
+    color: var(--bg-5);
+}

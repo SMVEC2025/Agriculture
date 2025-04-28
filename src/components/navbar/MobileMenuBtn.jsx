@@ -14,8 +14,9 @@ function MobileMenuBtn() {
         setShowItem('');
     }
   console.log(showMobileSlider)
+  console.log(`mmbtn ${showNav ? "color" : ""} ${showMobileSlider ? "true" : ""}`)
     return (
-        <div className={`mmbtn ${showNav ? "color" : ""}`}>
+        <div className={`mmbtn ${showNav ? "color" : ""} ${showMobileSlider ? "true" : ""}`}>
             {showMobileSlider ? (
                 <div onClick={handleClose}><IoIosClose /></div> // Close button triggers handleClose
             ) : (

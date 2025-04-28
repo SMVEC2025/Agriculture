@@ -1,10 +1,11 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useContext } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay, Parallax } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/parallax";
+import { AppContext } from "../../../context/AppContext";
 
 const slides = [
   {
@@ -26,7 +27,7 @@ const slides = [
 
 const HeroSlider: React.FC = () => {
   const swiperRef = useRef<any>(null);
-
+  const {setFormOpen} = useContext(AppContext)
   useEffect(() => {
     const swiperInstance = swiperRef.current?.swiper;
     if (swiperInstance) {
@@ -99,7 +100,7 @@ const HeroSlider: React.FC = () => {
                 </div>
                 <div className="clearfix"></div>
                 <div data-swiper-parallax="500" className="slide-btns">
-                  <a href="#" className="theme-btn-s2">Apply now</a>
+                  <a  className="theme-btn-s2" onClick={()=>setFormOpen(true)}>Apply now</a>
                   <a href="#" className="theme-btn-s3">
                     <i className="fas fa-chevron-circle-right"></i> About us
                   </a>

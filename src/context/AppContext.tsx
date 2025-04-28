@@ -24,15 +24,19 @@ import  {
     const [showMobileSlider,setShowMobileSlider]=useState(false)
     const [showItem,setShowItem]=useState('')
 
+    // Effect to track screen size changes
     useEffect(() => {
       const handleResize = () => {
         setIsMobile(window.innerWidth <= 768);
       };
-  
+    
       window.addEventListener("resize", handleResize);
+      
+      handleResize(); // <-- CALL IT IMMEDIATELY to set initial state correctly
+    
       return () => window.removeEventListener("resize", handleResize);
-    }, [isMobile]);
-  
+    }, []);
+   console.log(isMobile)
     return (
       <AppContext.Provider
         value={{
