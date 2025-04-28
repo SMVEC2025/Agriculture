@@ -3,7 +3,7 @@ import { lazy } from 'react';
 import { Link } from 'react-router-dom';
 const MyTimer = lazy(() => import('../../common/Timer'));
 
-const EventDetailsArea = () => {
+const EventDetailsArea = ({events}) => {
   return (
     <>
         <section className="event-details-section section-padding pt-0">
@@ -13,10 +13,10 @@ const EventDetailsArea = () => {
                         <div className="col-lg-8">
                             <div className="event-details-items">
                                 <div className="details-image">
-                                    <img src="assets/img/event/details-1.jpg" alt="img" />
+                                    <img src={events?.acf?.image} alt="img" />
                                 </div>
                                 <div className="event-details-content">
-                                    <h3>Event Description</h3>
+                                    <h3>{events?.acf?.title}</h3>
                                     <p className="mb-4">
                                         Are you looking for ways to improve your study habits and boost your academic performance? Join us for an engaging workshop where we’ll explore effective study techniques that will help you excel in your studies. This session will cover proven method note-taking, time management, memory enhancement, and exam preparation. Whether you're in high school or college, these skills.
                                     </p>
@@ -55,7 +55,7 @@ const EventDetailsArea = () => {
                                         <div className="col-md-4">
                                             <div className="event-image-items border-right-none">
                                                 <div className="event-image">
-                                                    <img src="assets/img/event/details-2.png" alt="img" />
+                                                    <img src="/assets/img/event/details-2.png" alt="img" />
                                                 </div>
                                                 <div className="event-content">
                                                     <h4>
@@ -74,7 +74,7 @@ const EventDetailsArea = () => {
                                         <div className="col-md-4">
                                             <div className="event-image-items border-right-none">
                                                 <div className="event-image">
-                                                    <img src="assets/img/event/details-3.png" alt="img" />
+                                                    <img src="/assets/img/event/details-3.png" alt="img" />
                                                 </div>
                                                 <div className="event-content">
                                                     <h4>
@@ -93,7 +93,7 @@ const EventDetailsArea = () => {
                                         <div className="col-md-4">
                                             <div className="event-image-items">
                                                 <div className="event-image">
-                                                    <img src="assets/img/event/details-4.png" alt="img" />
+                                                    <img src="/assets/img/event/details-4.png" alt="img" />
                                                 </div>
                                                 <div className="event-content">
                                                     <h4>
@@ -120,31 +120,19 @@ const EventDetailsArea = () => {
                                     <li>
                                         <span>
                                             <i className="fas fa-calendar-alt"></i>
-                                            Start Date
+                                             Date
                                         </span>
                                         <span className="text">15 October 2024</span>
                                     </li>
-                                    <li>
-                                        <span>
-                                            <i className="fas fa-calendar-alt"></i>
-                                            End Date
-                                        </span>
-                                        <span className="text">20 October 2024</span>
-                                    </li>
+                                 
                                     <li>
                                         <span>
                                             <i className="far fa-clock"></i>
-                                            Start Time
+                                             Time
                                         </span>
                                         <span className="text">08:00 am</span>
                                     </li>
-                                    <li>
-                                        <span>
-                                            <i className="far fa-clock"></i>
-                                            End Time
-                                        </span>
-                                        <span className="text">05:00 pm</span>
-                                    </li>
+                                   
                                     <li>
                                         <span>
                                             <i className="far fa-map-marker-alt"></i>
@@ -152,23 +140,9 @@ const EventDetailsArea = () => {
                                         </span>
                                         <span className="text">New York</span>
                                     </li>
-                                    <li>
-                                        <span>
-                                            <i className="far fa-money-bill-wave"></i>
-                                            Ticket Price
-                                        </span>
-                                        <span className="text color-2">$170.00</span>
-                                    </li>
-                                    <li>
-                                        <span>
-                                            <i className="far fa-loveseat"></i>
-                                            Total Seat
-                                        </span>
-                                        <span className="text color-3">50</span>
-                                    </li>
+                                   
                                 </ul>
-                                <Link to="/event-details" className="theme-btn">Book your seat</Link>
-                              <MyTimer />
+                        
                                 <Link to="/event-details" className="share-btn"><i className="fas fa-share"></i> Share this events</Link>
                             </div>
                         </div>

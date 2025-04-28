@@ -1,0 +1,81 @@
+.mm_main{
+    position: fixed;
+    z-index: 1000;
+    right:0;
+    top: 0;
+    background-color: rgb(240, 243, 255);
+    width: 0;
+    height: 100vh;
+    transition: all 0.3s ease-out;
+}
+.mm_main.opened{
+    width: 100%;
+}
+.mm_main.closed{
+    width: 0;
+}
+.mm_con1{
+    margin-left: 30px;
+    margin-top: 10vh;
+    h2{
+        margin-bottom: 1rem;
+        font-weight: 500;
+    }
+    .sub{
+        margin-left: 30px;
+        height: 0;
+        overflow: hidden;
+        transition: all 0.3s ease-out;
+    }
+    .sub.show{
+        height: 120px;
+        }
+}
+.mm_menuitems{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+    margin-top: 2rem;
+}
+.mm_menuitems{
+    h3{
+        display: flex;
+        justify-content: center;align-items: center;
+        margin: 0;
+        padding: 0;
+        color: black;
+        font-weight: 500;
+        letter-spacing: 0.8px;
+    }
+    
+}
+.mm_menuitems.show{
+    h3{
+        display: flex;
+        justify-content: center;align-items: center;
+        margin: 0;
+        padding: 0;
+        color: black;
+        font-weight: 500;
+        letter-spacing: 0.8px;
+        font-size: 25px;
+    }
+    
+}
+
+
+/* ////////////////////////////////// */
+/* From Uiverse.io by Cevorob */ 
+.mmbtn{
+    position: fixed;
+    right: 20px;
+    top: 15px;
+    color: white;
+    z-index: 1002;
+    font-size: 40px;
+}
+.mmbtn.color{
+    color: var(--bg-5);
+}

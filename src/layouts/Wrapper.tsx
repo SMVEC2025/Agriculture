@@ -1,8 +1,10 @@
 
 
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import ScrollToTop from "../common/ScrollToTop";    
 import WOW from "wow.js"; 
+import { AppContext } from "../context/AppContext";
+import MobileMenuBtn from "../components/navbar/MobileMenuBtn";
 
 const Wrapper = ({ children }: any) => {
   useEffect(() => {
@@ -10,7 +12,6 @@ const Wrapper = ({ children }: any) => {
       // Dynamically import bootstrap's JavaScript bundle
       import("bootstrap/dist/js/bootstrap.bundle.min.js")
         .then(() => {
-          console.log('Bootstrap JS loaded');
         })
         .catch(error => console.error('Error loading Bootstrap JS:', error));
     }
@@ -21,11 +22,12 @@ const Wrapper = ({ children }: any) => {
     const wow = new WOW({ live: false });
     wow.init();
   }, []);
- 
+  const {isMobile}=useContext(AppContext)
   return (
     <> 
       {children}
       <ScrollToTop /> 
+      {isMobile?( <MobileMenuBtn/>):null}
     </>
   );
 };

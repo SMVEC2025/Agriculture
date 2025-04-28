@@ -5,29 +5,30 @@ import { useNavigate } from "react-router-dom";
 import { IoMdClose } from "react-icons/io";
 
 function Navbar() {
-  const [navItemsCheck, setNavItemsCheck] = useState('');
+  const [navItemsCheck, setNavItemsCheck] = useState(" ");
   const [ShowNavSlider, setShowNavSlider] = useState(false)
-  const { showNav, setShowNav,setFormOpen } = useContext(AppContext);
+  const { showNav, setShowNav,setFormOpen,isMobile } = useContext(AppContext);
   const navigate = useNavigate()
-
   const handleMouseIn = (value: string): void => {
-    setNavItemsCheck(value);
     setShowNav(true)
+    setNavItemsCheck(value);
     setTimeout(() => {
       setShowNavSlider(true)
     }, 50);
   };
   const handleMouseLeave = () => {
-    setNavItemsCheck('')
+    setNavItemsCheck(" ")
     setShowNavSlider(false)
 
   }
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 150) {
-        setShowNav(true);
-      } else {
-        setShowNav(false);
+      if(navItemsCheck == ' '){
+        if (window.scrollY > 150) {
+          setShowNav(true);
+        } else {
+          setShowNav(false);
+        }
       }
     };
 
@@ -38,15 +39,17 @@ function Navbar() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [navItemsCheck]);
   return (
     <>
-      <div className={`nav_main ${showNav ? "show" : ""}`}>
+      <div  className={`nav_main ${showNav ? "show" : ""}`}>
         <div className="nav-logo-container">
           <img src={`/assets/img/${showNav ? 'agrilogodark' : 'agrilogo'}.png`} alt="" />
         </div>
         <div className="nav-menu-container">
-          <ul>
+          {isMobile?(<></>):
+          (<>
+           <ul>
             <li onMouseEnter={handleMouseLeave} onClick={() => navigate('/')}>Home</li>
             <li onMouseEnter={() => handleMouseIn('about')} >About</li>
             <li onMouseEnter={() => handleMouseIn('academy')} >Academics</li>
@@ -54,6 +57,7 @@ function Navbar() {
             <li onMouseEnter={() => handleMouseIn('admission')} >Admissions</li>
           </ul>
           <button className="hero-button" onClick={()=>setFormOpen(true)}>Apply</button>
+          </>)}
         </div>
       </div>
       {navItemsCheck == 'about' && (
@@ -88,8 +92,8 @@ function Navbar() {
           <div className="navslider_items">
             <ul>
               <li onClick={() => navigate('/faculty')}>Faculty</li>
-              <li onCanPlay={() => navigate('/courses-detail')}>Bsc Agriculture</li>
-              <li onCanPlay={() => navigate('/courses-detail')}>Bsc Ariclture</li>
+              <li onClick={() => navigate('/courses-detail')}>Bsc Agriculture</li>
+              <li onClick={() => navigate('/courses-detail')}>Bsc Ariclture</li>
             </ul>
 
           </div>
@@ -108,7 +112,7 @@ function Navbar() {
           <div className="navslider_items">
             <ul>
               <li onClick={() => navigate('/campus-life')}>campus Life</li>
-              <li onCanPlay={() => navigate('/event')}>News and events</li>
+              <li onClick={() => navigate('/event')}>News and events</li>
             </ul>
 
           </div>

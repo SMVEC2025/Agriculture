@@ -148,6 +148,7 @@
 
     .event-card-items {
         padding: 50px 30px;
+        height: 100%;
         position: relative;
         overflow: hidden;
         border-right: 1px solid $border-color;
@@ -157,7 +158,26 @@
             background-color: $white;
             @include transition;
         }
-    
+        .hllo{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            object-fit: cover;
+            z-index: 1;
+        }
+        .container{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            object-fit: cover;
+            background-image: linear-gradient(0deg,black,rgba(255, 0, 0, 0));
+            z-index: 2;
+
+        }
         .post-cat {
             line-height: 1;
             padding: 8px 10px;
@@ -189,6 +209,10 @@
             @include breakpoint (max-sm){
                 margin-top: 80px;
             }
+            h4{
+                color: $white;
+                font-weight: 500
+            }
 
             .date-list {
                 @include flex;
@@ -204,11 +228,13 @@
                 li {
                     font-size: 16px;
                     font-weight: 400;
+                    color: $white;
                     @include transition;
 
                     i {
                         color: $theme-red;
                         margin-left: 7px;
+                        margin-right: 1px;
                         @include transition;
                     }
                 }
@@ -217,7 +243,7 @@
             .theme-btn {
                 font-size: 14px;
                 padding: 16px 25px;
-                // opacity: 0;
+                opacity: 0;
                 // visibility: hidden;
 
                 &::before,&::after {
@@ -711,6 +737,7 @@
                     max-width: 622px;
     
                     h4 {
+                        color: white;
                         line-height: 135%;
                         font-size: 24px;
     
@@ -854,9 +881,10 @@
                     margin-top: 25px;
 
                     h4 {
+                        color: white;
 
                         a {
-                            color: $header-color;
+                            color: $white;
                         }
                     }
                     span {

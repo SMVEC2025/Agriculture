@@ -1,3 +1,4 @@
+import { useLocation } from "react-router-dom";
 import BreacrumbEventDetails from "../../common/breadcrumb/BreacrumbEventDetails";
 import MarqueeOne from "../../common/MarqueeOne";
 import Preloader from "../../common/Preloader";
@@ -8,11 +9,15 @@ import EventDetailsArea from "./EventDetailsArea";
  
 
 const EventDetails = () => {
+
+
+	const location = useLocation();
+	const Events = location.state.event
 	return (
 		<>
 		<Preloader />
       <BreacrumbEventDetails />
-      <EventDetailsArea />
+      <EventDetailsArea events={Events} />
       <MarqueeOne style_2={true} />
 			<FooterOne />
 			<ScrollTop />

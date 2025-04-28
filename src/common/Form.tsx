@@ -127,7 +127,6 @@ const Form: React.FC = () => {
     e.preventDefault();
     
     if (validate()) {
-      console.log('Form submitted:', formData);
       setIsSubmitted(true);
       // Here you would typically send the data to a server
     }

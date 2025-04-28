@@ -10,7 +10,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    transition: background 0.3s ease-out;
 
 }
 .nav-logo-container{
@@ -35,6 +34,7 @@
     li{
         cursor: pointer;
     }
+    
     button{
         background-color: var(--theme-red);
         color: white;
@@ -62,7 +62,7 @@
     gap: 2rem;
     padding-top: 2rem;
     opacity: 0;
-    transition: all 0.3s ease-out;
+    transition: all 0.1s ease-out;
     border-top: 1px solid rgba(128, 128, 128, 0.301);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     .close-btn{
@@ -121,4 +121,16 @@
     }
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
+}
+
+
+
+@media (max-width:576px) {
+    .nav-logo-container{
+        padding: 0;
+        img{
+            width: 200px;
+            height: auto;
+        }
+    }
 }
