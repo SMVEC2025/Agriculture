@@ -1,13 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-type TimelineItem = {
-  year: string;
-  description: string;
-  image: string;
-  title: string;
-};
 
-const timelineData: TimelineItem[] = [
+const timelineData= [
   {
     year: '1999',
     description: ' Sri Manakula Vinayagar Engineering College (SMVEC) was founded by the Sri Manakula Vinayaga Educational Trust to provide quality, affordable education, especially for underprivileged communities.',
@@ -50,9 +44,9 @@ Strengthened placement records, with students placed in top companies in India a
 }, 
 ];
 
-export const Timeline: React.FC = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
+export const Timeline = () => {
+  const containerRef = useRef
+  const itemRefs = useRef
   const [activeIndex, setActiveIndex] = useState(0);
   const [background, setBackground] = useState(timelineData[0].image);
 
