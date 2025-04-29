@@ -6,6 +6,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/parallax";
 import { AppContext } from "../../../context/AppContext";
+import { useNavigate } from "react-router-dom";
 
 const slides = [
   {
@@ -28,6 +29,7 @@ const slides = [
 const HeroSlider: React.FC = () => {
   const swiperRef = useRef<any>(null);
   const {setFormOpen} = useContext(AppContext)
+  const navigate = useNavigate()
   useEffect(() => {
     const swiperInstance = swiperRef.current?.swiper;
     if (swiperInstance) {
@@ -101,7 +103,7 @@ const HeroSlider: React.FC = () => {
                 <div className="clearfix"></div>
                 <div data-swiper-parallax="500" className="slide-btns">
                   <a  className="theme-btn-s2" onClick={()=>setFormOpen(true)}>Apply now</a>
-                  <a href="#" className="theme-btn-s3">
+                  <a  onClick={()=>navigate('/about')} className="theme-btn-s3">
                     <i className="fas fa-chevron-circle-right"></i> About us
                   </a>
                 </div>
