@@ -327,6 +327,7 @@
   
   .form-group input[type="text"],
   .form-group input[type="tel"],
+  .form-group input[type="email"],
   .form-group select {
     width: 100%;
     padding: 0.75rem;
@@ -355,8 +356,9 @@
     color: black;
   }
   .error-message {
-    display: block;
-    margin-top: 0.5rem;
+    display: flex;
+    margin-top: 0.1rem;
+    padding: 0;
     color: #e74c3c;
     font-size: 0.85rem;
   }
@@ -378,7 +380,7 @@
   }
   
   .captcha-group {
-    margin-top: 2rem;
+    margin-top: 0.2em;
   }
   
   .captcha-container {
@@ -471,10 +473,10 @@
     cursor: pointer;
   }
   .close-btn:hover{
-   scale: 1.1;
+   scale: 1;
   }
   .if_main>div{
-    scale: 0.9;
+    scale:0.9;
   }
   .if_main{
     button{
@@ -488,14 +490,18 @@
   .form-container h1 {
     text-align: center;
     color: #2c3e50;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.1rem;
     font-size: 1.8rem;
   }
   
   .form-group {
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
   }
-  
+  .form-group.error{
+    label {
+    color: red;
+    font-weight: 400;
+  }}
   .form-group label {
     display: block;
     margin-bottom: 0.1rem;
@@ -505,6 +511,7 @@
   
   .form-group input[type="text"],
   .form-group input[type="tel"],
+  .form-group input[type="email"],
   .form-group select {
     width: 100%;
     padding: 0.25rem;
@@ -539,6 +546,7 @@
         backdrop-filter: blur(5px);
         z-index: 1005;
         padding: 0;
+        overflow: scroll;
         
         
     .form-container{
@@ -595,6 +603,7 @@
     
     .form-group input[type="text"],
     .form-group input[type="tel"],
+  .form-group input[type="email"],
     .form-group select {
       width: 100%;
       padding: 0.25rem;

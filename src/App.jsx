@@ -22,6 +22,7 @@ import InstantForm from "./common/InstantForm";
 import MobileMenu from "./components/navbar/MobileMenu";
 import MobileMenuBtn from "./components/navbar/MobileMenuBtn";
 import { useContext } from "react";
+import AdmissionForm from "./common/breadcrumb/AdmissionForm";
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
           <Route path="/admission-horticulture" element={<HorticultureAdmission />} />
           <Route path="/history" element={<AboutHistory />} />
           <Route path="/campus-life" element={<CampusLife />} />
+          <Route path="/test" element={<AdmissionForm />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Wrapper>
