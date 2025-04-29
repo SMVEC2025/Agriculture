@@ -1,746 +1,120 @@
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
- 
+import { BiExpand } from "react-icons/bi";
 
 const GalleryArea = () => {
-  return (
-    <>
-       <section className="gallery-section section-padding pt-0 fix">
-            <div className="container">
-                <div className="section-title text-center">
-                    <h6>Photo Gallery</h6>
-                    <h2>
-                        Explore Our Photo Gallery
-                    </h2>
+    const galleryItems = [
+        { image: "https://img.freepik.com/free-photo/students-with-tablets-talking_23-2147663375.jpg", name: "Campus Walkway", category: "university" },
+        { image: "https://img.freepik.com/free-photo/couple-with-salesman-furniture-store_1157-37482.jpg", name: "Evening Football", category: "sports" },
+        { image: "https://img.freepik.com/premium-photo/young-people-children-happy-students-gathered-together-celebrating-student-day_285885-4710.jpg", name: "Street Mural", category: "arts and culture" },
+        { image: "https://img.freepik.com/free-photo/friends-with-smile-happy-emotions-university_496169-67.jpg", name: "Group Study", category: "students" },
+        { image: "https://img.freepik.com/free-photo/happy-circle-friends-planning-trip-globe-trotters-inspecting-map-being-home-european-indian-ethnicity-men-holding-guitar-globe_1157-47900.jpg", name: "Silent Reading", category: "university" },
+        { image: "https://img.freepik.com/free-photo/india-republic-day-celebration-digital-art-with-people_23-2151070862.jpg", name: "Hoops Night", category: "sports" },
+    ];
+
+    const [selectedCategory, setSelectedCategory] = useState("all");
+    const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+
+    const filteredItems = selectedCategory === "all"
+        ? galleryItems
+        : galleryItems.filter(item => item.category.toLowerCase() === selectedCategory.toLowerCase());
+
+    const openLightbox = (index: number) => {
+        setLightboxIndex(index);
+        document.body.style.overflow = "hidden"; // prevent scroll
+    };
+
+    const closeLightbox = () => {
+        setLightboxIndex(null);
+        document.body.style.overflow = "auto";
+    };
+
+    const nextImage = () => {
+        if (lightboxIndex !== null) {
+            setLightboxIndex((lightboxIndex + 1) % filteredItems.length);
+        }
+    };
+
+    const prevImage = () => {
+        if (lightboxIndex !== null) {
+            setLightboxIndex((lightboxIndex - 1 + filteredItems.length) % filteredItems.length);
+        }
+    };
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+        if (lightboxIndex !== null) {
+            if (e.key === "ArrowRight") nextImage();
+            if (e.key === "ArrowLeft") prevImage();
+            if (e.key === "Escape") closeLightbox();
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener("keydown", handleKeyDown);
+        return () => window.removeEventListener("keydown", handleKeyDown);
+    });
+
+    return (
+        <>
+            <section className="gallery-section section-padding pt-0 fix">
+                <div className="container">
+                    <div className="section-title text-center">
+                        <h6>Photo Gallery</h6>
+                        <h2>Explore Our Photo Gallery</h2>
+                    </div>
+
+                    {/* Tabs */}
+                    <ul className="nav justify-content-center mb-4">
+                        {["all", "university", "sports", "arts and culture", "students"].map(cat => (
+                            <li key={cat} className="nav-item">
+                                <button
+                                    className={`nav-link ${selectedCategory === cat ? "active" : ""}`}
+                                    onClick={() => setSelectedCategory(cat)}
+                                >
+                                    {cat.charAt(0).toUpperCase() + cat.slice(1)}
+                                </button>
+                            </li>
+                        ))}
+                    </ul>
+
+                    {/* Gallery Items */}
+                    <div className="row">
+                        {filteredItems.map((e, i) => (
+                            <div key={i} className="col-xl-4 col-lg-6 col-md-6 mb-4">
+                                <div className="portfolio-item">
+                                    <div className="portfoio-thumb position-relative">
+                                        <img src={e.image} alt={e.name} className="img-fluid" />
+                                        <div className="portfolio-arrow position-absolute top-0 end-0 p-2">
+                                            <button onClick={() => openLightbox(i)} className="btn btn-light rounded-circle">
+                                                <BiExpand/>
+                                            </button>
+                                        </div>
+                                        <div className="portfolio-text text-center mt-2">
+                                            <h3>{e.name}</h3>
+                                            <p>{e.category}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Lightbox Full View */}
+                    {lightboxIndex !== null && (
+                        <div className="lightbox-overlay" onClick={closeLightbox}>
+                            <div className="lightbox-content" onClick={e => e.stopPropagation()}>
+                                <img src={filteredItems[lightboxIndex].image} alt="Preview" />
+                                <h5 className="text-white mt-2">{filteredItems[lightboxIndex].name}</h5>
+                                
+                            </div>
+                        </div>
+                    )}
                 </div>
-                <ul className="nav">
-                    <li className="nav-item wow fadeInUp" data-wow-delay=".2s">
-                        <a href="#All" data-bs-toggle="tab" className="nav-link active">
-                            All Courses 
-                        </a>
-                    </li>
-                    <li className="nav-item wow fadeInUp" data-wow-delay=".4s">
-                        <a href="#Design" data-bs-toggle="tab" className="nav-link">
-                            Design
-                        </a>
-                    </li>
-                    <li className="nav-item wow fadeInUp" data-wow-delay=".6s">
-                        <a href="#Business" data-bs-toggle="tab" className="nav-link">
-                            Business
-                        </a>
-                    </li>
-                    <li className="nav-item wow fadeInUp" data-wow-delay=".8s">
-                        <a href="#Marketing" data-bs-toggle="tab" className="nav-link">
-                            Marketing
-                        </a>
-                    </li>
-                    <li className="nav-item wow fadeInUp" data-wow-delay=".9s">
-                        <a href="#University" data-bs-toggle="tab" className="nav-link">
-                            University
-                        </a>
-                    </li>
-                </ul>
-                <div className="tab-content">
-                    <div id="All" className="tab-pane fade show active">
-                        <div className="row">
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="portfolio-item">
-                                    <div className="portfoio-thumb">
-                                        <img src="assets/img/gallery/01.jpg" alt="img" />
-                                        <div className="portfolio-arrow">
-                                            <Link to="/gallery"><i className="fas fa-long-arrow-alt-right"></i></Link>
-                                        </div>
-                                        <div className="portfolio-text">
-                                            <h3>1. University Student Write <br />
-                                                on the exam Paper</h3>
-                                            <p>Student _ Gallery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="portfolio-item">
-                                    <div className="portfoio-thumb">
-                                        <img src="assets/img/gallery/02.jpg" alt="img" />
-                                        <div className="portfolio-arrow">
-                                            <Link to="/gallery"><i className="fas fa-long-arrow-alt-right"></i></Link>
-                                        </div>
-                                        <div className="portfolio-text">
-                                            <h3>University Student Write <br />
-                                                on the exam Paper</h3>
-                                            <p>Student _ Gallery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="portfolio-item">
-                                    <div className="portfoio-thumb">
-                                        <img src="assets/img/gallery/03.jpg" alt="img" />
-                                        <div className="portfolio-arrow">
-                                            <Link to="/gallery"><i className="fas fa-long-arrow-alt-right"></i></Link>
-                                        </div>
-                                        <div className="portfolio-text">
-                                            <h3>University Student Write <br />
-                                                on the exam Paper</h3>
-                                            <p>Student _ Gallery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="portfolio-item">
-                                    <div className="portfoio-thumb">
-                                        <img src="assets/img/gallery/04.jpg" alt="img" />
-                                        <div className="portfolio-arrow">
-                                            <Link to="/gallery"><i className="fas fa-long-arrow-alt-right"></i></Link>
-                                        </div>
-                                        <div className="portfolio-text">
-                                            <h3>University Student Write <br />
-                                                on the exam Paper</h3>
-                                            <p>Student _ Gallery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="portfolio-item">
-                                    <div className="portfoio-thumb">
-                                        <img src="assets/img/gallery/05.jpg" alt="img" />
-                                        <div className="portfolio-arrow">
-                                            <Link to="/gallery"><i className="fas fa-long-arrow-alt-right"></i></Link>
-                                        </div>
-                                        <div className="portfolio-text">
-                                            <h3>University Student Write <br />
-                                                on the exam Paper</h3>
-                                            <p>Student _ Gallery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="portfolio-item">
-                                    <div className="portfoio-thumb">
-                                        <img src="assets/img/gallery/06.jpg" alt="img" />
-                                        <div className="portfolio-arrow">
-                                            <Link to="/gallery"><i className="fas fa-long-arrow-alt-right"></i></Link>
-                                        </div>
-                                        <div className="portfolio-text">
-                                            <h3>University Student Write <br />
-                                                on the exam Paper</h3>
-                                            <p>Student _ Gallery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="portfolio-item">
-                                    <div className="portfoio-thumb">
-                                        <img src="assets/img/gallery/07.jpg" alt="img" />
-                                        <div className="portfolio-arrow">
-                                            <Link to="/gallery"><i className="fas fa-long-arrow-alt-right"></i></Link>
-                                        </div>
-                                        <div className="portfolio-text">
-                                            <h3>University Student Write <br />
-                                                on the exam Paper</h3>
-                                            <p>Student _ Gallery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="portfolio-item">
-                                    <div className="portfoio-thumb">
-                                        <img src="assets/img/gallery/08.jpg" alt="img" />
-                                        <div className="portfolio-arrow">
-                                            <Link to="/gallery"><i className="fas fa-long-arrow-alt-right"></i></Link>
-                                        </div>
-                                        <div className="portfolio-text">
-                                            <h3>University Student Write <br />
-                                                on the exam Paper</h3>
-                                            <p>Student _ Gallery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="portfolio-item">
-                                    <div className="portfoio-thumb">
-                                        <img src="assets/img/gallery/09.jpg" alt="img" />
-                                        <div className="portfolio-arrow">
-                                            <Link to="/gallery"><i className="fas fa-long-arrow-alt-right"></i></Link>
-                                        </div>
-                                        <div className="portfolio-text">
-                                            <h3>University Student Write <br />
-                                                on the exam Paper</h3>
-                                            <p>Student _ Gallery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="Design" className="tab-pane fade">
-                        <div className="row">
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="portfolio-item">
-                                    <div className="portfoio-thumb">
-                                        <img src="assets/img/gallery/01.jpg" alt="img" />
-                                        <div className="portfolio-arrow">
-                                            <Link to="/gallery"><i className="fas fa-long-arrow-alt-right"></i></Link>
-                                        </div>
-                                        <div className="portfolio-text">
-                                            <h3>2. University Student Write <br />
-                                                on the exam Paper</h3>
-                                            <p>Student _ Gallery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="portfolio-item">
-                                    <div className="portfoio-thumb">
-                                        <img src="assets/img/gallery/02.jpg" alt="img" />
-                                        <div className="portfolio-arrow">
-                                            <Link to="/gallery"><i className="fas fa-long-arrow-alt-right"></i></Link>
-                                        </div>
-                                        <div className="portfolio-text">
-                                            <h3>University Student Write <br />
-                                                on the exam Paper</h3>
-                                            <p>Student _ Gallery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="portfolio-item">
-                                    <div className="portfoio-thumb">
-                                        <img src="assets/img/gallery/03.jpg" alt="img" />
-                                        <div className="portfolio-arrow">
-                                            <Link to="/gallery"><i className="fas fa-long-arrow-alt-right"></i></Link>
-                                        </div>
-                                        <div className="portfolio-text">
-                                            <h3>University Student Write <br />
-                                                on the exam Paper</h3>
-                                            <p>Student _ Gallery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="portfolio-item">
-                                    <div className="portfoio-thumb">
-                                        <img src="assets/img/gallery/04.jpg" alt="img" />
-                                        <div className="portfolio-arrow">
-                                            <Link to="/gallery"><i className="fas fa-long-arrow-alt-right"></i></Link>
-                                        </div>
-                                        <div className="portfolio-text">
-                                            <h3>University Student Write <br />
-                                                on the exam Paper</h3>
-                                            <p>Student _ Gallery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="portfolio-item">
-                                    <div className="portfoio-thumb">
-                                        <img src="assets/img/gallery/05.jpg" alt="img" />
-                                        <div className="portfolio-arrow">
-                                            <Link to="/gallery"><i className="fas fa-long-arrow-alt-right"></i></Link>
-                                        </div>
-                                        <div className="portfolio-text">
-                                            <h3>University Student Write <br />
-                                                on the exam Paper</h3>
-                                            <p>Student _ Gallery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="portfolio-item">
-                                    <div className="portfoio-thumb">
-                                        <img src="assets/img/gallery/06.jpg" alt="img" />
-                                        <div className="portfolio-arrow">
-                                            <Link to="/gallery"><i className="fas fa-long-arrow-alt-right"></i></Link>
-                                        </div>
-                                        <div className="portfolio-text">
-                                            <h3>University Student Write <br />
-                                                on the exam Paper</h3>
-                                            <p>Student _ Gallery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="portfolio-item">
-                                    <div className="portfoio-thumb">
-                                        <img src="assets/img/gallery/07.jpg" alt="img" />
-                                        <div className="portfolio-arrow">
-                                            <Link to="/gallery"><i className="fas fa-long-arrow-alt-right"></i></Link>
-                                        </div>
-                                        <div className="portfolio-text">
-                                            <h3>University Student Write <br />
-                                                on the exam Paper</h3>
-                                            <p>Student _ Gallery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="portfolio-item">
-                                    <div className="portfoio-thumb">
-                                        <img src="assets/img/gallery/08.jpg" alt="img" />
-                                        <div className="portfolio-arrow">
-                                            <Link to="/gallery"><i className="fas fa-long-arrow-alt-right"></i></Link>
-                                        </div>
-                                        <div className="portfolio-text">
-                                            <h3>University Student Write <br />
-                                                on the exam Paper</h3>
-                                            <p>Student _ Gallery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="portfolio-item">
-                                    <div className="portfoio-thumb">
-                                        <img src="assets/img/gallery/09.jpg" alt="img" />
-                                        <div className="portfolio-arrow">
-                                            <Link to="/gallery"><i className="fas fa-long-arrow-alt-right"></i></Link>
-                                        </div>
-                                        <div className="portfolio-text">
-                                            <h3>University Student Write <br />
-                                                on the exam Paper</h3>
-                                            <p>Student _ Gallery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="Business" className="tab-pane fade">
-                        <div className="row">
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="portfolio-item">
-                                    <div className="portfoio-thumb">
-                                        <img src="assets/img/gallery/01.jpg" alt="img" />
-                                        <div className="portfolio-arrow">
-                                            <Link to="/gallery"><i className="fas fa-long-arrow-alt-right"></i></Link>
-                                        </div>
-                                        <div className="portfolio-text">
-                                            <h3>3. University Student Write <br />
-                                                on the exam Paper</h3>
-                                            <p>Student _ Gallery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="portfolio-item">
-                                    <div className="portfoio-thumb">
-                                        <img src="assets/img/gallery/02.jpg" alt="img" />
-                                        <div className="portfolio-arrow">
-                                            <Link to="/gallery"><i className="fas fa-long-arrow-alt-right"></i></Link>
-                                        </div>
-                                        <div className="portfolio-text">
-                                            <h3>University Student Write <br />
-                                                on the exam Paper</h3>
-                                            <p>Student _ Gallery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="portfolio-item">
-                                    <div className="portfoio-thumb">
-                                        <img src="assets/img/gallery/03.jpg" alt="img" />
-                                        <div className="portfolio-arrow">
-                                            <Link to="/gallery"><i className="fas fa-long-arrow-alt-right"></i></Link>
-                                        </div>
-                                        <div className="portfolio-text">
-                                            <h3>University Student Write <br />
-                                                on the exam Paper</h3>
-                                            <p>Student _ Gallery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="portfolio-item">
-                                    <div className="portfoio-thumb">
-                                        <img src="assets/img/gallery/04.jpg" alt="img" />
-                                        <div className="portfolio-arrow">
-                                            <Link to="/gallery"><i className="fas fa-long-arrow-alt-right"></i></Link>
-                                        </div>
-                                        <div className="portfolio-text">
-                                            <h3>University Student Write <br />
-                                                on the exam Paper</h3>
-                                            <p>Student _ Gallery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="portfolio-item">
-                                    <div className="portfoio-thumb">
-                                        <img src="assets/img/gallery/05.jpg" alt="img" />
-                                        <div className="portfolio-arrow">
-                                            <Link to="/gallery"><i className="fas fa-long-arrow-alt-right"></i></Link>
-                                        </div>
-                                        <div className="portfolio-text">
-                                            <h3>University Student Write <br />
-                                                on the exam Paper</h3>
-                                            <p>Student _ Gallery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="portfolio-item">
-                                    <div className="portfoio-thumb">
-                                        <img src="assets/img/gallery/06.jpg" alt="img" />
-                                        <div className="portfolio-arrow">
-                                            <Link to="/gallery"><i className="fas fa-long-arrow-alt-right"></i></Link>
-                                        </div>
-                                        <div className="portfolio-text">
-                                            <h3>University Student Write <br />
-                                                on the exam Paper</h3>
-                                            <p>Student _ Gallery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="portfolio-item">
-                                    <div className="portfoio-thumb">
-                                        <img src="assets/img/gallery/07.jpg" alt="img" />
-                                        <div className="portfolio-arrow">
-                                            <Link to="/gallery"><i className="fas fa-long-arrow-alt-right"></i></Link>
-                                        </div>
-                                        <div className="portfolio-text">
-                                            <h3>University Student Write <br />
-                                                on the exam Paper</h3>
-                                            <p>Student _ Gallery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="portfolio-item">
-                                    <div className="portfoio-thumb">
-                                        <img src="assets/img/gallery/08.jpg" alt="img" />
-                                        <div className="portfolio-arrow">
-                                            <Link to="/gallery"><i className="fas fa-long-arrow-alt-right"></i></Link>
-                                        </div>
-                                        <div className="portfolio-text">
-                                            <h3>University Student Write <br />
-                                                on the exam Paper</h3>
-                                            <p>Student _ Gallery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="portfolio-item">
-                                    <div className="portfoio-thumb">
-                                        <img src="assets/img/gallery/09.jpg" alt="img" />
-                                        <div className="portfolio-arrow">
-                                            <Link to="/gallery"><i className="fas fa-long-arrow-alt-right"></i></Link>
-                                        </div>
-                                        <div className="portfolio-text">
-                                            <h3>University Student Write <br />
-                                                on the exam Paper</h3>
-                                            <p>Student _ Gallery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="Marketing" className="tab-pane fade">
-                        <div className="row">
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="portfolio-item">
-                                    <div className="portfoio-thumb">
-                                        <img src="assets/img/gallery/01.jpg" alt="img" />
-                                        <div className="portfolio-arrow">
-                                            <Link to="/gallery"><i className="fas fa-long-arrow-alt-right"></i></Link>
-                                        </div>
-                                        <div className="portfolio-text">
-                                            <h3>4. University Student Write <br />
-                                                on the exam Paper</h3>
-                                            <p>Student _ Gallery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="portfolio-item">
-                                    <div className="portfoio-thumb">
-                                        <img src="assets/img/gallery/02.jpg" alt="img" />
-                                        <div className="portfolio-arrow">
-                                            <Link to="/gallery"><i className="fas fa-long-arrow-alt-right"></i></Link>
-                                        </div>
-                                        <div className="portfolio-text">
-                                            <h3>University Student Write <br />
-                                                on the exam Paper</h3>
-                                            <p>Student _ Gallery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="portfolio-item">
-                                    <div className="portfoio-thumb">
-                                        <img src="assets/img/gallery/03.jpg" alt="img" />
-                                        <div className="portfolio-arrow">
-                                            <Link to="/gallery"><i className="fas fa-long-arrow-alt-right"></i></Link>
-                                        </div>
-                                        <div className="portfolio-text">
-                                            <h3>University Student Write <br />
-                                                on the exam Paper</h3>
-                                            <p>Student _ Gallery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="portfolio-item">
-                                    <div className="portfoio-thumb">
-                                        <img src="assets/img/gallery/04.jpg" alt="img" />
-                                        <div className="portfolio-arrow">
-                                            <Link to="/gallery"><i className="fas fa-long-arrow-alt-right"></i></Link>
-                                        </div>
-                                        <div className="portfolio-text">
-                                            <h3>University Student Write <br />
-                                                on the exam Paper</h3>
-                                            <p>Student _ Gallery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="portfolio-item">
-                                    <div className="portfoio-thumb">
-                                        <img src="assets/img/gallery/05.jpg" alt="img" />
-                                        <div className="portfolio-arrow">
-                                            <Link to="/gallery"><i className="fas fa-long-arrow-alt-right"></i></Link>
-                                        </div>
-                                        <div className="portfolio-text">
-                                            <h3>University Student Write <br />
-                                                on the exam Paper</h3>
-                                            <p>Student _ Gallery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="portfolio-item">
-                                    <div className="portfoio-thumb">
-                                        <img src="assets/img/gallery/06.jpg" alt="img" />
-                                        <div className="portfolio-arrow">
-                                            <Link to="/gallery"><i className="fas fa-long-arrow-alt-right"></i></Link>
-                                        </div>
-                                        <div className="portfolio-text">
-                                            <h3>University Student Write <br />
-                                                on the exam Paper</h3>
-                                            <p>Student _ Gallery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="portfolio-item">
-                                    <div className="portfoio-thumb">
-                                        <img src="assets/img/gallery/07.jpg" alt="img" />
-                                        <div className="portfolio-arrow">
-                                            <Link to="/gallery"><i className="fas fa-long-arrow-alt-right"></i></Link>
-                                        </div>
-                                        <div className="portfolio-text">
-                                            <h3>University Student Write <br />
-                                                on the exam Paper</h3>
-                                            <p>Student _ Gallery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="portfolio-item">
-                                    <div className="portfoio-thumb">
-                                        <img src="assets/img/gallery/08.jpg" alt="img" />
-                                        <div className="portfolio-arrow">
-                                            <Link to="/gallery"><i className="fas fa-long-arrow-alt-right"></i></Link>
-                                        </div>
-                                        <div className="portfolio-text">
-                                            <h3>University Student Write <br />
-                                                on the exam Paper</h3>
-                                            <p>Student _ Gallery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="portfolio-item">
-                                    <div className="portfoio-thumb">
-                                        <img src="assets/img/gallery/09.jpg" alt="img" />
-                                        <div className="portfolio-arrow">
-                                            <Link to="/gallery"><i className="fas fa-long-arrow-alt-right"></i></Link>
-                                        </div>
-                                        <div className="portfolio-text">
-                                            <h3>University Student Write <br />
-                                                on the exam Paper</h3>
-                                            <p>Student _ Gallery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="University" className="tab-pane fade">
-                        <div className="row">
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="portfolio-item">
-                                    <div className="portfoio-thumb">
-                                        <img src="assets/img/gallery/01.jpg" alt="img" />
-                                        <div className="portfolio-arrow">
-                                            <Link to="/gallery"><i className="fas fa-long-arrow-alt-right"></i></Link>
-                                        </div>
-                                        <div className="portfolio-text">
-                                            <h3>5. University Student Write <br />
-                                                on the exam Paper</h3>
-                                            <p>Student _ Gallery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="portfolio-item">
-                                    <div className="portfoio-thumb">
-                                        <img src="assets/img/gallery/02.jpg" alt="img" />
-                                        <div className="portfolio-arrow">
-                                            <Link to="/gallery"><i className="fas fa-long-arrow-alt-right"></i></Link>
-                                        </div>
-                                        <div className="portfolio-text">
-                                            <h3>University Student Write <br />
-                                                on the exam Paper</h3>
-                                            <p>Student _ Gallery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="portfolio-item">
-                                    <div className="portfoio-thumb">
-                                        <img src="assets/img/gallery/03.jpg" alt="img" />
-                                        <div className="portfolio-arrow">
-                                            <Link to="/gallery"><i className="fas fa-long-arrow-alt-right"></i></Link>
-                                        </div>
-                                        <div className="portfolio-text">
-                                            <h3>University Student Write <br />
-                                                on the exam Paper</h3>
-                                            <p>Student _ Gallery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="portfolio-item">
-                                    <div className="portfoio-thumb">
-                                        <img src="assets/img/gallery/04.jpg" alt="img" />
-                                        <div className="portfolio-arrow">
-                                            <Link to="/gallery"><i className="fas fa-long-arrow-alt-right"></i></Link>
-                                        </div>
-                                        <div className="portfolio-text">
-                                            <h3>University Student Write <br />
-                                                on the exam Paper</h3>
-                                            <p>Student _ Gallery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="portfolio-item">
-                                    <div className="portfoio-thumb">
-                                        <img src="assets/img/gallery/05.jpg" alt="img" />
-                                        <div className="portfolio-arrow">
-                                            <Link to="/gallery"><i className="fas fa-long-arrow-alt-right"></i></Link>
-                                        </div>
-                                        <div className="portfolio-text">
-                                            <h3>University Student Write <br />
-                                                on the exam Paper</h3>
-                                            <p>Student _ Gallery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="portfolio-item">
-                                    <div className="portfoio-thumb">
-                                        <img src="assets/img/gallery/06.jpg" alt="img" />
-                                        <div className="portfolio-arrow">
-                                            <Link to="/gallery"><i className="fas fa-long-arrow-alt-right"></i></Link>
-                                        </div>
-                                        <div className="portfolio-text">
-                                            <h3>University Student Write <br />
-                                                on the exam Paper</h3>
-                                            <p>Student _ Gallery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="portfolio-item">
-                                    <div className="portfoio-thumb">
-                                        <img src="assets/img/gallery/07.jpg" alt="img" />
-                                        <div className="portfolio-arrow">
-                                            <Link to="/gallery"><i className="fas fa-long-arrow-alt-right"></i></Link>
-                                        </div>
-                                        <div className="portfolio-text">
-                                            <h3>University Student Write <br />
-                                                on the exam Paper</h3>
-                                            <p>Student _ Gallery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="portfolio-item">
-                                    <div className="portfoio-thumb">
-                                        <img src="assets/img/gallery/08.jpg" alt="img" />
-                                        <div className="portfolio-arrow">
-                                            <Link to="/gallery"><i className="fas fa-long-arrow-alt-right"></i></Link>
-                                        </div>
-                                        <div className="portfolio-text">
-                                            <h3>University Student Write <br />
-                                                on the exam Paper</h3>
-                                            <p>Student _ Gallery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-6 col-md-6">
-                                <div className="portfolio-item">
-                                    <div className="portfoio-thumb">
-                                        <img src="assets/img/gallery/09.jpg" alt="img" />
-                                        <div className="portfolio-arrow">
-                                            <Link to="/gallery"><i className="fas fa-long-arrow-alt-right"></i></Link>
-                                        </div>
-                                        <div className="portfolio-text">
-                                            <h3>University Student Write <br />
-                                                on the exam Paper</h3>
-                                            <p>Student _ Gallery</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </>
-  );
+            </section>
+
+            
+        </>
+    );
 };
 
 export default GalleryArea;

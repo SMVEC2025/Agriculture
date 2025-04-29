@@ -44,7 +44,7 @@ useEffect(() => {
         <ul>
               <li onClick={() => handleNavigate('/about')}>About</li>
               <li onClick={() => handleNavigate('/history')}>SMVEC History</li>
-              <li>Gallery</li>
+              <li  onClick={() => handleNavigate('/gallery')}  >Gallery</li>
               <li onClick={() => handleNavigate('/contact')}>Contact</li>
             </ul>
         </div>

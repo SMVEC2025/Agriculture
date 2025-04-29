@@ -18,7 +18,7 @@ const EventDetails = () => {
 		<Preloader />
       <BreacrumbEventDetails />
       <EventDetailsArea events={Events} />
-      <MarqueeOne style_2={true} />
+      {/* <MarqueeOne style_2={true} /> */}
 			<FooterOne />
 			<ScrollTop />
 		</>

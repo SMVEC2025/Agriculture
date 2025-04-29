@@ -686,8 +686,9 @@
 
     .event-list-items {
         padding: 30px 50px;
-        border: 1px solid $border-color;
+        border: 1px solid rgba(128, 128, 128, 0.322);
         border-radius: 7px;
+        background-color: rgb(245, 247, 252);
         @include flex;
         justify-content: space-between;
         margin-top: 30px;
@@ -741,7 +742,7 @@
                     max-width: 622px;
     
                     h4 {
-                        color: white;
+                        color: #012140;
                         line-height: 135%;
                         font-size: 24px;
     
@@ -784,8 +785,9 @@
 
         .event-btn {
             .theme-btn {
-                background-color: $bg-color;
+                background-color: #032042;
                 border: 1px solid $border-color;
+                color: white;
             }
         }
 
@@ -800,8 +802,7 @@
 
             .event-btn {
                 .theme-btn {
-                    background-color: $theme-green;
-                    border: 1px solid $theme-green;
+                    background-color: $theme-blue;
                 }
             }
         }

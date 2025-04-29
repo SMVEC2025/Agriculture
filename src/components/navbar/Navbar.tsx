@@ -73,7 +73,7 @@ function Navbar() {
             <ul>
               <li onClick={() => navigate('/about')}>About</li>
               <li onClick={() => navigate('/history')}>SMVEC History</li>
-              <li>Gallery</li>
+              <li  onClick={() => navigate('/gallery')}  >Gallery</li>
               <li onClick={() => navigate('/contact')}>Contact</li>
             </ul>
 

@@ -86,4 +86,30 @@
         }
 
     }
+    @media (max-width:500px){
+        .content{
+            background-color: rgba(0, 0, 0, 0.425);
+            padding: 6rem 0;
+            color: white;text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 2rem;
+    
+            h6{
+                max-width: 95%;
+                color:  rgb(228, 228, 228);
+                font-weight: 400;
+                font-size: 14px;
+            }
+            button{
+                background-color: var(--theme-red);
+                color: white;
+                padding: 7px 25px;
+                font-size: 14px;
+            }
+    
+        }
+    }
 }
