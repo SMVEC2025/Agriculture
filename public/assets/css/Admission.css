@@ -83,6 +83,10 @@
         max-width: 50%;
         text-align: center;
         position: relative;padding: 4rem 0;
+        @media (max-width:500px){
+        max-width: 90%;
+
+        }
     }
     p::before{
         width: 100%;
@@ -92,6 +96,7 @@
         position: absolute;
         top: -20px;
         left: 0;
+        
 
     }
     p::after{
@@ -108,10 +113,19 @@
     display: flex;
     flex-direction: row;
     margin: 3rem 0;
+    @media(max-width:500px){
+    flex-direction: column;
+
+    }
 
 }
 .appli_container>div{
     width: 50%;
+}
+@media(max-width:500px){
+  .appli_container>div{
+    width: 100%;
+}
 }
 .appli_container2 img{
     width: 100%;
@@ -133,6 +147,19 @@
         margin-top: 0.5rem;
         margin-left: 2rem;
         max-width: 80%;
+    }
+    @media (max-width:500px){
+      h6{
+        font-size: 30px;
+        color: white;
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+    p{
+        margin-top: 0.5rem;
+        margin-left: 1rem;
+        max-width: 95%;
+    }
     }
 }
 
@@ -422,19 +449,7 @@
     color: #7f8c8d;
     font-size: 1.1rem;
   }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .form-container {
-      padding: 1.5rem;
-      margin: 1rem;
-    }
-  
-    .radio-group {
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-  }
+
 
   .if_main{
     position: fixed;
@@ -510,21 +525,31 @@
 
 
   @media (max-width: 768px) {
-    .form-container{
-      width: 100%;margin: 0;
-      height: 100vh;
-      
+    .if_main>div{
+      scale: 1;
     }
     .if_main{
-      position: fixed;
-      left: 0;
-      top: 0;
-      width: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.459);
+        backdrop-filter: blur(5px);
+        z-index: 1005;
+        padding: 0;
+        
+        
+    .form-container{
+      width: 100% !important;
+      max-width: 100%;
+      margin: 0;
       height: 100vh;
-      background-color: rgba(0, 0, 0, 0.459);
-      backdrop-filter: blur(5px);
-      z-index: 1005;
+      border-radius: 0;
+      padding: 10px;
+      
     }
+ 
     .close-btn{
       position: absolute;
       right: 20px;
@@ -552,8 +577,8 @@
     .form-container h1 {
       text-align: center;
       color: #2c3e50;
-      margin-bottom: 1.5rem;
-      font-size: 1.8rem;
+      margin-bottom: 0;
+      font-size: 1rem;
     }
     
     .form-group {
@@ -586,5 +611,5 @@
       color: black;
     }
     }
-  
+    }
   }

@@ -396,9 +396,61 @@
     width: 70%;
     position: relative;
 }
+@media (max-width: 500px) {
+    .about_campuslife{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 0;
+        
+
+        img{
+            position: static;
+        }
+    }
+    .am_container{
+        padding: 0;
+        margin: 0;
+        font-size: 14px;
+        width: 100vw !important;
+        max-width: 100vw !important;
+    }
+    .am_main{
+        margin: 0;
+        .section-title{
+            width: 100%;
+        }
+        .am_container>p {
+            max-width: 90%;
+            text-align: left;
+        }
+        .am_container2 {
+            p {
+                max-width: 90%;
+
+            }}
+      
+    }
+  
+
+}
+@media (max-width: 1025px) {
+    .about_campuslife{
+        margin-bottom: 8rem;
+        padding: 2rem 0;
+        width: 90%;
+    }
+  
+
+}
 .about_campuslife.right{
     display: flex;
     justify-content: left;
+    @media (max-width: 500px) {
+        padding: 5px;
+
+    }
     p{
         text-align: left;
         margin-left: 3rem;
@@ -408,18 +460,57 @@
     img{
         
         height: 120%;
-        width: 500px;
+        width: 35%;
         object-fit: cover;
         position: absolute;
         right: 0;
         top: 50%;
         transform: translate(30%,-50%);
     }
+    @media (max-width: 1025px) {
+        img{
+        
+            height: 90%;
+            width: 35%;
+            object-fit: cover;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translate(20%,-50%);
+        }
+    }
+    @media (max-width: 500px) {
+        img{
+        
+            height: auto;
+            width: 98%;
+            object-fit: cover;
+            position: static;
+            right: 0;
+            top: 0;
+            transform: translate(0,0);
+        }
+        p{
+            text-align: center;
+            margin-right: 3rem;
+            max-width: 99%;
+            margin: 0;
+            line-height: 25px;
+            font-size: 14px;
+            text-align: left;
+
+    
+        }
+    }
 
 }
 .about_campuslife.left{
     display: flex;
     justify-content: right;
+    @media (max-width: 500px) {
+        padding: 5px;
+
+    }
     p{
         text-align: right;
         margin-right: 3rem;
@@ -435,6 +526,41 @@
         left: 0;
         top: 50%;
         transform: translate(-40%,-50%);
+    }
+    @media (max-width: 1025px) {
+        img{
+        
+            height: 90%;
+            width: 35%;
+            object-fit: cover;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translate(-20%,-50%);
+        }
+    }
+    @media (max-width: 500px) {
+        img{
+        
+            height: auto;
+            width: 100%;
+            object-fit: cover;
+            position: static;
+            right: 0;
+            top: 0;
+            transform: translate(0,0);
+            margin: 0;
+        }
+        p{
+            text-align: center;
+            margin-right: 3rem;
+            max-width: 99%;
+            margin: 0;
+            line-height: 25px;
+            font-size: 14px;
+            text-align: left;
+    
+        }
     }
 
 }
@@ -654,6 +780,11 @@
             font-size: 17px;
             color: $header-color;
             font-weight: 400;
+            @media (max-width: 500px) {
+                font-size: 14px;
+                text-align: left;
+
+            }
         }
 
         .counter-box-items {
@@ -726,6 +857,9 @@
 
 #about-h2{
     font-size: 30px;
+    @media (max-width: 500px) {
+        font-size: 23px;
+    }
 }
 .section-title>img{
     width: 100%;

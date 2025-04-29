@@ -245,6 +245,10 @@
                 padding: 16px 25px;
                 opacity: 0;
                 // visibility: hidden;
+                @media (max-width:500px){
+                opacity: 1;
+
+                }
 
                 &::before,&::after {
                     background-color: $white;

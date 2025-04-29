@@ -9,7 +9,7 @@ function InstantForm() {
     {formOpen?(
         <div className="if_main">
         <div className="close-btn" onClick={()=>setFormOpen(false)}>x</div>
-       <div>
+       <div className="if_maincontainer">
         <Form/>
        </div>
     </div>
