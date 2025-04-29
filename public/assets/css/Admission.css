@@ -134,6 +134,7 @@
 }
 .appli_container1{
     background-color: var(--theme-red);
+    padding: 2rem 0;
 }
 .appli_container1{
     color: white;

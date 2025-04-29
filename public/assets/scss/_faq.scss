@@ -30,11 +30,14 @@
                     border-bottom: 1px solid $border-color;
                     
 
-                    // .accordion-header {
-                    //     .accordion-button.collapsed {
-                    //         padding-top: 30px;
-                    //     }
-                    // }
+                    .accordion-header {
+                        .accordion-button.collapsed {
+                            padding-top: 30px;
+                            line-height: 25px;
+                            font-weight: 500;
+                        }
+                        
+                    }
         
                     h2 {
                         button {

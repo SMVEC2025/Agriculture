@@ -9,14 +9,20 @@ function AgricultureAdmission() {
   return (
     <>
     <Preloader />
-    <BreadcrumbEvent title="Apply for Bsc.agri" subtitle="Apply for Bsc.agri" />
+    <BreadcrumbEvent title="Apply for B.Sc. (Hons.) Agriculture" subtitle="Apply for B.Sc. (Hons.) Agriculture" />
     <div className="applipara">
     <p>The Master of Arts Degree in Islamic Texts provides students with access to the rational and traditional Islamic sciences through a guided course of study in primary sources. Our instructional approach is both didactic and dialectic, incorporating both contemporary and classical methods of learning. </p>
     </div>
     <div className="appli_container">
         <div className="appli_container1">
-            <h6>Bsc.agriculure</h6>
-            <p>B.Sc. Agriculture is a four-year undergraduate program designed to provide in-depth knowledge of agricultural science and modern farming practices. The course covers a wide range of subjects including agronomy, soil science, horticulture, agricultural economics, plant breeding, pest management, and sustainable agriculture. Students gain hands-on experience through fieldwork, lab experiments, and rural agricultural work experience programs (RAWE). With the growing focus on food security and sustainable practices, B.Sc. Agriculture opens up diverse career opportunities in government agencies, agribusiness firms, research institutions, and entrepreneurship in the agri-tech space.
+            <h6>B.Sc. (Hons.) Agriculture</h6>
+            <p>B.Sc. degree in Agriculture is an undergraduate program that focuses on the scientific principles and modern practices involved in farming, crop production, soil management, and agricultural sustainability. The course covers a wide range of topics, including agronomy, soil science, plant pathology, entomology, agricultural economics, horticulture, genetics, and irrigation techniques. Students gain in-depth knowledge of crop cultivation methods, pest and disease control, seed technology, organic farming, and the use of biotechnology in agriculture.
+
+The program also emphasizes sustainable farming practices, efficient water and nutrient management, and the integration of modern technologies like precision agriculture. Through practical training, students develop the skills required for managing farms, agricultural enterprises, and research projects.
+
+Upon completion, graduates can pursue careers in the agricultural sector as agricultural officers, farm managers, agronomists, soil scientists, seed technologists, or extension officers. They can also work with agro-based industries, research institutions, or start their own farming ventures and agri-business enterprises.
+
+
 
 </p>
               

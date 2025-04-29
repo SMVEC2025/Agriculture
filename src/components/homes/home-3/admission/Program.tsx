@@ -5,8 +5,8 @@ function Program() {
   return (
     <div className="adp_main">
       <div className="pcard">
-        <h2>Bsc. Agriculture</h2>
-        <p>Zaytuna’s bachelor of arts degree in Liberal Arts and Islamic Studies is founded on an integral liberal arts curriculum, consisting of courses from the Islamic and Western traditions of higher learning.</p>
+        <h2>B.Sc. (Hons.) Agriculture</h2>
+        <p>B.Sc. Agriculture is a degree program centered on crop production, soil science, agronomy, and agricultural technology. Students study plant breeding, irrigation, pest management, and farm management. Graduates can work as agricultural officers, farm managers, agronomists, or start their own agri-based ventures.</p>
         <button onClick={()=>navigate('/admission-agriculture')}>Application process</button>
         <svg width="181" height="89" viewBox="0 0 181 89" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M91.0464 0.0141602C81.2131 13.1808 67.4464 49.3142 91.0464 88.5142C99.3796 73.3475 111.046 34.4142 91.0464 0.0141602Z" fill="#D0D2DD"/>
@@ -24,8 +24,9 @@ function Program() {
 
       </div>
       <div className="pcard">
-        <h2>Bsc. horticulture</h2>
-        <p>Zaytuna’s bachelor of arts degree in Liberal Arts and Islamic Studies is founded on an integral liberal arts curriculum, consisting of courses from the Islamic and Western traditions of higher learning.</p>
+        <h2>B.Sc. (Hons.) Horticulture
+        </h2>
+        <p>B.Sc. Horticulture is a degree program focused on plant cultivation, landscaping, and crop production. Students learn about soil science, plant breeding, pest control, and sustainable farming. Graduates can work as horticulturists, landscape designers, nursery managers, or start their own horticulture businesses.</p>
         <button onClick={()=>navigate('/admission-horticulture')}>Application process</button>
         <svg width="181" height="89" viewBox="0 0 181 89" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M91.0464 0.0141602C81.2131 13.1808 67.4464 49.3142 91.0464 88.5142C99.3796 73.3475 111.046 34.4142 91.0464 0.0141602Z" fill="#D0D2DD"/>

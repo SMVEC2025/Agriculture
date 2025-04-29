@@ -55,8 +55,9 @@ useEffect(() => {
         <div className={`sub ${showItem=='academics'?"show":""}`}>
         <ul>
         <li onClick={() => handleNavigate('/faculty')}>Faculty</li>
-              <li onClick={() => handleNavigate('/courses-detail')}>Bsc Agriculture</li>
-              <li onClick={() => handleNavigate('/courses-detail')}>Bsc Ariclture</li>
+              <li onClick={() => handleNavigate('/courses-detail')}>B.Sc. (Hons.) Agriculture</li>
+              <li onClick={() => handleNavigate('/courses-detail')}>B.Sc. (Hons.) Horticulture
+              </li>
             </ul>
         </div>
         <div onClick={()=>{handlesubitems('campuslife')}}  className={`mm_menuitems ${showItem=='campuslife'?"show":""}`}>
@@ -76,8 +77,9 @@ useEffect(() => {
         <div className={`sub ${showItem=='admission'?"show":""}`}>
         <ul>
         <li onClick={() => handleNavigate('/admission')}>Admission</li>
-              <li onClick={() => handleNavigate('/admission-agriculture')}>Apply for Bsc.Agriculture</li>
-              <li onClick={() => handleNavigate('/admission-horticulture')}>Apply for Bsc. horticulture</li>
+              <li onClick={() => handleNavigate('/admission-agriculture')}>Apply for B.Sc. (Hons.) Agriculture</li>
+              <li onClick={() => handleNavigate('/admission-horticulture')}>Apply for B.Sc. (Hons.) Horticulture
+              </li>
             </ul>
         </div>
     

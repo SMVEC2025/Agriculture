@@ -92,8 +92,9 @@ function Navbar() {
           <div className="navslider_items">
             <ul>
               <li onClick={() => navigate('/faculty')}>Faculty</li>
-              <li onClick={() => navigate('/courses-detail')}>Bsc Agriculture</li>
-              <li onClick={() => navigate('/courses-detail')}>Bsc Ariclture</li>
+              <li onClick={() => navigate('/courses-detail')}>B.Sc. (Hons.) Agriculture</li>
+              <li onClick={() => navigate('/courses-detail')}>B.Sc. (Hons.) Horticulture
+              </li>
             </ul>
 
           </div>
@@ -131,8 +132,9 @@ function Navbar() {
           <div className="navslider_items">
             <ul>
               <li onClick={() => navigate('/admission')}>Admission</li>
-              <li onClick={() => navigate('/admission-agriculture')}>Apply for Bsc.Agriculture</li>
-              <li onClick={() => navigate('/admission-horticulture')}>Apply for Bsc. horticulture</li>
+              <li onClick={() => navigate('/admission-agriculture')}>Apply for B.Sc. (Hons.) Agriculture</li>
+              <li onClick={() => navigate('/admission-horticulture')}>Apply for B.Sc. (Hons.) Horticulture
+              </li>
             </ul>
 
           </div>

@@ -19,74 +19,73 @@ const FaqHomeThree = () => {
                                     </h2>
                                 </div>
                                 <div className="faq-items mt-4 mt-md-0 mb-0">
-                                    <div className="accordion" id="accordionExample">
-                                        <div className="accordion-item wow fadeInUp" data-wow-delay=".2s">
-                                            <h2 className="accordion-header" id="headingOne">
-                                                <button className="accordion-button" type="button" data-bs-toggle="collapse"
-                                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                    What programs does the university ?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseOne" className="accordion-collapse collapse show"
-                                                aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                                <div className="accordion-body">
-                                                    <p>
-                                                        We offer a wide range of undergraduate, graduate, and professional programs across various fields, including, sciences, business, engineering.
-                                                    </p>
+                                <div className="accordion" id="accordionExample">
+                                            <div className="accordion-item">
+                                                <h2 className="accordion-header lh-base" id="headingOne">
+                                                    <button className="accordion-button lh-base" type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                        What courses are offered at SMVEC College of Agriculture and Horticulture
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseOne" className="accordion-collapse collapse show"
+                                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                    <div className="accordion-body">
+                                                        <p>
+                                                            SMVEC offers undergraduate programs such as B.Sc. Agriculture and B.Sc. Horticulture, focusing on modern agricultural practices, plant science, soil management, and sustainable farming techniques.
+
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="accordion-item">
+                                            <h2 className="accordion-header lh-base" id="headingOne">
+                                            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                        What career opportunities are available after completing a B.Sc. in Agriculture or Horticulture?                                                </button>
+                                                </h2>
+                                                <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                                    data-bs-parent="#accordionExample">
+                                                    <div className="accordion-body">
+                                                        <p>
+                                                            Graduates can work as agricultural officers, farm managers, horticulturists, crop consultants, or start their own agri-business. Opportunities also exist in government departments, research institutions, and agri-tech industries.
+
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="accordion-item">
+                                            <h2 className="accordion-header lh-base" id="headingOne">
+                                            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#collapsethree" aria-expanded="false"
+                                                        aria-controls="collapsethree">
+                                                        Does the college provide practical training and field exposure?                                                </button>
+                                                </h2>
+                                                <div id="collapsethree" className="accordion-collapse collapse"
+                                                    aria-labelledby="headingthree" data-bs-parent="#accordionExample">
+                                                    <div className="accordion-body">
+                                                        <p>
+                                                            Yes, the college emphasizes hands-on learning through field visits, lab sessions, farm training, and internships, ensuring students gain real-world agricultural and horticultural experience.                                                    </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="accordion-item mb-0">
+                                            <h2 className="accordion-header lh-base" id="headingOne">
+                                            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#collapsefour" aria-expanded="false"
+                                                        aria-controls="collapsefour">
+                                                        What facilities are available on campus for students?                                                </button>
+                                                </h2>
+                                                <div id="collapsefour" className="accordion-collapse collapse"
+                                                    aria-labelledby="headingfour" data-bs-parent="#accordionExample">
+                                                    <div className="accordion-body">
+                                                        <p>
+                                                            SMVEC provides modern laboratories, research farms, well-stocked libraries, hostel accommodation, and Wi-Fi-enabled smart classrooms, creating a student-friendly and research-driven environment.
+
+                                                        </p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="accordion-item wow fadeInUp" data-wow-delay=".4s">
-                                            <h2 className="accordion-header" id="headingTwo">
-                                                <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                    How do I apply for admission?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                                data-bs-parent="#accordionExample">
-                                                <div className="accordion-body">
-                                                    <p>
-                                                        We offer a wide range of undergraduate, graduate, and professional programs across various fields, including, sciences, business, engineering.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="accordion-item wow fadeInUp" data-wow-delay=".6s">
-                                            <h2 className="accordion-header" id="headingthree">
-                                                <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                                    data-bs-target="#collapsethree" aria-expanded="false"
-                                                    aria-controls="collapsethree">
-                                                    What is the student-to-faculty ratio?
-                                                </button>
-                                            </h2>
-                                            <div id="collapsethree" className="accordion-collapse collapse"
-                                                aria-labelledby="headingthree" data-bs-parent="#accordionExample">
-                                                <div className="accordion-body">
-                                                    <p>
-                                                        We offer a wide range of undergraduate, graduate, and professional programs across various fields, including, sciences, business, engineering.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="accordion-item mb-0 wow fadeInUp" data-wow-delay=".8s">
-                                            <h2 className="accordion-header" id="headingfour">
-                                                <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                                    data-bs-target="#collapsefour" aria-expanded="false"
-                                                    aria-controls="collapsefour">
-                                                    What is the student-to-faculty ratio?
-                                                </button>
-                                            </h2>
-                                            <div id="collapsefour" className="accordion-collapse collapse"
-                                                aria-labelledby="headingfour" data-bs-parent="#accordionExample">
-                                                <div className="accordion-body">
-                                                    <p>
-                                                        We offer a wide range of undergraduate, graduate, and professional programs across various fields, including, sciences, business, engineering.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
