@@ -64,7 +64,7 @@ function Navbar() {
         <div onMouseLeave={handleMouseLeave} className={`navslider_main ${ShowNavSlider ? "opened" : ""}`}>
           <div onClick={handleMouseLeave} className="close-btn"><IoMdClose /></div>
 
-          <img src="/assets/img/breadcrumb/DJI_0981.JPG" alt="" />
+          <img src="/assets/img/images/mainentrance.jpg" alt="" />
           <div className="navslider_con2">
             <p>Sri Manakula Vinayagar Engineering College (SMVEC) was established in 1999 by the Sri Manakula Vinayagar Educational Trust with a focus on providing quality education. The college is affiliated with Pondicherry University and offers undergraduate, postgraduate, and research programs. In 2019, SMVEC was granted autonomous status, enhancing its academic reputation.</p>
             <div className="viewbtn" onClick={() => navigate('/about')}>View About <BsArrowRight /></div>
@@ -84,7 +84,7 @@ function Navbar() {
       {navItemsCheck == 'academy' && (
         <div onMouseLeave={handleMouseLeave} className={`navslider_main ${ShowNavSlider ? "opened" : ""}`}>
           <div onClick={handleMouseLeave} className="close-btn"><IoMdClose /></div>
-          <img src="/assets/img/breadcrumb/DJI_0981.JPG" alt="" />
+          <img src="/assets/img/images/frontview.jpg" alt="" />
           <div className="navslider_con2">
             <p>The School of Agricultural Sciences (SAGS) at Sri Manakula Vinayagar Engineering College (SMVEC) offers specialized programs in B.Sc. (Hons.) Agriculture and B.Sc. (Hons.) Horticulture. The college provides a modern learning environment with practical training on 40 acres of agricultural land.</p>
             <div className="viewbtn">View Faculty <BsArrowRight /></div>
@@ -105,7 +105,7 @@ function Navbar() {
         <div onMouseLeave={handleMouseLeave} className={`navslider_main ${ShowNavSlider ? "opened" : ""}`}>
           <div onClick={handleMouseLeave} className="close-btn"><IoMdClose /></div>
 
-          <img src="/assets/img/breadcrumb/DJI_0981.JPG" alt="" />
+          <img src="/assets/img/images/agribuilding.jpg" alt="" />
           <div className="navslider_con2">
             <p>Campus life at Sri Manakula Vinayagar Engineering College (SMVEC) is vibrant and enriching, offering a blend of academic rigor and extracurricular engagement. Students have access to modern infrastructure, including well-equipped classrooms, laboratories, and libraries, fostering an environment conducive to learning and innovation. </p>
             <div className="viewbtn">View campus life <BsArrowRight /></div>
@@ -124,7 +124,7 @@ function Navbar() {
         <div onMouseLeave={handleMouseLeave} className={`navslider_main ${ShowNavSlider ? "opened" : ""}`}>
           <div onClick={handleMouseLeave} className="close-btn"><IoMdClose /></div>
 
-          <img src="/assets/img/breadcrumb/DJI_0981.JPG" alt="" />
+          <img src="/assets/img/images/studentsthree.jpg" alt="" />
           <div className="navslider_con2">
             <p>Admission to the B.Sc. (Hons.) Agriculture at SMVEC requires candidates to have completed 10+2 with Physics, Chemistry, and Biology, with a minimum of 50% marks. Admission is based on merit, following the guidelines of the SMVEC Autonomous Regulations.</p>
             <div className="viewbtn">Admission {new Date().getFullYear()} <BsArrowRight /></div>

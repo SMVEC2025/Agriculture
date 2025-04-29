@@ -11,17 +11,17 @@ const slides = [
   {
     title: "Cultivate Yours Future with SMVEC Agri Science",
     text: "At SMVEC, we sow the sds of knowledge and innovation in agriculture—empowering students with cutting-edge practices, sustainable farming techniques, and hands-on experience to lead the future of agri-tech and rural development.",
-    background: "/assets/img/4G3A8463.JPG",
+    background: "/assets/img/hero/hero-1.jpg",
   },
   {
     title: "Cultivate Your Future with SMVEC Agri Science",
     text: "At SMVEC, we sow the sds of knowledge and innovation in agriculture—empowering students with cutting-edge practices, sustainable farming techniques, and hands-on experience to lead the future of agri-tech and rural development.",
-    background: "/assets/img/4G3A8439.JPG",
+    background: "/assets/img/hero/hero-2.jpg",
   },
   {
     title: "Cultivate Your Future with SMVEC Agri Science",
     text: "At SMVEC, we sow the sds of knowledge and innovation in agriculture—empowering students with cutting-edge practices, sustainable farming techniques, and hands-on experience to lead the future of agri-tech and rural development.",
-    background: "/assets/img/DSC00050.JPG",
+    background: "/assets/img/hero/hero-3.jpg",
   },
 ];
 
