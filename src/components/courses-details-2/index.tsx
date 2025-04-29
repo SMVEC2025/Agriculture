@@ -1,4 +1,3 @@
-import BreadcrumbCoursesDetailsTwo from "../../common/breadcrumb/BreadcrumbCoursesDetailsTwo";
 import BreadcrumbEvent from "../../common/breadcrumb/BreadcrumbEvent";
 import Preloader from "../../common/Preloader";
 import ScrollTop from "../../common/ScrollTop";

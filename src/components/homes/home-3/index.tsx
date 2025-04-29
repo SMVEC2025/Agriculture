@@ -1,4 +1,3 @@
-import { useContext, useEffect } from "react";
 import Preloader from "../../../common/Preloader";
 import AboutHomeThree from "./AboutHomeThree";
 import ChooseHomeThree from "./ChooseHomeThree";
@@ -10,9 +9,7 @@ import TestimonialHomeThree from "./TestimonialHomeThree";
 import FooterOne from "../../../layouts/footers/FooterOne";
 import EventHomeThree from "./EventHomeThree";
 import HeroSlider from "./HeroSlider";
- 
-import axios from 'axios';
-import { AppContext } from "../../../context/AppContext";
+
 
   
 
