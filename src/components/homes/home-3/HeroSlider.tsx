@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 import "swiper/css/parallax";
 import { AppContext } from "../../../context/AppContext";
 import { useNavigate } from "react-router-dom";
-import AdvancedBannerTop from "../../test/AdvancedBannerTop";
+import { AdvancedBannerTop } from "../../test/AdvancedBannerTop";
 
 const slides = [
   {

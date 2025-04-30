@@ -6,7 +6,7 @@ interface MyComponentProps {
   backgroundlayerimg: any;
 }
 
-const AdvancedBannerTop = ({ backgroundimg, backgroundlayerimg }: MyComponentProps) => {
+export const AdvancedBannerTop = ({ backgroundimg, backgroundlayerimg }: MyComponentProps) => {
   const background: BannerLayer = {
     image: backgroundimg, // use prop
     translateY: [10, 50],
@@ -49,4 +49,3 @@ const AdvancedBannerTop = ({ backgroundimg, backgroundlayerimg }: MyComponentPro
   );
 };
 
-export default AdvancedBannerTop;
