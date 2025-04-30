@@ -23,10 +23,13 @@ import MobileMenu from "./components/navbar/MobileMenu";
 import MobileMenuBtn from "./components/navbar/MobileMenuBtn";
 import { useContext } from "react";
 import AdmissionForm from "./common/breadcrumb/AdmissionForm";
+import Test from "./components/test/Test";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 function App() {
   return (
     <BrowserRouter>
+    <ParallaxProvider>
     <AppProvider>
       <Wrapper>
         <Navbar/>
@@ -48,11 +51,12 @@ function App() {
           <Route path="/admission-horticulture" element={<HorticultureAdmission />} />
           <Route path="/history" element={<AboutHistory />} />
           <Route path="/campus-life" element={<CampusLife />} />
-          <Route path="/test" element={<AdmissionForm />} />
+          <Route path="/test" element={<Test />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Wrapper>
       </AppProvider>
+      </ParallaxProvider>
     </BrowserRouter>
   );
 }

@@ -1,0 +1,70 @@
+
+.headline {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    font-size: 10vw;
+  }
+  
+  .inset {
+    position: absolute;
+    inset: 0;
+  }
+  .white {
+    color: white;
+  }
+  .gray {
+    color: #446;
+  }
+  
+
+  .center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .gradient {
+    background: linear-gradient(rgba(14, 62, 151, 0.5) 50%, #09224b);
+  }
+  .testdiv{
+    height: 200vh;
+  }
+  
+.inset {
+    position: absolute;
+    inset: 0;
+  }
+  .white {
+    color: white;
+  }
+  .gray {
+    color: #446;
+  }
+  
+  .full {
+    height: 100vh;
+  }
+  
+  .center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+
+  .paralaxcon{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(0deg,rgba(0, 0, 0, 0.219) 85%,rgba(0, 0, 0, 0.726) 99%);
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    h5,h2,p,a{
+        color: wh;
+    }
+  }
+
