@@ -45,8 +45,8 @@ Strengthened placement records, with students placed in top companies in India a
 ];
 
 export const Timeline = () => {
-  const containerRef = useRef
-  const itemRefs = useRef
+  const containerRef = useRef(null);
+const itemRefs = useRef([]);
   const [activeIndex, setActiveIndex] = useState(0);
   const [background, setBackground] = useState(timelineData[0].image);
 
