@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+
 .about-wrapper {
     @include breakpoint (max-lg){
        margin-top: -29px;
@@ -870,4 +873,93 @@
     width: 500px;
     border-radius: 10px;
     
+}
+
+
+
+
+// boardmembers.css
+.bm_main{
+    padding: 5rem 0;
+    position: relative;
+    padding-bottom: 10rem;
+    background-image: linear-gradient(0deg, #f6f6f6, rgb(255, 255, 255));
+    .assets{
+        position: absolute;
+        z-index: 0;
+        left: 3vw;
+        opacity: 0.8;
+        top: 0;
+        img{
+            height: 300px;
+            width: auto;
+        }
+
+    }
+    .asset2{
+        position: absolute;
+        z-index: 0;
+        right: 50%;
+        opacity: 1;
+        bottom: 0;
+        transform: translate(50%,0);
+        img{
+            height: auto;
+            width: 100vw;
+            opacity: 1;
+            object-fit: contain;
+            object-position: top;
+        }
+     
+
+    }
+}
+
+.bm_chairman{
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: end;
+    justify-self: center;
+    img{
+        width: 500px;
+        height: auto;
+    }
+    .content{
+        padding: 1rem 3rem;
+        width: 50vw;
+        p{
+            max-width: 90%;
+        }
+        h2,h4,p{
+            color: #002570;
+            width: fit-content;
+        }
+        h2{
+            font-size: 2.3rem;
+            background: linear-gradient(90deg, #002570, #5837a3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            width: fit-content;
+            margin-bottom: 5px;
+
+        }
+        p{
+            margin-top: 1rem;
+            position: relative;
+
+            div{
+                position: absolute;
+                font-family: "Manrope", sans-serif;
+                font-optical-sizing: auto;
+                top: 10px;
+                left: -10px;
+                font-size: 50px;
+                letter-spacing: -7px;
+                transform: rotate(180deg);
+                opacity: 0.8;
+            }
+        }
+    }
+
 }

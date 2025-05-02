@@ -11,7 +11,7 @@ const timelineData= [
   {
     year: 'Early 2000s',
     description: `SMVEC expanded its academic offerings in engineering disciplines and gradually built modern infrastructure like libraries, laboratories, and hostels.`,
-    image: '/assets/img/DSC00008.JPG',
+    image: '/assets/img/about/smveclabel.png',
     title:"Growth",
 },  {
     year: '2013',
