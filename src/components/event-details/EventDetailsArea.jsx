@@ -19,24 +19,15 @@ const EventDetailsArea = ({events}) => {
                                 <div className="event-details-content">
                                     <h3>{events?.acf?.title}</h3>
                                     <p className="mb-4">
-                                        Are you looking for ways to improve your study habits and boost your academic performance? Join us for an engaging workshop where we’ll explore effective study techniques that will help you excel in your studies. This session will cover proven method note-taking, time management, memory enhancement, and exam preparation. Whether you're in high school or college, these skills.
+                                    {events?.acf?.description}
                                     </p>
-                                    <p className="mb-5">
-                                        UI (User Interface) Design is the process of creating the visual elements of a product, including layout, color schemes, typography, and interactive features like buttons and icons.
-                                    </p>
-                                    <h3>
-                                        What You Will Learn
-                                    </h3>
-                                    <p>
-                                        Together, UX and UI design ensure that digital products are not only functional and accessible but also engaging and visually coherent, enhancing both usability and overall user satisfaction.
-                                    </p>
-                                    <ul className="details-list">
+                                    {/* <ul className="details-list">
                                         <li><i className="fas fa-check-circle"></i>How to create a personalized study plan that works for you.</li>
                                         <li><i className="fas fa-check-circle"></i>Techniques to manage your time more effectively</li>
                                         <li><i className="fas fa-check-circle"></i>Strategies to improve focus and avoid distractions.</li>
                                         <li><i className="fas fa-check-circle"></i>Memory-boosting methods to retain information longer.</li>
                                         <li><i className="fas fa-check-circle"></i>Tips on reducing stress during exam preparation..</li>
-                                    </ul>
+                                    </ul> */}
                                     <h3>
                                         Event Location
                                     </h3>
@@ -123,7 +114,7 @@ const EventDetailsArea = ({events}) => {
                                             <i className="fas fa-calendar-alt"></i>
                                              Date
                                         </span>
-                                        <span className="text">15 October 2024</span>
+                                        <span className="text">{events?.acf?.date}</span>
                                     </li>
                                  
                                     <li>
@@ -131,7 +122,7 @@ const EventDetailsArea = ({events}) => {
                                             <i className="far fa-clock"></i>
                                              Time
                                         </span>
-                                        <span className="text">08:00 am</span>
+                                        <span className="text">{events?.acf?.time}</span>
                                     </li>
                                    
                                     <li>
@@ -139,7 +130,7 @@ const EventDetailsArea = ({events}) => {
                                             <i className="far fa-map-marker-alt"></i>
                                             Location
                                         </span>
-                                        <span className="text">New York</span>
+                                        <span className="text">{events?.acf?.location}</span>
                                     </li>
                                    
                                 </ul>
