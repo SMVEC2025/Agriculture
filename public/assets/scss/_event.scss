@@ -937,6 +937,19 @@
         padding: 40px 35px;
         box-shadow: 10px 4px 60px rgba(200, 200, 200, 0.25);
         border-radius: 7px;
+        position: relative;
+        padding-bottom: 100px;
+        .sharebtn_main{
+            position: absolute;
+            bottom: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            height: fit-content;
+            width: fit-content;
+            justify-content: end;
+            align-items: end;
+        }
 
         .information-list {
             margin-top: 20px;

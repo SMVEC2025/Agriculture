@@ -109,3 +109,69 @@
 
 
 //>>>>> Component Button End <<<<<//
+
+// share button used in events detais page
+
+.share_btn{
+    display: flex;
+    cursor: pointer;
+    background-color: var(--bg5);
+    color: white;
+    width: 120px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    .firstshow{
+
+    }
+    .secondshow{
+        display: none;
+    }
+}
+
+.share_btn:hover::after{
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 45px;
+    background-color: #b00018;
+    right: 50%;
+    z-index: -1;
+    animation: animexpand 0.3s forwards ease-out;
+
+
+}
+.share_btn:hover::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 45px;
+    background-color: #b00018;
+    left: 50%;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+    animation: animexpand 0.3s forwards ease-out;
+
+}
+@keyframes animexpand {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 60px;
+    }
+
+}
+.share_btn:hover{
+    background-color: transparent;
+    .secondshow{
+        display: block;
+    }
+    .firstshow{
+    display: none;
+    }
+}
