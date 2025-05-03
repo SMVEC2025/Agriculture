@@ -30,7 +30,7 @@ const AboutMission = () => {
                     </p>
                 </div>
                 <div className="about_campuslife left">
-                    <img src="/assets/img/DSC00052.JPG" alt="" />
+                    <img src="/assets/img/smvecstudents.webp" alt="" />
                     <p>
                         Our campus is purposefully designed to support academic excellence and practical skill development. It features modern classrooms, well-equipped laboratories, advanced greenhouses, and expansive experimental farms. These facilities provide students with immersive, real-world exposure to farming techniques, crop production, and horticultural practices.
                     </p>
@@ -45,7 +45,7 @@ const AboutMission = () => {
 
                 </div>
                 <div className="about_campuslife left">
-                    <img src="/assets/img/youtubethumbnail.png" alt="" />
+                    <img src="/assets/img/youtubethumbnail.webp" alt="" />
 
 
                     <p>

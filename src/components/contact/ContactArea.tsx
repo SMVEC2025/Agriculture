@@ -17,15 +17,15 @@ const ContactArea = () => {
                                 <i className="flaticon-map"></i>
                             </div>
                             <h5>
-                                Academic Location
+                                Location
                             </h5>
                             <div className="image">
                                 <img src="assets/img/small-line.png" alt="img" />
                             </div>
                             <h4>
-                                70 Washington Square <br />
-                                South New York, NY 10012, <br />
-                                 United States
+Sri Manakula Vinayagar Engineering College Campus
+Madagadipet
+Puducherry – 605 107
                             </h4>
                         </div>
                     </div>
@@ -41,8 +41,7 @@ const ContactArea = () => {
                                 <img src="assets/img/small-line.png" alt="img" />
                             </div>
                             <h4>
-                                <a href="mailto:supportedus@gmail.com">supportedus@gmail.com</a> <br />
-                                <a href="mailto:www.eduspace.com">www.eduspace.com</a>
+                                <a href="mailto:supportedus@gmail.com">smvec@smvec.ac.in</a> <br />
                             </h4>
                         </div>
                     </div>
@@ -52,14 +51,15 @@ const ContactArea = () => {
                                 <img src="assets/img/call.png" alt="img" />
                             </div>
                             <h5>
-                                Emergency
+                                Enquiry
                             </h5>
                             <div className="image">
                                 <img src="assets/img/small-line.png" alt="img" />
                             </div>
                             <h4>
-                                <a href="tel:++00012345688">+000 123 456 88</a> <br />
-                                <a href="tel:+4325688899">+432 568 88 99</a>
+                                <a href="tel:+916381270732">6381270732</a> <br />
+                                <a href="tel:++00012345688">(0413)-2641151</a> <br />
+                                <a href="tel:+4325688899">(0413)-2640823</a>
                             </h4>
                         </div>
                     </div>

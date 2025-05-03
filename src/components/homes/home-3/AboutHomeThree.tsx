@@ -41,7 +41,7 @@ const AboutHomeThree = () => {
                             </div>
                             <div className="col-xl-5 col-lg-6">
                                 <div className="about-image">
-                                <img className="homeabt-img" src="assets/img/4G3A8492.JPG" alt="img" />
+                                <img className="homeabt-img" src="assets/img/smvecstudents.webp" alt="img" />
 
                                     <div className="counter-box">
                                         <p>More then</p>

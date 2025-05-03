@@ -16,7 +16,7 @@ const ChooseHomeThree = () => {
                 <div className="row g-0">
                     <div className="col-xxl-7 col-xl-6 col-lg-6">
                         <div className="video-image wow img-custom-anim-left">
-                            <img src="/assets/img/youtubethumbnail.png" alt="img" />
+                            <img src="/assets/img/youtubethumbnail.webp" alt="img" />
                             <a 
                             onClick={() => setIsVideoOpen(true)}
                             style={{ cursor: "pointer" }}

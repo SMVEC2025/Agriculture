@@ -627,8 +627,10 @@
     position: relative;
 
     .container-fluid {
-        padding: 0 100px;
-
+        padding: 0 0;
+        display: flex;justify-content: center;
+        align-items: center;
+        
         @include breakpoint (max-xxxl){
             padding: 0 50px;
         }
@@ -677,8 +679,13 @@
 }
 
 .quality-coureses-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     p {
         font-size: 24px;
+        max-width: 50%;
         color: $white;
 
         @include breakpoint (max-lg){
@@ -687,10 +694,14 @@
 
         @include breakpoint (max-md){
             font-size: 20px;
+        max-width: 80%;
+
         }
 
         @include breakpoint (max-sm){
             font-size: 18px;
+        max-width: 98%;
+
         }
 
     }

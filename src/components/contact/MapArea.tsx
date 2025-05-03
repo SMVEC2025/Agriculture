@@ -8,7 +8,7 @@ const MapArea = () => {
             <div className="row">
                 <div className="col-xl-12">
                     <div className="map-area">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6678.7619084840835!2d144.9618311901502!3d-37.81450084255415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642b4758afc1d%3A0x3119cc820fdfc62e!2sEnvato!5e0!3m2!1sen!2sbd!4v1641984054261!5m2!1sen!2sbd" style={{border: "0px"}} allowFullScreen loading="lazy"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4366.429478669725!2d79.6345067!3d11.9146599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5358c4d27d10a9%3A0x5013c5b96143ae32!2sSri%20Manakula%20Vinayagar%20Engineering%20College!5e1!3m2!1sen!2sin!4v1746246532867!5m2!1sen!2sin" style={{border: "0px"}} allowFullScreen loading="lazy"></iframe>
                     </div>
                 </div>
             </div>
