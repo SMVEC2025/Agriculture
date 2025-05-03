@@ -4,14 +4,14 @@ import { FaWhatsapp } from "react-icons/fa";
 import { FaRegShareSquare } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 
-function ShareButton() {
-    
+function ShareButton({events}) {
+    console.log(events)
     const handleShare = async () => {
         if (navigator.share) {
           try {
             await navigator.share({
-              title: 'hellotitle',
-              text: `${'this is desc'}\n\nMore details: ${'this is url'}`,
+              title: events?.acf?.title,
+              text: `${events?.acf?.title}\n\n${events?.acf?.description}\n\nMore details: ${`https://agri.smvec.ac.in/event`}`,
               url: 'https://google.com',
             });
             console.log('Shared successfully!');
@@ -23,13 +23,9 @@ function ShareButton() {
         }
       };
   return (
-     <div className='share_btn'>
-       <div className='firstshow'>
+     <div className='share_btn' onClick={handleShare}>
         share <IoMdShareAlt/>
-       </div>
-       <div onClick={handleShare} className='secondshow'>
-        hey
-       </div>
+    
         
      </div>
   )

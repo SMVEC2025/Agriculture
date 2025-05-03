@@ -145,7 +145,7 @@ const EventDetailsArea = ({events}) => {
                                 </ul>
                         
                                <div className='sharebtn_main'>
-                               <ShareButton/>
+                               <ShareButton events={events}/>
                                </div>
                             </div>
                         </div>
