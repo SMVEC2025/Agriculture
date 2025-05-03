@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import NiceSelect from "../../ui/NiceSelect";
 
 const EventListArea = ({ events }) => {
@@ -85,9 +85,6 @@ const EventListArea = ({ events }) => {
                         <p>No events found.</p>
                     )}
 
-                    <div className="event-button">
-                        <Link to="/event-details" className="theme-btn">View All Events</Link>
-                    </div>
                 </div>
             </div>
         </section>
