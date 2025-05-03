@@ -117,7 +117,7 @@ const InstructorArea = () => {
                     </div>
                     <div className="row">
                         {facultyDetails?.map((e, i) => (
-                            <div className="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                            <div key={i} className="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
                                 <div className="team-card-items style-2">
                                     <div className="thumb">
                                         <img src={e.image} alt="img" />
