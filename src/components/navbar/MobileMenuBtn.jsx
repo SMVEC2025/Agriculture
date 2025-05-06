@@ -13,8 +13,6 @@ function MobileMenuBtn() {
         setShowMobileSlider(false);
         setShowItem('');
     }
-  console.log(showMobileSlider)
-  console.log(`mmbtn ${showNav ? "color" : ""} ${showMobileSlider ? "true" : ""}`)
     return (
         <div className={`mmbtn ${showNav ? "color" : ""} ${showMobileSlider ? "true" : ""}`}>
             {showMobileSlider ? (

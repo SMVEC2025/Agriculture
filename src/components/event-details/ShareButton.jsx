@@ -14,9 +14,7 @@ function ShareButton({events}) {
               text: `${events?.acf?.title}\n\n${events?.acf?.description}\n\nMore details: ${`https://agri.smvec.ac.in/event`}`,
               url: 'https://google.com',
             });
-            console.log('Shared successfully!');
           } catch (error) {
-            console.error('Error sharing:', error);
           }
         } else {
           alert('Sharing not supported in this browser.');

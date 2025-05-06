@@ -13,7 +13,6 @@ const Wrapper = ({ children }: any) => {
       import("bootstrap/dist/js/bootstrap.bundle.min.js")
         .then(() => {
         })
-        .catch(error => console.error('Error loading Bootstrap JS:', error));
     }
   }, []);
  

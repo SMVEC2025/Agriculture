@@ -176,7 +176,6 @@ const Form: React.FC = () => {
       </div>
     );
   }
-  console.log(formData)
   return (
     <div className="form-container">
       <h1>Admission enquiry</h1>
