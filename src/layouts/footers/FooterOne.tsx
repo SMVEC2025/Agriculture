@@ -1,8 +1,15 @@
 import { Link } from "react-router-dom";
+import { FaFacebookF } from "react-icons/fa";
+import { BsTwitterX } from "react-icons/bs";
 
 
 
 const FooterOne = ({ style_2 }: any) => {
+
+    const handleRedirect = (url: string) => {
+        window.open(url, '_blank', 'noopener,noreferrer');
+      };
+    
     return (
         <>
             <footer className={`footer-section fix ${style_2 ? "" : "footer-bg"}`}>
@@ -24,11 +31,11 @@ const FooterOne = ({ style_2 }: any) => {
                                             Education the foundation personal and societal growth, empowering individuals with knowledge.
                                         </p>
                                         <div className="social-icon">
-                                            <a href="#"><i className="fab fa-facebook-f"></i></a>
-                                            <a href="#"><i className="fab fa-instagram"></i></a>
-                                            <a href="#"><i className="fab fa-dribbble"></i></a>
-                                            <a href="#"><i className="fab fa-behance"></i></a>
-                                            <a href="#"><i className="fab fa-linkedin-in"></i></a>
+                                            <a onClick={() => handleRedirect('https://www.facebook.com/SMVECOfficial')}><i className="fab fa-facebook-f"></i></a>
+                                            <a onClick={() => handleRedirect('https://x.com/SMVEC2')}><i className="fab fa-x-twitter"><BsTwitterX/></i></a>
+                                            <a onClick={() => handleRedirect('https://www.facebook.com/YourPage')}><i className="fab fa-whatsapp"></i></a>
+                                            <a onClick={() => handleRedirect('https://www.instagram.com/smvec_official')}><i className="fab fa-instagram"></i></a>
+                                            <a onClick={() => handleRedirect('https://www.facebook.com/YourPage')}><i className="fab fa-youtube"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -42,7 +49,7 @@ const FooterOne = ({ style_2 }: any) => {
                                         <li><Link to="/courses-detail-agriculture">B.Sc. (Hons.) Agriculture</Link></li>
                                         <li><Link to="/courses-detail-horticulture">B.Sc. (Hons.) Horticulture
                                         </Link></li>
-                                        
+
                                     </ul>
                                 </div>
                             </div>

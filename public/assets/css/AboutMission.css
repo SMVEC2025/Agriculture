@@ -64,19 +64,23 @@
     background-repeat: no-repeat;
     
     .content{
-        background-color: rgba(0, 0, 0, 0.425);
-        padding: 6rem 0;
+        background-color: rgba(0, 0, 0, 0.61);
+        padding: 5rem 0;
         color: white;text-align: center;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         gap: 2rem;
-
+       p{
+        font-size: 1.5rem;
+        text-transform: capitalize;
+       }
         h6{
             max-width: 50%;
             color:  rgb(228, 228, 228);
             font-weight: 400;
+            text-transform: lowercase;
         }
         button{
             background-color: var(--theme-red);
@@ -88,26 +92,34 @@
     }
     @media (max-width:500px){
         .content{
-            background-color: rgba(0, 0, 0, 0.425);
-            padding: 6rem 0;
+            background-color: rgba(0, 0, 0, 0.61);
+            padding: 4rem 0;
             color: white;text-align: center;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            gap: 2rem;
+            gap: 5px;
     
             h6{
                 max-width: 95%;
                 color:  rgb(228, 228, 228);
-                font-weight: 400;
+                font-weight: 300;
+                line-height: 22px;
                 font-size: 14px;
+
+                text-transform: lowercase;
+            }
+            p{
+                text-transform: capitalize;
+                padding: 5px;
             }
             button{
                 background-color: var(--theme-red);
                 color: white;
                 padding: 7px 25px;
                 font-size: 14px;
+                margin-top: 1rem;
             }
     
         }
