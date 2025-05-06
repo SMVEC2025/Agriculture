@@ -72,9 +72,7 @@ const ChooseHomeThree = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="circle-shape">
-                                <img src="assets/img/feature/circle-shape.png" alt="img" />
-                            </div>
+                           
                         </div>
                     </div>
                 </div>

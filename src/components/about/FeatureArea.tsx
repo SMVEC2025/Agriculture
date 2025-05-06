@@ -9,13 +9,12 @@ const FeatureArea = () => {
                         <div className="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
                             <div className="feature-card-items">
                                 <div className="icon">
-                                    <i className="flaticon-graduation"></i>
+                                <i className="fas fa-graduation-cap"></i>
                                 </div>
                                 <div className="content">
                                     <h5>Scholarship Facility</h5>
                                     <p>
-                                        Scholarship facility provides
-                                        financial assistance
+                                    We offer merit-based and need-based scholarships to support talented students.
                                     </p>
                                 </div>
                             </div>
@@ -23,13 +22,12 @@ const FeatureArea = () => {
                         <div className="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
                             <div className="feature-card-items">
                                 <div className="icon">
-                                    <i className="flaticon-instructor"></i>
+                                <i className="fas fa-chalkboard-teacher"></i>
                                 </div>
                                 <div className="content">
                                     <h5>Expert Instructors</h5>
                                     <p>
-                                        Scholarship facility provides
-                                        financial assistance
+                                    Learn from experienced professors and industry experts specializing in modern agriculture.
                                     </p>
                                 </div>
                             </div>
@@ -37,28 +35,26 @@ const FeatureArea = () => {
                         <div className="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".6s">
                             <div className="feature-card-items">
                                 <div className="icon">
-                                    <i className="flaticon-certficate"></i>
+                                <i className="fas fa-microscope"></i>
                                 </div>
                                 <div className="content">
-                                    <h5>Certificate Program</h5>
+                                    <h5>Modern Infrastructure</h5>
                                     <p>
-                                        Scholarship facility provides
-                                        financial assistance
-                                    </p>
+                                    Advanced labs, greenhouses, and botanical gardens for hands-on horticulture training.                                    </p>
                                 </div>
                             </div>
                         </div>
                         <div className="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".8s">
                             <div className="feature-card-items">
                                 <div className="icon">
-                                    <i className="flaticon-school"></i>
+                                    <i className="fas fa-seedling"></i>
                                 </div>
                                 <div className="content">
-                                    <h5>Graduate Admissions</h5>
+                                    <h5>Field & Industry Exposure</h5>
                                     <p>
-                                        Scholarship facility provides
-                                        financial assistance
-                                    </p>
+                                    Field visits and internships with leading farms and agri-businesses.
+
+</p>
                                 </div>
                             </div>
                         </div>

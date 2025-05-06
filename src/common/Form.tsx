@@ -166,8 +166,6 @@ const Form: React.FC = () => {
     }
 
   };
-
-
   if (isSubmitted) {
     return (
       <div className="form-container">

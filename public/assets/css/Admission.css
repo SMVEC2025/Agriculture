@@ -172,6 +172,7 @@
     align-items: center;
     flex-direction: column;
     padding-bottom: 5rem;
+
     
 }
 .af_main{
@@ -182,6 +183,7 @@
         color: white;
     }
 }
+
 .applicationdate{
     background-color:var(--theme-red);
     width: 800px;
@@ -191,7 +193,10 @@
     position: relative;
     height: 50px;
     transition: all 0.3s ease-out;
-    button{
+    @media (max-width:550px) {
+      width: 95vw;
+    }
+      button{
         position: absolute;
         top: 0;
         right: 0;
@@ -201,10 +206,14 @@
         transition: all 0.3s ease-out;
 
     }
+    
 
 }
 .applicationdate.open{
     height: 300px;
+    @media (max-width:550px) {
+      height: 600px;
+    }
     button{
         transform: rotate(45deg);
     }
@@ -268,8 +277,8 @@
         background-color: #3a566e;
         width: 90vw;
         
-        padding: 20px 40px;
-        padding-bottom: 100px;
+        padding: 15px 10px;
+        padding-bottom: 80px;
         position: relative;
     }
     .pcard{
@@ -284,7 +293,7 @@
         }
         button{
          position: absolute;
-         left: 40px;
+         left: 10px;
          bottom: 20px;
          z-index: 2;
         
@@ -623,3 +632,77 @@
     }
     }
   }
+  
+
+
+  
+
+  @media (max-width: 768px) {
+    .af_main>div{
+      scale: 1;
+    }
+    .af_main{
+        height: fit-content;
+        
+    .form-container{
+      width: 100% !important;
+      max-width: 100%;
+      margin: 0;
+      height: fit-content;
+      border-radius: 0;
+      padding: 10px;
+      
+    }
+    .if_main>div{
+      scale: 1;
+    }
+    .if_main{
+      button{
+          background-color: var(--theme-red);
+      }
+      form{
+          height: fit-content;
+          padding: 0;
+      }
+      
+    .form-container h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 0;
+      font-size: 1rem;
+    }
+    
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 0.1rem;
+      font-weight: 600;
+      color: #34495e;
+    }
+    
+    .form-group input[type="text"],
+    .form-group input[type="tel"],
+  .form-group input[type="email"],
+    .form-group select {
+      width: 100%;
+      padding: 0.25rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+    
+    .form-group input[type="text"]:focus,
+    .form-group input[type="tel"]:focus,
+    .form-group select:focus {
+      border-color: #3498db;
+      outline: none;
+      color: black;
+    }
+    }
+    }
+  }
+  
