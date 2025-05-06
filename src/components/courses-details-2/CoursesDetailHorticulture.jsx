@@ -45,36 +45,33 @@ const CoursesDetailHorticulture = () => {
                                                             <ul className="list-item">
                                                                 <li>
                                                                     <i className="fas fa-check-circle"></i>
-                                                                    Pomology
+                                                                    Physics
                                                                 </li>
                                                                 <li>
                                                                     <i className="fas fa-check-circle"></i>
-                                                                    Olericulture
+                                                                    Chemistry
                                                                 </li>
                                                                 <li>
                                                                     <i className="fas fa-check-circle"></i>
-                                                                    Floriculture
+                                                                    Mathematics
                                                                 </li>
                                                                 <li>
                                                                     <i className="fas fa-check-circle"></i>
-                                                                    Plantation Crops
+                                                                    Biology/Botany
                                                                 </li>
                                                                 <li>
                                                                     <i className="fas fa-check-circle"></i>
-                                                                    Landscape Gardening
+                                                                    Zoology Physics
                                                                 </li>
                                                                 <li>
                                                                     <i className="fas fa-check-circle"></i>
-                                                                    Post-Harvest Technology
+                                                                    Agriculture Physics
                                                                 </li>
                                                                 <li>
                                                                     <i className="fas fa-check-circle"></i>
-                                                                    Medicinal and Aromatic Plants
+                                                                    Forestry
                                                                 </li>
-                                                                <li>
-                                                                    <i className="fas fa-check-circle"></i>
-                                                                    Protected Cultivation
-                                                                </li>
+                                                               
                                                             </ul>
                                                         </div>
 
@@ -93,8 +90,8 @@ const CoursesDetailHorticulture = () => {
                                 <div className="courses-sidebar-area">
                                     <div className="courses-items">
                                         <div className="courses-image">
-                                            <img src="assets/img/horticulturecourse.webp" className="opacity-0.8" alt="img" />
-                                            <div className="position-absolute top-0 start-0 w-100 h-100 bg-dark z--1 opacity-25"></div>
+                                        <img src="assets/img/horticulturecourse.webp" className="opacity-0.8" alt="img" />
+                                        <div className="position-absolute top-0 start-0 w-100 h-100 bg-dark z--1 opacity-25"></div>
                                             <h3 className="courses-title">Bsc</h3>
                                             <h4 className="topic-title">Horticulture science</h4>
                                             <div className="arrow-items">

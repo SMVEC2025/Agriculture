@@ -27,8 +27,8 @@ const AboutArea = () => {
                                     </p>
                                     <div className="counter-box-items">
                                         <div className="counter-content wow fadeInUp" data-wow-delay=".3s">
-                                            <h2><span className="odometer" data-count="23">
-                                                <Count number={23} text='+' />
+                                            <h2><span className="odometer" data-count="25">
+                                                <Count number={25} text='+' />
                                             </span></h2>
                                             <p>Years Of Experience</p>
                                         </div>

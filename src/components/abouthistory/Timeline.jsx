@@ -16,22 +16,22 @@ const timelineData= [
 },  {
     year: '2013',
     description: `SMVEC became the first engineering college in Puducherry to be accredited by NAAC with an 'A' grade.`,
-    image: '/assets/img/DSC00008.JPG',
+    image: 'https://i0.wp.com/law.smvec.ac.in/images/events/chairman.webp',
     title:"Accreditation",
 },  {
     year: '2019',
     description: `SMVEC was granted autonomous status by the University Grants Commission (UGC) while continuing its affiliation with Pondicherry University.
 
 `,
-image: '/assets/img/DSC00008.JPG',
+image: 'https://smvec.ac.in/wp-content/uploads/2024/06/Sri_Manakula_Vinayagar_Engineering_College.webp',
 title:" Autonomous Status",
 },  {
     year: '2020s',
-    description: `dded new programs in Arts and Science, Allied Health Sciences, Agriculture, Law, Physiotherapy, and Pharmacy.
+    description: `added new programs in Arts and Science, Allied Health Sciences, Agriculture, Law, Physiotherapy, and Pharmacy.
 
 Campus grew to 125 acres with Wi-Fi enabled, air-conditioned auditoriums, modern labs, and separate boys' and girls' hostels.`,
-    image: 'http://www.volpeypir.com/upload/3732.jpg',
-    title:"Expansion",
+image: 'https://i1.wp.com/arts.smvec.ac.in/wp-content/uploads/2021/06/1.jpg?fit=1024%2C683&ssl=1',
+title:"Expansion",
 }, {
     year: '2022–2024',
     description: `Ranked in the 151–300 band in the NIRF Innovation Category.

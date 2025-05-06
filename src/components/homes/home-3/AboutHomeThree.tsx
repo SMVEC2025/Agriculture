@@ -24,8 +24,8 @@ const AboutHomeThree = () => {
                                     <Link to="/about" className="theme-btn red-btn wow fadeInUp" data-wow-delay=".3s">More About Us</Link>
                                     <div className="about-counter-items">
                                         <div className="counter-content wow fadeInUp" data-wow-delay=".3s">
-                                            <h3><span className="odometer" data-count="23">
-                                                <Count number={23} text='+' />
+                                            <h3><span className="odometer" data-count="25">
+                                                <Count number={25} text='+' />
                                             </span></h3>
                                             <p>Years of Agricultural Excellence</p>
                                         </div>

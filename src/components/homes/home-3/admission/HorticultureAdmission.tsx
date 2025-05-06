@@ -24,7 +24,7 @@ function HorticultureAdmission() {
 
                 </div>
                 <div className="appli_container2">
-                    <img src="https://img.freepik.com/free-photo/portrait-businesswoman-beige-suit-high-heels-walking-street-corporate-woman-going_1258-194142.jpg" alt="" />
+                <img src="/assets/img/gallery/gallery3.jpg" alt="" />
                 </div>
             </div>
             <ApplicationForm />
