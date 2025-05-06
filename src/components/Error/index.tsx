@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import BreadcrumbEvent from "../../common/breadcrumb/BreadcrumbEvent";
-import MarqueeOne from "../../common/MarqueeOne";
 import FooterOne from "../../layouts/footers/FooterOne";
 import ScrollTop from "../../common/ScrollTop";
 import Preloader from "../../common/Preloader";
@@ -18,7 +17,6 @@ const NotFound = () => {
                     <div className="col-lg-8">
                         <div className="error-items text-center">
                             <div className="error-image wow fadeInUp" data-wow-delay=".3s">
-                                <img src="assets/img/404.png" alt="img" />
                             </div>
                             <Link to="/" className="theme-btn wow fadeInUp" data-wow-delay=".5s">
                                 Back To Home
@@ -29,7 +27,7 @@ const NotFound = () => {
             </div>
         </div>
 
-        <MarqueeOne style_2={true} />
+        {/* <MarqueeOne style_2={true} /> */}
         <FooterOne />
         <ScrollTop />
     </>

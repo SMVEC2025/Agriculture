@@ -25,6 +25,7 @@ import { useContext } from "react";
 import AdmissionForm from "./common/breadcrumb/AdmissionForm";
 import Test from "./components/test/Test";
 import { ParallaxProvider } from "react-scroll-parallax";
+import Horticulture from "./components/courses-details-2/Horticulture";
 
 function App() {
   return (
@@ -37,7 +38,8 @@ function App() {
         <MobileMenu/>
         <Routes>
           <Route path="/" element={<HomeThree />} />
-          <Route path="/courses-detail" element={<CoursesDetailsTwo />} />
+          <Route path="/courses-detail-agriculture" element={<CoursesDetailsTwo />} />
+          <Route path="/courses-detail-horticulture" element={<Horticulture />} />
           <Route path="/event" element={<Event />} />
           <Route path="/event-details/:name" element={<EventDetails />} />
           <Route path="/about" element={<About />} />

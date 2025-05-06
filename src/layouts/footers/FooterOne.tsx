@@ -39,8 +39,8 @@ const FooterOne = ({ style_2 }: any) => {
                                         <h3>Courses</h3>
                                     </div>
                                     <ul className="list-area">
-                                        <li><Link to="/courses">B.Sc. (Hons.) Agriculture</Link></li>
-                                        <li><Link to="/courses">B.Sc. (Hons.) Horticulture
+                                        <li><Link to="/courses-detail-agriculture">B.Sc. (Hons.) Agriculture</Link></li>
+                                        <li><Link to="/courses-detail-horticulture">B.Sc. (Hons.) Horticulture
                                         </Link></li>
                                         
                                     </ul>

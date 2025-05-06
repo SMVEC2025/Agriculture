@@ -92,8 +92,8 @@ function Navbar() {
           <div className="navslider_items">
             <ul>
               <li onClick={() => navigate('/faculty')}>Faculty</li>
-              <li onClick={() => navigate('/courses-detail')}>B.Sc. (Hons.) Agriculture</li>
-              <li onClick={() => navigate('/courses-detail')}>B.Sc. (Hons.) Horticulture
+              <li onClick={() => navigate('/courses-detail-agriculture')}>B.Sc. (Hons.) Agriculture</li>
+              <li onClick={() => navigate('/courses-detail-horticulture')}>B.Sc. (Hons.) Horticulture
               </li>
             </ul>
 
