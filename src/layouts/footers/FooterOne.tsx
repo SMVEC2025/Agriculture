@@ -28,6 +28,7 @@ const FooterOne = ({ style_2 }: any) => {
                                     <div className="footer-content">
                                         <p>
                                             Education the foundation personal and societal growth, empowering individuals with knowledge.
+                                           
                                         </p>
                                         <div className="social-icon">
                                             <a onClick={() => handleRedirect('https://www.facebook.com/SMVECOfficial')}><i className="fab fa-facebook-f"></i></a>
@@ -70,14 +71,16 @@ const FooterOne = ({ style_2 }: any) => {
                                     <div className="widget-head">
                                         <h3>Contact Us</h3>
                                     </div>
-                                    <div className="footer-content">
+                                    <div className="footer-content" >
                                         <ul className="contact-info">
                                             <li>
-                                                Sri Manakula Vinayagar College of Agricultural Sciences
-                                                Sri Manakula Vinayagar Engineering College Campus
-                                                Madugarai Road,Madagadipet
-                                                Mannadipet Commune
+                                                Sri Manakula Vinayagar College of Agricultural Sciences<br/>
+                                                Sri Manakula Vinayagar Engineering College Campus<br/>
+                                                Madagadipet,
                                                 Puducherry – 605 107
+                                                <br/>
+                                            smvec@smvec.ac.in<br/>
+                                            +91 6381270732
                                             </li>
                                         </ul>
                                     </div>
