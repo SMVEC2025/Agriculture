@@ -41,7 +41,7 @@ Puducherry – 605 107
                                 <img src="assets/img/small-line.png" alt="img" />
                             </div>
                             <h4>
-                                <a href="mailto:supportedus@gmail.com">smvec@smvec.ac.in</a> <br />
+                                <a href="mailto:supportedus@gmail.com" style={{textTransform:'lowercase'}}>smvec@smvec.ac.in</a> <br />
                             </h4>
                         </div>
                     </div>

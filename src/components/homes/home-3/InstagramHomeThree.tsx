@@ -5,7 +5,18 @@ import { Swiper, SwiperSlide } from 'swiper/react';
  
 
 const InstagramHomeThree = () => {
-  return (
+    const galleryItems = [
+        { image: '/assets/img/gallery/gallery1.jpg', name: "on field training", category: "students" },
+        { image: '/assets/img/gallery/gallery2.jpg', name: "eagle shot", category: "university" },
+        { image: '/assets/img/gallery/gallery3.jpg', name: "25th year of success", category: "arts and culture" },
+        { image: '/assets/img/gallery/gallery4.jpg', name: "campus life", category: "students" },
+        { image: '/assets/img/gallery/gallery5.jpg', name: "pongal festival", category: "arts and culture" },
+        { image: '/assets/img/gallery/gallery6.jpg', name: "Smvec Anthem Song", category: "arts and culture" },
+        { image: '/assets/img/gallery/gallery7.jpg', name: "celestia 2025", category: "arts and culture" },
+        { image: '/assets/img/gallery/gallery8.jpg', name: "celestia 2025", category: "arts and culture" },
+
+    ];  
+    return (
     <>
       <div className="instagram-section fix">
             <Swiper
@@ -30,68 +41,20 @@ const InstagramHomeThree = () => {
                 }               
              }}
              className="swiper instagram-slider">
+                                        {galleryItems.map((e,i)=>(
+
+                    <SwiperSlide className="swiper-slide">
+                         <div key={i} className="instagram-image">
+                         <img src={e.image} alt="img" />
+                         <Link to="/gallery" className="icon"><i className="far fa-arrow-right"></i></Link>
+                     </div>
+                     
+                    </SwiperSlide>
+                ))}
                  
-                    <SwiperSlide className="swiper-slide">
-                        <div className="instagram-image">
-                            <img src="https://images.pexels.com/photos/9489759/pexels-photo-9489759.jpeg" alt="img" />
-                            <Link to="/gallery" className="icon"><i className="far fa-arrow-right"></i></Link>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide className="swiper-slide">
-                        <div className="instagram-image">
-                            <img src="https://images.pexels.com/photos/2247678/pexels-photo-2247678.jpeg" alt="img" />
-                            <Link to="/gallery" className="icon"><i className="far fa-arrow-right"></i></Link>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide className="swiper-slide">
-                        <div className="instagram-image">
-                            <img src="https://images.pexels.com/photos/427649/pexels-photo-427649.jpeg" alt="img" />
-                            <Link to="/gallery" className="icon"><i className="far fa-arrow-right"></i></Link>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide className="swiper-slide">
-                        <div className="instagram-image">
-                            <img src="https://images.pexels.com/photos/426976/pexels-photo-426976.jpeg" alt="img" />
-                            <Link to="/gallery" className="icon"><i className="far fa-arrow-right"></i></Link>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide className="swiper-slide">
-                        <div className="instagram-image">
-                            <img src="https://images.pexels.com/photos/2479946/pexels-photo-2479946.jpeg" alt="img" />
-                            <Link to="/gallery" className="icon"><i className="far fa-arrow-right"></i></Link>
-                        </div>
-                    </SwiperSlide>
+                
                  
-                    <SwiperSlide className="swiper-slide">
-                        <div className="instagram-image">
-                            <img src="assets/img/instagram/01.jpg" alt="img" />
-                            <Link to="/gallery" className="icon"><i className="far fa-arrow-right"></i></Link>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide className="swiper-slide">
-                        <div className="instagram-image">
-                            <img src="assets/img/instagram/02.jpg" alt="img" />
-                            <Link to="/gallery" className="icon"><i className="far fa-arrow-right"></i></Link>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide className="swiper-slide">
-                        <div className="instagram-image">
-                            <img src="assets/img/instagram/03.jpg" alt="img" />
-                            <Link to="/gallery" className="icon"><i className="far fa-arrow-right"></i></Link>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide className="swiper-slide">
-                        <div className="instagram-image">
-                            <img src="assets/img/instagram/04.jpg" alt="img" />
-                            <Link to="/gallery" className="icon"><i className="far fa-arrow-right"></i></Link>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide className="swiper-slide">
-                        <div className="instagram-image">
-                            <img src="assets/img/instagram/05.jpg" alt="img" />
-                            <Link to="/gallery" className="icon"><i className="far fa-arrow-right"></i></Link>
-                        </div>
-                    </SwiperSlide>
+                
             
             </Swiper>
         </div>

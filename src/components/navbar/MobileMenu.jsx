@@ -7,6 +7,7 @@ import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FiMinus } from "react-icons/fi";
 import { AppContext } from "../../context/AppContext";
+import { BsTwitterX } from "react-icons/bs";
 
 function MobileMenu() {
   const { showMobileSlider, showItem, setShowItem, setShowMobileSlider } = useContext(AppContext)
@@ -22,6 +23,10 @@ function MobileMenu() {
   useEffect(() => {
     setShowItem('')
   }, [])
+  const handleRedirect = (url) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <div className={`mm_main ${showMobileSlider ? "opened" : "closed"}`}>
       <div className="mm_con1">
@@ -75,6 +80,13 @@ function MobileMenu() {
             <li onClick={() => handleNavigate('/admission-horticulture')}>Apply for B.Sc. (Hons.) Horticulture
             </li>
           </ul>
+        </div>
+        <div className="social-icon">
+          <a onClick={() => handleRedirect('https://www.facebook.com/SMVECOfficial')}><i className="fab fa-facebook-f"></i></a>
+          <a onClick={() => handleRedirect('https://x.com/SMVEC2')}><i className="fab fa-x-twitter"><BsTwitterX /></i></a>
+          <a onClick={() => handleRedirect('https://www.facebook.com/YourPage')}><i className="fab fa-whatsapp"></i></a>
+          <a onClick={() => handleRedirect('https://www.instagram.com/smvec_official')}><i className="fab fa-instagram"></i></a>
+          <a onClick={() => handleRedirect('https://www.facebook.com/YourPage')}><i className="fab fa-youtube"></i></a>
         </div>
       </div>
     </div>

@@ -1,5 +1,8 @@
  
 const ContactForm = () => {
+    function handleSubmit(){
+       
+    }
   return (
     <>
        <section className="contact-section-2 section-padding pt-0">
@@ -10,7 +13,7 @@ const ContactForm = () => {
                             <div className="title text-center">
                                 <h2 className="wow fadeInUp">Send Us Message</h2>
                             </div>
-                            <form id="contact-form" onSubmit={e => e.preventDefault()}>
+                            <form id="contact-form" onSubmit={handleSubmit}>
                                 <div className="row g-4">
                                     <div className="col-lg-6 wow fadeInUp" data-wow-delay=".2s">
                                         <div className="form-clt">

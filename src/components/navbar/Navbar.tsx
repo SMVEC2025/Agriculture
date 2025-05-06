@@ -31,15 +31,14 @@ function Navbar() {
         }
       }
     };
-
     // Add scroll event listener
     window.addEventListener("scroll", handleScroll);
-
     // Cleanup event listener
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [navItemsCheck]);
+
   return (
     <>
       <div  className={`nav_main ${showNav ? "show" : ""}`}>
@@ -136,11 +135,11 @@ function Navbar() {
               <li onClick={() => navigate('/admission-horticulture')}>Apply for B.Sc. (Hons.) Horticulture
               </li>
             </ul>
-
           </div>
 
         </div>
       )}
+
     </>
   )
 }

@@ -28,7 +28,7 @@ const CtaHomeThree = () => {
                             </div>
                             <p className="mt-3 mt-md-0 wow fadeInUp" data-wow-delay=".3s">        Join SMVEC and be part of India’s agri-tech revolution. Learn from experienced faculty and gain hands-on field experience.
                             </p>
-                            <Link to="/courses-details" className="theme-btn wow fadeInUp" data-wow-delay=".3s">
+                            <Link to="/admission" className="theme-btn wow fadeInUp" data-wow-delay=".3s">
                                 Apply Now
                             </Link>
                         </div>

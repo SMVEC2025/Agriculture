@@ -7,9 +7,41 @@
     width: 0;
     height: 100vh;
     transition: all 0.3s ease-out;
+    .social-icon{
+        display: none;
+    }
+    
 }
 .mm_main.opened{
     width: 100%;
+    .social-icon{
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+        a{
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            font-size: 16px;
+            display: block;
+            background: #0c1c3b;
+            -webkit-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+            text-align: center;
+            border-radius: 50%;
+            cursor: pointer;
+           
+
+        i{
+            color: #f0f2ff;
+        }
+          
+        }
+    }
 }
 .mm_main.closed{
     width: 0;
@@ -29,7 +61,7 @@
     }
     .sub.show{
         height: 120px;
-        }
+    }
 }
 .mm_menuitems{
     display: flex;
@@ -49,6 +81,7 @@
         font-weight: 500;
         letter-spacing: 0.8px;
     }
+  
     
 }
 .mm_menuitems.show{

@@ -3,13 +3,16 @@ import { BiExpand } from "react-icons/bi";
 
 const GalleryArea = () => {
     const galleryItems = [
-        { image: "https://img.freepik.com/free-photo/students-with-tablets-talking_23-2147663375.jpg", name: "Campus Walkway", category: "university" },
-        { image: "https://img.freepik.com/free-photo/couple-with-salesman-furniture-store_1157-37482.jpg", name: "Evening Football", category: "sports" },
-        { image: "https://img.freepik.com/premium-photo/young-people-children-happy-students-gathered-together-celebrating-student-day_285885-4710.jpg", name: "Street Mural", category: "arts and culture" },
-        { image: "https://img.freepik.com/free-photo/friends-with-smile-happy-emotions-university_496169-67.jpg", name: "Group Study", category: "students" },
-        { image: "https://img.freepik.com/free-photo/happy-circle-friends-planning-trip-globe-trotters-inspecting-map-being-home-european-indian-ethnicity-men-holding-guitar-globe_1157-47900.jpg", name: "Silent Reading", category: "university" },
-        { image: "https://img.freepik.com/free-photo/india-republic-day-celebration-digital-art-with-people_23-2151070862.jpg", name: "Hoops Night", category: "sports" },
-    ];
+        { image: '/assets/img/gallery/gallery1.jpg', name: "on field training", category: "students" },
+        { image: '/assets/img/gallery/gallery2.jpg', name: "eagle shot", category: "university" },
+        { image: '/assets/img/gallery/gallery3.jpg', name: "25th year of success", category: "arts and culture" },
+        { image: '/assets/img/gallery/gallery4.jpg', name: "campus life", category: "students" },
+        { image: '/assets/img/gallery/gallery5.jpg', name: "pongal festival", category: "arts and culture" },
+        { image: '/assets/img/gallery/gallery6.jpg', name: "Smvec Anthem Song", category: "arts and culture" },
+        { image: '/assets/img/gallery/gallery7.jpg', name: "celestia 2025", category: "arts and culture" },
+        { image: '/assets/img/gallery/gallery8.jpg', name: "celestia 2025", category: "arts and culture" },
+
+    ];   
 
     const [selectedCategory, setSelectedCategory] = useState("all");
     const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
