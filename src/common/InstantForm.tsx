@@ -1,7 +1,7 @@
 import { useContext } from "react"
-import Form from "./Form"
 import { AppContext } from "../context/AppContext"
 import { IoMdClose } from "react-icons/io";
+import Form from "./Form";
 
 function InstantForm() {
     const { formOpen,setFormOpen } = useContext(AppContext)

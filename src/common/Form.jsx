@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 // Indian states and cities data
 const indianStates = [
@@ -50,23 +50,29 @@ const courses = [
   'BSc Horticulture'
 ];
 
-const Form: React.FC = () => {
+const Form = () => {
   const [formData, setFormData] = useState({
     name: '',
     fathername: '',
     phone: '',
     state: '',
     email: '',
+    otp: '',
     city: '',
     course: '',
     captcha: '',
-    captchaInput: ''
+    captchaInput: '',
+    is_otp_verified: 0
   });
 
-  const [cities, setCities] = useState<string[]>([]);
-  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [cities, setCities] = useState([]);
+  const [errors, setErrors] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
-
+  const [userOtp, setUserOtp] = useState('')
+  const [otpVerified, setOtpVerified] = useState(false)
+  const [buttonLoading,setButtonLoading]=useState('')
+  const [timeLeft, setTimeLeft] = useState(59);
+  const timerRef = useRef(null);
   // Generate captcha on component mount
   useEffect(() => {
     generateCaptcha();
@@ -94,8 +100,11 @@ const Form: React.FC = () => {
     setFormData(prev => ({ ...prev, captcha }));
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
+    if(name == 'phone' && otpVerified){
+      return
+    }
     setFormData(prev => ({ ...prev, [name]: value }));
 
     // Clear error when user starts typing
@@ -109,7 +118,8 @@ const Form: React.FC = () => {
   };
 
   const validate = () => {
-    const newErrors: Record<string, string> = {};
+    const newErrors = {};
+
 
     if (!formData.name.trim()) newErrors.name = 'Name is required';
     if (!formData.fathername.trim()) newErrors.fathername = 'fatername is required';
@@ -118,22 +128,19 @@ const Form: React.FC = () => {
     if (!formData.state) newErrors.state = 'State is required';
     if (!formData.city) newErrors.city = 'City is required';
     if (!formData.course) newErrors.course = 'Course is required';
-    if (formData.captchaInput !== formData.captcha) {
-      newErrors.captchaInput = 'Captcha does not match'
-      formData.captchaInput = ""
-    }
+    if (formData.is_otp_verified == 0) newErrors.otp = 'Verify otp';
+
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
-  const handleSubmit = async (e: any) => {
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (validate()) {
-      const date = new Date().toISOString().slice(0, 19).replace('T', ' ');
 
-      const datapara = {
-        enquiry: {
-          created_at: date,
+      const enquiryData = {
+  
           student_name: formData.name,
           father_name: formData.fathername,
           department: formData.course,
@@ -142,20 +149,11 @@ const Form: React.FC = () => {
           state: `${formData.city},${formData.state}`,
           qualification: '',
           requirement: '',
-          encode_id: "",
-          utm_id: '',
-          utm_source: '',
-          utm_medium: '',
-          utm_campaign: '',
-          utm_gclid: '',
-          is_otp_verified: 1
-        },
-        user: "Admission_Enquiry",
-        key: "WojY3p37$%s852"
+          is_otp_verified: formData.is_otp_verified
+      
       };
-
       try {
-        const response = await axios.post('http://localhost:3000/api/submit-form', datapara);
+        const response = await axios.post('https://agribackend.vercel.app/api/submit-form', enquiryData);
 
         console.log("CRM Response:", response.data);
         setIsSubmitted(true)
@@ -163,9 +161,75 @@ const Form: React.FC = () => {
         console.error("Error submitting form:", error);
         alert("Something went wrong!");
       }
+    }else{
+      alert('check valid')
     }
 
   };
+  const startCountdown = () => {
+    if (timerRef.current) return; // Prevent multiple intervals
+
+    timerRef.current = setInterval(() => {
+      setTimeLeft(prev => {
+        if (prev <= 1) {
+          clearInterval(timerRef.current);
+          timerRef.current = null;
+          setButtonLoading('')
+          setTimeLeft(true)
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+  };
+console.log(timeLeft)
+  const sendOtp = async (e) => {
+    e.preventDefault();
+    setButtonLoading('otp')
+    const newErrors = {};
+
+
+    if (!formData.phone.trim()) newErrors.phone = 'Phone number is required';
+    else if (!/^\d{10}$/.test(formData.phone)) newErrors.phone = 'Invalid phone number';
+    else {
+      try {
+        const response = await axios.post('https://agribackend.vercel.app/api/send-otp', {
+          "mobile_number": formData.phone
+        });
+
+        console.log("CRM Response:", response.data);
+        const jsonString = JSON.stringify(response.data)
+        setUserOtp(jsonString)
+        setButtonLoading('otpcount')
+        startCountdown()
+      } catch (error) {
+        console.error("Error submitting form:", error);
+        alert("Something went wrong!");
+        setButtonLoading('')
+      }
+    }
+
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  }
+  const verifyOtp = async (e) => {
+    e.preventDefault();
+    const newErrors = {};
+
+    if (!formData.otp) newErrors.otp = 'Enter a valid otp';
+    if (userOtp !== formData.otp) {
+      newErrors.otp = 'Enter a valid otp';
+    } else {
+      setFormData(prev => ({ ...prev, is_otp_verified: 1 }));
+      setOtpVerified(true)
+    }
+
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  }
+  console.log('forms',`${formData.state},${formData.city}`)
   if (isSubmitted) {
     return (
       <div className="form-container">
@@ -179,9 +243,9 @@ const Form: React.FC = () => {
   return (
     <div className="form-container">
       <h1>Admission enquiry</h1>
-      <form onSubmit={handleSubmit}>
+      <form >
         <div className={`form-group ${errors.name && 'error'}`}>
-          <label htmlFor="name">Full Name: 
+          <label htmlFor="name">Full Name:
           </label>
           <input
             type="text"
@@ -205,7 +269,7 @@ const Form: React.FC = () => {
         </div>
 
         <div className={`form-group ${errors.phone && 'error'}`}>
-          <label htmlFor="phone">Phone Number:</label>
+          <label htmlFor="phone">Phone Number:</label> <div className='error-message'>{errors.phone}</div>
           <input
             type="tel"
             id="phone"
@@ -214,8 +278,44 @@ const Form: React.FC = () => {
             onChange={handleChange}
             className={errors.phone ? 'error' : ''}
             maxLength={10}
+
           />
+          <div className='sendotp-btn'>
+            {buttonLoading=='' && !otpVerified && (
+              <button onClick={sendOtp}>Get Otp</button>
+            )}
+             {buttonLoading=='otp' &&(
+              <div >...</div>
+            )}
+             {buttonLoading=='otpcount'&& !otpVerified &&(
+              <div >{timeLeft}</div>
+            )}
+          </div>
         </div>
+
+      {otpVerified?(
+     <div className='otp-success'>Verified successfully</div>
+
+      ):(
+        <div className={`form-group ${errors.otp && 'error'}`}>
+        <label htmlFor="phone">Enter OTP</label>          <div className='error-message'>{errors.otp}</div>
+
+        <input
+          type="tel"
+          id="otp"
+          name="otp"
+          value={formData.otp}
+          onChange={handleChange}
+          className={errors.otp ? 'error' : ''}
+          maxLength={10}
+          
+        />
+        <div className='sendotp-btn'>
+          <button onClick={verifyOtp}>Verify</button>
+        </div>
+      </div>
+      )}
+
         <div className={`form-group ${errors.email && 'error'}`}>
           <label htmlFor="email">email:</label>
           <input
@@ -290,26 +390,9 @@ const Form: React.FC = () => {
           </div>
         </div>
 
-        <div className="form-group captcha-group">
-          <label>Captcha:</label>
-          <div className="captcha-container">
-            <div className="captcha-display">{formData.captcha}</div>
-            <button type="button" onClick={generateCaptcha} className="refresh-btn">
-              ↻
-            </button>
-          </div>
-          <input
-            type="text"
-            name="captchaInput"
-            value={formData.captchaInput}
-            onChange={handleChange}
-            placeholder="Enter the captcha"
-            className={`captchainput${errors.captchaInput ? 'error' : ''}`}
-          />
-          {errors.captchaInput && <span className="error-message">{errors.captchaInput}</span>}
-        </div>
 
-        <button type="submit" className="submit-btn">
+
+        <button onClick={handleSubmit} className="submit-btn">
           Submit Application
         </button>
       </form>

@@ -329,6 +329,36 @@
   
   .form-group {
     margin-bottom: 1.5rem;
+    position: relative;
+
+    .sendotp-btn{
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      padding:0;
+      border-radius: 4px;
+      font-size: 1rem;
+      button{
+        width: 70px;
+        height: 40px;
+      border-radius: 4px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      }
+      div{
+        background-color: #ac0117;
+        width: 70px;
+        height: 40px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      }
+    }
   }
   
   .form-group label {
@@ -341,17 +371,21 @@
   .form-group input[type="text"],
   .form-group input[type="tel"],
   .form-group input[type="email"],
+  .form-group input,
   .form-group select {
     width: 100%;
     padding: 0.75rem;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 1rem;
+    color: black;
     transition: border-color 0.3s;
+    overflow: hidden;
   }
   
   .form-group input[type="text"]:focus,
   .form-group input[type="tel"]:focus,
+  .form-group input:focus
   .form-group select:focus {
     border-color: #3498db;
     outline: none;
@@ -512,8 +546,8 @@
   }
   .form-group.error{
     label {
-    color: red;
-    font-weight: 400;
+      color: #e74c3c;
+      font-weight: 400;
   }}
   .form-group label {
     display: block;
@@ -543,7 +577,9 @@
   }
   }
 
-
+.otp-success{
+  color: green;
+}
 
   @media (max-width: 768px) {
     .if_main>div{
