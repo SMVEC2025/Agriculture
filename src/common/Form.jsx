@@ -155,7 +155,6 @@ const Form = () => {
       try {
         const response = await axios.post('https://agribackend.vercel.app/api/submit-form', enquiryData);
 
-        console.log("CRM Response:", response.data);
         setIsSubmitted(true)
       } catch (error) {
         console.error("Error submitting form:", error);
@@ -182,7 +181,6 @@ const Form = () => {
       });
     }, 1000);
   };
-console.log(timeLeft)
   const sendOtp = async (e) => {
     e.preventDefault();
     setButtonLoading('otp')
@@ -197,7 +195,6 @@ console.log(timeLeft)
           "mobile_number": formData.phone
         });
 
-        console.log("CRM Response:", response.data);
         const jsonString = JSON.stringify(response.data)
         setUserOtp(jsonString)
         setButtonLoading('otpcount')
@@ -229,7 +226,6 @@ console.log(timeLeft)
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   }
-  console.log('forms',`${formData.state},${formData.city}`)
   if (isSubmitted) {
     return (
       <div className="form-container">
