@@ -12,7 +12,7 @@ function CampusLife() {
     <Preloader />
     <BreadcrumbEvent title="Campus life" subtitle="campuslife"  />
     <div className="applipara">
-    <p>The Master of Arts Degree in Islamic Texts provides students with access to the rational and traditional Islamic sciences through a guided course of study in primary sources. Our instructional approach is both didactic and dialectic, incorporating both contemporary and classical methods of learning. </p>
+    <p>Campus life at SMVEC is vibrant, inclusive, and designed to nurture both academic excellence and personal growth. Spread across a lush, green campus with state-of-the-art infrastructure, SMVEC offers students a dynamic environment where learning extends beyond the classroom. Students benefit from well-equipped labs, digital libraries, modern hostels, and a wide range of sports and recreational facilities.</p>
     </div>
     <Facilities/>
     <div className="section-title color-red text-center" style={{paddingTop:"3rem"}}>

@@ -11,7 +11,7 @@ function AgricultureAdmission() {
     <Preloader />
     <BreadcrumbEvent title="Apply for B.Sc. (Hons.) Agriculture" subtitle="Apply for B.Sc. (Hons.) Agriculture" />
     <div className="applipara">
-    <p>The Master of Arts Degree in Islamic Texts provides students with access to the rational and traditional Islamic sciences through a guided course of study in primary sources. Our instructional approach is both didactic and dialectic, incorporating both contemporary and classical methods of learning. </p>
+    <p>The B.Sc (Hons) Agriculture program equips students with in-depth knowledge of agricultural sciences through a balanced blend of theoretical instruction and hands-on experience. This course emphasizes modern farming techniques, sustainable agriculture, soil and crop management, and agri-technology, while also drawing on traditional practices. With a focus on innovation and real-world application, students are prepared to contribute effectively to food security, environmental stewardship, and the advancement of rural economies.</p>
     </div>
     <div className="appli_container">
         <div className="appli_container1">

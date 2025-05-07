@@ -12,7 +12,7 @@ function HorticultureAdmission() {
             <BreadcrumbEvent title="Apply for B.Sc. (Hons.) Horticulture" subtitle="Apply for B.Sc. (Hons.) Horticulture
 " />
             <div className="applipara">
-                <p>The Master of Arts Degree in Islamic Texts provides students with access to the rational and traditional Islamic sciences through a guided course of study in primary sources. Our instructional approach is both didactic and dialectic, incorporating both contemporary and classical methods of learning. </p>
+                <p>The B.Sc (Hons) Horticulture program provides students with a focused understanding of the science and art of cultivating fruits, vegetables, flowers, and ornamental plants. The curriculum blends modern horticultural technologies with ecological and sustainable practices, covering areas such as plant propagation, greenhouse management, landscape design, and post-harvest technology. This program prepares graduates to meet the growing demand for horticultural expertise in food production, urban greening, and the agri-business sector.</p>
             </div>
             <div className="appli_container">
                 <div className="appli_container1">
