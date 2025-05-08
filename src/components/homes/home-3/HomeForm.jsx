@@ -5,20 +5,19 @@ import bookanimation from '../../../common/bookanimation.json'
 function HomeForm() {
     return (
         <div className='homeform_main' >
+            <div className='airplane'>
+                <img src="/assets/img/airplane.png" alt="" />
+            </div>
+            <img className='backimage' src="/assets/img/breadcrumb/DJI_0981.jpg" alt="" />
+            
             <div className='blur'>
-            
-            
-            <div className='homeform-left'>
-{/* <div style={{ width: 300, height: 300 }}>
-            
-      <Lottie animationData={bookanimation} loop={true} />
-    </div> */}
-        </div>
-            <div className='homeform-right'>
-            <div className='af_main'>
-            <Form/>
-            </div>
-            </div>
+
+
+                <div className='homeform-right'>
+                    <div className='af_main'>
+                        <Form />
+                    </div>
+                </div>
             </div>
         </div>
     )
@@ -27,7 +26,7 @@ function HomeForm() {
 export default HomeForm
 
 
-  {/* <div style={{ width: 300, height: 300 }}>
+{/* <div style={{ width: 300, height: 300 }}>
             
       <Lottie animationData={bookanimation} loop={true} />
     </div> */}

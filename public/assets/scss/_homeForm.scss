@@ -1,16 +1,46 @@
 .homeform_main{
  
-    background-image: url('/assets/img/breadcrumb/DJI_0981.jpg');
     background-size: cover;
     position: relative;
     
     width: 100%;
+    .airplane{
+        position: absolute;
+        transform: rotate(-8deg);
+  animation: moveRight 30s linear infinite;
+  z-index: 0;
+        img{
+            width: 70px;
+            height: auto;
+            
+        }
+    }
+    .backimage{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        object-fit: cover;
+        z-index: -1;
+        object-position: top;
+    }
  
 }
+@keyframes moveRight {
+    0% {
+      left: -100px;
+      top: 20%;
+    }
+    
+    100% {
+      left: 100%;
+      top: 0;
+    }
+  }
+
 .blur{
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.219);
     justify-content: center;
     align-items: center;
     flex-direction: row-reverse;
@@ -46,6 +76,7 @@
 .homeform-right{
     display: flex;
     justify-content: center;align-items: center;
+    z-index: 10;
 }
 @media (max-width:1050px) {
     .homeform-left{
