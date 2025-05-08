@@ -107,7 +107,6 @@ const itemRefs = useRef([]);
       </div>
       <div className="demo-footer">
         <a href="http://www.turkishnews.com/Ataturk/life.htm" target="_blank" rel="noopener noreferrer">
-          Source/Kaynak
         </a>
       </div>
     </div>

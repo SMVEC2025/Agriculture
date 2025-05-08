@@ -9,10 +9,10 @@ function HomeForm() {
             
             
             <div className='homeform-left'>
-<div style={{ width: 300, height: 300 }}>
+{/* <div style={{ width: 300, height: 300 }}>
             
       <Lottie animationData={bookanimation} loop={true} />
-    </div>
+    </div> */}
         </div>
             <div className='homeform-right'>
             <div className='af_main'>

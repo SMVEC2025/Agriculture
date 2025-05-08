@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState, useEffect, useRef } from 'react';
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
 // Indian states and cities data
 const indianStates = [
@@ -161,7 +162,6 @@ const Form = () => {
         alert("Something went wrong!");
       }
     }else{
-      alert('check valid')
     }
 
   };
@@ -201,14 +201,15 @@ const Form = () => {
         startCountdown()
       } catch (error) {
         console.error("Error submitting form:", error);
-        alert("Something went wrong!");
         setButtonLoading('')
       }
     }
 
+    setButtonLoading('')
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
+
   }
   const verifyOtp = async (e) => {
     e.preventDefault();
@@ -281,7 +282,7 @@ const Form = () => {
               <button onClick={sendOtp}>Get-Otp</button>
             )}
              {buttonLoading=='otp' &&(
-              <div >...</div>
+              <div><AiOutlineLoading3Quarters /></div>
             )}
              {buttonLoading=='otpcount'&& !otpVerified &&(
               <div >{timeLeft}</div>

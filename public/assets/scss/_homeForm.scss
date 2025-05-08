@@ -55,3 +55,66 @@
         opacity: 0.8;
     }
 }
+
+@media (max-width:550px) {
+    .homeform_main{
+ 
+        background-image: url('/assets/img/breadcrumb/DJI_0981.jpg');
+        background-size: cover;
+        position: relative;
+        
+        width: 100%;
+     
+    }
+    .blur{
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(5px);
+        justify-content: center;
+        align-items: center;
+        flex-direction: row-reverse;
+        background-position: center;
+        gap: 1rem;
+        background-size: cover;
+        display: flex;
+        padding: 0;
+    
+        .form-container{
+            width: 100vw !important;
+        }
+      
+    }
+    .homeform-left{
+        display: flex;
+        justify-content: start;
+        align-items: start;
+    
+        img{
+            width:auto;
+            height: 50%;
+            border-radius: 10px;
+    
+            z-index: 1;
+        }
+        .back{
+        position: absolute;
+        top: 0;
+        z-index: 0;
+        left: 0;
+        width: 100%;
+        }
+        
+    }
+    .homeform-right{
+        display: flex;
+        justify-content: center;align-items: center;
+    }
+    @media (max-width:1050px) {
+        .homeform-left{
+            position: absolute;
+            z-index: -1;
+            right: 0;
+            opacity: 0.8;
+        }
+    }  
+}
