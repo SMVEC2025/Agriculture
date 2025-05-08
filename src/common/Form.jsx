@@ -278,7 +278,7 @@ const Form = () => {
           />
           <div className='sendotp-btn'>
             {buttonLoading=='' && !otpVerified && (
-              <button onClick={sendOtp}>Get Otp</button>
+              <button onClick={sendOtp}>Get-Otp</button>
             )}
              {buttonLoading=='otp' &&(
               <div >...</div>

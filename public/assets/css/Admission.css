@@ -207,14 +207,6 @@
 
 }
 
-.af_main {
-  button {
-    padding: 7px 25px;
-    background-color: var(--theme-red);
-    font-size: 15px;
-    color: white;
-  }
-}
 
 .applicationdate {
   background-color: var(--theme-red);
@@ -641,7 +633,7 @@
     top: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.459);
+    background-color: #aaaaaac4;
     backdrop-filter: blur(5px);
     z-index: 1005;
     padding: 0;
@@ -652,9 +644,10 @@
 
 
     .form-container {
-      width: 100% !important;
+      width: 100vw !important;
       max-width: 100%;
       margin: 0;
+      
       height: fit-content;
       border-radius: 0;
       padding: 10px;
