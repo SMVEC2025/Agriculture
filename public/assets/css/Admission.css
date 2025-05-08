@@ -249,6 +249,8 @@
 }
 
 .applicationdate {
+  margin-bottom: 2rem;
+
   .header {
     height: 50px;
     display: flex;
@@ -256,6 +258,7 @@
     align-items: center;
     padding-left: 20px;
     columns: white;
+    
 
     h4 {
       color: white;

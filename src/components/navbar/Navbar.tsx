@@ -86,7 +86,7 @@ function Navbar() {
           <img src="/assets/img/images/frontview.jpg" alt="" />
           <div className="navslider_con2">
             <p>The School of Agricultural Sciences (SAGS) at Sri Manakula Vinayagar Engineering College (SMVEC) offers specialized programs in B.Sc. (Hons.) Agriculture and B.Sc. (Hons.) Horticulture. The college provides a modern learning environment with practical training on 40 acres of agricultural land.</p>
-            <div className="viewbtn">View Faculty <BsArrowRight /></div>
+            <div className="viewbtn"  onClick={() => navigate('/faculty')}>View Faculty <BsArrowRight /></div>
           </div>
           <div className="navslider_items">
             <ul>
@@ -107,7 +107,7 @@ function Navbar() {
           <img src="/assets/img/images/agribuilding.jpg" alt="" />
           <div className="navslider_con2">
             <p>Campus life at Sri Manakula Vinayagar Engineering College (SMVEC) is vibrant and enriching, offering a blend of academic rigor and extracurricular engagement. Students have access to modern infrastructure, including well-equipped classrooms, laboratories, and libraries, fostering an environment conducive to learning and innovation. </p>
-            <div className="viewbtn">View campus life <BsArrowRight /></div>
+            <div className="viewbtn"  onClick={() => navigate('/campus-life')}>View campus life <BsArrowRight /></div>
           </div>
           <div className="navslider_items">
             <ul>
@@ -126,7 +126,7 @@ function Navbar() {
           <img src="/assets/img/images/studentsthree.jpg" alt="" />
           <div className="navslider_con2">
             <p>Admission to the B.Sc. (Hons.) Agriculture at SMVEC requires candidates to have completed 10+2 with Physics, Chemistry, and Biology, with a minimum of 50% marks. Admission is based on merit, following the guidelines of the SMVEC Autonomous Regulations.</p>
-            <div className="viewbtn">Admission {new Date().getFullYear()} <BsArrowRight /></div>
+            <div className="viewbtn"  onClick={() => navigate('/admission')}>Admission {new Date().getFullYear()} <BsArrowRight /></div>
           </div>
           <div className="navslider_items">
             <ul>
