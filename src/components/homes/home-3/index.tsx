@@ -9,6 +9,7 @@ import TestimonialHomeThree from "./TestimonialHomeThree";
 import FooterOne from "../../../layouts/footers/FooterOne";
 import EventHomeThree from "./EventHomeThree";
 import HeroSlider from "./HeroSlider";
+import HomeForm from "./HomeForm";
 
 
   
@@ -23,7 +24,7 @@ const HomeThree = () => {
        {/* <Test/> */}
       {/* <HeroHomeThree /> */}
       <HeroSlider/>
-
+     <HomeForm/>
       <AboutHomeThree />
       {/* <MarqueeTwo /> */}
       <CoursesHomeThree />
