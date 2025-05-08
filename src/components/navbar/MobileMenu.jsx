@@ -84,9 +84,9 @@ function MobileMenu() {
         <div className="social-icon">
           <a onClick={() => handleRedirect('https://www.facebook.com/SMVECOfficial')}><i className="fab fa-facebook-f"></i></a>
           <a onClick={() => handleRedirect('https://x.com/SMVEC2')}><i className="fab fa-x-twitter"><BsTwitterX /></i></a>
-          <a onClick={() => handleRedirect('https://www.facebook.com/YourPage')}><i className="fab fa-whatsapp"></i></a>
+          <a onClick={() => handleRedirect('https://api.whatsapp.com/send/?phone=919344916320&text&app_absent=0')}><i className="fab fa-whatsapp"></i></a>
           <a onClick={() => handleRedirect('https://www.instagram.com/smvec_official')}><i className="fab fa-instagram"></i></a>
-          <a onClick={() => handleRedirect('https://www.facebook.com/YourPage')}><i className="fab fa-youtube"></i></a>
+          <a onClick={() => handleRedirect('https://www.youtube.com/@official_smvec')}><i className="fab fa-youtube"></i></a>
         </div>
       </div>
     </div>
