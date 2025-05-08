@@ -205,7 +205,6 @@ const Form = () => {
       }
     }
 
-    setButtonLoading('')
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
