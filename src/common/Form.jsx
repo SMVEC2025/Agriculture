@@ -73,6 +73,7 @@ const Form = () => {
   const [otpVerified, setOtpVerified] = useState(false)
   const [buttonLoading,setButtonLoading]=useState('')
   const [timeLeft, setTimeLeft] = useState(59);
+  const [loading,setLoading] = useState(false)
   const timerRef = useRef(null);
   // Generate captcha on component mount
   useEffect(() => {
@@ -138,6 +139,7 @@ const Form = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true)
     if (validate()) {
 
       const enquiryData = {
@@ -157,11 +159,16 @@ const Form = () => {
         const response = await axios.post('https://agribackend.vercel.app/api/submit-form', enquiryData);
 
         setIsSubmitted(true)
+        setLoading(false)
       } catch (error) {
         console.error("Error submitting form:", error);
-        alert("Something went wrong!");
+        alert("Something went wrong! try after sometimes");
+        setLoading(false)
+
       }
     }else{
+      setLoading(false)
+
     }
 
   };
@@ -388,9 +395,16 @@ const Form = () => {
 
 
 
-        <button onClick={handleSubmit} className="submit-btn">
+        {!loading?(
+          <button onClick={handleSubmit} className="submit-btn">
           Submit Application
         </button>
+        ):(
+          <button  className="submit-btn">
+                        <div><AiOutlineLoading3Quarters /></div>
+
+        </button>
+        )}
       </form>
     </div>
   );
