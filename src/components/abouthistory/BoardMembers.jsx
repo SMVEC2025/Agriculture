@@ -38,7 +38,8 @@ function BoardMembers() {
           <div className='bm_chairman'>
             <img src={secratary} alt="" />
              <div className='content'>
-                <h2>Shri.M.Dhanasekaran</h2>
+                <h2>Dr.K.Narayanasamy
+                </h2>
                 <h4>Secretary</h4>
                 <p>Sri Manakula Vinayaga Educational Trust stands as a beacon of excellence in fostering future innovators and leaders. Since its establishment in 1998, the institution has reached remarkable milestones, including academic brilliance, exceptional placement records, and commendable achievements in sports and co-curricular activities. The Sri Manakula Vinayagar College of Agricultural Sciences (SMVCAS) embodies the Trust’s vision of providing a holistic and enriching learning environment for its students.
                     <div>,,</div>
