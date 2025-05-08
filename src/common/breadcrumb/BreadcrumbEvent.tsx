@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
  
 
 const BreadcrumbEvent = ({title, subtitle, heroImage} : any) => {
-	const heroImages = heroImage || '/assets/img/breadcrumb/DJI_0981.jpg'
+	const heroImages = heroImage ? heroImage:'/assets/img/breadcrumb/DJI_0981.jpg'
 	return (
 		<>
 			<section className="breadcrumb-wrapper">
