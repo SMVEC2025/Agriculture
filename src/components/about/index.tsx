@@ -13,7 +13,7 @@ const About = () => {
 	return (
 		<>
 		<Preloader />
-			<BreadcrumbEvent heroImage='/assets/img/breadcrumb/DJI_0981.JPG' title="About" subtitle="About" />
+			<BreadcrumbEvent heroImage='/assets/img/breadcrumb/DJI_0981.jpg' title="About" subtitle="About" />
       <AboutArea />
 	  <AboutMission/>
       <FeatureArea />

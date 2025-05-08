@@ -13,7 +13,7 @@ const CoursesHomeThree = () => {
             <h2 className="wow fadeInUp" data-wow-delay=".3s">
               our Academic Programs
             </h2>
-            <p className="courses-sub-text mt-3 wow fadeInUp" data-wow-delay=".5s">  Hands-on training, expert mentorship, and real-world field experience to cultivate your success
+            <p className="courses-sub-text mt-3 wow fadeInUp" data-wow-delay=".5s">  Our programs combine academic excellence with hands-on learning, preparing students for impactful careers in agriculture and allied sciences.
             </p>
           </div>
 

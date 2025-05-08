@@ -11,11 +11,11 @@ export default function Journey() {
                     </h2>
                 </div>
             <p>
-                Zaytuna College is a place for traditional and formal studies. We seek students who demonstrate intelligence, diligence, and perseverance, who have a track record of service and volunteer work, who are energized by long hours of study, and who desire to develop their character as they develop their intellect.
+            At SMVEC, we are committed to academic excellence, personal growth, and the holistic development of our students. We welcome aspiring individuals who are passionate about learning, dedicated to making a positive impact, and eager to grow both intellectually and personally.
 
             </p>
             <p>
-                The Zaytuna degree programs are rigorous and incoming students must possess superb reading, writing, and time-management skills. Acquiring tools for accessing great books, in English and in Arabic, that contain timeless truths is a way of life at Zaytuna College.
+            Our programs are designed to be challenging and transformative, requiring strong reading, writing, and time-management skills. At SMVEC, education is not just about acquiring knowledge — it's about shaping character, fostering innovation, and building a foundation for lifelong success. With access to world-class resources and a vibrant learning environment, students at SMVEC are empowered to become future-ready leaders.
 
             </p>
         </div>

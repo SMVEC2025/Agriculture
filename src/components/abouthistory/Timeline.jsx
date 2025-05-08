@@ -39,7 +39,7 @@ title:"Expansion",
 Rated 'AAA' by Careers 360 as the Best Engineering College in Puducherry.
 
 Strengthened placement records, with students placed in top companies in India and abroad.`,
-    image: '/assets/img/breadcrumb/DJI_0981.JPG',
+    image: '/assets/img/breadcrumb/DJI_0981.jpg',
     title:"Recognitions",
 }, 
 ];

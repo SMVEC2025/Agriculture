@@ -6,7 +6,7 @@ function ApplicationForm() {
     const [openApplication, setOpenApllication] = useState(false)
     return (
         <div className="af_main">
-            <button>Application Closed</button>
+            {/* <button>Application Closed</button>   i opened application here so i cmt the apploication closed button */}
             <Form/>
             <div className={`applicationdate ${openApplication ? "open" : ""}`}  onClick={() => setOpenApllication(!openApplication)} >
                 <button>+</button>
@@ -32,12 +32,10 @@ function ApplicationForm() {
                 </div>
                 <div className="applicationcontainer">
                     <ul>
-                        <li>Any candidate who has earned a terminal degree, such as a bachelor’s degree or seminary (madrasa) equivalent, may apply</li>
-                        <li>Studied rudimentary classical texts of grammar, fiqh, theology, rhetoric, and the other Islamic sciences with a qualified teacher
-                        </li>
-                        <li>Proficiency in the English language similar to a native speaker</li>
-                        <li>Oral examination administered as part of the admissions interview to assess your Arabic reading/comprehension and area of concentration proficiencies
-                        </li>
+                        <li>Candidates must have completed higher secondary education (10+2) with a strong foundation in science subjects, preferably including Biology or Agriculture.</li>
+                        <li>A genuine interest in agricultural sciences and sustainable farming practices is essential.</li>
+                        <li>Proficiency in English is required, as the medium of instruction is English.</li>
+                        <li>Candidates may be evaluated through a personal interview to assess aptitude, communication skills, and subject understanding.</li>
                     </ul>
                 </div>
             </div>

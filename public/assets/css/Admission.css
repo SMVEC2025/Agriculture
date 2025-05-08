@@ -224,12 +224,13 @@
 
   button {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 10px;
+    right: 10px;
     font-size: 30px;
     cursor: pointer;
     background: none;
     transition: all 0.3s ease-out;
+    color: white;
 
   }
 
