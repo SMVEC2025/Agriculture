@@ -1,10 +1,10 @@
 
 
 import { useContext, useEffect } from "react";
-import ScrollToTop from "../common/ScrollToTop";    
 import WOW from "wow.js"; 
 import { AppContext } from "../context/AppContext";
 import MobileMenuBtn from "../components/navbar/MobileMenuBtn";
+import ScrollTop from "../common/ScrollTop";
 
 const Wrapper = ({ children }: any) => {
   useEffect(() => {
@@ -25,7 +25,7 @@ const Wrapper = ({ children }: any) => {
   return (
     <> 
       {children}
-      <ScrollToTop /> 
+      <ScrollTop/>
       {isMobile?( <MobileMenuBtn/>):null}
     </>
   );
