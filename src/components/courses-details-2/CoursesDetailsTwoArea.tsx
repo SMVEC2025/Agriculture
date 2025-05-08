@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AppContext } from "../../context/AppContext";
+import Cards from "./Cards";
 
 
 const CoursesDetailsTwoArea = () => {
@@ -37,9 +38,7 @@ const CoursesDetailsTwoArea = () => {
 
 
                                                     </p>
-                                                    <p>
-                                                        UI (User Interface) Design is the process of creating the visual elements of a product, including layout, color schemes, typography, and interactive features like buttons and icons.
-                                                    </p>
+
                                                     <h3 className="mt-5">subjects covered</h3>
 
                                                     <div className="row  mb-5">
@@ -76,13 +75,20 @@ const CoursesDetailsTwoArea = () => {
                                                                 <li>
                                                                     <i className="fas fa-check-circle"></i>
                                                                     Agricultural Engineering                                                                </li>
-                                                            
+
 
                                                             </ul>
                                                         </div>
+                                                        <h3 className="mt-5">career opportunities</h3>
+                                                        <div>
+                                                            <Cards/>
+                                                        </div>
 
                                                     </div>
-                                                    
+
+
+
+
                                                 </div>
                                             </div>
 

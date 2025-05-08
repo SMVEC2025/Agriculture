@@ -2650,7 +2650,6 @@
 
 
 
-
 /////////i wriiten
 /// 
 .couses-list{
@@ -2659,5 +2658,63 @@
     justify-content: center;
     align-items: center;
     gap: 3rem;
+}
+.course-card{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+    @media (max-width:550px) {
+        grid-template-columns: repeat(auto-fit, minmax(90vw, 1fr));
 
+    }
+    .card {
+        background: linear-gradient(to top right, #032042, rgb(23, 29, 87));
+        background: -webkit-linear-gradient(to top right, rgb(7 16 45), rgb(58 60 84));
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        border-radius: 20px;
+        border: 1px solid rgb(84 90 106);
+        width: 400px;
+        @media (max-width:550px) {
+            width: 90vw;
+    
+        }
+        margin-bottom: 1rem;
+
+        box-sizing: border-box;
+      }
+      
+      .small-text, .title,.desc {
+        font-weight: 600;
+      }
+      
+      .title,.desc {
+        margin: 8px 0;
+      }
+      
+      .small-text {
+        color: #488aec;
+        font-size: 14px;
+      }
+      
+      .title {
+        color: #fff;
+        font-size: 23px;
+        line-height: 26px;
+        font-weight: 400;
+      }
+      
+      .desc {
+        color: rgb(151 153 167);
+        font-size: 13px;
+        ul {
+            list-style-type: disc; /* Show solid bullet points */
+            padding-left: 20px;    /* Add space so bullets are visible */
+          }
+          li {
+            list-style-position: outside; /* Position bullet outside the content box */
+          }
+      }
+      
 }

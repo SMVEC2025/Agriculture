@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AppContext } from "../../context/AppContext";
+import Cards from "./Cards";
 
 
 const CoursesDetailHorticulture = () => {
@@ -76,6 +77,10 @@ const CoursesDetailHorticulture = () => {
                                                         </div>
 
                                                     </div>
+                                                    <h3 className="mt-5">career opportunities</h3>
+                                                         <div>
+                                                        <Cards/>
+                                                        </div>                               
 
                                                 </div>
                                             </div>
@@ -90,7 +95,7 @@ const CoursesDetailHorticulture = () => {
                                 <div className="courses-sidebar-area">
                                     <div className="courses-items">
                                         <div className="courses-image">
-                                        <img src="assets/img/horticulturecourse.webp" className="opacity-0.8" alt="img" />
+                                        <img src="assets/img/agriculturecourse.webp" className="opacity-0.8" alt="img" />
                                         <div className="position-absolute top-0 start-0 w-100 h-100 bg-dark z--1 opacity-25"></div>
                                             <h3 className="courses-title">Bsc</h3>
                                             <h4 className="topic-title">Horticulture science</h4>

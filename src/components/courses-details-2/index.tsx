@@ -2,6 +2,7 @@ import BreadcrumbEvent from "../../common/breadcrumb/BreadcrumbEvent";
 import Preloader from "../../common/Preloader";
 import ScrollTop from "../../common/ScrollTop";
 import FooterOne from "../../layouts/footers/FooterOne";
+import Cards from "./Cards";
 import CoursesDetailsTwoArea from "./CoursesDetailsTwoArea";
 
 const CoursesDetailsTwo = () => {
