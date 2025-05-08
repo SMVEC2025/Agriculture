@@ -90,22 +90,7 @@ const FaqArea = () => {
                                 <div className="faq-content">
                                     <div className="faq-items">
                                         <div className="accordion" id="accordionExample2">
-                                            <div className="accordion-item">
-                                                <h2 className="accordion-header" id="headingfive">
-                                                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                                        data-bs-target="#collapsefive" aria-expanded="true" aria-controls="collapsefive">
-                                                        Do you offer online courses?
-                                                    </button>
-                                                </h2>
-                                                <div id="collapsefive" className="accordion-collapse collapse"
-                                                    aria-labelledby="headingfive" data-bs-parent="#accordionExample2">
-                                                    <div className="accordion-body">
-                                                        <p>
-                                                            We offer a wide range of undergraduate, graduate, and professional programs across various fields, including, sciences, business, engineering.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
+
                                             <div className="accordion-item">
                                                 <h2 className="accordion-header" id="headingsix">
                                                     <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -117,8 +102,7 @@ const FaqArea = () => {
                                                     data-bs-parent="#accordionExample2">
                                                     <div className="accordion-body">
                                                         <p>
-                                                            We offer a wide range of undergraduate, graduate, and professional programs across various fields, including, sciences, business, engineering.
-                                                        </p>
+                                                            You can apply to our institution either online or offline. To apply online, simply visit the Admission page on our website and complete the application form. Alternatively, you can apply offline by visiting our campus in person and submitting your application at the admission office.                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -127,15 +111,13 @@ const FaqArea = () => {
                                                     <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                                         data-bs-target="#collapseseven" aria-expanded="false"
                                                         aria-controls="collapseseven">
-                                                        What is the student-to-teacher ratio?
-                                                    </button>
+                                                        Does the college provide hostel facilities?                                                    </button>
                                                 </h2>
                                                 <div id="collapseseven" className="accordion-collapse collapse"
                                                     aria-labelledby="headingseven" data-bs-parent="#accordionExample2">
                                                     <div className="accordion-body">
                                                         <p>
-                                                            We offer a wide range of undergraduate, graduate, and professional programs across various fields, including, sciences, business, engineering.
-                                                        </p>
+                                                            Yes, our college offers separate, well-maintained hostel facilities for both boys and girls. The hostels are equipped with essential amenities, 24/7 security, and a comfortable living environment to ensure students feel at home while focusing on their studies.                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -151,8 +133,7 @@ const FaqArea = () => {
                                                     aria-labelledby="headingeight" data-bs-parent="#accordionExample2">
                                                     <div className="accordion-body">
                                                         <p>
-                                                            We offer a wide range of undergraduate, graduate, and professional programs across various fields, including, sciences, business, engineering.
-                                                        </p>
+                                                            Campus life at our institution is vibrant, inclusive, and engaging. Students enjoy a well-balanced environment with access to academic resources, cultural events, sports facilities, student clubs, and various extracurricular activities. We encourage a healthy blend of learning and personal growth through a strong sense of community and active student participation.                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -161,16 +142,30 @@ const FaqArea = () => {
                                                     <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                                         data-bs-target="#collapsenine" aria-expanded="false"
                                                         aria-controls="collapsenine">
-                                                        What is the campus life like?
-                                                    </button>
+                                                        Are scholarships or financial aid available?                                                    </button>
                                                 </h2>
                                                 <div id="collapsenine" className="accordion-collapse collapse"
                                                     aria-labelledby="headingnine" data-bs-parent="#accordionExample2">
                                                     <div className="accordion-body">
                                                         <p>
-                                                            We offer a wide range of undergraduate, graduate, and professional programs across various fields, including, sciences, business, engineering.
-                                                        </p>
+                                                            Yes, our institution offers various scholarships and financial aid programs based on merit, need, and specific eligibility criteria. You can learn more about available options and apply through the Scholarships section on our website or by contacting the admissions office directly.                                                        </p>
                                                     </div>
+                                                </div>
+                                            </div>
+                                            <div className="accordion-item ">
+                                                <h2 className="accordion-header " id="headingten">
+                                                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#collapseten" aria-expanded="false"
+                                                        aria-controls="collapseten">
+                                                        How does the college support career development and placements?                                              </button>
+                                                </h2>
+                                                <div id="collapseten" className="accordion-collapse collapse"
+                                                    aria-labelledby="headingten" data-bs-parent="#accordionExample2">
+                                                    <div className="accordion-body">
+                                                        <p>
+                                                            Our college has a dedicated Career Services department that offers career counseling, resume-building workshops, interview preparation, and placement drives. We have strong industry connections and regularly host recruitment events to help students secure internships and job opportunities in leading companies.
+
+                                                        </p></div>
                                                 </div>
                                             </div>
                                         </div>

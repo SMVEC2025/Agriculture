@@ -48,7 +48,7 @@ const HeroHomeThree = () => {
                                             with SMVEC Agri Sciences
                                         </h1>
                                         <p data-animation="fadeInUp" data-delay="1.7s">
-                                            At SMVEC, we sow the sds of knowledge and innovation in agriculture—empowering students with cutting-edge practices, sustainable farming techniques, and hands-on experience to lead the future of agri-tech and rural development.
+                                            At SMVEC, we sow the seeds of knowledge and innovation in agriculture—empowering students with cutting-edge practices, sustainable farming techniques, and hands-on experience to lead the future of agri-tech and rural development.
                                         </p>
                                         <div className="hero-button">
                                             <Link to="/courses-details" data-animation="fadeInUp" data-delay="1.9s" className="theme-btn red-btn">Apply Now</Link>

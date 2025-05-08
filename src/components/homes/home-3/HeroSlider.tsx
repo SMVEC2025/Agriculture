@@ -12,20 +12,20 @@ import { AdvancedBannerTop } from "../../test/AdvancedBannerTop";
 const slides = [
   {
     title: "Cultivate Your Future with SMVEC Agri Science",
-    text: "At SMVEC, we sow the sds of knowledge and innovation in agriculture—empowering students with cutting-edge practices, sustainable farming techniques, and hands-on experience to lead the future of agri-tech and rural development.",
+    text: "At SMVEC, we sow the seeds of knowledge and innovation in agriculture—empowering students with cutting-edge practices, sustainable farming techniques, and hands-on experience to lead the future of agri-tech and rural development.",
     background: "/assets/img/campushome.webp",
     backgroundlayer: "/assets/img/campuslayer.png",
 
   },
   {
     title: "Cultivate Yours Future with SMVEC Agri Science",
-    text: "At SMVEC, we sow the sds of knowledge and innovation in agriculture—empowering students with cutting-edge practices, sustainable farming techniques, and hands-on experience to lead the future of agri-tech and rural development.",
+    text: "At SMVEC, we sow the seeds of knowledge and innovation in agriculture—empowering students with cutting-edge practices, sustainable farming techniques, and hands-on experience to lead the future of agri-tech and rural development.",
     background: "/assets/img/gardenhome.webp",
     backgroundlayer: "/assets/img/gardenlayer.png",
   },
   {
     title: "Cultivate Your Future with SMVEC Agri Science",
-    text: "At SMVEC, we sow the sds of knowledge and innovation in agriculture—empowering students with cutting-edge practices, sustainable farming techniques, and hands-on experience to lead the future of agri-tech and rural development.",
+    text: "At SMVEC, we sow the seeds of knowledge and innovation in agriculture—empowering students with cutting-edge practices, sustainable farming techniques, and hands-on experience to lead the future of agri-tech and rural development.",
     background: "/assets/img/entrancehome.webp",
     backgroundlayer: "/assets/img/entrancelayer.png",
 
