@@ -20,7 +20,7 @@ const ContactArea = () => {
                                 Location
                             </h5>
                             <div className="image">
-                                <img src="assets/img/small-line.png" alt="img" />
+                                <img src="/assets/img/small-line.png" alt="img" />
                             </div>
                             <h4>
 Sri Manakula Vinayagar Engineering College Campus
@@ -38,7 +38,7 @@ Puducherry – 605 107
                                 Email Address
                             </h5>
                             <div className="image">
-                                <img src="assets/img/small-line.png" alt="img" />
+                                <img src="/assets/img/small-line.png" alt="img" />
                             </div>
                             <h4>
                                 <a href="mailto:supportedus@gmail.com" style={{textTransform:'lowercase'}}>smvec@smvec.ac.in</a> <br />
@@ -48,13 +48,13 @@ Puducherry – 605 107
                     <div className="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".7s">
                         <div className="contact-box-items">
                             <div className="icon">
-                                <img src="assets/img/call.png" alt="img" />
+                                <img src="/assets/img/call.png" alt="img" />
                             </div>
                             <h5>
                                 Enquiry
                             </h5>
                             <div className="image">
-                                <img src="assets/img/small-line.png" alt="img" />
+                                <img src="/assets/img/small-line.png" alt="img" />
                             </div>
                             <h4>
                                 <a href="tel:+916381270732">6381270732</a> <br />

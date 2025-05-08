@@ -73,7 +73,7 @@ export default function Preloader() {
 			<div id="preloader" className="preloader">
 				<div className="animation-preloader">
 					{/* <div className="edu-preloader-icon">
-						<img src="assets/img/logo.png" alt="" />
+						<img src="/assets/img/logo.png" alt="" />
 					</div> */}
 					<div className="txt-loading">
 						<span data-text-preloader="S" className="letters-loading">

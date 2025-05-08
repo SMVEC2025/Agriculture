@@ -91,7 +91,7 @@ const FaqHomeThree = () => {
                         </div>
                         <div className="col-lg-6"> 
                            <div className="faq-image-2">
-                                <img src="assets/img/faqback.png" alt="img" className="wow img-custom-anim-left" />
+                                <img src="/assets/img/faqback.png" alt="img" className="wow img-custom-anim-left" />
                                 <div className="bg-shape">
                                 </div>
                                

@@ -19,7 +19,7 @@ const BlogHomeThree = () => {
                     <div className="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
                         <div className="news-left-items">
                             <div className="news-thumb">
-                                <img src="assets/img/news/08.jpg" alt="img" />
+                                <img src="/assets/img/news/08.jpg" alt="img" />
                                 <Link to="/news-details" className="post-box">
                                     History
                                 </Link>
@@ -46,7 +46,7 @@ const BlogHomeThree = () => {
                         <div className="news-right-items">
                             <div className="news-right-box wow fadeInUp" data-wow-delay=".3s">
                                 <div className="thumb">
-                                    <img src="assets/img/news/09.jpg" alt="img" />
+                                    <img src="/assets/img/news/09.jpg" alt="img" />
                                     <Link to="/news-details" className="post-box">
                                         Business
                                     </Link>
@@ -71,7 +71,7 @@ const BlogHomeThree = () => {
                             </div>
                             <div className="news-right-box wow fadeInUp" data-wow-delay=".5s">
                                 <div className="thumb">
-                                    <img src="assets/img/news/10.jpg" alt="img" />
+                                    <img src="/assets/img/news/10.jpg" alt="img" />
                                     <Link to="/news-details" className="post-box">
                                         Community
                                     </Link>
@@ -95,7 +95,7 @@ const BlogHomeThree = () => {
                             </div>
                             <div className="news-right-box wow fadeInUp" data-wow-delay=".3s">
                                 <div className="thumb">
-                                    <img src="assets/img/news/09.jpg" alt="img" />
+                                    <img src="/assets/img/news/09.jpg" alt="img" />
                                     <Link to="/news-details" className="post-box">
                                         Finance
                                     </Link>

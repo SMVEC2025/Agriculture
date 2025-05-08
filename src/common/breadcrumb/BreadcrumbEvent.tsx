@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
  
 
 const BreadcrumbEvent = ({title, subtitle, heroImage} : any) => {
-	const heroImages = heroImage ? heroImage:'/assets/img/breadcrumb/DJI_0981.jpg'
+	const heroImages = heroImage ? heroImage:'//assets/img/breadcrumb/DJI_0981.jpg'
 	return (
 		<>
 			<section className="breadcrumb-wrapper">
@@ -11,19 +11,19 @@ const BreadcrumbEvent = ({title, subtitle, heroImage} : any) => {
 			<div className="contentt"></div>
 
 			<div className="shape-1">
-					<img src="assets/img/breadcrumb/shape-1.png" alt="img" />
+					<img src="/assets/img/breadcrumb/shape-1.png" alt="img" />
 				</div>
 				<div className="shape-2">
-					<img src="assets/img/breadcrumb/shape-2.png" alt="img" />
+					<img src="/assets/img/breadcrumb/shape-2.png" alt="img" />
 				</div>
 				<div className="shape-3">
-					<img src="assets/img/breadcrumb/shape-3.png" alt="img" />
+					<img src="/assets/img/breadcrumb/shape-3.png" alt="img" />
 				</div>
 				<div className="dot-shape">
-					<img src="assets/img/breadcrumb/dot-shape.png" alt="img" />
+					<img src="/assets/img/breadcrumb/dot-shape.png" alt="img" />
 				</div>
 				<div className="vector-shape">
-					<img src="assets/img/breadcrumb/Vector.png" alt="img" />
+					<img src="/assets/img/breadcrumb/Vector.png" alt="img" />
 				</div>
 				<div className="container">
 					<div className="row">
@@ -36,7 +36,7 @@ const BreadcrumbEvent = ({title, subtitle, heroImage} : any) => {
 								<li className="style-2">{subtitle}</li>
 							</ul>
 							<div className="breadcrumb-image">
-								<img src="/assets/img/breadcrumb/DJI_0981.jpg" alt="img" />
+								<img src="//assets/img/breadcrumb/DJI_0981.jpg" alt="img" />
 							</div>
 						</div>
 					</div>
