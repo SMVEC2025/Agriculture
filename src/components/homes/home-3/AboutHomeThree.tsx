@@ -44,7 +44,7 @@ const AboutHomeThree = () => {
                                 <img className="homeabt-img" src="/assets/img/smvecstudents.webp" alt="img" />
 
                                     <div className="counter-box">
-                                        <p>More then</p>
+                                        <p>More than</p>
                                         <h2><span className="odometer" data-count="2800">
                                             <Count number={2800} text='+' />
                                         </span></h2>
