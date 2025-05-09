@@ -25,7 +25,7 @@ const HomeThree = () => {
       <HeroSlider/>
      <HomeForm/>
    
-     {/* <Loader/> */}
+     <Loader/>
       <AboutHomeThree />
       {/* <MarqueeTwo /> */}
       <CoursesHomeThree />
