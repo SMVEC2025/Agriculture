@@ -61,6 +61,7 @@ const Form = () => {
     otp: '',
     city: '',
     course: '',
+    message:'',
     captcha: '',
     captchaInput: '',
     is_otp_verified: 0
@@ -131,6 +132,7 @@ const Form = () => {
     if (!formData.city) newErrors.city = 'City is required';
     if (!formData.course) newErrors.course = 'Course is required';
     if (formData.is_otp_verified == 0) newErrors.otp = 'Verify otp';
+    
 
 
     setErrors(newErrors);
@@ -146,12 +148,12 @@ const Form = () => {
   
           student_name: formData.name,
           father_name: formData.fathername,
-          department: formData.course,
+          department: 'BSc Agriculture',
           mobile: formData.phone,
           email: formData.email,
           state: `${formData.city},${formData.state}`,
           qualification: '',
-          requirement: '',
+          requirement: formData.message,
           is_otp_verified: formData.is_otp_verified
       
       };
@@ -374,7 +376,7 @@ const Form = () => {
           </select>
         </div>
 
-        <div className={`form-group ${errors.course && 'error'}`}>
+        {/* <div className={`form-group ${errors.course && 'error'}`}>
           <label>Course Applying For:</label>
           <div className="radio-group">
             {courses.map(course => (
@@ -391,8 +393,18 @@ const Form = () => {
               </div>
             ))}
           </div>
-        </div>
-
+        </div> */}
+<div className={`form-group ${errors.message && 'error'}`}>
+  <label htmlFor="message">Message:</label>
+  <textarea
+    id="message"
+    name="message"
+    value={formData.message}
+    onChange={handleChange}
+    className={errors.message ? 'error' : ''}
+    rows="4"
+  ></textarea>
+</div>
 
 
         {!loading?(
