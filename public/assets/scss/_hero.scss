@@ -218,6 +218,7 @@
 .newhero_main{
     width: 100%;
     height: 100vh;
+    background-color: rgb(5, 17, 58);
 
 .layerhome{
     background-image: linear-gradient(0deg,rgba(0, 0, 0, 0.37) 85%,rgba(0, 0, 0, 0.726) 99%);
@@ -577,4 +578,22 @@
 
 
 
+}
+.logo-entrance{
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1500;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.logo-entrance.show{
+  background-color: rgb(255, 255, 255);
+}
+.logo-entrance.hide{
+  display: none;
 }
