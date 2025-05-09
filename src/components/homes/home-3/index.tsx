@@ -1,4 +1,3 @@
-import Preloader from "../../../common/Preloader";
 import AboutHomeThree from "./AboutHomeThree";
 import ChooseHomeThree from "./ChooseHomeThree";
 import CoursesHomeThree from "./CoursesHomeThree";
