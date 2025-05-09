@@ -3,7 +3,7 @@ import Preloader from "../../../../common/Preloader"
 import ScrollTop from "../../../../common/ScrollTop"
 import FooterOne from "../../../../layouts/footers/FooterOne"
 import AboutEnd from "../../../about/AboutEnd"
-import ApplicationForm from "./ApplicationForm"
+import ApplicationFormHorticulture from "./ApplicationFormHorticulture"
 
 function HorticultureAdmission() {
     return (
@@ -27,7 +27,7 @@ function HorticultureAdmission() {
                 <img src="/assets/img/gallery/gallery3.jpg" alt="" />
                 </div>
             </div>
-            <ApplicationForm />
+            <ApplicationFormHorticulture/>
             {/* <Qualification/> */}
             <AboutEnd />
             <FooterOne />

@@ -130,11 +130,7 @@ const Form = () => {
     else if (!/^\d{10}$/.test(formData.phone)) newErrors.phone = 'Invalid phone number';
     if (!formData.state) newErrors.state = 'State is required';
     if (!formData.city) newErrors.city = 'City is required';
-    if (!formData.course) newErrors.course = 'Course is required';
     if (formData.is_otp_verified == 0) newErrors.otp = 'Verify otp';
-    
-
-
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -157,14 +153,14 @@ const Form = () => {
           is_otp_verified: formData.is_otp_verified
       
       };
-      console.log("enquiryData",enquiryData)
       try {
         const response = await axios.post('https://agribackend.vercel.app/api/submit-form', enquiryData);
 
+       setTimeout(() => {
         setIsSubmitted(true)
         setLoading(false)
+       }, 100);
       } catch (error) {
-        console.error("Error submitting form:", error);
         alert("Something went wrong! try after sometimes");
         setLoading(false)
 
@@ -291,10 +287,10 @@ const Form = () => {
               <button onClick={sendOtp}>Get-Otp</button>
             )}
              {buttonLoading=='otp' &&(
-              <div><AiOutlineLoading3Quarters /></div>
+              <div><span className='loading-btn'><AiOutlineLoading3Quarters /></span></div>
             )}
              {buttonLoading=='otpcount'&& !otpVerified &&(
-              <div >{timeLeft}</div>
+              <div >{timeLeft} sec</div>
             )}
           </div>
         </div>
@@ -414,7 +410,7 @@ const Form = () => {
         </button>
         ):(
           <button  className="submit-btn">
-         <div><AiOutlineLoading3Quarters /></div>
+         <div><span className='loading-btn'><AiOutlineLoading3Quarters /></span></div>
 
         </button>
         )}

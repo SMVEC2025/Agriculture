@@ -48,9 +48,9 @@ function Cards() {
     return (
         <div className='course-card'>
            {careerOpportunities.map((e,i)=>(
-             <div class="card">
-             <span class="title">{e.title}</span>
-             <span class="desc">
+             <div key={i} className="card">
+             <span className="title">{e.title}</span>
+             <span className="desc">
              <ul>
             
                 {e.lines.map((line,index)=>(

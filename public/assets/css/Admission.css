@@ -202,7 +202,28 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
+ .closed-info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10rem 0;
+  button{
+    background-color: #ad0116;
+    padding: 7px 25px;
+    color: white;
+  }
+  p{
+    max-width: 95vw;
+    margin-top: 2rem;
+    text-align: center;
+    span{
+      color: rgb(36, 36, 116);
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+ }
 
 }
 
@@ -429,10 +450,7 @@
     font-size: 1rem;
     z-index: 2;
     
-   .loading-btn{
-    animation: spin 1s linear infinite;
 
-   }
  
     button {
       width: 70px;
@@ -442,6 +460,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      border-radius: 4px;
+
 
     }
 
@@ -453,10 +473,21 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      border-radius: 4px;
+
 
     }
   }
 }
+.loading-btn{
+  animation: spin 1s linear infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 20px;
+
+ }
 @keyframes spin {
   0% {
     transform: rotate(0deg);

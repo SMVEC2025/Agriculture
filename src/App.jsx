@@ -22,7 +22,6 @@ import InstantForm from "./common/InstantForm";
 import MobileMenu from "./components/navbar/MobileMenu";
 import MobileMenuBtn from "./components/navbar/MobileMenuBtn";
 import { useContext } from "react";
-import AdmissionForm from "./common/breadcrumb/AdmissionForm";
 import Test from "./components/test/Test";
 import { ParallaxProvider } from "react-scroll-parallax";
 import Horticulture from "./components/courses-details-2/Horticulture";
