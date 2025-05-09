@@ -3,7 +3,8 @@
     z-index: 1000;
     right:0;
     top: 0;
-    background-color: rgb(240, 243, 255);
+    background:linear-gradient(45deg,#dde1f1f8,#f9f9f9f8);
+    backdrop-filter: blur(50px);
     width: 0;
     height: 100vh;
     transition: all 0.3s ease-out;
