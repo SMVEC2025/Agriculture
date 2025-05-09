@@ -157,6 +157,7 @@ const Form = () => {
           is_otp_verified: formData.is_otp_verified
       
       };
+      console.log("enquiryData",enquiryData)
       try {
         const response = await axios.post('https://agribackend.vercel.app/api/submit-form', enquiryData);
 
