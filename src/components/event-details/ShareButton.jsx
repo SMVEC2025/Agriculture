@@ -5,7 +5,6 @@ import { FaRegShareSquare } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 
 function ShareButton({events}) {
-    console.log(events)
     const handleShare = async () => {
         if (navigator.share) {
           try {

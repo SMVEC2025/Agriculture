@@ -61,7 +61,6 @@ const AdmissionForm = () => {
     try {
       const response = await axios.post('http://localhost:3000/api/submit-form', datapara);
 
-      console.log("CRM Response:", response.data);
       alert("Form submitted successfully!");
     } catch (error) {
       console.error("Error submitting form:", error);

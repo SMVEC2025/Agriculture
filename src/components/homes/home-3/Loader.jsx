@@ -4,7 +4,6 @@ import { AppContext } from '../../../context/AppContext';
 
 function Loader() {
     const {showLogoLoader,setShowLoader} = useContext(AppContext)
-    console.log(showLogoLoader)
   return (
 <div className={`logo-entrance ${showLogoLoader?"show":"hide"}`}>
                    <svg width="226" height="221" viewBox="0 0 226 221" fill="none" xmlns="http://www.w3.org/2000/svg">
