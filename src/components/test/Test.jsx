@@ -1,363 +1,126 @@
-import axios from 'axios';
-import React, { useState, useEffect } from 'react';
-
-// Indian states and cities data
-const indianStates = [
-  { name: 'Puducherry', cities: ['Pondicherry', 'Karaikal', 'Mahe', 'Yanam'] },
-  { name: 'Tamil Nadu', cities: ['Chennai', 'Coimbatore', 'Madurai', 'Tiruchirappalli', 'Salem', 'Tirunelveli', 'Vellore', 'Erode', 'Tiruppur', 'Thoothukudi'] },
-
-  { name: 'Andhra Pradesh', cities: ['Visakhapatnam', 'Vijayawada', 'Guntur', 'Nellore', 'Kurnool', 'Kadapa', 'Rajahmundry', 'Tirupati', 'Anantapur', 'Kakinada', 'Eluru', 'Ongole', 'Srikakulam', 'Chittoor'] },
-  { name: 'Arunachal Pradesh', cities: ['Itanagar', 'Naharlagun', 'Tawang', 'Bomdila', 'Ziro', 'Pasighat', 'Roing', 'Tezu'] },
-  { name: 'Assam', cities: ['Guwahati', 'Silchar', 'Dibrugarh', 'Jorhat', 'Nagaon', 'Tinsukia', 'Tezpur', 'Bongaigaon', 'Karimganj'] },
-  { name: 'Bihar', cities: ['Patna', 'Gaya', 'Bhagalpur', 'Muzaffarpur', 'Purnia', 'Darbhanga', 'Ara', 'Begusarai', 'Katihar'] },
-  { name: 'Chhattisgarh', cities: ['Raipur', 'Bhilai', 'Bilaspur', 'Korba', 'Durg', 'Rajnandgaon', 'Jagdalpur', 'Ambikapur'] },
-  { name: 'Goa', cities: ['Panaji', 'Margao', 'Vasco da Gama', 'Mapusa', 'Ponda'] },
-  { name: 'Gujarat', cities: ['Ahmedabad', 'Surat', 'Vadodara', 'Rajkot', 'Bhavnagar', 'Jamnagar', 'Gandhinagar', 'Junagadh', 'Anand', 'Nadiad', 'Bharuch'] },
-  { name: 'Haryana', cities: ['Gurgaon', 'Faridabad', 'Panipat', 'Ambala', 'Yamunanagar', 'Rohtak', 'Karnal', 'Hisar', 'Sonipat'] },
-  { name: 'Himachal Pradesh', cities: ['Shimla', 'Manali', 'Dharamshala', 'Mandi', 'Solan', 'Una', 'Chamba', 'Hamirpur'] },
-  { name: 'Jharkhand', cities: ['Ranchi', 'Jamshedpur', 'Dhanbad', 'Bokaro Steel City', 'Deoghar', 'Hazaribagh'] },
-  { name: 'Karnataka', cities: ['Bengaluru', 'Mysuru', 'Mangalore', 'Hubballi', 'Belagavi', 'Kalaburagi', 'Davanagere', 'Ballari', 'Udupi', 'Tumakuru'] },
-  { name: 'Kerala', cities: ['Thiruvananthapuram', 'Kochi', 'Kozhikode', 'Thrissur', 'Kollam', 'Alappuzha', 'Palakkad', 'Kannur', 'Kottayam'] },
-  { name: 'Madhya Pradesh', cities: ['Bhopal', 'Indore', 'Gwalior', 'Jabalpur', 'Ujjain', 'Sagar', 'Ratlam', 'Satna', 'Rewa'] },
-  { name: 'Maharashtra', cities: ['Mumbai', 'Pune', 'Nagpur', 'Nashik', 'Thane', 'Aurangabad', 'Solapur', 'Amravati', 'Kolhapur', 'Nanded', 'Sangli'] },
-  { name: 'Manipur', cities: ['Imphal', 'Thoubal', 'Churachandpur', 'Bishnupur', 'Kakching'] },
-  { name: 'Meghalaya', cities: ['Shillong', 'Tura', 'Jowai', 'Nongpoh'] },
-  { name: 'Mizoram', cities: ['Aizawl', 'Lunglei', 'Champhai', 'Serchhip'] },
-  { name: 'Nagaland', cities: ['Kohima', 'Dimapur', 'Mokokchung', 'Tuensang', 'Wokha'] },
-  { name: 'Odisha', cities: ['Bhubaneswar', 'Cuttack', 'Rourkela', 'Berhampur', 'Sambalpur', 'Puri', 'Balasore'] },
-  { name: 'Punjab', cities: ['Ludhiana', 'Amritsar', 'Jalandhar', 'Patiala', 'Bathinda', 'Hoshiarpur', 'Mohali'] },
-  { name: 'Rajasthan', cities: ['Jaipur', 'Jodhpur', 'Udaipur', 'Kota', 'Bikaner', 'Ajmer', 'Alwar', 'Bharatpur'] },
-  { name: 'Sikkim', cities: ['Gangtok', 'Namchi', 'Gyalshing', 'Mangan'] },
-  { name: 'Telangana', cities: ['Hyderabad', 'Warangal', 'Nizamabad', 'Khammam', 'Karimnagar', 'Mahbubnagar'] },
-  { name: 'Tripura', cities: ['Agartala', 'Udaipur', 'Dharmanagar', 'Kailasahar'] },
-  { name: 'Uttar Pradesh', cities: ['Lucknow', 'Kanpur', 'Ghaziabad', 'Agra', 'Varanasi', 'Prayagraj', 'Meerut', 'Bareilly', 'Aligarh', 'Moradabad', 'Saharanpur', 'Gorakhpur', 'Noida'] },
-  { name: 'Uttarakhand', cities: ['Dehradun', 'Haridwar', 'Roorkee', 'Haldwani', 'Nainital'] },
-  { name: 'West Bengal', cities: ['Kolkata', 'Asansol', 'Siliguri', 'Durgapur', 'Howrah', 'Bardhaman', 'Malda', 'Kharagpur'] },
-
-  { name: 'Andaman and Nicobar Islands', cities: ['Port Blair', 'Havelock Island'] },
-  { name: 'Chandigarh', cities: ['Chandigarh'] },
-  { name: 'Dadra and Nagar Haveli and Daman and Diu', cities: ['Daman', 'Diu', 'Silvassa'] },
-  { name: 'Delhi', cities: ['New Delhi', 'North Delhi', 'South Delhi', 'East Delhi', 'West Delhi', 'Central Delhi', 'Dwarka', 'Rohini'] },
-  { name: 'Jammu and Kashmir', cities: ['Srinagar', 'Jammu', 'Anantnag', 'Baramulla', 'Udhampur'] },
-  { name: 'Ladakh', cities: ['Leh', 'Kargil'] },
-  { name: 'Lakshadweep', cities: ['Kavaratti'] },
-];
-
-// Add more states as needed
-
-const courses = [
-  'BSc Agriculture',
-  'BSc Horticulture'
-];
+import React from "react";
+import { motion } from "framer-motion";
 
 const Test = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    fathername: '',
-    phone: '',
-    state: '',
-    email: '',
-    city: '',
-    course: '',
-    captcha: '',
-    otp:'',
-    captchaInput: ''
-  });
-
-  const [cities, setCities] = useState([]);
-  const [errors, setErrors] = useState({});
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [userOtp,setUserOtp]=useState()
-  const [isOtpVerified,setisOtpVerified]=useState(false)
-
-  // Generate captcha on component mount
-  useEffect(() => {
-    generateCaptcha();
-  }, []);
-
-  // Update cities when state changes
-  useEffect(() => {
-    if (formData.state) {
-      const selectedState = indianStates.find(s => s.name === formData.state);
-      if (selectedState) {
-        setCities(selectedState.cities);
-        setFormData(prev => ({ ...prev, city: '' })); // Reset city when state changes
-      }
-    } else {
-      setCities([]);
-    }
-  }, [formData.state]);
-
-  const generateCaptcha = () => {
-    const chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    let captcha = '';
-    for (let i = 0; i < 6; i++) {
-      captcha += chars[Math.floor(Math.random() * chars.length)];
-    }
-    setFormData(prev => ({ ...prev, captcha }));
-  };
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-
-    // Clear error when user starts typing
-    if (errors[name]) {
-      setErrors(prev => {
-        const newErrors = { ...prev };
-        delete newErrors[name];
-        return newErrors;
-      });
-    }
-  };
-
-  const validate = () => {
-    const newErrors = {};
-
-    if (!formData.name.trim()) newErrors.name = 'Name is required';
-    if (!formData.fathername.trim()) newErrors.fathername = 'fatername is required';
-    if (!formData.phone.trim()) newErrors.phone = 'Phone number is required';
-    else if (!/^\d{10}$/.test(formData.phone)) newErrors.phone = 'Invalid phone number';
-    if (!formData.state) newErrors.state = 'State is required';
-    if (!formData.city) newErrors.city = 'City is required';
-    if (!formData.course) newErrors.course = 'Course is required';
-    if (formData.captchaInput !== formData.captcha) {
-      newErrors.captchaInput = 'Captcha does not match'
-      formData.captchaInput = ""
-    }
-
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (validate() && isOtpVerified) {
-      const date = new Date().toISOString().slice(0, 19).replace('T', ' ');
-
-      const datapara = {
-        enquiry: {
-          created_at: date,
-          student_name: formData.name,
-          father_name: formData.fathername,
-          department: formData.course,
-          mobile: formData.phone,
-          email: formData.email,
-          state: `${formData.city},${formData.state}`,
-          qualification: '',
-          requirement: '',
-          encode_id: "",
-          utm_id: '',
-          utm_source: '',
-          utm_medium: '',
-          utm_campaign: '',
-          utm_gclid: '',
-          is_otp_verified: 1
-        },
-        user: "Admission_Enquiry",
-        key: "WojY3p37$%s852"
-      };
-
-      try {
-        const response = await axios.post('http://localhost:3000/api/submit-form', datapara);
-
-        console.log("CRM Response:", response.data);
-        setIsSubmitted(true)
-      } catch (error) {
-        console.error("Error submitting form:", error);
-        alert("Something went wrong!");
-      }
-    }
-
-  };
-  const sendOtp = async (e)=>{
-    e.preventDefault();
-
-    console.log('calling...')
-    try {
-      const response = await axios.post('http://localhost:3000/api/send-otp', {
-        "mobile_number":6382688488
-      });
-
-      console.log("CRM Response:", response.data);
-      setUserOtp(response.data)
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      alert("Something went wrong!");
-    }
-  }
- const verifyOtp = async (e)=>{
-  e.preventDefault();
-
-   if(userOtp == formData.otp){
-     alert('correct otp ')
-     setisOtpVerified(true)
-   }else{
-    alert('pls enter a valid otp')
-   }
- }
-  if (isSubmitted) {
-    return (
-      <div className="form-container">
-        <div className="success-message">
-          <h2>Application Submitted Successfully!</h2>
-          <p>Thank you for your application. We will contact you shortly.</p>
-        </div>
-      </div>
-    );
-  }
   return (
-    <div className="form-container">
-      <h1>Admission enquiry</h1>
-      <form >
-        <div className={`form-group ${errors.name && 'error'}`}>
-          <label htmlFor="name">Full Name: 
-          </label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            className={errors.name ? 'error' : ''}
-          />
-        </div>
-        <div className={`form-group ${errors.fathername && 'error'}`}>
-          <label htmlFor="fathername">Father Name:</label>
-          <input
-            type="text"
-            id="fathername"
-            name="fathername"
-            value={formData.fathername}
-            onChange={handleChange}
-            className={errors.fathername ? 'error' : ''}
-          />
-        </div>
+       <div className="logo-entrance">
+       <svg width="226" height="221" viewBox="0 0 226 221" fill="none" xmlns="http://www.w3.org/2000/svg">
+<motion.path
+ initial={{  opacity: 0 }}
+ animate={{  opacity: 1 }}
+ transition={{
+   duration: 0.6,
+   delay: 0.9,
+   ease: "easeOut"
+ }}
+className="path-1" d="M115.239 0C102.985 15.919 85.8289 59.6056 115.239 107C125.623 88.6629 140.162 41.591 115.239 0Z" fill="#D8A228"/>
+<motion.path
+initial={{  opacity: 0,x:30,rotate: 50,y:-20 }}
+animate={{  opacity: 1,x:0,rotate: 0,y:0}}
+transition={{
+  duration: 0.4,
+  delay: 1.3,
+  ease: "easeOut"
+}} 
+className="path-2" d="M13.7012 54.1107C20.3279 69.2312 45.3434 99.3311 92.3914 98.7668C83.2113 83.9303 54.6211 54.228 13.7012 54.1107Z" fill="#D8A228"/>
 
-        <div className={`form-group ${errors.phone && 'error'}`}>
-          <label htmlFor="phone">Phone Number:</label>
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-            className={errors.phone ? 'error' : ''}
-            maxLength={10}
-          />
-        </div>
-        <button onClick={sendOtp}>send otp</button>
-        <div className={`form-group ${errors.phone && 'error'}`}>
-          <label htmlFor="phone">Enter OTP:</label>
-          <input
-            type="tel"
-            id="otp"
-            name="otp"
-            value={formData.otp}
-            onChange={handleChange}
-            className={errors.otp ? 'error' : ''}
-            maxLength={10}
-          />
-        </div>
-        <button onClick={verifyOtp}>verify otp</button>
-        <div className={`form-group ${errors.email && 'error'}`}>
-          <label htmlFor="email">email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            className={errors.email ? 'error' : ''}
-          />
-        </div>
+<motion.path
+initial={{  opacity: 0,x:-30,rotate: -50,y:-20 }}
+animate={{  opacity: 1,x:0,rotate: 0,y:0}}
+transition={{
+  duration: 0.4,
+  delay: 1.3,
+  ease: "easeOut"
+}}
+className="path-3" d="M213.157 58.6068C196.512 55.7973 156.95 59.8608 131.856 98.5902C149.644 99.1599 190.807 91.9609 213.157 58.6068Z" fill="#D8A228"/>
+
+<motion.path
+initial={{  opacity: 0,x:-30,rotate: -50,y:-20 }}
+animate={{  opacity: 1,x:0,rotate: 0,y:0}}
+transition={{
+  duration: 0.5,
+  delay: 0.9,
+  ease: "easeOut"
+}}
+className="path-4" d="M172.547 16.5035C161.617 21.5935 138.902 40.0657 135.48 73.2343C146.421 66.3512 169.153 45.3686 172.547 16.5035Z" fill="#D8A228"/>
+
+<motion.path
+initial={{  opacity: 0,x:30,rotate: 50,y:-20 }}
+animate={{  opacity: 1,x:0,rotate: 0,y:0}}
+transition={{
+  duration: 0.5,
+  delay: 0.9,
+  ease: "easeOut"
+}}
+
+className="path-5" d="M53.9139 16.5035C64.8438 21.5935 87.5591 40.0657 90.9812 73.2343C80.0398 66.3512 57.3083 45.3686 53.9139 16.5035Z" fill="#D8A228"/>
+
+<motion.path
+initial={{  opacity: 0 }}
+animate={{  opacity: 1}}
+transition={{
+  duration: 0.5,
+  delay: 0.2,
+  ease: "easeOut"
+}}className="path-8" d="M3.09035 82.8127C8.32018 80.4718 21.3653 78.7129 31.7069 90.4047C25.9787 92.0446 12.236 92.8221 3.09035 82.8127Z" fill="#D8A228"/>
+<motion.path
+initial={{  opacity: 0 }}
+animate={{  opacity: 1}}
+transition={{
+  duration: 0.5,
+  delay: 0.3,
+  ease: "easeOut"
+}}
+ className="path-6" d="M32.0564 31.2458C37.8077 31.4847 50.2406 35.7112 53.9608 50.7066C48.0947 49.6226 35.5012 44.213 32.0564 31.2458Z" fill="#D8A228"/>
+<motion.path
+initial={{  opacity: 0 }}
+animate={{  opacity: 1}}
+transition={{
+  duration: 0.5,
+  delay: 0.4,
+  ease: "easeOut"
+}} className="path-7" d="M82.8106 1.53243C87.7297 4.44208 96.5235 13.9816 92.3462 28.8625C87.7456 25.1588 79.3977 14.5076 82.8106 1.53243Z" fill="#D8A228"/>
+<motion.path
+initial={{  opacity: 0 }}
+animate={{  opacity: 1}}
+transition={{
+  duration: 0.5,
+  delay: 0.5,
+  ease: "easeOut"
+}} className="path-10" d="M146.189 3.95919C141.27 6.86884 132.476 16.4084 136.654 31.2893C141.254 27.5856 149.602 16.9344 146.189 3.95919Z" fill="#D8A228"/>
+
+<motion.path
+initial={{  opacity: 0 }}
+animate={{  opacity: 1}}
+transition={{
+  duration: 0.5,
+  delay: 0.6,
+  ease: "easeOut"
+}} className="path-9" d="M196.944 33.6721C191.192 33.9109 178.759 38.1375 175.039 53.1328C180.905 52.0489 193.499 46.6393 196.944 33.6721Z" fill="#D8A228"/>
+
+
+<motion.path
+initial={{  opacity: 0 }}
+animate={{  opacity: 1}}
+transition={{
+  duration: 0.5,
+  delay: 0.7,
+  ease: "easeOut"
+}} className="path-11" d="M225.91 85.2385C220.68 82.8976 207.635 81.1387 197.293 92.8305C203.021 94.4704 216.764 95.2479 225.91 85.2385Z" fill="#D8A228"/>
 
 
 
-        <div className={`form-group ${errors.state && 'error'}`}>
-          <label htmlFor="state">State:</label>
-          <select
-            id="state"
-            name="state"
-            value={formData.state}
-            onChange={handleChange}
-            className={errors.state ? 'error' : ''}
-          >
-            <option value="">Select State</option>
-            {/* Pondicherry first */}
-            {/* Other states */}
-            {indianStates
-              .filter(state => state.name !== 'Pondicherry')
-              .map(state => (
-                <option key={state.name} value={state.name}>
-                  {state.name}
-                </option>
-              ))}
-          </select>
-        </div>
+<path className="path-12" d="M108.025 220.5C74.0247 220.1 53.5247 207.334 47.5247 201L78.0247 170.5C88.8247 178.5 103.525 180.5 109.525 180.5L108.025 220.5Z" fill="#33409C"/>
+<path className="path-13" d="M73.0247 167.5L43.0247 197C20.6247 181.8 10.6913 160.334 8.52465 151.5H60.0247C62.4247 158.3 69.6913 165 73.0247 167.5Z" fill="#33409C"/>
+<path className="path-14" d="M56.5247 145C50.8356 134.6 49.8209 121 50.0247 115.5H55.0234C57.0234 149.9 77.5234 165.5 87.5234 169V110.5H0.0246531C-0.375347 126.1 4.19132 140 6.52465 145H56.5247Z" fill="#33409C"/>
+<path className="path-15" d="M93.0234 170.5V110.5C93.0234 110.5 108.522 109.501 109.023 126C109.525 142.5 109.023 174 109.023 174C102.223 174.8 95.5234 172 93.0234 170.5Z" fill="#33409C"/>
+<path className="path-16" d="M116.022 220C150.022 219.6 170.522 206.833 176.522 200.5L146.022 170C135.222 178 120.522 180 114.522 180L116.022 220Z" fill="#33409C"/>
+<path className="path-17" d="M151.022 167L181.022 196.5C203.422 181.3 213.356 159.833 215.522 151H164.022C161.622 157.8 154.356 164.5 151.022 167Z" fill="#33409C"/>
+<path className="path-18" d="M167.522 144.5C173.211 134.1 174.226 120.5 174.022 115H169.023C167.023 149.4 146.523 165 136.523 168.5V110H224.022C224.422 125.6 219.856 139.5 217.522 144.5H167.522Z" fill="#33409C"/>
+<path className="path-19" d="M131.023 170V110C131.023 110 115.023 112 115.023 125.5V173.5C121.823 174.3 128.523 171.5 131.023 170Z" fill="#33409C"/>
+</svg>
 
-        <div className={`form-group ${errors.city && 'error'}`}>
-          <label htmlFor="city">City:</label>
-          <select
-            id="city"
-            name="city"
-            value={formData.city}
-            onChange={handleChange}
-            className={errors.city ? 'error' : ''}
-            disabled={!formData.state}
-          >
-            <option value="">Select City</option>
-            {cities.map(city => (
-              <option key={city} value={city}>
-                {city}
-              </option>
-            ))}
-          </select>
-        </div>
-
-        <div className={`form-group ${errors.course && 'error'}`}>
-          <label>Course Applying For:</label>
-          <div className="radio-group">
-            {courses.map(course => (
-              <div key={course} className="radio-option">
-                <input
-                  type="radio"
-                  id={course.replace(/\s+/g, '-')}
-                  name="course"
-                  value={course}
-                  checked={formData.course === course}
-                  onChange={handleChange}
-                />
-                <label htmlFor={course.replace(/\s+/g, '-')}>{course}</label>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="form-group captcha-group">
-          <label>Captcha:</label>
-          <div className="captcha-container">
-            <div className="captcha-display">{formData.captcha}</div>
-            <button type="button" onClick={generateCaptcha} className="refresh-btn">
-              ↻
-            </button>
-          </div>
-          <input
-            type="text"
-            name="captchaInput"
-            value={formData.captchaInput}
-            onChange={handleChange}
-            placeholder="Enter the captcha"
-            className={`captchainput${errors.captchaInput ? 'error' : ''}`}
-          />
-          {errors.captchaInput && <span className="error-message">{errors.captchaInput}</span>}
-        </div>
-
-        <button onClick={handleSubmit} className="submit-btn">
-          Submit Application
-        </button>
-      </form>
-    </div>
+       </div>
   );
 };
 

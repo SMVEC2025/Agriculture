@@ -579,3 +579,18 @@
 
 
 }
+.logo-entrance{
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1500;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 100vh;
+}
+.logo-entrance.show{
+  background-color: rgb(255, 255, 255);
+}
+.logo-entrance.hide{
+  display: none;
+}

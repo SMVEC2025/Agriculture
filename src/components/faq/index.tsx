@@ -8,6 +8,7 @@ import FaqArea from "./FaqArea";
 const Faq = () => {
   return (
     <>
+   
     <Preloader />
 			<BreadcrumbEvent title="Faq" subtitle="Faq" />
 			<FaqArea />       
