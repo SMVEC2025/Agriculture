@@ -43,7 +43,7 @@ function Navbar() {
     <>
       <div  className={`nav_main ${showNav ? "show" : ""}`}>
         <div className="nav-logo-container">
-          <img src={`/assets/img/${showNav ? 'agrilogodark' : 'agrilogo'}.png`} alt="" />
+          <img src={`/assets/img/${showNav ? 'agriculturelogodark' : 'agriculturelogowhite'}.png`} alt="" />
         </div>
         <div className="nav-menu-container">
           {isMobile?(<></>):
