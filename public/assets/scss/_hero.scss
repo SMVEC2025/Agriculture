@@ -602,10 +602,10 @@
   backdrop-filter: blur(100px);
 }
 .logo-entrance.hide{
-  animation: hideHeight 0.4s forwards ease-out;
+  animation: hideHeight 0.5s forwards ease-out;
   svg{
     scale: 1;
-    animation: moveLogo 0.9s forwards ease-out;
+    animation: moveLogo 1s forwards ease-out;
   }
 }
 @keyframes hideHeight {
@@ -627,7 +627,7 @@
 
   }
 
-  90%{
+  95%{
     opacity: 0;
   }
   100%{
