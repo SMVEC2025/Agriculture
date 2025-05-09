@@ -19,9 +19,9 @@ const FooterOne = ({ style_2 }: any) => {
                                 <div className="single-footer-widget">
                                     <div className="widget-head">
                                         <Link to="/">
-                                            {style_2 ? <img src="/assets/img/logo/black-logo-2.svg" alt="img" />
+                                            {style_2 ? <img src="/assets/img/logo/agriculturelogowhite.png" alt="img" />
                                                 :
-                                                <img className="footer_logo" src="/assets/img/agrilogo.png" alt="img" />
+                                                <img className="footer_logo" src="/assets/img/agriculturelogowhite.png" alt="img" />
                                             }
                                         </Link>
                                     </div>
@@ -60,7 +60,7 @@ const FooterOne = ({ style_2 }: any) => {
                                     </div>
                                     <ul className="list-area">
                                         <li><Link to="/about">About SMVEC</Link></li>
-                                        <li><Link to="/courses">Faculty</Link></li>
+                                        <li><Link to="/faculty">Faculty</Link></li>
                                         <li><Link to="/contact">Contact</Link></li>
                                         <li><Link to="/faq">FAQs</Link></li>
                                     </ul>
