@@ -414,7 +414,7 @@ const Form = () => {
         </button>
         ):(
           <button  className="submit-btn">
-                        <div><AiOutlineLoading3Quarters /></div>
+         <div><AiOutlineLoading3Quarters /></div>
 
         </button>
         )}
