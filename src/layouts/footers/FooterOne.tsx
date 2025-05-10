@@ -59,8 +59,8 @@ const FooterOne = ({ style_2 }: any) => {
                                         <h3>Quick Link</h3>
                                     </div>
                                     <ul className="list-area">
-                                        <li><Link to="/about">About SMVEC</Link></li>
-                                        <li><Link to="/faculty">Faculty</Link></li>
+                                        <li><Link to="/about-us">About SMVEC</Link></li>
+                                        <li><Link to="/faculty-list">Faculty</Link></li>
                                         <li><Link to="/contact">Contact</Link></li>
                                         <li><Link to="/faq">FAQs</Link></li>
                                     </ul>

@@ -21,7 +21,7 @@ const AboutHomeThree = () => {
                                     <p className="mt-3 mt-md-0 wow fadeInUp" data-wow-delay=".5s">
                                         SMVEC's College of Agriculture is committed to transforming rural India through education, research, and innovation in modern and sustainable farming. We equip future agri-leaders with practical knowledge, scientific expertise, and a passion for growth.
                                     </p>
-                                    <Link to="/about" className="theme-btn red-btn wow fadeInUp" data-wow-delay=".3s">More About Us</Link>
+                                    <Link to="/about-us" className="theme-btn red-btn wow fadeInUp" data-wow-delay=".3s">More About Us</Link>
                                     <div className="about-counter-items">
                                         <div className="counter-content wow fadeInUp" data-wow-delay=".3s">
                                             <h3><span className="odometer" data-count="25">

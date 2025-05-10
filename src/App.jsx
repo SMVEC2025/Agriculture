@@ -41,8 +41,8 @@ function App() {
           <Route path="/courses-detail-horticulture" element={<Horticulture />} />
           <Route path="/event" element={<Event />} />
           <Route path="/event-details/:name" element={<EventDetails />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/faculty" element={<Instructor />} />
+          <Route path="/about-us" element={<About />} />
+          <Route path="/faculty-list" element={<Instructor />} />
           <Route path="/faculty-details" element={<InstructorDetails />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/faq" element={<Faq />} />

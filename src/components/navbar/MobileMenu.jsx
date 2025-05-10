@@ -53,7 +53,7 @@ function MobileMenu() {
         </div>
         <div className={`sub ${showItem == 'academics' ? "show" : ""}`}>
           <ul>
-            <li onClick={() => handleNavigate('/faculty')}>Faculty</li>
+            <li onClick={() => handleNavigate('/faculty-list')}>Faculty</li>
             <li onClick={() => handleNavigate('/courses-detail-agriculture')}>B.Sc. (Hons.) Agriculture</li>
             {/* <li onClick={() => handleNavigate('/courses-detail-horticulture')}>B.Sc. (Hons.) Horticulture
             </li> */}

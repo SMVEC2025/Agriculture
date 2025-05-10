@@ -100,7 +100,7 @@ const menu_data:DataType[] = [
 		has_dropdown: true,
 		has_dropdown_inner: true,
 		sub_menus: [
-			{ link: "/about", title: "About" },
+			{ link: "/about-us", title: "About" },
 			{ link: "/instructor", title: "Instructor" },
 			{ link: "/instructor-details", title: "Instructor Details" },
 			{ link: "/program", title: "Program" },

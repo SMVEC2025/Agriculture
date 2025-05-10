@@ -86,11 +86,11 @@ function Navbar() {
           <img src="/assets/img/images/frontview.jpg" alt="" />
           <div className="navslider_con2">
             <p>The School of Agricultural Sciences (SAGS) at Sri Manakula Vinayagar Engineering College (SMVEC) offers specialized programs in B.Sc. (Hons.) Agriculture and B.Sc. (Hons.) Horticulture. The college provides a modern learning environment with practical training on 40 acres of agricultural land.</p>
-            <div className="viewbtn"  onClick={() => navigate('/faculty')}>View Faculty <BsArrowRight /></div>
+            <div className="viewbtn"  onClick={() => navigate('/faculty-list')}>View Faculty <BsArrowRight /></div>
           </div>
           <div className="navslider_items">
             <ul>
-              <li onClick={() => navigate('/faculty')}>Faculty</li>
+              <li onClick={() => navigate('/faculty-list')}>Faculty</li>
               <li onClick={() => navigate('/courses-detail-agriculture')}>B.Sc. (Hons.) Agriculture</li>
               {/* <li onClick={() => navigate('/courses-detail-horticulture')}>B.Sc. (Hons.) Horticulture
               </li> */}
