@@ -30,7 +30,7 @@ const HeroHomeThree = () => {
                     className="swiper hero-slider">
                     <SwiperSlide className="swiper-slide">
                         <div className='home-background'>
-                            <img src="/assets/img/hero/hero-1.jpg" alt="" />
+                            <img src="/assets/img/hero/hero-11.webp" alt="" />
                             <div className='content'>
 
                             </div>
