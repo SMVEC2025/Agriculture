@@ -101,11 +101,11 @@ const HeroSlider: React.FC = () => {
                 <div className="container">
 
                   <div data-swiper-parallax="300" className="slide-title">
-                    <h5>Welcome to SMVEC</h5>
-                    <h2>{slide.title}</h2>
+                    <h5 data-talkback>Welcome to SMVEC</h5>
+                    <h2 data-talkback>{slide.title}</h2>
                   </div>
                   <div data-swiper-parallax="400" className="slide-text">
-                    <p>{slide.text}</p>
+                    <p data-talkback>{slide.text}</p>
                   </div>
                   <div className="clearfix"></div>
                   <div data-swiper-parallax="500" className="slide-btns">

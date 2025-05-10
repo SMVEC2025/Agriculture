@@ -10,25 +10,36 @@ import EventHomeThree from "./EventHomeThree";
 import HeroSlider from "./HeroSlider";
 import HomeForm from "./HomeForm";
 import Loader from "./Loader";
+import { useTalkBack } from "../../../context/TalkBackContext";
 
 
   
 
 const HomeThree = () => {
+  const { speakText, stopSpeaking, speaking } = useTalkBack();
 
+const handleStartTalk = () => {
+    const allText = Array.from(document.querySelectorAll('[data-talkback]'))
+      .map((el) => el.textContent)
+      .filter(Boolean)
+      .join('. ');
 
-
+    speakText(allText);
+  };
   return (
     <>
        {/* <Test/> */}
       {/* <HeroHomeThree /> */}
       <HeroSlider/>
      <HomeForm/>
-   
+      
      <Loader/>
       <AboutHomeThree />
       {/* <MarqueeTwo /> */}
       <CoursesHomeThree />
+       <button  onClick={handleStartTalk} style={{ position: 'fixed', top: 100, right: 20, zIndex: 999 }}>
+        🔊 Start TalkBack
+      </button>
       <ChooseHomeThree />
       <EventHomeThree  />
       {/* <HomeEvent/> */}
