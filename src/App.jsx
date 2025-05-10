@@ -25,14 +25,12 @@ import { useContext } from "react";
 import Test from "./components/test/Test";
 import { ParallaxProvider } from "react-scroll-parallax";
 import Horticulture from "./components/courses-details-2/Horticulture";
-import { TalkBackProvider } from "./context/TalkBackContext";
 
 function App() {
   return (
     <BrowserRouter>
     <ParallaxProvider>
     <AppProvider>
-      <TalkBackProvider>
       <Wrapper>
         <Navbar/>
         <InstantForm/>
@@ -58,7 +56,6 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Wrapper>
-      </TalkBackProvider>
       </AppProvider>
       </ParallaxProvider>
     </BrowserRouter>
