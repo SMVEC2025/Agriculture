@@ -968,7 +968,7 @@
 
 }
 
-@media (max-width:550px) {
+@media (max-width:800px) {
     
 .bm_chairman{
     padding: 1rem 0;
@@ -1020,4 +1020,53 @@
     }
 
 }
+}
+
+////dean messsage....
+/// 
+.dm_main{
+    padding: 3rem 0;
+}
+.dm_content{
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 2rem;
+    gap: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (max-width:800px) {
+        flex-direction: column;
+    padding: 1rem 10px;
+        
+    }
+    div{
+        max-width: 50%;
+           @media (max-width:800px) {
+            max-width: 100%;
+
+        
+    }
+    }
+    img{
+        width: 400px;
+        border: 1px solid rgb(230, 230, 230);
+        border-radius: 20px;
+         @media (max-width:600px) {
+        width: 80vw;
+        height: auto;
+        
+    }
+    }
+    p{
+        max-width: 100%;
+                 @media (max-width:600px) {
+                    font-size: 14px;
+                    line-height: 22px;
+                 }
+    }
+    h3{
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+    }
 }

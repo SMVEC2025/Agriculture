@@ -23,7 +23,7 @@ function Program() {
 </svg>
 
       </div>
-      <div className="pcard">
+      {/* <div className="pcard">
         <h2>B.Sc. (Hons.) Horticulture
         </h2>
         <p>B.Sc. Horticulture is a degree program focused on plant cultivation, landscaping, and crop production. Students learn about soil science, plant breeding, pest control, and sustainable farming. Graduates can work as horticulturists, landscape designers, nursery managers, or start their own horticulture businesses.</p>
@@ -42,7 +42,7 @@ function Program() {
 <path d="M180.851 70.7549C176.627 68.8118 166.09 67.3518 157.737 77.0568C162.364 78.4181 173.464 79.0634 180.851 70.7549Z" fill="#D0D2DD"/>
 </svg>
 
-      </div>
+      </div> */}
     </div>
   )
 }

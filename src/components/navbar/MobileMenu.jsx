@@ -55,8 +55,8 @@ function MobileMenu() {
           <ul>
             <li onClick={() => handleNavigate('/faculty')}>Faculty</li>
             <li onClick={() => handleNavigate('/courses-detail-agriculture')}>B.Sc. (Hons.) Agriculture</li>
-            <li onClick={() => handleNavigate('/courses-detail-horticulture')}>B.Sc. (Hons.) Horticulture
-            </li>
+            {/* <li onClick={() => handleNavigate('/courses-detail-horticulture')}>B.Sc. (Hons.) Horticulture
+            </li> */}
           </ul>
         </div>
         <div onClick={() => { handlesubitems('campuslife') }} className={`mm_menuitems ${showItem == 'campuslife' ? "show" : ""}`}>
@@ -77,8 +77,8 @@ function MobileMenu() {
           <ul>
             <li onClick={() => handleNavigate('/admission')}>Admission</li>
             <li onClick={() => handleNavigate('/admission-agriculture')}>Apply for B.Sc. (Hons.) Agriculture</li>
-            <li onClick={() => handleNavigate('/admission-horticulture')}>Apply for B.Sc. (Hons.) Horticulture
-            </li>
+            {/* <li onClick={() => handleNavigate('/admission-horticulture')}>Apply for B.Sc. (Hons.) Horticulture
+            </li> */}
           </ul>
         </div>
         <div className="social-icon">
