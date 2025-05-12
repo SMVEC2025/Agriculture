@@ -87,7 +87,7 @@ const HeroSlider: React.FC = () => {
           modules={[Navigation, Autoplay, Parallax]}
           className="swiper-container"
         >
-          {slides.map((slide, idx) => (
+          {slides.map((slide, idx) => ( 
             <SwiperSlide key={idx} style={{backgroundImage:`url(${slide.background})`}} >
              
               <div
@@ -101,11 +101,11 @@ const HeroSlider: React.FC = () => {
                 <div className="container">
 
                   <div data-swiper-parallax="300" className="slide-title">
-                    <h5 data-talkback>Welcome to SMVEC</h5>
+                    <h5 data-talkback data-read="true">Welcome to SMVEC</h5>
                     <h2 data-talkback>{slide.title}</h2>
                   </div>
                   <div data-swiper-parallax="400" className="slide-text">
-                    <p data-talkback>{slide.text}</p>
+                    <p data-talkback data-read="true">{slide.text}</p>
                   </div>
                   <div className="clearfix"></div>
                   <div data-swiper-parallax="500" className="slide-btns">
