@@ -62,7 +62,6 @@ function Navbar() {
       {navItemsCheck == 'about' && (
         <div onMouseLeave={handleMouseLeave} className={`navslider_main ${ShowNavSlider ? "opened" : ""}`}>
           <div onClick={handleMouseLeave} className="close-btn"><IoMdClose /></div>
-
           <img src="/assets/img/images/mainentrance.jpg" alt="" />
           <div className="navslider_con2">
             <p>Sri Manakula Vinayagar Engineering College (SMVEC) was established in 1999 by the Sri Manakula Vinayagar Educational Trust with a focus on providing quality education. The college is affiliated with Pondicherry University and offers undergraduate, postgraduate, and research programs. In 2019, SMVEC was granted autonomous status, enhancing its academic reputation.</p>
@@ -70,14 +69,12 @@ function Navbar() {
           </div>
           <div className="navslider_items">
             <ul>
-              <li onClick={() => navigate('/about')}>About</li>
+              <li onClick={() => navigate('/about-us')}>About</li>
               <li onClick={() => navigate('/history')}>SMVEC History</li>
               <li  onClick={() => navigate('/gallery')}  >Gallery</li>
               <li onClick={() => navigate('/contact')}>Contact</li>
             </ul>
-
           </div>
-
         </div>
       )}
       {navItemsCheck == 'academy' && (

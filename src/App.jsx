@@ -25,16 +25,19 @@ import { useContext } from "react";
 import Test from "./components/test/Test";
 import { ParallaxProvider } from "react-scroll-parallax";
 import Horticulture from "./components/courses-details-2/Horticulture";
+import usePageTracking from "./common/usePageTracking";
+
 
 function App() {
+ usePageTracking();
   return (
-    <BrowserRouter>
     <ParallaxProvider>
     <AppProvider>
       <Wrapper>
         <Navbar/>
         <InstantForm/>
         <MobileMenu/>
+        
         <Routes>
           <Route path="/" element={<HomeThree />} />
           <Route path="/courses-detail-agriculture" element={<CoursesDetailsTwo />} />
@@ -58,7 +61,6 @@ function App() {
       </Wrapper>
       </AppProvider>
       </ParallaxProvider>
-    </BrowserRouter>
   );
 }
 

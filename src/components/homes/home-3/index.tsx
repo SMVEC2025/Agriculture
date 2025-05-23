@@ -10,10 +10,9 @@ import EventHomeThree from "./EventHomeThree";
 import HeroSlider from "./HeroSlider";
 import HomeForm from "./HomeForm";
 import Loader from "./Loader";
-import AssistantReader from "../../../common/AssistantReader";
 
 
-  
+
 
 const HomeThree = () => {
 
@@ -21,19 +20,18 @@ const HomeThree = () => {
 
   return (
     <>
-       {/* <Test/> */}
+      {/* <Test/> */}
       {/* <HeroHomeThree /> */}
-      <HeroSlider/>
-     <HomeForm/>
-   
-     <Loader/>
+      <HeroSlider />
+      <HomeForm />
+      <Loader />
       <AboutHomeThree />
       {/* <MarqueeTwo /> */}
       <CoursesHomeThree />
       <ChooseHomeThree />
-      <EventHomeThree  />
+      <EventHomeThree />
       {/* <HomeEvent/> */}
-      
+
       <InstagramHomeThree />
 
       {/* <MarqueeTwo /> */}
@@ -45,8 +43,7 @@ const HomeThree = () => {
       <CtaHomeThree />
       {/* <MarqueeTwo /> */}
       {/* <FooterThree /> */}
-      <FooterOne/>
-      <AssistantReader/>
+      <FooterOne />
       {/* <ScrollTop /> */}
     </>
   );

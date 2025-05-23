@@ -41,7 +41,7 @@ function MobileMenu() {
         </div>
         <div className={`sub ${showItem == 'about' ? "show" : ""}`}>
           <ul>
-            <li onClick={() => handleNavigate('/about')}>About</li>
+            <li onClick={() => handleNavigate('/about-us')}>About</li>
             <li onClick={() => handleNavigate('/history')}>SMVEC History</li>
             <li onClick={() => handleNavigate('/gallery')}  >Gallery</li>
             <li onClick={() => handleNavigate('/contact')}>Contact</li>

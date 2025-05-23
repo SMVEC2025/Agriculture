@@ -2,6 +2,8 @@ import axios from 'axios';
 import React, { useState, useEffect, useRef } from 'react';
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
+import { FormControl, InputLabel, Select, FormHelperText, Box, TextField, MenuItem } from '@mui/material';
+
 // Indian states and cities data
 const indianStates = [
   { name: 'Puducherry', cities: ['Pondicherry', 'Karaikal', 'Mahe', 'Yanam'] },
@@ -47,8 +49,10 @@ const indianStates = [
 // Add more states as needed
 
 const courses = [
-  'BSc Agriculture',
-  'BSc Horticulture'
+  'B.A., LL.B - 5 years',
+  'B.B.A. LL.B - 5 years',
+  'B.Sc. LL.B - 5 years',
+  'LL.B - 3 years'
 ];
 
 const Form = () => {
@@ -61,7 +65,7 @@ const Form = () => {
     otp: '',
     city: '',
     course: '',
-    message:'',
+    message: '',
     captcha: '',
     captchaInput: '',
     is_otp_verified: 0
@@ -70,11 +74,11 @@ const Form = () => {
   const [cities, setCities] = useState([]);
   const [errors, setErrors] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [userOtp, setUserOtp] = useState('')
+  const [userOtp, setUserOtp] = useState(' ')
   const [otpVerified, setOtpVerified] = useState(false)
-  const [buttonLoading,setButtonLoading]=useState('')
+  const [buttonLoading, setButtonLoading] = useState('')
   const [timeLeft, setTimeLeft] = useState(59);
-  const [loading,setLoading] = useState(false)
+  const [loading, setLoading] = useState(false)
   const timerRef = useRef(null);
   // Generate captcha on component mount
   useEffect(() => {
@@ -105,7 +109,7 @@ const Form = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    if(name == 'phone' && otpVerified){
+    if (name == 'phone' && otpVerified) {
       return
     }
     setFormData(prev => ({ ...prev, [name]: value }));
@@ -125,6 +129,7 @@ const Form = () => {
 
 
     if (!formData.name.trim()) newErrors.name = 'Name is required';
+    if (!formData.email.trim()) newErrors.email = 'email is required';
     if (!formData.fathername.trim()) newErrors.fathername = 'fatername is required';
     if (!formData.phone.trim()) newErrors.phone = 'Phone number is required';
     else if (!/^\d{10}$/.test(formData.phone)) newErrors.phone = 'Invalid phone number';
@@ -141,31 +146,31 @@ const Form = () => {
     if (validate()) {
 
       const enquiryData = {
-  
-          student_name: formData.name,
-          father_name: formData.fathername,
-          department: 'BSc Agriculture',
-          mobile: formData.phone,
-          email: formData.email,
-          state: `${formData.city},${formData.state}`,
-          qualification: '',
-          requirement: formData.message,
-          is_otp_verified: formData.is_otp_verified
-      
+
+        student_name: formData.name,
+        father_name: formData.fathername,
+        department: 'B.Sc Agriculture',
+        mobile: formData.phone,
+        email: formData.email,
+        state: `${formData.city},${formData.state}`,
+        qualification: '',
+        requirement: formData.message,
+        is_otp_verified: formData.is_otp_verified
+
       };
       try {
-        const response = await axios.post('https://agribackend.vercel.app/api/submit-form', enquiryData);
-
-       setTimeout(() => {
-        setIsSubmitted(true)
-        setLoading(false)
-       }, 100);
+       await axios.post('https://agribackend.vercel.app/api/submit-form', enquiryData);
+       
+        setTimeout(() => {
+          setIsSubmitted(true)
+          setLoading(false)
+        }, 100);
       } catch (error) {
         alert("Something went wrong! try after sometimes");
         setLoading(false)
 
       }
-    }else{
+    } else {
       setLoading(false)
 
     }
@@ -193,8 +198,15 @@ const Form = () => {
     const newErrors = {};
 
 
-    if (!formData.phone.trim()) newErrors.phone = 'Phone number is required';
-    else if (!/^\d{10}$/.test(formData.phone)) newErrors.phone = 'Invalid phone number';
+    if (!formData.phone.trim()) {
+      newErrors.phone = 'Phone number is required';
+      setButtonLoading('')
+
+    }
+    else if (!/^\d{10}$/.test(formData.phone)) {
+      newErrors.phone = 'Invalid phone number';
+      setButtonLoading('')
+    }
     else {
       try {
         const response = await axios.post('https://agribackend.vercel.app/api/send-otp', {
@@ -221,6 +233,8 @@ const Form = () => {
     const newErrors = {};
 
     if (!formData.otp) newErrors.otp = 'Enter a valid otp';
+    if (userOtp == " ") newErrors.otp = 'generate a OTP ';
+
     if (userOtp !== formData.otp) {
       newErrors.otp = 'Enter a valid otp';
     } else {
@@ -243,137 +257,261 @@ const Form = () => {
     );
   }
   return (
-    <div className="form-container">
-      <h1>Admission enquiry</h1>
+       <div className="form-container">
+      <div className='header'>
+        <h2>Admission enquiry</h2>
+      </div>
       <form >
-        <div className={`form-group ${errors.name && 'error'}`}>
-          <label htmlFor="name">Full Name:
-          </label>
-          <input
-            type="text"
+        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+
+          <TextField
             id="name"
+            label="Name"
             name="name"
+            variant="outlined"
+            className="custom-input"
+            fullWidth
             value={formData.name}
             onChange={handleChange}
-            className={errors.name ? 'error' : ''}
+            error={!!errors.name}
+            helperText={errors.name}
+            sx={{
+              input: {
+                color: 'black',
+              },
+              '& .MuiInputBase-input:focus': {
+                color: 'black',
+              },
+            }}
           />
-        </div>
-        <div className={`form-group ${errors.fathername && 'error'}`}>
-          <label htmlFor="fathername">Father Name:</label>
-          <input
-            type="text"
+
+          <TextField
             id="fathername"
+            label="Father Name"
+            className="custom-input"
             name="fathername"
+            variant="outlined"
+            fullWidth
             value={formData.fathername}
             onChange={handleChange}
-            className={errors.fathername ? 'error' : ''}
+            error={!!errors.fathername}
+            helperText={errors.fathername}
+            sx={{
+              input: {
+                color: 'black',
+              },
+              '& .MuiInputBase-input:focus': {
+                color: 'black',
+              },
+            }}
           />
-        </div>
+          <div className='input-with-btn'>
 
-        <div className={`form-group ${errors.phone && 'error'}`}>
-          <label htmlFor="phone">Phone Number:</label> <div className='error-message'>{errors.phone}</div>
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-            className={errors.phone ? 'error' : ''}
-            maxLength={10}
+            <TextField
+              id="phone"
+              label="Phone"
 
-          />
-          <div className='sendotp-btn'>
-            {buttonLoading=='' && !otpVerified && (
+              name="phone"
+              variant="outlined"
+              className="custom-input"
+              style={{ width: `${otpVerified ? '100%' : 'calc(100% - 120px)'}` }}
+              value={formData.phone}
+              onChange={handleChange}
+              error={!!errors.phone}
+              helperText={errors.phone}
+              sx={{
+                input: {
+                  color: 'black',
+                },
+                '& .MuiInputBase-input:focus': {
+                  color: 'black',
+                },
+              }}
+            />
+            {buttonLoading == '' && !otpVerified && (
               <button onClick={sendOtp}>Get-Otp</button>
             )}
-             {buttonLoading=='otp' &&(
+            {buttonLoading == 'otp' && (
+              <button><span className='loading-btn'><AiOutlineLoading3Quarters /></span></button>
+            )}
+            {buttonLoading == 'otpcount' && !otpVerified && (
+              <button>{timeLeft} sec</button>
+            )}
+          </div>
+
+
+
+
+
+
+          {!otpVerified ? (
+            <div className='input-with-btn'>
+
+              <TextField
+                id="otp"
+                name="otp"
+                value={formData.otp}
+                onChange={handleChange}
+                label="OTP"
+                variant="outlined"
+                className="custom-input"
+                style={{ width: `calc(100% - 120px)` }}
+                error={!!errors.otp}
+                helperText={errors.otp}
+                sx={{
+                  input: {
+                    color: 'black',
+                  },
+                  '& .MuiInputBase-input:focus': {
+                    color: 'black',
+                  },
+                }}
+              />
+
+              <button onClick={verifyOtp}>Verify</button>
+
+            </div>
+          ) : <div className='success-msg'>OTP Verified Sucessfully</div>}
+
+          {/* <div className={`form-group ${errors.phone && 'error'}`}>
+
+          <div className='sendotp-btn'>
+            {buttonLoading == '' && !otpVerified && (
+              <button onClick={sendOtp}>Get-Otp</button>
+            )}
+            {buttonLoading == 'otp' && (
               <div><span className='loading-btn'><AiOutlineLoading3Quarters /></span></div>
             )}
-             {buttonLoading=='otpcount'&& !otpVerified &&(
+            {buttonLoading == 'otpcount' && !otpVerified && (
               <div >{timeLeft} sec</div>
             )}
           </div>
-        </div>
+        </div> */}
 
-      {otpVerified?(
-     <div className='otp-success'>Verified successfully</div>
+          {/* {otpVerified ? (
+          <div className='otp-success'>Verified successfully</div>
 
-      ):(
-        <div className={`form-group ${errors.otp && 'error'}`}>
-        <label htmlFor="phone">Enter OTP</label>          <div className='error-message'>{errors.otp}</div>
+        ) : (
+          <div className={`form-group ${errors.otp && 'error'}`}>
+            <label htmlFor="phone">Enter OTP</label>          <div className='error-message'>{errors.otp}</div>
 
-        <input
-          type="tel"
-          id="otp"
-          name="otp"
-          value={formData.otp}
-          onChange={handleChange}
-          className={errors.otp ? 'error' : ''}
-          maxLength={10}
-          
-        />
-        <div className='sendotp-btn'>
-          <button onClick={verifyOtp}>Verify</button>
-        </div>
-      </div>
-      )}
+            <input
+              type="tel"
+              id="otp"
+              name="otp"
+              value={formData.otp}
+              onChange={handleChange}
+              className={errors.otp ? 'error' : ''}
+              maxLength={10}
 
-        <div className={`form-group ${errors.email && 'error'}`}>
-          <label htmlFor="email">email:</label>
-          <input
-            type="email"
+            />
+            <div className='sendotp-btn'>
+              <button onClick={verifyOtp}>Verify</button>
+            </div>
+          </div>
+        )} */}
+
+          <TextField
             id="email"
+            label="Email"
             name="email"
+            type="email"
+            className="custom-input"
+            variant="outlined"
+            fullWidth
             value={formData.email}
             onChange={handleChange}
-            className={errors.email ? 'error' : ''}
+            error={!!errors.email}
+            helperText={errors.email}
+            sx={{
+              input: {
+                color: 'black',
+              },
+              '& .MuiInputBase-input:focus': {
+                color: 'black',
+              },
+            }}
           />
-        </div>
+          {/* <FormControl fullWidth sx={{ mt: 2 }} error={Boolean(errors.course)}>
+            <InputLabel id="course-label">Program</InputLabel>
+            <Select
+              labelId="course-label"
+              id="course"
+              name="course"
+              className="custom-input"
+              value={formData.course}
+              onChange={handleChange}
+              label="Program"
+            >
+              <MenuItem value="">
+                <em>Select Program</em>
+              </MenuItem>
+              {courses.map(course => (
+                <MenuItem key={course} value={course}>
+                  {course}
+                </MenuItem>
+              ))}
+            </Select>
+            {errors.course && <FormHelperText>{errors.course}</FormHelperText>}
+          </FormControl> */}
 
-
-
-        <div className={`form-group ${errors.state && 'error'}`}>
-          <label htmlFor="state">State:</label>
-          <select
+          <TextField
+            select
             id="state"
+            label="State"
             name="state"
+            fullWidth
+            className="custom-input"
+            variant="outlined"
             value={formData.state}
             onChange={handleChange}
-            className={errors.state ? 'error' : ''}
+            error={!!errors.state}
+            helperText={errors.state}
+            sx={{
+              input: {
+                color: 'black',
+              },
+              '& .MuiInputBase-input:focus': {
+                color: 'black',
+              },
+            }}
           >
-            <option value="">Select State</option>
-            {/* Pondicherry first */}
-            {/* Other states */}
-            {indianStates
-              .filter(state => state.name !== 'Pondicherry')
-              .map(state => (
-                <option key={state.name} value={state.name}>
-                  {state.name}
-                </option>
-              ))}
-          </select>
-        </div>
-
-        <div className={`form-group ${errors.city && 'error'}`}>
-          <label htmlFor="city">City:</label>
-          <select
+            {indianStates.map((state) => (
+              <MenuItem key={state.name} value={state.name}>
+                {state.name}
+              </MenuItem>
+            ))}
+          </TextField>
+          <TextField
+            select
             id="city"
+            label="City"
             name="city"
+            fullWidth
+            variant="outlined"
+            className="custom-input"
             value={formData.city}
             onChange={handleChange}
-            className={errors.city ? 'error' : ''}
-            disabled={!formData.state}
+            error={!!errors.city}
+            helperText={errors.city}
+            sx={{
+              input: {
+                color: 'black',
+              },
+              '& .MuiInputBase-input:focus': {
+                color: 'black',
+              },
+            }}
           >
-            <option value="">Select City</option>
-            {cities.map(city => (
-              <option key={city} value={city}>
+            {cities.map((city) => (
+              <MenuItem key={city} value={city}>
                 {city}
-              </option>
+              </MenuItem>
             ))}
-          </select>
-        </div>
+          </TextField>
 
-        {/* <div className={`form-group ${errors.course && 'error'}`}>
+
+          {/* <div className={`form-group ${errors.course && 'error'}`}>
           <label>Course Applying For:</label>
           <div className="radio-group">
             {courses.map(course => (
@@ -391,29 +529,39 @@ const Form = () => {
             ))}
           </div>
         </div> */}
-<div className={`form-group ${errors.message && 'error'}`}>
-  <label htmlFor="message">Message:</label>
-  <textarea
-    id="message"
-    name="message"
-    value={formData.message}
-    onChange={handleChange}
-    className={errors.message ? 'error' : ''}
-    rows="4"
-  ></textarea>
-</div>
+          <TextField
+            id="message"
+            label="Message"
+            name="message"
+            multiline
+            rows={4}
+            fullWidth
+            variant="outlined"
+            value={formData.message}
+            onChange={handleChange}
+            sx={{
+              input: {
+                color: 'black',
+              },
+              '& .MuiInputBase-input:focus': {
+                color: 'black',
+              },
+            }}
+          />
 
 
-        {!loading?(
-          <button onClick={handleSubmit} className="submit-btn">
-          Submit Application
-        </button>
-        ):(
-          <button  className="submit-btn">
-         <div><span className='loading-btn'><AiOutlineLoading3Quarters /></span></div>
+          {!loading ? (
+            <button onClick={handleSubmit} className="submit-btn">
+              Submit Application
+            </button>
+          ) : (
+            <button className="submit-btn">
+              <div><span className='loading-btn'><AiOutlineLoading3Quarters /></span></div>
 
-        </button>
-        )}
+            </button>
+          )}
+        </Box>
+
       </form>
     </div>
   );

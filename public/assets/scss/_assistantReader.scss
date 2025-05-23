@@ -1,0 +1,13 @@
+.ar_main{
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    z-index: 999;
+    background-color: rgba(128, 128, 128, 0.452);
+    padding: 7px 25px;
+    border-radius: 25px;
+    border: 1px solid gray;
+    button{
+        color: white;
+    }
+}
