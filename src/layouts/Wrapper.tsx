@@ -26,7 +26,7 @@ const Wrapper = ({ children }: any) => {
     <> 
       {children}
       <ScrollTop/>
-      {isMobile?( <MobileMenuBtn/>):null}
+     <MobileMenuBtn/>
     </>
   );
 };

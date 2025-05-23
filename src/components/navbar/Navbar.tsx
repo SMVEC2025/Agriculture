@@ -55,7 +55,7 @@ function Navbar() {
             <li onMouseEnter={() => handleMouseIn('campus')} >Campus Life</li>
             <li onMouseEnter={() => handleMouseIn('admission')} >Admissions</li>
           </ul>
-          <button className="hero-button" onClick={()=>setFormOpen(true)}>Apply</button>
+          <button style={{backgroundColor:"#303f82"}} className="hero-button" onClick={()=>setFormOpen(true)}>Apply</button>
           </>)}
         </div>
       </div>
