@@ -1,8 +1,7 @@
 
 
-import { useContext, useEffect } from "react";
+import { useEffect } from "react";
 import WOW from "wow.js"; 
-import { AppContext } from "../context/AppContext";
 import MobileMenuBtn from "../components/navbar/MobileMenuBtn";
 import ScrollTop from "../common/ScrollTop";
 
@@ -21,7 +20,6 @@ const Wrapper = ({ children }: any) => {
     const wow = new WOW({ live: false });
     wow.init();
   }, []);
-  const {isMobile}=useContext(AppContext)
   return (
     <> 
       {children}
