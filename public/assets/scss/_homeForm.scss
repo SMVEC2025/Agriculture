@@ -2,12 +2,12 @@
  
     background-size: cover;
     position: relative;
-    
+    overflow: hidden;
     width: 100%;
     .airplane{
         position: absolute;
         transform: rotate(-8deg);
-  animation: moveRight 30s linear infinite;
+  animation: moveRight 28s linear infinite;
   z-index: 0;
         img{
             width: 70px;
