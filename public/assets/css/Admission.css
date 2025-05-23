@@ -868,7 +868,7 @@ select:-webkit-autofill {
     padding: 0;
    display: flex;
    justify-content: center;
-   align-items: center;
+   align-items: start;
     overflow: scroll;
 
 
