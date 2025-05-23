@@ -110,7 +110,7 @@ const HeroSlider: React.FC = () => {
                   <div className="clearfix"></div>
                   <div data-swiper-parallax="500" className="slide-btns">
                     <a className="theme-btn-s2" onClick={() => setFormOpen(true)}>Apply now</a>
-                    <a onClick={() => navigate('/about')} className="theme-btn-s3">
+                    <a onClick={() => navigate('/about-us')} className="theme-btn-s3">
                       <i className="fas fa-chevron-circle-right"></i> About us
                     </a>
                   </div>

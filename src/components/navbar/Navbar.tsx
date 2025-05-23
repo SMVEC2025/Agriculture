@@ -65,7 +65,7 @@ function Navbar() {
           <img src="/assets/img/images/mainentrance.jpg" alt="" />
           <div className="navslider_con2">
             <p>Sri Manakula Vinayagar Engineering College (SMVEC) was established in 1999 by the Sri Manakula Vinayagar Educational Trust with a focus on providing quality education. The college is affiliated with Pondicherry University and offers undergraduate, postgraduate, and research programs. In 2019, SMVEC was granted autonomous status, enhancing its academic reputation.</p>
-            <div className="viewbtn" onClick={() => navigate('/about')}>View About <BsArrowRight /></div>
+            <div className="viewbtn" onClick={() => navigate('/about-us')}>View About <BsArrowRight /></div>
           </div>
           <div className="navslider_items">
             <ul>

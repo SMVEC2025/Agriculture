@@ -713,106 +713,6 @@ h2{
   color: green;
 }
 
-@media (max-width: 768px) {
- 
-
-  .if_main {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #aaaaaac4;
-    backdrop-filter: blur(5px);
-    z-index: 1005;
-    padding: 0;
-    overflow: scroll;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-
-    .form-container {
-      width: 100vw !important;
-      max-width: 100%;
-      margin: 0;
-      
-      
-      height: fit-content;
-      border-radius: 0;
-      padding: 10px;
-
-    }
-
-    .close-btn {
-      position: absolute;
-      right: 20px;
-      top: 20px;
-      font-size: 30px;
-      color: rgb(0, 0, 0);
-      cursor: pointer;
-      z-index: 1006;
-    }
-
-    .close-btn:hover {
-      scale: 1.1;
-    }
-
-    .if_main>div {
-      scale: none;
-    }
-
-    .if_main {
-      button {
-        background-color: var(--theme-red);
-      }
-
-      form {
-        height: fit-content;
-        padding: 0;
-      }
-
-
-      .form-group {
-        margin-bottom: 1rem;
-      }
-
-      .form-group label {
-        display: block;
-        margin-bottom: 0.1rem;
-        font-weight: 600;
-        color: #34495e;
-      }
-
-      .form-group input[type="text"],
-      .form-group input[type="tel"],
-      .form-group input[type="email"],
-      .form-group textarea,
-
-      .form-group select {
-        width: 100%;
-        padding: 0.25rem;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        font-size: 1rem;
-        transition: border-color 0.3s;
-      }
-
-      .form-group input[type="text"]:focus,
-      .form-group input[type="tel"]:focus,
-      .form-group textarea:focus,
-
-      .form-group select:focus {
-        border-color: #3498db;
-        outline: none;
-        color: black;
-      }
-    }
-  }
-}
-
-
-
 
 
 @media (max-width: 768px) {
@@ -937,3 +837,193 @@ select:-webkit-autofill {
   margin-left: 10px;
   color: rgb(81, 143, 81);
 }
+
+@media (max-height: 800px) {
+  .custom-input .MuiInputLabel-root {
+  font-size: 14px;  
+}
+
+.custom-input .MuiInputLabel-shrink {
+  font-size: 15px;       /* Label font size when it floats above */
+}
+
+.custom-input .MuiInputBase-input {
+  color: black;          /* Input text color */
+  font-size: 16px;       /* Input text font size */
+}
+
+
+
+  .if_main {
+
+    backdrop-filter: blur(5px);
+    z-index: 1005;
+    padding: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    overflow: scroll;
+
+
+    .form-container {
+      
+      max-width: 100%;
+      margin: 5px;
+      box-shadow: none;
+      
+      height: fit-content;
+      border-radius: 10px;
+      padding: 5px 10px;
+      .names_field{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+      }
+h2{
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+    }
+
+ .custom-input .MuiInputBase-root {
+  height:45px;
+  padding: 0 10px;
+}
+
+    .close-btn {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      font-size: 30px;
+      color: rgb(102, 114, 184);
+      cursor: pointer;
+      z-index: 1006;
+    }
+
+    .close-btn:hover {
+      scale: 1.1;
+    }
+
+    .if_main>div {
+      scale: none;
+    }
+
+    .if_main {
+      button {
+        background-color: var(--theme-red);
+      }
+
+      form {
+        height: fit-content;
+        padding: 0;
+      }
+
+
+
+
+    }
+  }
+ 
+
+}
+
+@media (max-width: 800px) {
+ 
+
+  .if_main {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  background-color: #fdfdfd;
+    backdrop-filter: blur(5px);
+    z-index: 1005;
+    padding: 0;
+
+    overflow: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    .form-container {
+      width: 100vw !important;
+      max-width: 100%;
+      margin: 0;
+      box-shadow: none;
+      
+      height: fit-content;
+      border-radius: 0;
+      padding: 10px;
+
+    }
+
+    .close-btn {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      font-size: 30px;
+      color: rgb(0, 0, 0);
+      cursor: pointer;
+      z-index: 1006;
+    }
+
+    .close-btn:hover {
+      scale: 1.1;
+    }
+
+    .if_main>div {
+      scale: none;
+    }
+
+    .if_main {
+      button {
+        background-color: var(--theme-red);
+      }
+
+      form {
+        height: fit-content;
+        padding: 0;
+      }
+
+
+      .form-group {
+        margin-bottom: 1rem;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 0.1rem;
+        font-weight: 600;
+        color: #34495e;
+      }
+
+      .form-group input[type="text"],
+      .form-group input[type="tel"],
+      .form-group input[type="email"],
+      .form-group textarea,
+
+      .form-group select {
+        width: 100%;
+        padding: 0.25rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 1rem;
+        transition: border-color 0.3s;
+      }
+
+      .form-group input[type="text"]:focus,
+      .form-group input[type="tel"]:focus,
+      .form-group textarea:focus,
+
+      .form-group select:focus {
+        border-color: #3498db;
+        outline: none;
+        color: black;
+      }
+    }
+  }
+}
+

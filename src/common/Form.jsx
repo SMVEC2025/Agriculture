@@ -262,9 +262,10 @@ const Form = () => {
         <h2>Admission enquiry</h2>
       </div>
       <form >
-        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }}>
 
-          <TextField
+          <div className='names_field'>
+            <TextField
             id="name"
             label="Name"
             name="name"
@@ -305,6 +306,7 @@ const Form = () => {
               },
             }}
           />
+          </div>
           <div className='input-with-btn'>
 
             <TextField
