@@ -14,10 +14,10 @@ function Facilities() {
       img: 'https://smvec.ac.in/wp-content/uploads/2024/06/DSC05735.webp'
     },
     {
-      name: 'IT',
+      name: 'Agricultural Field',
       subheading: null,
-      para: 'Our modern IT infrastructure empowers students with seamless access to digital resources and lab facilities.',
-      img: 'https://smvec.ac.in/wp-content/uploads/2024/06/IMG_9970.webp'
+      para: 'Our expansive on-campus agricultural field offers students real-time exposure to modern farming techniques, crop research, and sustainable agricultural practices.',
+      img: '/assets/img/gardenhome.webp'
     },
     {
       name: 'GYM Facilities',

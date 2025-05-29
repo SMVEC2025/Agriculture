@@ -25,7 +25,7 @@ const AboutHomeThree = () => {
                                     <div className="about-counter-items">
                                         <div className="counter-content wow fadeInUp" data-wow-delay=".3s">
                                             <h3><span className="odometer" data-count="25">
-                                                <Count number={25} text='+' />
+                                                <Count number={5} text='+' />
                                             </span></h3>
                                             <p>Years of Agricultural Excellence</p>
                                         </div>
@@ -44,11 +44,11 @@ const AboutHomeThree = () => {
                                 <img className="homeabt-img" src="/assets/img/smvecstudents.webp" alt="img" />
 
                                     <div className="counter-box">
-                                        <p>More than</p>
                                         <h2><span className="odometer" data-count="2800">
-                                            <Count number={2800} text='+' />
+                                            <Count number={90} text='%+' />
+                                            
                                         </span></h2>
-                                        <p>placements</p>
+                                        <p> Pass Rate Every Year</p>
                                     </div>
                                 </div>
                             </div>
