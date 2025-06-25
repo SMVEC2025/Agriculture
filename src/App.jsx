@@ -27,6 +27,7 @@ import { ParallaxProvider } from "react-scroll-parallax";
 import Horticulture from "./components/courses-details-2/Horticulture";
 import usePageTracking from "./common/usePageTracking";
 import AllIndiaTour from "./components/allindiatour/Index";
+import EnquiredSucessfully from "./common/EnquiredSucessfully";
 
 
 function App() {
@@ -58,6 +59,7 @@ function App() {
           <Route path="/campus-life" element={<CampusLife />} />
           <Route path="/test" element={<Test />} />
           <Route path="/all-india-tour" element={<AllIndiaTour />} />
+          <Route path="/enquired-successfully" element={<EnquiredSucessfully />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Wrapper>

@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
 import { FormControl, InputLabel, Select, FormHelperText, Box, TextField, MenuItem } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 // Indian states and cities data
 const indianStates = [
@@ -56,6 +57,7 @@ const courses = [
 ];
 
 const Form = () => {
+  const navigate = useNavigate()
   const [formData, setFormData] = useState({
     name: '',
     fathername: '',
@@ -164,6 +166,7 @@ const Form = () => {
         setTimeout(() => {
           setIsSubmitted(true)
           setLoading(false)
+          navigate('/enquired-successfully')
         }, 100);
       } catch (error) {
         alert("Something went wrong! try after sometimes");
