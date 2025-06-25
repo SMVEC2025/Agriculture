@@ -5,9 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.success-box {
+  .success-box {
   padding: 40px 30px;
   border-radius: 12px;
   text-align: center;
@@ -32,3 +30,6 @@
   color: #f0f0f0;
   margin-top: 10px;
 }
+
+}
+
