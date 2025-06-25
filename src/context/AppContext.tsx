@@ -38,8 +38,6 @@ import  {
     
       return () => window.removeEventListener("resize", handleResize);
     }, []);
-
-
    useEffect(() => {
      // Replace with your endpoint; consider adding `id` in _fields for React keys
      axios
@@ -54,6 +52,8 @@ import  {
          setLoader(false);
        });
    }, []);
+          console.log(events)
+
     return (
       <AppContext.Provider
         value={{

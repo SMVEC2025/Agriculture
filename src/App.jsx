@@ -26,6 +26,7 @@ import Test from "./components/test/Test";
 import { ParallaxProvider } from "react-scroll-parallax";
 import Horticulture from "./components/courses-details-2/Horticulture";
 import usePageTracking from "./common/usePageTracking";
+import AllIndiaTour from "./components/allindiatour/Index";
 
 
 function App() {
@@ -56,6 +57,7 @@ function App() {
           <Route path="/history" element={<AboutHistory />} />
           <Route path="/campus-life" element={<CampusLife />} />
           <Route path="/test" element={<Test />} />
+          <Route path="/all-india-tour" element={<AllIndiaTour />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Wrapper>

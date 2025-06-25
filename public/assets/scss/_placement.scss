@@ -1,0 +1,22 @@
+.placement-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 2vw;
+    margin-top: 4rem;
+    @media (max-width: 950px) {
+        display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+    }
+    img{
+        height: 50px;
+        width: auto;
+        
+    }
+}
+.home_placement-main{
+  padding: 6rem 0;
+  padding-bottom: 10rem;
+}

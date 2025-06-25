@@ -67,6 +67,7 @@ function MobileMenu() {
           <ul>
             <li onClick={() => handleNavigate('/campus-life')}>campus Life</li>
             <li onClick={() => handleNavigate('/event')}>News and events</li>
+            <li onClick={() => handleNavigate('/all-india-tour')}>All India Tour</li>
           </ul>
         </div>
         <div onClick={() => { handlesubitems('admission') }} className={`mm_menuitems ${showItem == 'admission' ? "show" : ""}`}>

@@ -11,7 +11,7 @@ function ShareButton({events}) {
             await navigator.share({
               title: events?.acf?.title,
               text: `${events?.acf?.title}\n\n${events?.acf?.description}\n\nMore details: ${`https://agri.smvec.ac.in/event`}`,
-              url: 'https://google.com',
+              url: `https://agri.smvec.ac.in/event/${events?.acf?.title}`,
             });
           } catch (error) {
           }

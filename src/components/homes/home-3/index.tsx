@@ -10,6 +10,7 @@ import EventHomeThree from "./EventHomeThree";
 import HeroSlider from "./HeroSlider";
 import HomeForm from "./HomeForm";
 import Loader from "./Loader";
+import Placement from "./Placement";
 
 
 
@@ -38,6 +39,7 @@ const HomeThree = () => {
       {/* <PartnarsHomeThree /> */}
       {/* <BlogHomeThree /> */}
       <FaqHomeThree />
+      <Placement/>
       <TestimonialHomeThree />
 
       <CtaHomeThree />

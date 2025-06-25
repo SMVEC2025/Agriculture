@@ -840,6 +840,9 @@
                 font-size: 27px;
                 margin-bottom: 20px;
             }
+            P{
+               white-space: pre-line;
+            }
 
             .details-list {
                 margin-top: 25px;
@@ -941,7 +944,7 @@
         padding-bottom: 100px;
         .sharebtn_main{
             position: absolute;
-            bottom: 5px;
+            bottom: 30px;
             left: 50%;
             transform: translateX(-50%);
             display: flex;

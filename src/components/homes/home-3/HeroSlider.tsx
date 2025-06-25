@@ -12,20 +12,21 @@ const slides = [
   {
     title: "Cultivate Your Future with SMVEC Agri Science",
     text: "At SMVEC, we sow the seeds of knowledge and innovation in agriculture—empowering students with cutting-edge practices, sustainable farming techniques, and hands-on experience to lead the future of agri-tech and rural development.",
-    background: "/assets/img/hero/hero-11.webp",
+        background: "/assets/img/hero/tour.png",
+
     backgroundlayer: "/assets/img/campuslayer.png",
 
   },
   {
     title: "Cultivate Yours Future with SMVEC Agri Science",
     text: "At SMVEC, we sow the seeds of knowledge and innovation in agriculture—empowering students with cutting-edge practices, sustainable farming techniques, and hands-on experience to lead the future of agri-tech and rural development.",
-    background: "/assets/img/hero/hero-12.webp",
+    background: "/assets/img/hero/hero-11.webp",
     backgroundlayer: "/assets/img/gardenlayer.png",
   },
   {
     title: "Cultivate Your Future with SMVEC Agri Science",
     text: "At SMVEC, we sow the seeds of knowledge and innovation in agriculture—empowering students with cutting-edge practices, sustainable farming techniques, and hands-on experience to lead the future of agri-tech and rural development.",
-    background: "/assets/img/hero/hero-13.webp",
+    background: "/assets/img/hero/nbpgr.png",
     backgroundlayer: "/assets/img/entrancelayer.png",
 
   }
@@ -79,7 +80,7 @@ const HeroSlider: React.FC = () => {
           speed={1000}
           parallax={true}
           autoplay={{
-            delay: 4500,
+            delay: 6500,
             disableOnInteraction: false,
           }}
 

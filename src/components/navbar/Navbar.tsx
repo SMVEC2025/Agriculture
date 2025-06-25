@@ -6,7 +6,7 @@ import { IoMdClose } from "react-icons/io";
 
 function Navbar() {
   const [navItemsCheck, setNavItemsCheck] = useState(" ");
-  const [ShowNavSlider, setShowNavSlider] = useState(false)
+  const [ShowNavSlider, setShowNavSlider] = useState(false);
   const { showNav, setShowNav,setFormOpen,isMobile } = useContext(AppContext);
   const navigate = useNavigate()
   const handleMouseIn = (value: string): void => {
@@ -19,7 +19,6 @@ function Navbar() {
   const handleMouseLeave = () => {
     setNavItemsCheck(" ")
     setShowNavSlider(false)
-
   }
   useEffect(() => {
     const handleScroll = () => {
@@ -92,9 +91,7 @@ function Navbar() {
               {/* <li onClick={() => navigate('/courses-detail-horticulture')}>B.Sc. (Hons.) Horticulture
               </li> */}
             </ul>
-
           </div>
-
         </div>
       )}
       {navItemsCheck == 'campus' && (
@@ -110,10 +107,9 @@ function Navbar() {
             <ul>
               <li onClick={() => navigate('/campus-life')}>campus Life</li>
               <li onClick={() => navigate('/event')}>News and events</li>
+              <li onClick={() => navigate('/all-india-tour')}>All India Tour</li>
             </ul>
-
           </div>
-
         </div>
       )}
       {navItemsCheck == 'admission' && (

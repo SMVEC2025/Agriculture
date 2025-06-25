@@ -221,7 +221,7 @@
     background-color: rgb(5, 17, 58);
 
 .layerhome{
-    background-image: linear-gradient(0deg,rgba(0, 0, 0, 0.096) 85%,rgba(0, 0, 0, 0.418) 99%);
+    background-image: linear-gradient(0deg,rgba(0, 0, 0, 0.185) 85%,rgba(0, 0, 0, 0.651) 99%);
     position: absolute;
     left: 0;
     top: 0;
@@ -458,21 +458,24 @@
   .hero-style .slide-btns {
     max-width:  800px;
   }
-  .hero-slider .slide-title,.hero-slider .slide-text{
-    
-      text-shadow: 
-   0 0 5px rgba(0, 0, 0, 0.274),
-        0 0 10px rgba(0, 0, 0, 0.212),
-        0 0 15px rgba(0, 0, 0, 0.267),
-        0 0 20px rgba(0, 0, 0, 0.164);
+  .hero-slider {
 
         h5{
             text-shadow: 
   
-      0 0 5px rgba(0, 0, 0, 0.767),
-        0 0 10px rgba(0, 0, 0, 0.568),
-        0 0 15px rgba(0, 0, 0, 0.521),
-        0 0 20px rgba(66, 66, 66, 0.397);
+       0 0 5px rgba(0, 0, 0, 0.274),
+        0 0 10px rgba(0, 0, 0, 0.212),
+        0 0 15px rgba(0, 0, 0, 0.267),
+        0 0 20px rgba(0, 0, 0, 0.164);
+
+        }
+          h2{
+            text-shadow: 
+  
+     0 0 5px rgba(0, 0, 0, 0.274),
+        0 0 10px rgba(0, 0, 0, 0.212),
+        0 0 15px rgba(0, 0, 0, 0.267),
+        0 0 20px rgba(0, 0, 0, 0.164);
 
         }
     p{

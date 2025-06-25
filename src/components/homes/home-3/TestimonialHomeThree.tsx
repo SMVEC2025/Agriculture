@@ -56,16 +56,8 @@ const TestimonialHomeThree = () => {
       <img src="/assets/img/4G3A8463.JPG" alt="" />
             <div className="counter-section-2 section-padding pt-0">
                 <div className="container custom-container">
-                    <div className="counter-wrapper-2 bg-cover" style={{background: `url(/assets/img/counter-bg.jpg)`}}>
-                        <div className="counter-items wow fadeInUp" data-wow-delay=".2s">
-                            <div className="icon">
-                                <i className="flaticon-success"></i>
-                            </div>
-                            <div className="content">
-                                <h2><span className="odometer" data-count="48.5"> <Count number={48} text='.5k'  /> </span></h2>
-                                <p>Students</p>
-                            </div>
-                        </div>
+                    <div  className="counter-wrapper-2 bg-cover " style={{background: `url(/assets/img/counter-bg.jpg) ` }}>
+                        
                         <div className="counter-items wow fadeInUp" data-wow-delay=".4s">
                             <div className="icon">
                                 <i className="flaticon-medal"></i>
