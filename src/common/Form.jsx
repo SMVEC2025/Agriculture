@@ -1,9 +1,10 @@
 import axios from 'axios';
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useContext } from 'react';
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
 import { FormControl, InputLabel, Select, FormHelperText, Box, TextField, MenuItem } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import { AppContext } from '../context/AppContext';
 
 // Indian states and cities data
 const indianStates = [
@@ -68,20 +69,20 @@ const Form = () => {
     city: '',
     course: '',
     message: '',
-    captcha: '',
+    captcha: '', 
     captchaInput: '',
     is_otp_verified: 0
   });
 
   const [cities, setCities] = useState([]);
   const [errors, setErrors] = useState({});
-  const [isSubmitted, setIsSubmitted] = useState(false);
   const [userOtp, setUserOtp] = useState(' ')
   const [otpVerified, setOtpVerified] = useState(false)
   const [buttonLoading, setButtonLoading] = useState('')
   const [timeLeft, setTimeLeft] = useState(59);
   const [loading, setLoading] = useState(false)
   const timerRef = useRef(null);
+  const {isSubmitted, setIsSubmitted} = useContext(AppContext)
   // Generate captcha on component mount
   useEffect(() => {
     generateCaptcha();
@@ -249,15 +250,12 @@ const Form = () => {
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   }
-  if (isSubmitted) {
-    return (
-      <div className="form-container">
-        <div className="success-message">
-          <h2>Application Submitted Successfully!</h2>
-          <p>Thank you for your application. We will contact you shortly.</p>
-        </div>
-      </div>
-    );
+
+
+    function handleKeyDown(e,triggerButton = false){
+    if(e.key === "Enter"){
+     e.preventDefault()
+    }
   }
   return (
        <div className="form-container">
@@ -279,6 +277,8 @@ const Form = () => {
             onChange={handleChange}
             error={!!errors.name}
             helperText={errors.name}
+                onKeyDown={(e) => handleKeyDown(e)} 
+
             sx={{
               input: {
                 color: 'black',
@@ -300,6 +300,8 @@ const Form = () => {
             onChange={handleChange}
             error={!!errors.fathername}
             helperText={errors.fathername}
+                onKeyDown={(e) => handleKeyDown(e)} 
+
             sx={{
               input: {
                 color: 'black',
@@ -324,6 +326,7 @@ const Form = () => {
               onChange={handleChange}
               error={!!errors.phone}
               helperText={errors.phone}
+
               sx={{
                 input: {
                   color: 'black',
@@ -363,6 +366,8 @@ const Form = () => {
                 style={{ width: `calc(100% - 120px)` }}
                 error={!!errors.otp}
                 helperText={errors.otp}
+                onKeyDown={(e) => handleKeyDown(e)} 
+
                 sx={{
                   input: {
                     color: 'black',
@@ -428,6 +433,8 @@ const Form = () => {
             onChange={handleChange}
             error={!!errors.email}
             helperText={errors.email}
+                onKeyDown={(e) => handleKeyDown(e)} 
+
             sx={{
               input: {
                 color: 'black',

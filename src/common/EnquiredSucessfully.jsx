@@ -1,13 +1,22 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import CtaHomeThree from '../components/homes/home-3/CtaHomeThree'
 import FooterOne from '../layouts/footers/FooterOne'
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./SuccessMessage.css";
+import { AppContext } from '../context/AppContext';
 
 function EnquiredSucessfully() {
     const [countdown, setCountdown] = useState(7);
     const navigate = useNavigate();
+    const { isSubmitted,setIsSubmitted } = useContext(AppContext);
+
+    useEffect(() => {
+        if (!isSubmitted) {
+            navigate('/error');
+        
+        }
+    }, [isSubmitted, navigate]);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -16,6 +25,9 @@ function EnquiredSucessfully() {
 
         const timeout = setTimeout(() => {
             navigate("/");
+
+            
+            
         }, 7000);
 
         return () => {

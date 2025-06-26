@@ -25,6 +25,8 @@ import  {
     const [showMobileSlider,setShowMobileSlider]=useState(false)
     const [showItem,setShowItem]=useState('')
     const [showLogoLoader,setShowLoader] = useState(true)
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
 
     // Effect to track screen size changes
     useEffect(() => {
@@ -57,7 +59,7 @@ import  {
     return (
       <AppContext.Provider
         value={{
-            showNav,setShowNav,isMobile,setIsMobile,formOpen,setFormOpen,events,setEvents,loader,setLoader,showMobileSlider,setShowMobileSlider,showItem,setShowItem,showLogoLoader,setShowLoader
+            showNav,setShowNav,isMobile,setIsMobile,formOpen,setFormOpen,events,setEvents,loader,setLoader,showMobileSlider,setShowMobileSlider,showItem,setShowItem,showLogoLoader,setShowLoader,isSubmitted, setIsSubmitted
         }}
       >
         {children}
