@@ -11,7 +11,6 @@ const EventHomeThree = () => {
         navigate(`/event-details/${event?.acf.title}`, { state: { event } });
 
     }
-    console.log(events)
     return (
         <>
             <section className="event-section pt-0 fix section-padding">
@@ -30,12 +29,12 @@ const EventHomeThree = () => {
 
                             {events?.slice(0, 4).map((element, i) => (
                                 <div key={i} className="col-xl-4 col-lg-3 col-md-5 wow fadeInUp " data-wow-delay=".2s">
-                                            <div class="card" >
+                                            <div className="card" >
                                                 <h6 style={{position:"absolute",right:"0",top:"0",padding:"10px",backgroundColor:"#2e4082",color:"white",borderRadius:"5px",margin:"5px"}}>{element.acf.date}</h6>
-  <img style={{height:"250px",objectFit:"cover"}} src={element?.acf.image} class="card-img-top" alt="..."/>
-  <div class="card-body">
-    <h5 class="card-title" style={{color:"#2e4082"}}>{element?.acf?.title}</h5>
-    <p class="card-text">{element?.acf?.description.split(" ").slice(0, 20).join(" ")}...</p>
+  <img style={{height:"250px",objectFit:"cover"}} src={element?.acf.image} className="card-img-top" alt="..."/>
+  <div className="card-body">
+    <h5 className="card-title" style={{color:"#2e4082"}}>{element?.acf?.title}</h5>
+    <p className="card-text">{element?.acf?.description.split(" ").slice(0, 20).join(" ")}...</p>
     
   <button onClick={()=>handleNavigate(element)} style={{padding:'15px 20px',marginTop:"10px",backgroundColor:"#2e4082"}} className="theme-btn red-btn">View Events</button>
   </div>

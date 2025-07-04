@@ -44,7 +44,7 @@ function Placement() {
 
        <div className='placement-list'>
            {plaementPartners.map((element,index)=>(
-            <img src={`${element.image}`} alt="" />
+            <img key={index} src={`${element.image}`} alt="" />
            ))}
        </div>
     </div>

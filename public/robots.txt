@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://agri.smvec.ac.in/sitemap.xml

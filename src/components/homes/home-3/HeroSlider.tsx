@@ -12,22 +12,19 @@ const slides = [
   {
     title: "Cultivate Your Future with SMVEC Agri Science",
     text: "At SMVEC, we sow the seeds of knowledge and innovation in agriculture—empowering students with cutting-edge practices, sustainable farming techniques, and hands-on experience to lead the future of agri-tech and rural development.",
-        background: "/assets/img/hero/tour.png",
+    background: "/assets/img/hero/tour.webp",
 
-    backgroundlayer: "/assets/img/campuslayer.png",
 
   },
   {
     title: "Cultivate Yours Future with SMVEC Agri Science",
     text: "At SMVEC, we sow the seeds of knowledge and innovation in agriculture—empowering students with cutting-edge practices, sustainable farming techniques, and hands-on experience to lead the future of agri-tech and rural development.",
     background: "/assets/img/hero/hero-11.webp",
-    backgroundlayer: "/assets/img/gardenlayer.png",
   },
   {
     title: "Cultivate Your Future with SMVEC Agri Science",
     text: "At SMVEC, we sow the seeds of knowledge and innovation in agriculture—empowering students with cutting-edge practices, sustainable farming techniques, and hands-on experience to lead the future of agri-tech and rural development.",
-    background: "/assets/img/hero/nbpgr.png",
-    backgroundlayer: "/assets/img/entrancelayer.png",
+    background: "/assets/img/hero/nbpgr.webp",
 
   }
 
@@ -88,12 +85,12 @@ const HeroSlider: React.FC = () => {
           modules={[Navigation, Autoplay, Parallax]}
           className="swiper-container"
         >
-          {slides.map((slide, idx) => ( 
-            <SwiperSlide key={idx} style={{backgroundImage:`url(${slide.background})`}} >
-             
+          {slides.map((slide, idx) => (
+            <SwiperSlide key={idx} style={{ backgroundImage: `url(${slide.background})` }} >
+
               <div
                 className="slide-inner slide-bg-image"
-                style={{backgroundImage:`url(${slide.background})`}}              >
+                style={{ backgroundImage: `url(${slide.background})` }}              >
 
                 <div className="layerhome" >
 

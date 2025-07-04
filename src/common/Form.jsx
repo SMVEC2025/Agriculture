@@ -50,13 +50,6 @@ const indianStates = [
 
 // Add more states as needed
 
-const courses = [
-  'B.A., LL.B - 5 years',
-  'B.B.A. LL.B - 5 years',
-  'B.Sc. LL.B - 5 years',
-  'LL.B - 3 years'
-];
-
 const Form = () => {
   const navigate = useNavigate()
   const [formData, setFormData] = useState({
@@ -69,7 +62,7 @@ const Form = () => {
     city: '',
     course: '',
     message: '',
-    captcha: '', 
+    captcha: '',
     captchaInput: '',
     is_otp_verified: 0
   });
@@ -82,7 +75,7 @@ const Form = () => {
   const [timeLeft, setTimeLeft] = useState(59);
   const [loading, setLoading] = useState(false)
   const timerRef = useRef(null);
-  const {isSubmitted, setIsSubmitted} = useContext(AppContext)
+  const { isSubmitted, setIsSubmitted, setFormOpen } = useContext(AppContext)
   // Generate captcha on component mount
   useEffect(() => {
     generateCaptcha();
@@ -162,12 +155,18 @@ const Form = () => {
 
       };
       try {
-       await axios.post('https://agribackend.vercel.app/api/submit-form', enquiryData);
-       
+        let response = await axios.post('https://agribackend.vercel.app/api/submit-form', enquiryData);
+
         setTimeout(() => {
           setIsSubmitted(true)
+          setFormOpen(false)
           setLoading(false)
-          navigate('/enquired-successfully')
+          if (response.data != 1) {
+            navigate(`/success/?id=${response.data}`, { state: enquiryData?.student_name })
+          }else{
+            navigate('/already-enquired')
+          }
+
         }, 100);
       } catch (error) {
         alert("Something went wrong! try after sometimes");
@@ -252,13 +251,13 @@ const Form = () => {
   }
 
 
-    function handleKeyDown(e,triggerButton = false){
-    if(e.key === "Enter"){
-     e.preventDefault()
+  function handleKeyDown(e, triggerButton = false) {
+    if (e.key === "Enter") {
+      e.preventDefault()
     }
   }
   return (
-       <div className="form-container">
+    <div className="form-container">
       <div className='header'>
         <h2>Admission enquiry</h2>
       </div>
@@ -267,50 +266,50 @@ const Form = () => {
 
           <div className='names_field'>
             <TextField
-            id="name"
-            label="Name"
-            name="name"
-            variant="outlined"
-            className="custom-input"
-            fullWidth
-            value={formData.name}
-            onChange={handleChange}
-            error={!!errors.name}
-            helperText={errors.name}
-                onKeyDown={(e) => handleKeyDown(e)} 
+              id="name"
+              label="Name"
+              name="name"
+              variant="outlined"
+              className="custom-input"
+              fullWidth
+              value={formData.name}
+              onChange={handleChange}
+              error={!!errors.name}
+              helperText={errors.name}
+              onKeyDown={(e) => handleKeyDown(e)}
 
-            sx={{
-              input: {
-                color: 'black',
-              },
-              '& .MuiInputBase-input:focus': {
-                color: 'black',
-              },
-            }}
-          />
+              sx={{
+                input: {
+                  color: 'black',
+                },
+                '& .MuiInputBase-input:focus': {
+                  color: 'black',
+                },
+              }}
+            />
 
-          <TextField
-            id="fathername"
-            label="Father Name"
-            className="custom-input"
-            name="fathername"
-            variant="outlined"
-            fullWidth
-            value={formData.fathername}
-            onChange={handleChange}
-            error={!!errors.fathername}
-            helperText={errors.fathername}
-                onKeyDown={(e) => handleKeyDown(e)} 
+            <TextField
+              id="fathername"
+              label="Father Name"
+              className="custom-input"
+              name="fathername"
+              variant="outlined"
+              fullWidth
+              value={formData.fathername}
+              onChange={handleChange}
+              error={!!errors.fathername}
+              helperText={errors.fathername}
+              onKeyDown={(e) => handleKeyDown(e)}
 
-            sx={{
-              input: {
-                color: 'black',
-              },
-              '& .MuiInputBase-input:focus': {
-                color: 'black',
-              },
-            }}
-          />
+              sx={{
+                input: {
+                  color: 'black',
+                },
+                '& .MuiInputBase-input:focus': {
+                  color: 'black',
+                },
+              }}
+            />
           </div>
           <div className='input-with-btn'>
 
@@ -366,7 +365,7 @@ const Form = () => {
                 style={{ width: `calc(100% - 120px)` }}
                 error={!!errors.otp}
                 helperText={errors.otp}
-                onKeyDown={(e) => handleKeyDown(e)} 
+                onKeyDown={(e) => handleKeyDown(e)}
 
                 sx={{
                   input: {
@@ -383,43 +382,6 @@ const Form = () => {
             </div>
           ) : <div className='success-msg'>OTP Verified Sucessfully</div>}
 
-          {/* <div className={`form-group ${errors.phone && 'error'}`}>
-
-          <div className='sendotp-btn'>
-            {buttonLoading == '' && !otpVerified && (
-              <button onClick={sendOtp}>Get-Otp</button>
-            )}
-            {buttonLoading == 'otp' && (
-              <div><span className='loading-btn'><AiOutlineLoading3Quarters /></span></div>
-            )}
-            {buttonLoading == 'otpcount' && !otpVerified && (
-              <div >{timeLeft} sec</div>
-            )}
-          </div>
-        </div> */}
-
-          {/* {otpVerified ? (
-          <div className='otp-success'>Verified successfully</div>
-
-        ) : (
-          <div className={`form-group ${errors.otp && 'error'}`}>
-            <label htmlFor="phone">Enter OTP</label>          <div className='error-message'>{errors.otp}</div>
-
-            <input
-              type="tel"
-              id="otp"
-              name="otp"
-              value={formData.otp}
-              onChange={handleChange}
-              className={errors.otp ? 'error' : ''}
-              maxLength={10}
-
-            />
-            <div className='sendotp-btn'>
-              <button onClick={verifyOtp}>Verify</button>
-            </div>
-          </div>
-        )} */}
 
           <TextField
             id="email"
@@ -433,7 +395,7 @@ const Form = () => {
             onChange={handleChange}
             error={!!errors.email}
             helperText={errors.email}
-                onKeyDown={(e) => handleKeyDown(e)} 
+            onKeyDown={(e) => handleKeyDown(e)}
 
             sx={{
               input: {
@@ -444,29 +406,26 @@ const Form = () => {
               },
             }}
           />
-          {/* <FormControl fullWidth sx={{ mt: 2 }} error={Boolean(errors.course)}>
-            <InputLabel id="course-label">Program</InputLabel>
-            <Select
-              labelId="course-label"
-              id="course"
-              name="course"
-              className="custom-input"
-              value={formData.course}
-              onChange={handleChange}
-              label="Program"
-            >
-              <MenuItem value="">
-                <em>Select Program</em>
-              </MenuItem>
-              {courses.map(course => (
-                <MenuItem key={course} value={course}>
-                  {course}
-                </MenuItem>
-              ))}
-            </Select>
-            {errors.course && <FormHelperText>{errors.course}</FormHelperText>}
-          </FormControl> */}
 
+          <TextField
+            label="Program"
+            type="test"
+            className="custom-input"
+            variant="outlined"
+            fullWidth
+            value={"B.Sc Agriculture"}
+            helperText={errors.email}
+            onKeyDown={(e) => handleKeyDown(e)}
+
+            sx={{
+              input: {
+                color: 'black',
+              },
+              '& .MuiInputBase-input:focus': {
+                color: 'black',
+              },
+            }}
+          />
           <TextField
             select
             id="state"
@@ -521,26 +480,6 @@ const Form = () => {
               </MenuItem>
             ))}
           </TextField>
-
-
-          {/* <div className={`form-group ${errors.course && 'error'}`}>
-          <label>Course Applying For:</label>
-          <div className="radio-group">
-            {courses.map(course => (
-              <div key={course} className="radio-option">
-                <input
-                  type="radio"
-                  id={course.replace(/\s+/g, '-')}
-                  name="course"
-                  value={course}
-                  checked={formData.course === course}
-                  onChange={handleChange}
-                />
-                <label htmlFor={course.replace(/\s+/g, '-')}>{course}</label>
-              </div>
-            ))}
-          </div>
-        </div> */}
           <TextField
             id="message"
             label="Message"

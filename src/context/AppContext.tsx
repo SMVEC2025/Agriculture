@@ -54,7 +54,6 @@ import  {
          setLoader(false);
        });
    }, []);
-          console.log(events)
 
     return (
       <AppContext.Provider

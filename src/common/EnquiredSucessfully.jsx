@@ -1,55 +1,39 @@
-import React, { useContext } from 'react'
-import CtaHomeThree from '../components/homes/home-3/CtaHomeThree'
-import FooterOne from '../layouts/footers/FooterOne'
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import "./SuccessMessage.css";
-import { AppContext } from '../context/AppContext';
+import React, { useEffect, useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import CtaHomeThree from '../components/homes/home-3/CtaHomeThree';
+import FooterOne from '../layouts/footers/FooterOne';
+import './SuccessMessage.css';
 
 function EnquiredSucessfully() {
-    const [countdown, setCountdown] = useState(7);
-    const navigate = useNavigate();
-    const { isSubmitted,setIsSubmitted } = useContext(AppContext);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const studentName = location.state;
 
-    useEffect(() => {
-        if (!isSubmitted) {
-            navigate('/error');
-        
-        }
-    }, [isSubmitted, navigate]);
+  const [allowRender, setAllowRender] = useState(false);
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCountdown((prev) => prev - 1);
-        }, 1000);
+  useEffect(() => {
+    if (!studentName) {
+      navigate('/');
+    } else {
+      setAllowRender(true);
+    }
+  }, [studentName, navigate]);
 
-        const timeout = setTimeout(() => {
-            navigate("/");
+  if (!allowRender) return null; // 
 
-            
-            
-        }, 7000);
-
-        return () => {
-            clearInterval(interval);
-            clearTimeout(timeout);
-        };
-    }, [navigate]);
-    return (
-        <>
-            <div className="success-container">
-                <div className="success-box">
-                    <h1>Enquired successfully!</h1>
-                    <p>You have successfully enquired.We will contact you soon</p>
-                    <p className="countdown">Redirecting in {countdown} seconds...</p>
-                </div>
-            </div>
-            <CtaHomeThree />
-            {/* <MarqueeTwo /> */}
-            {/* <FooterThree /> */}
-            <FooterOne />
-        </>
-    )
+  return (
+    <>
+      <div className="success-container">
+        <div className="success-box">
+          <h1>Enquired successfully! {studentName}</h1>
+          <p>You have successfully enquired. We will contact you soon.</p>
+          <button onClick={() => navigate('/')}>Back To Home</button>
+        </div>
+      </div>
+      <CtaHomeThree />
+      <FooterOne />
+    </>
+  );
 }
 
-export default EnquiredSucessfully
+export default EnquiredSucessfully;

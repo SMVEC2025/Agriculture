@@ -11,18 +11,47 @@ import HeroSlider from "./HeroSlider";
 import HomeForm from "./HomeForm";
 import Loader from "./Loader";
 import Placement from "./Placement";
+import { useEffect, useState } from "react";
+import Popup from "./Popup";
+import axios from "axios";
 
 
 
 
 const HomeThree = () => {
+  const [showPopup, setShowPopup] = useState(false);
+  const [popImage, setPopImage] = useState()
 
+  useEffect(() => {
+    async function getPop() {
+      const hasVisited = sessionStorage.getItem("hasVisitedHome");
 
+      try {
+        const res = await axios.get('http://localhost:3000/api/get-pop')
+
+        setTimeout(() => {
+          if (!hasVisited && res.data?.status) {
+          setShowPopup(true);
+          setPopImage(res.data?.img)
+          sessionStorage.setItem("hasVisitedHome", "true");
+        } else {
+
+        }
+        }, 2000);
+      }
+      catch (err) {
+        // console.log(err)
+      }
+    }
+    getPop()
+
+  }, []);
 
   return (
     <>
       {/* <Test/> */}
       {/* <HeroHomeThree /> */}
+      {showPopup && <Popup popImage={popImage} onClose={() => setShowPopup(false)} />}
       <HeroSlider />
       <HomeForm />
       <Loader />
@@ -39,7 +68,7 @@ const HomeThree = () => {
       {/* <PartnarsHomeThree /> */}
       {/* <BlogHomeThree /> */}
       <FaqHomeThree />
-      <Placement/>
+      <Placement />
       <TestimonialHomeThree />
 
       <CtaHomeThree />
