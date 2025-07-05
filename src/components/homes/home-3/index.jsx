@@ -27,7 +27,7 @@ const HomeThree = () => {
       const hasVisited = sessionStorage.getItem("hasVisitedHome");
 
       try {
-        const res = await axios.get('http://localhost:3000/api/get-pop')
+        const res = await axios.get('https://agribackend.vercel.app/api/get-pop')
 
         setTimeout(() => {
           if (!hasVisited && res.data?.status) {

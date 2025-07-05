@@ -29,6 +29,7 @@ import usePageTracking from "./common/usePageTracking";
 import AllIndiaTour from "./components/allindiatour/Index";
 import EnquiredSucessfully from "./common/EnquiredSucessfully";
 import AlreadyEnquired from "./common/AlreadyEnquired";
+import SuccessPage from "./components/successpage/SuccessPage";
 
 
 function App() {
@@ -58,7 +59,7 @@ function App() {
           <Route path="/admission-horticulture" element={<HorticultureAdmission />} />
           <Route path="/history" element={<AboutHistory />} />
           <Route path="/campus-life" element={<CampusLife />} />
-          <Route path="/test" element={<Test />} />
+          <Route path="/test" element={<SuccessPage />} />
           <Route path="/all-india-tour" element={<AllIndiaTour />} />
           <Route path="/success" element={<EnquiredSucessfully />} />
           <Route path="/already-enquired" element={<AlreadyEnquired />} />
