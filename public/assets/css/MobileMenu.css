@@ -61,7 +61,7 @@
         transition: all 0.3s ease-out;
     }
     .sub.show{
-        height: 120px;
+        height: fit-content;
     }
 }
 .mm_menuitems{

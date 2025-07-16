@@ -8,10 +8,13 @@ import { useNavigate } from "react-router-dom";
 import { FiMinus } from "react-icons/fi";
 import { AppContext } from "../../context/AppContext";
 import { BsTwitterX } from "react-icons/bs";
+import { BsArrowLeft } from "react-icons/bs";
 
 function MobileMenu() {
   const { showMobileSlider, showItem, setShowItem, setShowMobileSlider } = useContext(AppContext)
   const navigate = useNavigate()
+  const [NavAcademicContent, setNavAcademicContent] = useState('');
+
   const handlesubitems = (val) => {
     setShowItem(val)
   }
@@ -26,7 +29,9 @@ function MobileMenu() {
   const handleRedirect = (url) => {
     window.open(url, '_blank', 'noopener,noreferrer');
   };
-
+  const handelFileOpen = (path) => {
+    window.open(`/file/${path}`, '_blank');
+  }
   return (
     <div className={`mm_main ${showMobileSlider ? "opened" : "closed"}`}>
       <div className="mm_con1">
@@ -53,10 +58,26 @@ function MobileMenu() {
         </div>
         <div className={`sub ${showItem == 'academics' ? "show" : ""}`}>
           <ul>
-            <li onClick={() => handleNavigate('/faculty-list')}>Faculty</li>
-            <li onClick={() => handleNavigate('/courses-detail-agriculture')}>B.Sc. (Hons.) Agriculture</li>
-            {/* <li onClick={() => handleNavigate('/courses-detail-horticulture')}>B.Sc. (Hons.) Horticulture
-            </li> */}
+          
+            {NavAcademicContent == 'bos' ? (
+              <>
+                <li onClick={() => { setShowItem('academics'); setNavAcademicContent('') }}><BsArrowLeft /> Back</li>
+                <li onClick={() => handelFileOpen('1st_BoS_minute.pdf')}>1st Bos Minute</li>
+                <li onClick={() => handelFileOpen('2nd_BoS_minute.pdf')}>2nd Bos Minute</li>
+                <li onClick={() => handelFileOpen('3rd_BoS_minute.pdf')}>3rd Bos Minute</li>
+                <li onClick={() => handelFileOpen('Agri_4th_BoS.pdf')}>4th Bos Minute</li>
+                <li onClick={() => handelFileOpen('agri_5th_BoS_Minutes.pdf')}>5th Bos Minute</li>
+                <li onClick={() => handelFileOpen('6th_BOS_CAGS.pdf')}>6th Bos Minute</li>
+
+              </>
+            ) : (
+              <>
+                <li onClick={() => handleNavigate('/faculty-list')}>Faculty</li>
+                <li onClick={() => handleNavigate('/courses-detail-agriculture')}>B.Sc. (Hons.) Agriculture</li>
+                <li onClick={() => handelFileOpen('Regulation_Agri_R2021.pdf')}>Academic Regulation 2021</li>
+                <li onClick={() => { setNavAcademicContent('bos') }}>Bos Minute</li>
+              </>
+            )}
           </ul>
         </div>
         <div onClick={() => { handlesubitems('campuslife') }} className={`mm_menuitems ${showItem == 'campuslife' ? "show" : ""}`}>

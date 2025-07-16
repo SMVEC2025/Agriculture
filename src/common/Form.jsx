@@ -119,6 +119,22 @@ const Form = () => {
       });
     }
   };
+  ///getting meta / ad data 
+  function getUTMParams() {
+    const params = new URLSearchParams(window.location.search);
+
+    return {
+      utm_source: params.get('utm_source') || '',
+      utm_medium: params.get('utm_medium') || '',
+      utm_campaign: params.get('utm_campaign') || '',
+      utm_content: params.get('utm_content') || '',
+      utm_term: params.get('utm_term') || '',
+      utm_id: params.get('utm_id') || '',
+    fbclid: params.get('fbclid') || params.get('gclid') || '' ,
+    };
+  }
+
+
 
   const validate = () => {
     const newErrors = {};
@@ -136,6 +152,9 @@ const Form = () => {
     return Object.keys(newErrors).length === 0;
   };
 
+
+
+  const utmData = getUTMParams();
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true)
@@ -151,8 +170,14 @@ const Form = () => {
         state: `${formData.city},${formData.state}`,
         qualification: '',
         requirement: formData.message,
-        is_otp_verified: formData.is_otp_verified
-
+        is_otp_verified: formData.is_otp_verified,
+        utm_id: utmData?.utm_id || '',
+        utm_source: utmData?.utm_source || 'website',
+        utm_medium: utmData?.utm_medium || '',
+        utm_campaign: utmData?.utm_campaign || '',
+        utm_content: utmData?.utm_content || '',
+        utm_term: utmData?.utm_term || '',
+        utm_gclid: utmData?.fbclid || '',
       };
       try {
         let response = await axios.post('https://agribackend.vercel.app/api/submit-form', enquiryData);
@@ -163,7 +188,7 @@ const Form = () => {
           setLoading(false)
           if (response.data != 1) {
             navigate(`/success/?id=${response.data}`, { state: enquiryData?.student_name })
-          }else{
+          } else {
             navigate('/already-enquired')
           }
 
@@ -346,43 +371,42 @@ const Form = () => {
             )}
           </div>
 
+          {userOtp !== ' ' && (
+            <>
+              {!otpVerified ? (
+                <div className='input-with-btn'>
+
+                  <TextField
+                    id="otp"
+                    name="otp"
+                    value={formData.otp}
+                    onChange={handleChange}
+                    label="OTP"
+                    variant="outlined"
+                    className="custom-input"
+                    style={{ width: `calc(100% - 120px)` }}
+                    error={!!errors.otp}
+                    helperText={errors.otp}
+                    onKeyDown={(e) => handleKeyDown(e)}
+
+                    sx={{
+                      input: {
+                        color: 'black',
+                      },
+                      '& .MuiInputBase-input:focus': {
+                        color: 'black',
+                      },
+                    }}
+                  />
+
+                  <button onClick={verifyOtp}>Verify</button>
+
+                </div>
+              ) : <div className='success-msg'>OTP Verified Sucessfully</div>}
 
 
-
-
-
-          {!otpVerified ? (
-            <div className='input-with-btn'>
-
-              <TextField
-                id="otp"
-                name="otp"
-                value={formData.otp}
-                onChange={handleChange}
-                label="OTP"
-                variant="outlined"
-                className="custom-input"
-                style={{ width: `calc(100% - 120px)` }}
-                error={!!errors.otp}
-                helperText={errors.otp}
-                onKeyDown={(e) => handleKeyDown(e)}
-
-                sx={{
-                  input: {
-                    color: 'black',
-                  },
-                  '& .MuiInputBase-input:focus': {
-                    color: 'black',
-                  },
-                }}
-              />
-
-              <button onClick={verifyOtp}>Verify</button>
-
-            </div>
-          ) : <div className='success-msg'>OTP Verified Sucessfully</div>}
-
-
+            </>
+          )}
           <TextField
             id="email"
             label="Email"

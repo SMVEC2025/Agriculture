@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { BsArrowRight } from "react-icons/bs";
+import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
 import { AppContext } from "../../context/AppContext";
 import { useNavigate } from "react-router-dom";
 import { IoMdClose } from "react-icons/io";
@@ -7,7 +7,8 @@ import { IoMdClose } from "react-icons/io";
 function Navbar() {
   const [navItemsCheck, setNavItemsCheck] = useState(" ");
   const [ShowNavSlider, setShowNavSlider] = useState(false);
-  const { showNav, setShowNav,setFormOpen,isMobile } = useContext(AppContext);
+  const { showNav, setShowNav, setFormOpen, isMobile } = useContext(AppContext);
+  const [NavAcademicContent, setNavAcademicContent] = useState('');
   const navigate = useNavigate()
   const handleMouseIn = (value: string): void => {
     setShowNav(true)
@@ -22,7 +23,7 @@ function Navbar() {
   }
   useEffect(() => {
     const handleScroll = () => {
-      if(navItemsCheck == ' '){
+      if (navItemsCheck == ' ') {
         if (window.scrollY > 150) {
           setShowNav(true);
         } else {
@@ -38,24 +39,28 @@ function Navbar() {
     };
   }, [navItemsCheck]);
 
+
+  const handelFileOpen = (path: string) => {
+    window.open(`/file/${path}`, '_blank');
+  }
   return (
     <>
-      <div  className={`nav_main ${showNav ? "show" : ""}`}>
+      <div className={`nav_main ${showNav ? "show" : ""}`}>
         <div className="nav-logo-container">
           <img src={`/assets/img/${showNav ? 'agriculturelogodark' : 'agriculturelogowhite'}.png`} alt="" />
         </div>
         <div className="nav-menu-container">
-          {isMobile?(<></>):
-          (<>
-           <ul>
-            <li onMouseEnter={handleMouseLeave} onClick={() => navigate('/')}>Home</li>
-            <li onMouseEnter={() => handleMouseIn('about')} >About</li>
-            <li onMouseEnter={() => handleMouseIn('academy')} >Academics</li>
-            <li onMouseEnter={() => handleMouseIn('campus')} >Campus Life</li>
-            <li onMouseEnter={() => handleMouseIn('admission')} >Admissions</li>
-          </ul>
-          <button style={{backgroundColor:"#303f82"}} className="hero-button" onClick={()=>setFormOpen(true)}>Apply</button>
-          </>)}
+          {isMobile ? (<></>) :
+            (<>
+              <ul>
+                <li onMouseEnter={handleMouseLeave} onClick={() => navigate('/')}>Home</li>
+                <li onMouseEnter={() => handleMouseIn('about')} >About</li>
+                <li onMouseEnter={() => handleMouseIn('academy')} >Academics</li>
+                <li onMouseEnter={() => handleMouseIn('campus')} >Campus Life</li>
+                <li onMouseEnter={() => handleMouseIn('admission')} >Admissions</li>
+              </ul>
+              <button style={{ backgroundColor: "#303f82" }} className="hero-button" onClick={() => setFormOpen(true)}>Apply</button>
+            </>)}
         </div>
       </div>
       {navItemsCheck == 'about' && (
@@ -70,7 +75,7 @@ function Navbar() {
             <ul>
               <li onClick={() => navigate('/about-us')}>About</li>
               <li onClick={() => navigate('/history')}>SMVEC History</li>
-              <li  onClick={() => navigate('/gallery')}  >Gallery</li>
+              <li onClick={() => navigate('/gallery')}  >Gallery</li>
               <li onClick={() => navigate('/contact')}>Contact</li>
             </ul>
           </div>
@@ -82,18 +87,40 @@ function Navbar() {
           <img src="/assets/img/images/frontview.jpg" alt="" />
           <div className="navslider_con2">
             <p>The School of Agricultural Sciences (SAGS) at Sri Manakula Vinayagar Engineering College (SMVEC) offers specialized programs in B.Sc. (Hons.) Agriculture and B.Sc. (Hons.) Horticulture. The college provides a modern learning environment with practical training on 40 acres of agricultural land.</p>
-            <div className="viewbtn"  onClick={() => navigate('/faculty-list')}>View Faculty <BsArrowRight /></div>
+            <div className="viewbtn" onClick={() => navigate('/faculty-list')}>View Faculty <BsArrowRight /></div>
           </div>
           <div className="navslider_items">
             <ul>
-              <li onClick={() => navigate('/faculty-list')}>Faculty</li>
-              <li onClick={() => navigate('/courses-detail-agriculture')}>B.Sc. (Hons.) Agriculture</li>
+
+              {NavAcademicContent == 'bos' ? (
+                <>
+                  <li onClick={() => { setNavItemsCheck('academy'); setNavAcademicContent('') }}><BsArrowLeft /> Back</li>
+                  <li onClick={() => handelFileOpen('1st_BoS_minute.pdf')}>1st Bos Minute</li>
+                  <li onClick={() => handelFileOpen('2nd_BoS_minute.pdf')}>2nd Bos Minute</li>
+                  <li onClick={() => handelFileOpen('3rd_BoS_minute.pdf')}>3rd Bos Minute</li>
+                  <li onClick={() => handelFileOpen('Agri_4th_BoS.pdf')}>4th Bos Minute</li>
+                  <li onClick={() => handelFileOpen('agri_5th_BoS_Minutes.pdf')}>5th Bos Minute</li>
+                  <li onClick={() => handelFileOpen('6th_BOS_CAGS.pdf')}>6th Bos Minute</li>
+
+                </>
+              ) : (
+                <>
+                  <li onClick={() => navigate('/faculty-list')}>Faculty</li>
+                  <li onClick={() => navigate('/courses-detail-agriculture')}>B.Sc. (Hons.) Agriculture</li>
+                  {/* <li onClick={() => navigate('/courses-detail-agriculture')}>Curriculum & syllabus</li> */}
+                  <li onClick={() => handelFileOpen('Regulation_Agri_R2021.pdf')}>Academic Regulation 2021</li>
+                  <li onClick={() => { setNavAcademicContent('bos') }}>Bos Minute</li>
+                </>
+              )}
+
+              {/* ACADEMIC REGULATIONS 2021 */}
               {/* <li onClick={() => navigate('/courses-detail-horticulture')}>B.Sc. (Hons.) Horticulture
               </li> */}
             </ul>
           </div>
         </div>
       )}
+
       {navItemsCheck == 'campus' && (
         <div onMouseLeave={handleMouseLeave} className={`navslider_main ${ShowNavSlider ? "opened" : ""}`}>
           <div onClick={handleMouseLeave} className="close-btn"><IoMdClose /></div>
@@ -101,7 +128,7 @@ function Navbar() {
           <img src="/assets/img/images/agribuilding.jpg" alt="" />
           <div className="navslider_con2">
             <p>Campus life at Sri Manakula Vinayagar Engineering College (SMVEC) is vibrant and enriching, offering a blend of academic rigor and extracurricular engagement. Students have access to modern infrastructure, including well-equipped classrooms, laboratories, and libraries, fostering an environment conducive to learning and innovation. </p>
-            <div className="viewbtn"  onClick={() => navigate('/campus-life')}>View campus life <BsArrowRight /></div>
+            <div className="viewbtn" onClick={() => navigate('/campus-life')}>View campus life <BsArrowRight /></div>
           </div>
           <div className="navslider_items">
             <ul>
@@ -119,7 +146,7 @@ function Navbar() {
           <img src="/assets/img/images/studentsthree.jpg" alt="" />
           <div className="navslider_con2">
             <p>Admission to the B.Sc. (Hons.) Agriculture at SMVEC requires candidates to have completed 10+2 with Physics, Chemistry, and Biology, with a minimum of 50% marks. Admission is based on merit, following the guidelines of the SMVEC Autonomous Regulations.</p>
-            <div className="viewbtn"  onClick={() => navigate('/admission')}>Admission {new Date().getFullYear()} <BsArrowRight /></div>
+            <div className="viewbtn" onClick={() => navigate('/admission')}>Admission {new Date().getFullYear()} <BsArrowRight /></div>
           </div>
           <div className="navslider_items">
             <ul>
