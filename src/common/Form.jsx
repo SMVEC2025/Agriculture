@@ -130,7 +130,7 @@ const Form = () => {
       utm_content: params.get('utm_content') || '',
       utm_term: params.get('utm_term') || '',
       utm_id: params.get('utm_id') || '',
-    fbclid: params.get('fbclid') || params.get('gclid') || '' ,
+      fbclid: params.get('fbclid') || params.get('gclid') || '',
     };
   }
 
@@ -164,12 +164,14 @@ const Form = () => {
 
         student_name: formData.name,
         father_name: formData.fathername,
-        department: 'B.Sc Agriculture',
+        department: 'B.Sc-Agri',
         mobile: formData.phone,
         email: formData.email,
         state: `${formData.city},${formData.state}`,
         qualification: '',
         requirement: formData.message,
+        degreeID: "75",
+        course_code_ID: "Agri",
         is_otp_verified: formData.is_otp_verified,
         utm_id: utmData?.utm_id || '',
         utm_source: utmData?.utm_source || 'website',
