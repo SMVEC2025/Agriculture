@@ -835,6 +835,15 @@
         }
 
         .event-details-content {
+            img{
+                border-radius: 10px;
+                margin-top: 10px;
+                width: 100% !important;
+                object-fit: cover;
+                min-height: 350px;
+                height: 100% !important;
+                margin-bottom: 20px;
+            }
 
             h3 {
                 font-size: 27px;

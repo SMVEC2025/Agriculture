@@ -43,7 +43,7 @@ import  {
    useEffect(() => {
      // Replace with your endpoint; consider adding `id` in _fields for React keys
      axios
-       .get('https://cms.smvhospital.com/wp-json/wp/v2/agrinewsevents?_fields=acf')
+       .get('https://cms.smvec.ac.in/wp-json/wp/v2/agrievents?per_page=100&page=1')
        .then((response) => {
          setEvents(response.data);
        })

@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AppContext } from "../../context/AppContext";
 import Cards from "./Cards";
+import FeesDetails from "./FeesDetails";
 
 
 const CoursesDetailsTwoArea = () => {
@@ -79,9 +80,14 @@ const CoursesDetailsTwoArea = () => {
 
                                                             </ul>
                                                         </div>
+
+                                                        <h3 className="mt-5">Fees Detail</h3>
+                                                        <div>
+                                                            <FeesDetails />
+                                                        </div>
                                                         <h3 className="mt-5">career opportunities</h3>
                                                         <div>
-                                                            <Cards/>
+                                                            <Cards />
                                                         </div>
 
                                                     </div>

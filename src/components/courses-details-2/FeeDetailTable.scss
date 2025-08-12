@@ -1,0 +1,94 @@
+.fees-table-container {
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(128, 128, 128, 0.336);
+
+
+    .fees-table {
+        width: 100%;
+        border-collapse: collapse;
+        background: #fff;
+        box-shadow: 0 1px 6px rgba(0, 0, 32, 0.05);
+
+        th,
+        td {
+            padding: 16px 8px;
+            text-align: left;
+            border-bottom: 1px solid #e0e7ef;
+            cursor: pointer;
+        }
+
+        td {
+            border: 1px solid rgba(128, 128, 128, 0.26);
+
+        }
+
+        th {
+            background: #142248; // dark blue
+            color: #fff;
+            font-weight: 600;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+    }
+
+    // Responsive design
+    @media (max-width: 600px) {
+        .fees-table-container {
+            padding: 8px;
+        }
+
+        .fees-table,
+        .fees-table thead,
+        .fees-table tbody,
+        .fees-table th,
+        .fees-table td,
+        .fees-table tr {
+            display: block;
+        }
+
+        .fees-table thead tr {
+            display: none;
+        }
+
+        .fees-table tr {
+            background: #fff;
+            border-radius: 6px;
+            box-shadow: 0 1px 6px rgba(0, 0, 32, 0.07);
+        }
+
+        .fees-table td {
+            border: none;
+            padding: 12px 6px;
+            position: relative;
+            padding-left: 50%;
+            font-size: 1rem;
+
+        }
+
+        .fees-table td::before {
+            position: absolute;
+            left: 10px;
+            top: 12px;
+            width: 45%;
+            font-weight: 600;
+            color: #142248;
+            white-space: nowrap;
+        }
+
+        .fees-table tr td:nth-child(1)::before {
+            content: "Category";
+        }
+
+        .fees-table tr td:nth-child(2)::before {
+            content: "Fees per Year (₹)";
+        }
+
+        .fees-table tr td:nth-child(3)::before {
+            content: "Includes";
+        }
+    }
+}

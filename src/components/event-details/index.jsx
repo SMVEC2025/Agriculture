@@ -17,10 +17,9 @@ const EventDetails = () => {
 	useEffect(() => {
 		const params = new URLSearchParams(window.location.search);
 		const eventNameFromURL = decodeURIComponent(window.location.pathname.split("/").pop());
-
 		// Filter event by title match
 		const matchedEvent = events.find(
-			(event) => event?.acf?.title?.trim().toLowerCase() === eventNameFromURL.trim().toLowerCase()
+			(event) => event?.slug  == eventNameFromURL
 		);
 
 		if (matchedEvent) {
@@ -31,13 +30,15 @@ const EventDetails = () => {
 		}
 	}, [events])
 
-
-
 	return (
 		<>
 			<Preloader />
 			<BreacrumbEventDetails />
-			<EventDetailsArea events={updatedEvents} />
+			{updatedEvents?<EventDetailsArea events={updatedEvents} />:(
+				<div style={{minHeight:"100vh",display:"flex",justifyContent:"center",alignItems:"center"}}>
+					<h2>Loading...</h2>
+				</div>
+			)}
 			{/* <MarqueeOne style_2={true} /> */}
 			<FooterOne />
 			<ScrollTop />

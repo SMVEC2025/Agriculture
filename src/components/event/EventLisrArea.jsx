@@ -9,7 +9,7 @@ const EventListArea = ({ events }) => {
     const [selectedLocation, setSelectedLocation] = useState("");
 
     const handleNavigate = (event) => {
-        navigate(`/event-details/${event?.acf.title}`, { state: { event } });
+        navigate(`/event-details/${event?.slug}`, { state: { event } });
     };
 
     // Get unique locations from events
@@ -21,7 +21,7 @@ const EventListArea = ({ events }) => {
 
     // Filter events based on search and location
     const filteredEvents = events?.filter(event => {
-        const matchesSearch = event?.acf?.title.toLowerCase().includes(searchTerm.toLowerCase());
+        const matchesSearch = event?.acf?.name?.toLowerCase().includes(searchTerm.toLowerCase());
         const matchesLocation = selectedLocation ? event?.acf?.location === selectedLocation : true;
         return matchesSearch && matchesLocation;
     });
@@ -64,10 +64,10 @@ const EventListArea = ({ events }) => {
                                         <span>{event?.acf?.date.split("/")[1]}-{event?.acf?.date.split("/")[2]}</span>
                                     </div>
                                     <div className="title-text">
-                                        <h4>{event?.acf?.title}</h4>
+                                        <h4>{event?.acf?.name}</h4>
                                         <ul className="post-time">
                                             <li><i className="far fa-map-marker-alt"></i> {event?.acf?.location}</li>
-                                            <li><i className="far fa-clock"></i> {event?.acf?.time}</li>
+                                            <li><i className="far fa-clock"></i> {event?.acf?.time || '10.00 AM'}</li>
                                         </ul>
                                     </div>
                                 </div>
