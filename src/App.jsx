@@ -30,7 +30,7 @@ import AllIndiaTour from "./components/allindiatour/Index";
 import EnquiredSucessfully from "./common/EnquiredSucessfully";
 import AlreadyEnquired from "./common/AlreadyEnquired";
 import SuccessPage from "./components/successpage/SuccessPage";
-
+import Placement from './components/placement/Index'
 
 function App() {
  usePageTracking();
@@ -63,6 +63,7 @@ function App() {
           <Route path="/all-india-tour" element={<AllIndiaTour />} />
           <Route path="/success" element={<EnquiredSucessfully />} />
           <Route path="/already-enquired" element={<AlreadyEnquired />} />
+          <Route path="/placement" element={<Placement />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Wrapper>

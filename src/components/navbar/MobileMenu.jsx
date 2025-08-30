@@ -76,6 +76,7 @@ function MobileMenu() {
                 <li onClick={() => handleNavigate('/courses-detail-agriculture')}>B.Sc. (Hons.) Agriculture</li>
                 <li onClick={() => handelFileOpen('Regulation_Agri_R2021.pdf')}>Academic Regulation 2021</li>
                 <li onClick={() => { setNavAcademicContent('bos') }}>Bos Minute</li>
+                <li  onClick={() => handleNavigate('/placement')}>Placement</li>
               </>
             )}
           </ul>

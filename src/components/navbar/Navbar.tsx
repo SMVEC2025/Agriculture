@@ -110,6 +110,8 @@ function Navbar() {
                   {/* <li onClick={() => navigate('/courses-detail-agriculture')}>Curriculum & syllabus</li> */}
                   <li onClick={() => handelFileOpen('Regulation_Agri_R2021.pdf')}>Academic Regulation 2021</li>
                   <li onClick={() => { setNavAcademicContent('bos') }}>Bos Minute</li>
+                  <li onClick={() => navigate('/placement')}>Placement</li>
+
                 </>
               )}
 
