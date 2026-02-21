@@ -9,20 +9,34 @@ import gsp from '/assets/img/placement/gsp.png';
 function Placement() {
     const plaementPartners =[
         {
+            image: '/assets/img/placement/bayer.png'
+        },
+        {
             image: '/assets/img/placement/rallis.png'
+        },
+        
+         {
+            image: '/assets/img/placement/parrys.png'
+        },
+          {
+            image: '/assets/img/placement/murugappa.png'
         },
          {
             image: '/assets/img/placement/mcf.png'
         },
-         {
-            image: '/assets/img/placement/parrys.png'
+             {
+            image: '/assets/img/placement/coromandel.png'
+        },
+             {
+            image: '/assets/img/placement/rukcho.png'
+        },
+             {
+            image: '/assets/img/placement/dhanuka.png'
         },
          {
             image: '/assets/img/placement/upl.png'
         },
-         {
-            image: '/assets/img/placement/bayer.png'
-        },
+         
          {
             image: '/assets/img/placement/logo.svg'
         },

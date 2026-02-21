@@ -219,6 +219,8 @@
     box-shadow: var(--shadow-sm);
     transition: box-shadow .2s ease;
     max-width: 90vw;
+    position: relative;
+
     @media (max-width: 568px) {
         flex-direction: column;
     }
@@ -285,6 +287,10 @@
     color: #6b7280;
 }
 
+.student-companylogo__img {
+    display: none;
+}
+
 /* Responsive */
 @media (min-width: 640px) {
     .hero__grid {
@@ -299,8 +305,21 @@
     .cards-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-}
 
+   
+}
+@media (max-width: 640px) {
+   .student-companylogo__img {
+        display: flex;
+       
+        width: 40px;
+        height: auto;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+    
+}
 @media (min-width: 1024px) {
     .cards-grid {
         grid-template-columns: repeat(3, 1fr);

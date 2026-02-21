@@ -143,7 +143,7 @@ export default function Index() {
         id: "S002",
         name: "CHANDRU.R",
         company: "Dhanuka Agritech Ltd.",
-        role: "System Engineer",
+        role: "Dhanuka Doctor",
         packageLPA: 2.4,
         image:
           "/assets/img/placement/dhanuka/CHANDRU.R.webp",
@@ -154,7 +154,7 @@ export default function Index() {
         id: "S002",
         name: "GOKULAKRISHNAN.R",
         company: "Dhanuka Agritech Ltd.",
-        role: "System Engineer",
+        role: "Dhanuka Doctor",
         packageLPA: 2.4,
         image:
           "/assets/img/placement/dhanuka/GOKULAKRISHNAN.R.webp",
@@ -165,7 +165,7 @@ export default function Index() {
         id: "S002",
         name: "KUMUTHINI.C",
         company: "Dhanuka Agritech Ltd.",
-        role: "System Engineer",
+        role: "Dhanuka Doctor",
         packageLPA: 2.4,
         image:
           "/assets/img/placement/dhanuka/KUMUTHINI.C.webp",
@@ -176,7 +176,7 @@ export default function Index() {
         id: "S002",
         name: "MANOJ.V",
         company: "Dhanuka Agritech Ltd.",
-        role: "System Engineer",
+        role: "Dhanuka Doctor",
         packageLPA: 2.4,
         image:
           "/assets/img/placement/dhanuka/MANOJ.V.webp",
@@ -187,7 +187,7 @@ export default function Index() {
         id: "S002",
         name: "NIRANJANA.K",
         company: "Dhanuka Agritech Ltd.",
-        role: "System Engineer",
+        role: "Dhanuka Doctor",
         packageLPA: 2.4,
         image:
           "/assets/img/placement/dhanuka/NIRANJANA.K.webp",
@@ -198,7 +198,7 @@ export default function Index() {
         id: "S002",
         name: "NITHESH.G",
         company: "Dhanuka Agritech Ltd.",
-        role: "System Engineer",
+        role: "Dhanuka Doctor",
         packageLPA: 2.4,
         image:
           "/assets/img/placement/dhanuka/NITHESH.G.webp",
@@ -209,7 +209,7 @@ export default function Index() {
         id: "S002",
         name: "RAJA MEENAKSHI.V",
         company: "Dhanuka Agritech Ltd.",
-        role: "System Engineer",
+        role: "Dhanuka Doctor",
         packageLPA: 2.4,
         image:
           "/assets/img/placement/dhanuka/RAJA MEENAKSHI.V.webp",
@@ -220,7 +220,7 @@ export default function Index() {
         id: "S002",
         name: "SRI VISHWALKSENA.S",
         company: "Dhanuka Agritech Ltd.",
-        role: "System Engineer",
+        role: "Dhanuka Doctor",
         packageLPA: 2.4,
         image:
           "/assets/img/placement/dhanuka/SRI VISHWALKSENA.S.webp",
@@ -231,7 +231,7 @@ export default function Index() {
         id: "S002",
         name: "SUNDHARA MAHALINGAM.P",
         company: "Dhanuka Agritech Ltd.",
-        role: "System Engineer",
+        role: "Dhanuka Doctor",
         packageLPA: 2.4,
         image:
           "/assets/img/placement/dhanuka/SUNDHARA MAHALINGAM.P.webp",
@@ -242,7 +242,7 @@ export default function Index() {
         id: "S002",
         name: "VEENA.B",
         company: "Dhanuka Agritech Ltd.",
-        role: "System Engineer",
+        role: "Dhanuka Doctor",
         packageLPA: 2.4,
         image:
           "/assets/img/placement/dhanuka/VEENA.B.webp",
@@ -253,7 +253,7 @@ export default function Index() {
         id: "S002",
         name: "VENKATRAMAN.C",
         company: "Dhanuka Agritech Ltd.",
-        role: "System Engineer",
+        role: "Dhanuka Doctor",
         packageLPA: 2.4,
         image:
           "/assets/img/placement/dhanuka/VENKATRAMAN.C.webp",
@@ -265,7 +265,7 @@ export default function Index() {
         id: "S002",
         name: "DHILIP KUMAR.V",
         company: "Rallis India Ltd.",
-        role: "Field Ofiicer",
+        role: "Field Officer",
         packageLPA: 2.4,
         image:
           "/assets/img/placement/rallis/DHILIP KUMAR.V.webp",
@@ -276,7 +276,7 @@ export default function Index() {
         id: "S002",
         name: "GOPIKRISHNAN.K",
         company: "Rallis India Ltd.",
-        role: "Field Ofiicer",
+        role: "Field Officer",
         packageLPA: 2.4,
         image:
           "/assets/img/placement/rallis/GOPIKRISHNAN.K.webp",
@@ -287,7 +287,7 @@ export default function Index() {
         id: "S002",
         name: "JANAGAR.S",
         company: "Rallis India Ltd.",
-        role: "Field Ofiicer",
+        role: "Field Officer",
         packageLPA: 2.4,
         image:
           "/assets/img/placement/rallis/JANAGAR.S.webp",
@@ -298,7 +298,7 @@ export default function Index() {
         id: "S002",
         name: "JAVAHAR.V",
         company: "Rallis India Ltd.",
-        role: "Field Ofiicer",
+        role: "Field Officer",
         packageLPA: 2.4,
         image:
           "/assets/img/placement/rallis/JAVAHAR.V.webp",
@@ -309,7 +309,7 @@ export default function Index() {
         id: "S002",
         name: "SANJAY.K",
         company: "Rallis India Ltd.",
-        role: "Field Ofiicer",
+        role: "Field Officer",
         packageLPA: 2.4,
         image:
           "/assets/img/placement/rallis/SANJAY.K.webp",
@@ -320,7 +320,7 @@ export default function Index() {
         id: "S002",
         name: "SANTHOSH KUMAR.D",
         company: "Rallis India Ltd.",
-        role: "Field Ofiicer",
+        role: "Field Officer",
         packageLPA: 2.4,
         image:
           "/assets/img/placement/rallis/SANTHOSH KUMAR.D.webp",
@@ -331,7 +331,7 @@ export default function Index() {
         id: "S002",
         name: "SRINATH.M",
         company: "Rallis India Ltd.",
-        role: "Field Ofiicer",
+        role: "Field Officer",
         packageLPA: 2.4,
         image:
           "/assets/img/placement/rallis/SRINATH.M.webp",
@@ -342,31 +342,21 @@ export default function Index() {
         id: "S002",
         name: "SWETHA.S",
         company: "Rallis India Ltd.",
-        role: "Field Ofiicer",
+        role: "Field Officer",
         packageLPA: 2.4,
         image:
           "/assets/img/placement/rallis/SWETHA.S.webp",
         companyLogo:
           "/assets/img/placement/rallis.png",
       },
-       {
-        id: "S002",
-        name: "THIYAGARAJAN.M",
-        company: "Rallis India Ltd.",
-        role: "Field Ofiicer",
-        packageLPA: 2.4,
-        image:
-          "/assets/img/placement/rallis/THIYAGARAJAN.M.webp",
-        companyLogo:
-          "/assets/img/placement/rallis.png",
-      },
+       
 
       ///rukcho biotech
        {
         id: "S002",
         name: "VINOTHINI V",
         company: "Rukcho Biotech Ltd.",
-        role: "Field Ofiicer",
+        role: "Field Officer",
         packageLPA: 2.4,
         image:
           "/assets/img/placement/rukcho/VINOTHINI V.webp",
@@ -377,7 +367,7 @@ export default function Index() {
         id: "S002",
         name: "KARTHIGA U",
         company: "Rukcho Biotech Ltd.",
-        role: "Field Ofiicer",
+        role: "Field Officer",
         packageLPA: 2.4,
         image:
           "/assets/img/placement/rukcho/KARTHIGA U.webp",
@@ -388,7 +378,7 @@ export default function Index() {
         id: "S002",
         name: "KAVIYA L",
         company: "Rukcho Biotech Ltd.",
-        role: "Field Ofiicer",
+        role: "Field Officer",
         packageLPA: 2.4,
         image:
           "/assets/img/placement/rukcho/KAVIYA L.webp",
@@ -399,7 +389,7 @@ export default function Index() {
         id: "S002",
         name: "KOKILASRI A",
         company: "Rukcho Biotech Ltd.",
-        role: "Field Ofiicer",
+        role: "Field Officer",
         packageLPA: 2.4,
         image:
           "/assets/img/placement/rukcho/KOKILASRI A.webp",
@@ -410,7 +400,7 @@ export default function Index() {
         id: "S002",
         name: "PRIYADHARSHINI P",
         company: "Rukcho Biotech Ltd.",
-        role: "Field Ofiicer",
+        role: "Field Officer",
         packageLPA: 2.4,
         image:
           "/assets/img/placement/rukcho/PRIYADHARSHINI P.webp",
@@ -421,13 +411,92 @@ export default function Index() {
         id: "S002",
         name: "RAMADEVI S",
         company: "Rukcho Biotech Ltd.",
-        role: "Field Ofiicer",
+        role: "Field Officer",
         packageLPA: 2.4,
         image:
           "/assets/img/placement/rukcho/RAMADEVI S.webp",
         companyLogo:
           "/assets/img/placement/rukcho.png",
       },
+      //coromandel
+       {
+        id: "S002",
+        name: "DEVAPRASATH R",
+        company: "Coromandel International Ltd.",
+        role: "Market Development Trainee ",
+        packageLPA: 3.0,
+        image:
+          "/assets/img/placement/coromandel/DEVAPRASATH R.webp",
+        companyLogo:
+          "/assets/img/placement/coromandel.png",
+      },
+       {
+        id: "S002",
+        name: "THIYAGARAJAN M",
+        company: "Coromandel International Ltd.",
+        role: "Market Development Trainee ",
+        packageLPA: 3.0,
+        image:
+          "/assets/img/placement/coromandel/THIYAGARAJAN M.webp",
+        companyLogo:
+          "/assets/img/placement/coromandel.png",
+      },
+       {
+        id: "S002",
+        name: "SIBIRAJ S",
+        company: "Coromandel International Ltd.",
+        role: "Market Development Trainee ",
+        packageLPA: 3.0,
+        image:
+          "/assets/img/placement/coromandel/SIBIRAJ S.webp",
+        companyLogo:
+          "/assets/img/placement/coromandel.png",
+      },
+       {
+        id: "S002",
+        name: "SAI SANTHOSH G",
+        company: "Coromandel International Ltd.",
+        role: "Market Development Trainee ",
+        packageLPA: 3.0,
+        image:
+          "/assets/img/placement/coromandel/SAI SANTHOSH G.webp",
+        companyLogo:
+          "/assets/img/placement/coromandel.png",
+      },
+       {
+        id: "S002",
+        name: "NAVEEN C.R",
+        company: "Coromandel International Ltd.",
+        role: "Market Development Trainee ",
+        packageLPA: 3.0,
+        image:
+          "/assets/img/placement/coromandel/NAVEEN C.R.webp",
+        companyLogo:
+          "/assets/img/placement/coromandel.png",
+      },
+       {
+        id: "S002",
+        name: "KAVIARASU I",
+        company: "Coromandel International Ltd.",
+        role: "Market Development Trainee ",
+        packageLPA: 3.0,
+        image:
+          "/assets/img/placement/coromandel/KAVIARASU I.webp",
+        companyLogo:
+          "/assets/img/placement/coromandel.png",
+      },
+       {
+        id: "S002",
+        name: "GOPI K",
+        company: "Coromandel International Ltd.",
+        role: "Market Development Trainee ",
+        packageLPA: 3.0,
+        image:
+          "/assets/img/placement/coromandel/GOPI K.webp",
+        companyLogo:
+          "/assets/img/placement/coromandel.png",
+      },
+
     ],
     []
   );
@@ -474,7 +543,7 @@ export default function Index() {
 
   return (
     <>
-    <BreadcrumbEvent  title="Placement" subtitle="Placement" />
+    <BreadcrumbEvent  title="School of Agricultural Sciences - Placement" subtitle="Placement" />
     <div className="placement-page" style={{ "--theme-primary": THEME.primary, "--theme-accent": THEME.accent }}>
       {/* Top bar */}
       
@@ -565,6 +634,7 @@ function StudentCard({ student }) {
   return (
     <article className="student-card">
       <img src={student.image} alt={student.name} className="student-card__img" loading="lazy" />
+      <img src={student.companyLogo} alt={student.companyLogo} className="student-companylogo__img" loading="lazy" />
       <div className="student-card__meta">
         <h4 className="student-card__name">{student.name}</h4>
         <p className="student-card__role">{student.role}</p>
