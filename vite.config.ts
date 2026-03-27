@@ -16,6 +16,12 @@ export default defineConfig({
   },
   server: {
     open: true,
+    proxy: {
+      '/api': {
+        target: 'https://agribackend.vercel.app',
+        changeOrigin: true,
+        secure: true,
+      },
+    },
   },
 });
-

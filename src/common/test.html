@@ -1,0 +1,403 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+<form id="enquiry_form" class="form-horizontal pl-2 pr-2" method="post" name="enquiry_form">
+  <div id="loader" class="lds-dual-ring hidden img_overlay"></div>
+  <input id="sourceid_home" name="sourceid_home" type="hidden" value="Homepage" />
+  <div class="row">
+    <div class="col-12">
+      <input id="name" class="form-control" name="name" type="text" placeholder="Enter Name*" required
+        pattern="[A-Za-z]+" title="Name is required, dot not allowed" aria-describedby="name-error"
+        aria-invalid="true" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <input id="Fathername" class="form-control" name="Fathername" type="text" placeholder="Enter Father Name*"
+        required pattern="[^0-9]*" title="Father Name is required, dot not allowed"
+        aria-describedby="Fathername-error" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+
+      <select id="course" class="form-control" name="course" aria-describedby="course-error" required>
+        <option selected="selected" value="">Select Course</option>
+        <option value="B.Tech-ECE">B.Tech – Electronics and Communication Engineering</option>
+        <option value="B.Tech-EEE">B.Tech – Electrical and Electronics Engineering</option>
+        <option value="B.Tech-CSE">B.Tech – Computer science and Engineering</option>
+        <option value="B.Tech-IT">B.Tech – Information Technology</option>
+        <option value="B.Tech-Mech">B.Tech – Mechanical Engineering</option>
+        <option value="B.Tech-Civil">B.Tech – Civil Engineering</option>
+        <option value="B.Tech-ICE">B.Tech – Instrumentation and Control Engineering</option>
+        <option value="B.Tech-BME">B.Tech – Bio Medical Engineering</option>
+        <option value="B.Tech-Mechatronics">B.Tech – Mechatronics Engineering</option>
+        <option value="B.Tech-CSBS">B.Tech – Computer Science and Business Systems</option>
+        <option value="B.Tech-AI">B.Tech – Artificial intelligence and Data science</option>
+        <option value="B.Tech-CCE">B.Tech – Computer and Communication Engineering</option>
+        <option value="B.Tech-Arch">B.Arch – Bachelor of Architecture</option>
+        <option value="M.Tech-ECE">M.Tech – Electronics and Communication Engineering</option>
+        <option value="M.Tech-VLSI">M.Tech – VLSI and Embedded Systems</option>
+        <option value="M.Tech-CSEBigData">M.Tech – Computer Science Engineering (Big data Analytics)</option>
+        <option value="M.Tech-Artificial">M.Tech – Artificial Intelligence and Data Science</option>
+        <option value="M.Tech-CSE">M.Tech – Computer Science &amp; Engineering</option>
+        <option value="M.Tech-Manufacturing">M.Tech – Manufacturing Engineering</option>
+        <option value="MBA">Master of Business Administration</option>
+        <option value="MCA">Master of Computer Applications</option>
+      </select>
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <input id="email" class="form-control" name="email" type="email" title="Enter valid email id"
+        placeholder="Enter Email*" required="required" aria-describedby="email-error" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 input-group premove" id="mobilevalid">
+      <span class="cntry_code">+91</span>
+      <input id="mobileno" class="form-control col-sm-7 col-7 ml-1" name="mobileno" type="text" pattern="[0-9]{10}"
+        maxlength="10" title="Please enter 10 digit mobile number" placeholder="Mobile Number *" required
+        aria-describedby="mobile-error" />
+      <button id="Sendotp" class="btn col-3 frm2dispnone OTPSend" name="Sendotp" type="button">
+        Get OTP
+      </button>
+      <button id="Resendotp" class="btn btnresendotp col-4 frm3dispnone OTPSend" name="Resendotp" type="button"
+        style="display: none">
+        Resend OTP
+      </button>
+      <span class="mt-4" id="load_info"></span>
+      <p class="errorMobile"></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <input id="otp" class="form-control frm4dispnone col-5" pattern="[0-9]{6}" maxlength="6" name="otp" type="text"
+        placeholder="Enter OTP *" title="Please enter the OTP" required />
+    </div>
+    <span id="otpinvalid"></span>
+    <span id="successmsgotp" class="py-1"></span>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <select id="place" class="form-control" name="place" required="required" aria-describedby="place-error">
+        <option selected="selected" value="">Select State *</option>
+        <option id="AndhraPradesh">AndhraPradesh</option>
+        <option id="AndamanandNicobarIslands">AndamanandNicobarIslands</option>
+        <option id="ArunachalPradesh">ArunachalPradesh</option>
+        <option id="Assam">Assam</option>
+        <option id="Bihar">Bihar</option>
+        <option id="Chandigarh">Chandigarh</option>
+        <option id="Chhattisgarh">Chhattisgarh</option>
+        <option id="DadarandNagarHaveli">DadarandNagarHaveli</option>
+        <option id="DamanandDiu">DamanandDiu</option>
+        <option id="Delhi">Delhi</option>
+        <option id="Lakshadweep">Lakshadweep</option>
+        <option id="Puducherry">Puducherry</option>
+        <option id="Goa">Goa</option>
+        <option id="Gujarat">Gujarat</option>
+        <option id="Haryana">Haryana</option>
+        <option id="HimachalPradesh">HimachalPradesh</option>
+        <option id="JammuandKashmir">JammuandKashmir</option>
+        <option id="Jharkhand">Jharkhand</option>
+        <option id="Karnataka">Karnataka</option>
+        <option id="Kerala">Kerala</option>
+        <option id="MadhyaPradesh">MadhyaPradesh</option>
+        <option id="Maharashtra">Maharashtra</option>
+        <option id="Manipur">Manipur</option>
+        <option id="Meghalaya">Meghalaya</option>
+        <option id="Mizoram">Mizoram</option>
+        <option id="Nagaland">Nagaland</option>
+        <option id="Odisha">Odisha</option>
+        <option id="Punjab">Punjab</option>
+        <option id="Rajasthan">Rajasthan</option>
+        <option id="Sikkim">Sikkim</option>
+        <option id="TamilNadu">TamilNadu</option>
+        <option id="Telangana">Telangana</option>
+        <option id="Tripura">Tripura</option>
+        <option id="UttarPradesh">UttarPradesh</option>
+        <option id="Uttarakhand">Uttarakhand</option>
+        <option id="WestBengal">WestBengal</option>
+      </select>
+    </div>
+  </div>
+  <div class="row mt-2">
+    <div class="col text-center">
+      <button id="Save" class="ele-button btn frm5dispnone" name="Save" type="submit">
+        Register
+      </button>
+    </div>
+  </div>
+</form>
+<div class="form-group">
+  <input type="checkbox" name="Agree" value="1" id="Agree" checked="checked" class="widget_input" /><span class="fs12p">
+    I agree to receive the admission related messages.
+  </span>
+</div>
+<span id="existmsg" class="txtsuccess"></span>
+<div id="success_reg" class="text-center"></div>
+<script type="text/javascript">
+  jQuery(document).ready(function ($) {
+    var downloadTimer;
+    $("#mobileno").removeClass("error");
+
+    $("#mobileno").on("change paste keyup", function () {
+      var length = $("#mobileno").val().length;
+      if ($("#Sendotp").is(":disabled")) {
+        $("#Sendotp").prop("disabled", false);
+      }
+      if (length == 10) {
+        $(".errorMobile").text("");
+        $("#Sendotp").focus();
+      }
+    });
+
+    $("#otp").on("keypress keydown keyup", function () {
+      var length = $("#otp").val().length;
+      if (length == 6) {
+        clearInterval(downloadTimer);
+        $("#successmsgotp").empty();
+      } else if (length > 6) {
+        event.preventDefault();
+        return false;
+      }
+    });
+
+    $(".OTPSend").click(function (e) {
+      e.preventDefault(e);
+      var ajax_url = "https://smvec.ac.in/wp-admin/admin-ajax.php";
+      $("#otp").focus();
+      $("#otp").text("");
+      var length = $("#mobileno").val().length;
+      var txtmobile = $("#mobileno").val();
+      $("#mobileno").removeClass("error");
+      $("#mobile-error").remove();
+      if (txtmobile == "" || length < 10) {
+        $(".errorMobile").text("Please enter 10 digit mobile number");
+        $("#mobileno").focus();
+        $("#mobileno").removeClass("error");
+        return false;
+      }
+      $(".errorMobile").text("");
+      var data = {
+        action: "sendOTP",
+        mobile_number: txtmobile,
+      };
+
+      $("#Sendotp").prop("disabled", true);
+      $("#Resendotp").prop("disabled", true);
+      $("#otp").prop("readonly", false);
+      $("#mobileno").removeClass("error");
+      $("#otpinvalid").css("display", "none");
+      $("#existmsg").css("display", "none");
+      $(".frm5dispnone").css("display", "block");
+      $.ajax({
+        url: ajax_url,
+        type: "post",
+        data: data,
+        dataType: "text",
+        cache: false,
+        success: function (data) {
+          console.log(data);
+          var timeleft = 90;
+          $("#successmsgotp").css("display", "block");
+          downloadTimer = setInterval(function () {
+            document.getElementById("load_info").innerHTML = timeleft + "s";
+            timeleft -= 1;
+            if (timeleft <= 0) {
+              clearInterval(downloadTimer);
+              document.getElementById("load_info").innerHTML = "";
+              $(".frm2dispnone").css("display", "none");
+              $(".frm3dispnone").css("display", "block");
+              $("#otp").prop("readonly", true);
+              $("#Resendotp").prop("disabled", false);
+              $("#successmsgotp").css("display", "none");
+            }
+          }, 1000);
+        },
+        error: function () { },
+      });
+      e.stopImmediatePropagation();
+      return false;
+    });
+
+    //  $("form").submit(function(event) {
+    $("#enquiry_form").validate({
+
+      errorElement: "span",
+      rules: {
+        name: "required",
+        Fathername: "required",
+        course: "required",
+        place: "required",
+        email: {
+          required: true,
+          email: true,
+        },
+        mobileno: {
+          required: true,
+          minlength: 10,
+          maxlength: 10,
+        },
+      },
+      messages: {
+        name: "Please enter your name",
+        Fathername: "Please enter your father name",
+        course: "Select your course",
+        place: "Please enter your state",
+        email: {
+          required: "Please enter your email",
+        },
+        mobileno: {
+          required: "Please enter 10 digit mobile number",
+          minlength: "Invalid mobile number",
+          maxlength: "Invalid mobile number",
+        },
+      },
+      errorPlacement: function (error, element) {
+        if (element.attr("name") != "mobileno") {
+          error.insertAfter(element);
+        } else {
+          $(".errorMobile").text("");
+          error.appendTo($(element).parents("div").find($(".errorMobile")));
+        }
+      },
+
+      submitHandler: function (form) {
+        $("#successmsgotp").empty();
+        $("#mobileno").removeClass("error");
+        clearInterval(downloadTimer);
+        var txtotp = $("#otp").val();
+        $("#Resendotp").prop("disabled", true);
+        $(".frm2dispnone").css("display", "none");
+        $(".frm3dispnone").css("display", "block");
+        $("#existmsg").css("display", "none");
+        var ajax_url =
+          "https://smvec.ac.in/wp-admin/admin-ajax.php";
+        var name = $("#name").val();
+        var sourceid = $("#sourceid_home").val();
+        var Fathername = $("#Fathername").val();
+        var Course = $("#course").find(":selected").val();
+        var email = $("#email").val();
+        var mobile = $("#mobileno").val();
+        var city = $("#place").find(":selected").val();
+        var urlParams = new URLSearchParams(window.location.search);
+        var id = urlParams.get("id");
+        var utm_source = urlParams.get("utm_source");
+        var utm_medium = urlParams.get("utm_medium");
+        var utm_campaign = urlParams.get("utm_campaign");
+        var utm_gclid = urlParams.get("gclid");
+        var data = {
+          action: "newusers_details",
+          name: name,
+          source_id: sourceid,
+          Fathername: Fathername,
+          Course: Course,
+          email: email,
+          mobile: mobile,
+          place: city,
+          utm_id: id,
+          source_id: sourceid,
+          utm_source: utm_source,
+          utm_medium: utm_medium,
+          utm_campaign: utm_campaign,
+          utm_gclid: utm_gclid,
+          OTP: txtotp,
+        };
+        $("#loader").removeClass("hidden");
+        $.ajax({
+          url: ajax_url,
+          type: "post",
+          data: data,
+          dataType: "text",
+          complete: function () {
+            $("#loader").addClass("hidden");
+          },
+          success: function (response) {
+            var spres = response.split("@");
+            var whlist = "Whitelisted";
+
+            $("#submit_enqForm").css("display", "block");
+            var res = response.substring(0, response.length - 1);
+            var url = response;
+            $("#successmsgotp").css("display", "none");
+            if (response == 1) {
+              $("#existmsg").css("display", "block");
+              $("#existmsg").html(
+                "Your have already Registered. Please login."
+              );
+              window.location.href =
+                "https://smvec.ac.in/student-admission-enquiry-login/";
+            } else if (response == 2) {
+              $(".frm4dispnone").val("");
+              document.getElementById("load_info").innerHTML = "";
+              $("#otpinvalid").css("display", "Block");
+              $("#otpinvalid").html("OTP Mismatched, Please Try Again!");
+              $(".frm2dispnone").css("display", "none");
+              $(".frm3dispnone").css("display", "block");
+              $("#Resendotp").prop("disabled", false);
+              $("#otp").focus();
+            } else if (spres[1] == whlist) {
+              $(".frm3dispnone").prop("disabled", false);
+              $(".frm2dispnone").css("display", "none");
+              window.location.href =
+                "https://smvec.ac.in/success?id=" + spres[0];
+            } else {
+              window.location.href =
+                "https://smvec.ac.in/thank-you/";
+            }
+          },
+          error: function (xhr, ajaxOptions, thrownError) {
+            $("#dispsuccessmsg").text(xhr.status);
+          },
+        });
+      },
+    });
+  });
+
+  jQuery(document).ready(function ($) {
+    $("input[name='mobileno']").on("input", function (e) {
+      $(this).val(
+        $(this)
+          .val()
+          .replace(/[^0-9]/g, "")
+      );
+    });
+
+    $("input[name='otp']").on("input", function (e) {
+      $(this).val(
+        $(this)
+          .val()
+          .replace(/[^0-9]/g, "")
+      );
+    });
+
+
+    $("#name").keypress(function (event) {
+      var regex = /^[a-zA-Z0-9\s.]*$/;
+      var key = String.fromCharCode(
+        !event.charCode ? event.which : event.charCode
+      );
+      if (!regex.test(key)) {
+        event.preventDefault();
+        $("#name").focus();
+        return;
+
+        false;
+      }
+    });
+    $("#Fathername").keypress(function (event) {
+      var regex = /^[a-zA-Z0-9\s.]*$/;
+      var key = String.fromCharCode(
+        !event.charCode ? event.which : event.charCode
+      );
+      if (!regex.test(key)) {
+        event.preventDefault();
+        $("#Fathername").focus();
+        return;
+
+        false;
+      }
+    });
+  });
+</script>

@@ -61,7 +61,7 @@ function App() {
           <Route path="/campus-life" element={<CampusLife />} />
           <Route path="/test" element={<SuccessPage />} />
           <Route path="/all-india-tour" element={<AllIndiaTour />} />
-          <Route path="/success" element={<EnquiredSucessfully />} />
+          <Route path="/thank-you" element={<EnquiredSucessfully />} />
           <Route path="/already-enquired" element={<AlreadyEnquired />} />
           <Route path="/placement" element={<Placement />} />
           <Route path="*" element={<NotFound />} />

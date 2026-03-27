@@ -8,7 +8,11 @@ import { AppContext } from '../context/AppContext';
 function EnquiredSucessfully() {
   const location = useLocation();
   const navigate = useNavigate();
-  const studentName = location.state;
+  const locationState = location?.state;
+  const studentName =
+    typeof locationState === 'string'
+      ? locationState
+      : locationState?.name || '';
 
   const [allowRender, setAllowRender] = useState(false);
   const { showNav, setShowNav } = useContext(AppContext)
@@ -60,7 +64,7 @@ function EnquiredSucessfully() {
           </g>
         </svg>
 
-        <h1 className="thankyou-text">Enquired successfully! {studentName}</h1>
+        <h1 className="thankyou-text">Enquired successfully! {studentName ? studentName : ""}</h1>
         <p className="sub-text">You have successfully enquired. We will contact you soon.</p>
         <p className="sub-text">If you have any urgent questions, feel free to contact our admissions office.</p>
 

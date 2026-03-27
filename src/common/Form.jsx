@@ -155,56 +155,131 @@ const Form = () => {
 
 
   const utmData = getUTMParams();
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   setLoading(true)
+  //   if (validate()) {
+
+  //     const enquiryData = {
+
+  //       student_name: formData.name,
+  //       father_name: formData.fathername,
+  //       department: 'B.Sc-Agri',
+  //       mobile: formData.phone,
+  //       email: formData.email,
+  //       state: `${formData.city},${formData.state}`,
+  //       qualification: '',
+  //       requirement: formData.message,
+  //       degreeID: "75",
+  //       course_code_ID: "Agri",
+  //       is_otp_verified: formData.is_otp_verified,
+  //       utm_id: utmData?.utm_id || '',
+  //       utm_source: utmData?.utm_source || 'website',
+  //       utm_medium: utmData?.utm_medium || '',
+  //       utm_campaign: utmData?.utm_campaign || '',
+  //       utm_content: utmData?.utm_content || '',
+  //       utm_term: utmData?.utm_term || '',
+  //       utm_gclid: utmData?.fbclid || '',
+  //     };
+  //     try {
+  //       let response = await axios.post('https://agribackend.vercel.app/api/submit-form', enquiryData);
+
+  //       setTimeout(() => {
+  //         setIsSubmitted(true)
+  //         setFormOpen(false)
+  //         setLoading(false)
+  //         navigate('thank-you', { state: enquiryData?.student_name })
+  //         // comment for test purpose instead of this integrating thank-you navigation. req from echovme
+  //         // if (response.data != 1) {
+  //         //   navigate(`/success/?id=${response.data}`, { state: enquiryData?.student_name })
+  //         // } else {
+  //         //   navigate('/already-enquired')
+  //         // }
+
+  //       }, 100);
+  //     } catch (error) {
+  //       alert("Something went wrong! try after sometimes");
+  //       setLoading(false)
+
+  //     }
+  //   } else {
+  //     setLoading(false)
+
+  //   }
+
+  // };
+  const pushFormSubmitSuccess = () => {
+    window.dataLayer = window.dataLayer || [];
+
+    // prevent duplicate firing in SPA re-renders
+    if (window.__leadFormSubmitSuccessFired) return;
+    window.__leadFormSubmitSuccessFired = true;
+
+    window.dataLayer.push({
+      event: "form_submit_success",
+      form_name: "lead_form",
+    });
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true)
-    if (validate()) {
+    setLoading(true);
 
-      const enquiryData = {
-
-        student_name: formData.name,
-        father_name: formData.fathername,
-        department: 'B.Sc-Agri',
-        mobile: formData.phone,
-        email: formData.email,
-        state: `${formData.city},${formData.state}`,
-        qualification: '',
-        requirement: formData.message,
-        degreeID: "75",
-        course_code_ID: "Agri",
-        is_otp_verified: formData.is_otp_verified,
-        utm_id: utmData?.utm_id || '',
-        utm_source: utmData?.utm_source || 'website',
-        utm_medium: utmData?.utm_medium || '',
-        utm_campaign: utmData?.utm_campaign || '',
-        utm_content: utmData?.utm_content || '',
-        utm_term: utmData?.utm_term || '',
-        utm_gclid: utmData?.fbclid || '',
-      };
-      try {
-        let response = await axios.post('https://agribackend.vercel.app/api/submit-form', enquiryData);
-
-        setTimeout(() => {
-          setIsSubmitted(true)
-          setFormOpen(false)
-          setLoading(false)
-          if (response.data != 1) {
-            navigate(`/success/?id=${response.data}`, { state: enquiryData?.student_name })
-          } else {
-            navigate('/already-enquired')
-          }
-
-        }, 100);
-      } catch (error) {
-        alert("Something went wrong! try after sometimes");
-        setLoading(false)
-
-      }
-    } else {
-      setLoading(false)
-
+    if (!validate()) {
+      setLoading(false);
+      return;
     }
 
+    const enquiryData = {
+      student_name: formData.name,
+      father_name: formData.fathername,
+      department: 'B.Sc-Agri',
+      mobile: formData.phone,
+      email: formData.email,
+      state: `${formData.city},${formData.state}`,
+      qualification: '',
+      requirement: formData.message,
+      degreeID: "75",
+      course_code_ID: "Agri",
+      is_otp_verified: formData.is_otp_verified,
+      utm_id: utmData?.utm_id || '',
+      utm_source: utmData?.utm_source || 'website',
+      utm_medium: utmData?.utm_medium || '',
+      utm_campaign: utmData?.utm_campaign || '',
+      utm_content: utmData?.utm_content || '',
+      utm_term: utmData?.utm_term || '',
+      utm_gclid: utmData?.fbclid || '',
+    };
+
+    try {
+      const response = await axios.post(
+        'https://agribackend.vercel.app/api/submit-form',
+        enquiryData
+      );
+
+      // Backend success condition (adjust if your API returns different)
+      if (response?.status === 200 && response?.data) {
+        setIsSubmitted(true);
+        setFormOpen(false);
+        setLoading(false);
+
+        //reach thank-you state
+        navigate(`/thank-you/?id=${response?.data}`, { state: enquiryData?.student_name });
+
+        // push after navigation (thank-you state reached)
+        setTimeout(() => {
+          pushFormSubmitSuccess();
+        }, 0);
+
+        return;
+      }
+
+      // If API returns non-success in body, treat as failure
+      throw new Error("Non-success response");
+    } catch (error) {
+      alert("Something went wrong! try after sometimes");
+      setLoading(false);
+    }
   };
   const startCountdown = () => {
     if (timerRef.current) return; // Prevent multiple intervals

@@ -13,45 +13,21 @@ import Loader from "./Loader";
 import Placement from "./Placement";
 import { useEffect, useState } from "react";
 import Popup from "./Popup";
-import axios from "axios";
-
-
-
 
 const HomeThree = () => {
   const [showPopup, setShowPopup] = useState(false);
-  const [popImage, setPopImage] = useState()
 
   useEffect(() => {
-    async function getPop() {
-      const hasVisited = sessionStorage.getItem("hasVisitedHome");
-
-      try {
-        const res = await axios.get('https://agribackend.vercel.app/api/get-pop')
-
-        setTimeout(() => {
-          if (!hasVisited && res.data?.status) {
-          setShowPopup(true);
-          setPopImage(res.data?.img)
-          sessionStorage.setItem("hasVisitedHome", "true");
-        } else {
-
-        }
-        }, 2000);
-      }
-      catch (err) {
-        // console.log(err)
-      }
-    }
-    getPop()
-
+    setTimeout(() => {
+      setShowPopup(true);
+    }, 1500);
   }, []);
 
   return (
     <>
       {/* <Test/> */}
       {/* <HeroHomeThree /> */}
-      {showPopup && <Popup popImage={popImage} onClose={() => setShowPopup(false)} />}
+      {showPopup && <Popup onClose={() => setShowPopup(false)} />}
       <HeroSlider />
       <HomeForm />
       <Loader />
