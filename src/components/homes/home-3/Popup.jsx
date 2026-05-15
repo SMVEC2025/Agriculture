@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 
 const Popup = ({ onClose }) => {
+  const facultyPdfPath = "/file/School%20of%20Agricultural%20Sciences%20Faculty%20LIst.pdf";
   const popupRef = useRef();
 
   useEffect(() => {
@@ -14,7 +15,7 @@ const Popup = ({ onClose }) => {
   }, [onClose]);
 
   const handleViewFaculty = () => {
-    window.open("/file/School of Agricultural Sciences Faculty LIst.pdf", "_blank");
+    window.open(facultyPdfPath, "_blank", "noopener,noreferrer");
   };
 
   return (

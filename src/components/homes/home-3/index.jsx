@@ -11,23 +11,13 @@ import HeroSlider from "./HeroSlider";
 import HomeForm from "./HomeForm";
 import Loader from "./Loader";
 import Placement from "./Placement";
-import { useEffect, useState } from "react";
-import Popup from "./Popup";
 
 const HomeThree = () => {
-  const [showPopup, setShowPopup] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setShowPopup(true);
-    }, 1500);
-  }, []);
 
   return (
     <>
       {/* <Test/> */}
       {/* <HeroHomeThree /> */}
-      {showPopup && <Popup onClose={() => setShowPopup(false)} />}
       <HeroSlider />
       <HomeForm />
       <Loader />

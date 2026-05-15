@@ -7,7 +7,7 @@ const AboutMission = () => {
 
             </div>
             <div className="am_container">
-                <p>Our mission at Sri Manakula Vinayagar College of Agriculture and Horticulture is to provide quality education and hands-on training in agriculture and horticulture, fostering innovation, sustainability, and ethical values. We aim to empower students with the knowledge and skills needed to address real-world agricultural challenges, contribute to rural development, and become responsible professionals who advance food security and environmental stewardship.
+                <p>Our mission at Sri Manakula Vinayagar School of Agriculture and Horticulture is to provide quality education and hands-on training in agriculture and horticulture, fostering innovation, sustainability, and ethical values. We aim to empower students with the knowledge and skills needed to address real-world agricultural challenges, contribute to rural development, and become responsible professionals who advance food security and environmental stewardship.
 
                 </p>
             </div>
@@ -26,7 +26,7 @@ const AboutMission = () => {
                 <div className="about_campuslife right">
                     <img src="/assets/img/campus/marque3.png" alt="" />
                     <p>
-                        Sri Manakula Vinayagar College of Agriculture and Horticulture is located in a serene, green campus that fosters both learning and sustainability. Situated on a spacious rural landscape, the college provides an ideal environment for agricultural education, research, and hands-on training.
+                        Sri Manakula Vinayagar School of Agriculture and Horticulture is located in a serene, green campus that fosters both learning and sustainability. Situated on a spacious rural landscape, the college provides an ideal environment for agricultural education, research, and hands-on training.
                     </p>
                 </div>
                 <div className="about_campuslife left">

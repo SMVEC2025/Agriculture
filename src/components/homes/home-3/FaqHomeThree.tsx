@@ -24,7 +24,7 @@ const FaqHomeThree = () => {
                                                 <h2 className="accordion-header lh-base" id="headingOne">
                                                     <button className="accordion-button lh-base" type="button" data-bs-toggle="collapse"
                                                         data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                        What courses are offered at SMVEC College of Agriculture and Horticulture
+                                                        What courses are offered at SMVEC School of Agriculture and Horticulture
                                                     </button>
                                                 </h2>
                                                 <div id="collapseOne" className="accordion-collapse collapse show"

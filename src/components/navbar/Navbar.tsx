@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { IoMdClose } from "react-icons/io";
 
 function Navbar() {
+  const facultyPdfPath = "/file/School%20of%20Agricultural%20Sciences%20Faculty%20LIst.pdf";
   const [navItemsCheck, setNavItemsCheck] = useState(" ");
   const [ShowNavSlider, setShowNavSlider] = useState(false);
   const { showNav, setShowNav, setFormOpen, isMobile } = useContext(AppContext);
@@ -43,11 +44,17 @@ function Navbar() {
   const handelFileOpen = (path: string) => {
     window.open(`/file/${path}`, '_blank');
   }
+
+  const handleFacultyOpen = () => {
+    handleMouseLeave();
+    window.open(facultyPdfPath, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <>
       <div className={`nav_main ${showNav ? "show" : ""}`}>
         <div className="nav-logo-container">
-          <img src={`/assets/img/${showNav ? 'agriculturelogodark' : 'agriculturelogowhite'}.png`} alt="" />
+          <img src={`/assets/img/logo/${showNav ? 'agriculturelogodark' : 'agriculturelogowhite'}.png`} alt="" />
         </div>
         <div className="nav-menu-container">
           {isMobile ? (<></>) :
@@ -58,6 +65,7 @@ function Navbar() {
                 <li onMouseEnter={() => handleMouseIn('academy')} >Academics</li>
                 <li onMouseEnter={() => handleMouseIn('campus')} >Campus Life</li>
                 <li onMouseEnter={() => handleMouseIn('admission')} >Admissions</li>
+                <li onMouseEnter={handleMouseLeave} onClick={handleFacultyOpen}>Faculty</li>
               </ul>
               <button style={{ backgroundColor: "#303f82" }} className="hero-button" onClick={() => setFormOpen(true)}>Apply</button>
             </>)}
@@ -87,7 +95,7 @@ function Navbar() {
           <img src="/assets/img/images/frontview.jpg" alt="" />
           <div className="navslider_con2">
             <p>The School of Agricultural Sciences (SAGS) at Sri Manakula Vinayagar Engineering College (SMVEC) offers specialized programs in B.Sc. (Hons.) Agriculture and B.Sc. (Hons.) Horticulture. The college provides a modern learning environment with practical training on 40 acres of agricultural land.</p>
-            <div className="viewbtn" onClick={() => navigate('/faculty-list')}>View Faculty <BsArrowRight /></div>
+            <div className="viewbtn" onClick={handleFacultyOpen}>View Faculty <BsArrowRight /></div>
           </div>
           <div className="navslider_items">
             <ul>
@@ -105,7 +113,7 @@ function Navbar() {
                 </>
               ) : (
                 <>
-                  <li onClick={() => navigate('/faculty-list')}>Faculty</li>
+                  <li onClick={handleFacultyOpen}>Faculty</li>
                   <li onClick={() => navigate('/courses-detail-agriculture')}>B.Sc. (Hons.) Agriculture</li>
                   {/* <li onClick={() => navigate('/courses-detail-agriculture')}>Curriculum & syllabus</li> */}
                   <li onClick={() => handelFileOpen('Regulation_Agri_R2021.pdf')}>Academic Regulation 2021</li>

@@ -11,6 +11,7 @@ import { BsTwitterX } from "react-icons/bs";
 import { BsArrowLeft } from "react-icons/bs";
 
 function MobileMenu() {
+  const facultyPdfPath = "/file/School%20of%20Agricultural%20Sciences%20Faculty%20LIst.pdf";
   const { showMobileSlider, showItem, setShowItem, setShowMobileSlider } = useContext(AppContext)
   const navigate = useNavigate()
   const [NavAcademicContent, setNavAcademicContent] = useState('');
@@ -32,6 +33,13 @@ function MobileMenu() {
   const handelFileOpen = (path) => {
     window.open(`/file/${path}`, '_blank');
   }
+
+  const handleFacultyOpen = () => {
+    window.open(facultyPdfPath, "_blank", "noopener,noreferrer");
+    setShowItem('');
+    setShowMobileSlider('');
+  };
+
   return (
     <div className={`mm_main ${showMobileSlider ? "opened" : "closed"}`}>
       <div className="mm_con1">
@@ -72,7 +80,7 @@ function MobileMenu() {
               </>
             ) : (
               <>
-                <li onClick={() => handleNavigate('/faculty-list')}>Faculty</li>
+                <li onClick={handleFacultyOpen}>Faculty</li>
                 <li onClick={() => handleNavigate('/courses-detail-agriculture')}>B.Sc. (Hons.) Agriculture</li>
                 <li onClick={() => handelFileOpen('Regulation_Agri_R2021.pdf')}>Academic Regulation 2021</li>
                 <li onClick={() => { setNavAcademicContent('bos') }}>Bos Minute</li>

@@ -19,7 +19,7 @@ const AboutArea = () => {
                             <div className="col-lg-6">
                                 <div className="about-content">
                                     <p className="wow fadeInUp" data-wow-delay=".3s">
-                                        Sri Manakula Vinayaga Educational Trust founded the Sri Manakula Vinayagar College of Agriculture and Horticulture to provide quality and affordable education in agricultural sciences. Affiliated with Pondicherry University, the college offers undergraduate, postgraduate, and research programs in Agriculture and Horticulture.
+                                        Sri Manakula Vinayaga Educational Trust founded the Sri Manakula Vinayagar School of Agriculture and Horticulture to provide quality and affordable education in agricultural sciences. Affiliated with Pondicherry University, the college offers undergraduate, postgraduate, and research programs in Agriculture and Horticulture.
 
                                         The campus features modern infrastructure including Wi-Fi, a central library, advanced labs, greenhouses, experimental farms, and smart classrooms. Students benefit from hostel facilities, 24/7 security, and other amenities like an ATM and purified drinking water.
 

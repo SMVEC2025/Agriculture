@@ -21,7 +21,7 @@ const FaqArea = () => {
                                                 <h2 className="accordion-header" id="headingOne">
                                                     <button className="accordion-button" type="button" data-bs-toggle="collapse"
                                                         data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                        What courses are offered at SMVEC College of Agriculture and Horticulture
+                                                        What courses are offered at SMVEC School of Agriculture and Horticulture
                                                     </button>
                                                 </h2>
                                                 <div id="collapseOne" className="accordion-collapse collapse show"

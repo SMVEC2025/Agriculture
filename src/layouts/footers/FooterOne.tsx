@@ -4,6 +4,7 @@ import { BsTwitterX } from "react-icons/bs";
 
 
 const FooterOne = ({ style_2 }: any) => {
+    const facultyPdfPath = "/file/School%20of%20Agricultural%20Sciences%20Faculty%20LIst.pdf";
 
     const handleRedirect = (url: string) => {
         window.open(url, '_blank', 'noopener,noreferrer');
@@ -21,7 +22,7 @@ const FooterOne = ({ style_2 }: any) => {
                                         <Link to="/">
                                             {style_2 ? <img src="/assets/img/logo/agriculturelogowhite.png" alt="img" />
                                                 :
-                                                <img className="footer_logo" src="/assets/img/agriculturelogowhite.png" alt="img" />
+                                                <img className="footer_logo" src="/assets/img/logo/agriculturelogowhite.png" alt="img" />
                                             }
                                         </Link>
                                     </div>
@@ -60,7 +61,7 @@ const FooterOne = ({ style_2 }: any) => {
                                     </div>
                                     <ul className="list-area">
                                         <li><Link to="/about-us">About SMVEC</Link></li>
-                                        <li><Link to="/faculty-list">Faculty</Link></li>
+                                        <li><a href={facultyPdfPath} target="_blank" rel="noreferrer">Faculty</a></li>
                                         <li><Link to="/contact">Contact</Link></li>
                                         <li><Link to="/faq">FAQs</Link></li>
                                     </ul>
@@ -74,7 +75,7 @@ const FooterOne = ({ style_2 }: any) => {
                                     <div className="footer-content" >
                                         <ul className="contact-info">
                                             <li>
-                                                Sri Manakula Vinayagar College of Agricultural Sciences<br/>
+                                                Sri Manakula Vinayagar School of Agricultural Sciences<br/>
                                                 Sri Manakula Vinayagar Engineering College Campus<br/>
                                                 Madagadipet,
                                                 Puducherry – 605 107
